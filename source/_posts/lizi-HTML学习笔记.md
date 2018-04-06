@@ -5,7 +5,7 @@ tags:
 - html
 categories:
 - Web
-comments: false
+comments: true
 ---
 
 ## HTML

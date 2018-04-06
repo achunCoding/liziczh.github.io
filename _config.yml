@@ -100,3 +100,11 @@ search:
   field: post
   format: html
   limit: 10000
+
+# 源码 有 config.symbols_count_time就这个吧
+symbols_count_time:
+  separated_meta: true
+  item_text_post: true
+  item_text_total: true
+  awl: 5
+  wpm: 200

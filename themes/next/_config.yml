@@ -218,9 +218,9 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  #display: post
   #display: always
-  #display: hide
+  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
@@ -305,7 +305,7 @@ related_posts:
 
 # Declare license on posts
 post_copyright:
-  enable: true
+  enable: false
   license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a>
 
 
@@ -514,16 +514,15 @@ gitment:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#  baidushare:
-#    type: button
-#    baidushare: true
+# baidushare:
+#   type: button
 
 # Share
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-jiathis:
-  uid: 2160658
+# jiathis:
+#   uid: 2160658
 #add_this_id:
 
 # NeedMoreShare2
