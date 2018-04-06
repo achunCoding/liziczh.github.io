@@ -133,8 +133,8 @@ menu_settings:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
-scheme: Mist
+scheme: Muse
+#scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
 
@@ -523,8 +523,7 @@ gitment:
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
 jiathis:
- uid: 2160658
- jiathis: true
+  uid: 2160658
 #add_this_id:
 
 # NeedMoreShare2
