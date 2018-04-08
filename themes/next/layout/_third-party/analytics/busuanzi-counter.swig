@@ -1,3 +1,5 @@
+<!-- 我直接给整到layout/_partials/footer里了，这边先注释掉！ -->
+<!--
 {% if theme.busuanzi_count.enable %}
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -17,4 +19,4 @@
   {% endif %}
 </div>
 {% endif %}
-
+-->

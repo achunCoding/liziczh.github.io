@@ -4,8 +4,8 @@
 
 # Site
 title: Lizi's Blogs
-subtitle: Life is Now.
-description: Keep on.
+subtitle:
+description: 记录|旧事|杂谈
 keywords:
 author: Jehaw Chen
 language: zh-CN
@@ -17,6 +17,8 @@ url: https://liziczh.github.io
 root: /
 permalink: :year/:month/:day/:title.html
 permalink_defaults:
+
+# 永久链接字符化
 # permalink: post/:abbrlink.html
 # abbrlink:
 #   alg: crc32  # 算法：crc16(default) and crc32
@@ -61,11 +63,13 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  记录: record
 	杂谈: talks
   旧事: life
 	其他: other
 tag_map:
   学习笔记: notes
+  记录: record
   杂谈: talks
   旧事: stories
 	其他: other
