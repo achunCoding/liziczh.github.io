@@ -154,6 +154,7 @@ site_state: true
 social:
   GitHub: https://github.com/liziczh || github
   E-Mail: mailto:liziczh@foxmail.com || envelope
+  Weibo: https://weibo.com/p/1005055521704376/home
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -186,7 +187,9 @@ links_layout: inline
 links:
   博客园: https://www.cnblogs.com
   知乎: https://www.zhihu.com
-
+  segmentfault: https://segmentfault.com
+  V2EX: https://www.v2ex.com
+  Linkedin: https://www.linkedin.com
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.png
