@@ -12,11 +12,11 @@ comments: true
 
 HTML超文本标记语言
 
+<!-- more -->
+
 ## HTML基本结构
 
 HTML注释：`<!-- HTML注释格式 -->`
-
-<!-- more -->
 
 ```html
 <!-- HTML注释格式 -->
