@@ -1,5 +1,5 @@
 ---
-title: lizi-CSS学习笔记
+title: Notes-CSS
 tags:
   - css
   - 学习笔记
