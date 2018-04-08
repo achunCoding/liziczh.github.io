@@ -85,9 +85,9 @@ CSS注释：`/* CSS注释内容 */`
 5. font综合设置：` font : font-style font-weight font-size/line-height font-family`；
 ```css
 注意：
-	- ！英文字体名一般不需要加引号，设置英文字体名必须位于中文字体名之前；
-	- ！加粗度没有单位，而且`x00`只有9个值，不存在`123`这种值；
-	- ！网页普遍是`14px`；尽量设偶数px，奇数px在IE6存在bug；
+- ！英文字体名一般不需要加引号，设置英文字体名必须位于中文字体名之前；
+- ！加粗度没有单位，而且`x00`只有9个值，不存在`123`这种值；
+- ！网页普遍是`14px`；尽量设偶数px，奇数px在IE6存在bug；
 ```
 
 ### CSS文本-text★
@@ -104,12 +104,6 @@ CSS注释：`/* CSS注释内容 */`
 6. 行高：`line-height:px`； 一般文本行高比字号大7-8像素即可。
 7. 文本阴影：`text-shadow: 水平位置 垂直位置 模糊偏移 阴影颜色`；
 8. 【CSS3】**颜色透明度**：`rgba(0~255, 0~255, 0~255, 0~1)`；
-
-### 标签显示模式★
-- `display:none`：不显示；
-- `display:block` ：块级元素；
-- `display:inline` ：行内元素；
-- `display:inline-block`： 行内块元素；
 
 ### CSS背景-background★
 1. 背景色：`background-color：rgb()`；
@@ -132,20 +126,21 @@ CSS注释：`/* CSS注释内容 */`
   - `cover`：保证背景图片完全覆盖整个区域；
   - `width&height`：设置背景的宽&高；（一般设置1个参数，设置2个参数会导致图片变形）
 
-### CSS列表-list-style*
+### *CSS列表-list-style
+
 1. 列表项标志：`list-style-type:none/disc/circle/square/decimal...`；
 2. 列表项图像：`list-style-image:url()`；
 3. 列表标志位置：`list-style-position:inside/outside`；
 4. 列表综合设置：`list-style:image type position `；
 
-### CSS表格*
+### *CSS表格
 1. 折叠边框：`border-collapse:collapse`；
 2. 水平对齐：`text-align:left/center/right`；
 3. 垂直对齐：`vertical-align:top/center/bottom`；
 4. 空单元格显示/隐藏：`empty-cells:show/hide`；
 5. 表格标题在上/在下：`caption-side:top/bottom`；
 
-### CSS轮廓-outline*
+### *CSS轮廓-outline
 1. 轮廓颜色：`outline-color:rgb()`；
 2. 轮廓样式：`outline-style:solid/dotted/dashed/double`；详见[框模型-border]；
 3. 轮廓宽度：`outline-width:thick/medium/thin/px`；
@@ -153,9 +148,23 @@ CSS注释：`/* CSS注释内容 */`
 4. 轮廓综合设置：`outline:color style width`；
 
 
+### 标签显示模式★
+
+- `display:none`：不显示；
+- `display:block` ：块级元素；
+- `display:inline` ：行内元素；
+- `display:inline-block`： 行内块元素；
+
+### 内容溢出盒子★
+
+- `overflow:visible`：默认值。内容溢出部分显示在盒子外；
+- `overflow:hidden`：隐藏内容溢出部分；
+- `overflow:scroll`：内容溢出会被修剪，则浏览器会显示滚动条以便查看其余的内容；
+- `overflow:auto`：如果内容溢出被修剪，则浏览器会显示滚动条以便查看其余的内容；
 
 
-## CSS基础选择器
+
+## CSS选择器
 
 ### 元素选择器
 ```css
@@ -188,41 +197,6 @@ CSS注释：`/* CSS注释内容 */`
 ```
 > 作用域：整个HTML页面
 >
-
-### 伪类选择器
-```css
-选择器:伪类{
-	属性:值;
-}
-```
-
-**1.`<a>`链接伪类：**
-- `a:link`：未访问的链接；
-- `a:visited`：已访问的链接；
-- `a:hover`：鼠标移动到链接；
-- `a:active`：鼠标点击时的连接；
-
-**2.位置结构伪类：**
-- `first-child`：第一个子元素；
-- `last-child`：最后一个子元素；
-- `nth-child(n)`：第n个元素（n=1,2,3...）；
-- `nth-last-child(n)`：倒数第n个元素（n=1,2,3...）;
-  [n=`odd`：奇数 | n=`even`：偶数]
-```css
-注意：
-	- 不是第一个HTML标签，而是第一个HTML元素
-	html元素：文本，图像，链接；
-```
-
-**3.【CSS3】目标伪类：**
-```css
-/*:target 选择器用于选取当前活动的目标元素*/
-:target{
-    属性:值;
-}
-```
-
-## CSS复合选择器
 
 ### 交集选择器
 
@@ -281,6 +255,38 @@ CSS注释：`/* CSS注释内容 */`
 }
 ```
 
+### 伪类选择器
+```css
+选择器:伪类{
+	属性:值;
+}
+```
+
+**1.`<a>`链接伪类：**
+- `a:link`：未访问的链接；
+- `a:visited`：已访问的链接；
+- `a:hover`：鼠标移动到链接；
+- `a:active`：鼠标点击时的连接；
+
+**2.位置结构伪类：**
+- `first-child`：第一个子元素；
+- `last-child`：最后一个子元素；
+- `nth-child(n)`：第n个元素（n=1,2,3...）；
+- `nth-last-child(n)`：倒数第n个元素（n=1,2,3...）;
+  [n=`odd`：奇数 | n=`even`：偶数]
+```css
+注意：
+- ！不是第一个HTML标签，而是第一个HTML元素
+	html元素：文本，图像，链接；
+```
+
+**3.【CSS3】目标伪类：**
+```css
+/*:target 选择器用于选取当前活动的目标元素*/
+:target{
+    属性:值;
+}
+```
 ### 伪元素选择器
 
 ```css
@@ -312,26 +318,34 @@ CSS注释：`/* CSS注释内容 */`
 
 ## CSS框模型（Box Model）★
 
-![boxmodel](http://p6uturdzt.bkt.clouddn.com/lizi-CSS-boxmodel.gif)
+![BoxModel](http://p6uturdzt.bkt.clouddn.com/lizi-CSS-boxmodel.gif)
 
 ### 边框-border
 1. 边框宽度：`border-width:px`；
 2. 边框样式：`border-style:solid/dashed/dotteddouble`；
-  - `soild`实线，`dashed`虚线，`dotted`点线，`double`双实线；
+  - `soild` 实线，`dashed` 虚线；
+  - `dotted`点线，`double`双实线；
 3. 边框颜色：`border-color:rgb()`；
 4. 边框综合设置：`border:width style color`；
-5. 单边边框：`border-top/right/bottom/left-属性:值`;
+5. 单边边框：`border-top/right/bottom/left-属性:值`；
 6. 圆角边框：`border-radius:半径px`；
 
 ### 内边距-padding
-1. 内边距：`padding:px/em/%`；
+1. 内边距：`padding:top-px right-px bottom-px left-px `；
 2. 单边内边距：`padding-top/right/bottom/left:值`；
 
 ### 外边距-margin
-1. 外边距：`margin:px/em/%`；
+1. 外边距：`margin:top-px right-px bottom-px left-px`；
 2. 单边外边距：`margin-top/right/bottom/left:值`；
 
-综合设置
+```css
+border/padding/margin综合设置提示：
+- 可设置四个参数，分别对应top-right-bottom-left，顺时针遍历设置；
+- 若只设置了1个value，则top=right=bottom=left=value；
+- 若只设置了2个value，则top=val_1,right=val_2,bottom=val_1,left=val_2；顺时针遍历赋值；
+- 若只设置了3个value，则top=val_1,right=val_2,bottom=val_3,left=val_1；顺时针遍历赋值；
+- border-radius半径设置顺序：左上-右上-右下-坐下；顺时针遍历；
+```
 
 
 ### 垂直外边距合并现象★
@@ -353,81 +367,78 @@ CSS注释：`/* CSS注释内容 */`
         - CSS3盒的[width&height]包含[padding+border]；
     ```
 
+
+
 ## 浮动
 
 ### 浮动-float（难点）
+- **浮动：浮动块不在文档流中，不占文档流位置；但占浮动位置**。
 
-- **浮动：不在文档流中，不占文档流位置；但占浮动位置**。
-- **浮动：`float:left/right`；**
+- **浮动：`float:left/right`**；
 
-### 清除浮动-clear
+  （未完待详细解释）
 
+### 清除浮动-clear★
 - clear 属性规定元素的哪一侧不允许其他浮动元素。
 - 清除浮动：`clear:left/right/both`；
 
-清除浮动的方式：
-
-1. W3C推荐：在盒子末尾添加一个空盒子
+**清除浮动的方式：**
+1. 【W3C推荐】在盒子末尾再添加一个如下的空盒子：
   `<div style="clear:both;"></div> `；
-2. 盒子末尾添加`overflow:hidden`；
-  `overflow:scroll/auto/hidden`；
-3. `.clearfix:after{clear:both}`只适用于IE6、IE7。
+2. 在盒子样式中添加溢出隐藏样式：
+  `overflow:hidden`；
+3. 为盒子添加如下样式，在每次结束后都清除浮动：
+  `.clearfix:after{clear:both}`只适用于IE6、IE7。
+
+
 
 ## 定位
 
-### 定位-position（难点）
+### 定位简介（难点）
 
-边偏移：top，bottom，left，right
+| position             | 是否占文档流   | 定位策略                   |
+| -------------------- | -------------- | -------------------------- |
+| `static`：静态定位   | 占文档流       |                            |
+| `fixed`：固定定位    | 不占文档流     | 相对于视窗进行定位         |
+| `relative`：相对定位 | 占文档流原位置 | 相对于原位置进行边偏移     |
+| `absolute`：绝对定位 | 不占文档流     | 相对于其已定位的包含块定位 |
 
-​        前提：float，position=relative;不占标准流
+### 边偏移
+1. 前提：float || position || 不占文档流；
+2. 边偏移：`top`，`bottom`，`left`，`right`；
 
-定位模式：position
+### 相对定位★
+- `position:relative`；
+1. 相对于在文档流中的原位置进行边偏移；
+2. 仍占据文档流中的原位置；
 
-static：静态定位，标准流
-
-fixed：固定定位，不占位置，始终相对于浏览器左上角
-
-relative：相对定位，占原位置，相对于原位置边偏移
-
-absolute：绝对定位，不占位置，相对于父容器；
-
-        如果父元素定位，子元素相对父元素移动
-    
-        如果父元素未定位，子元素
-
-一般采取[子绝父相]策略
-
- 
-
-绝对定位盒子水平/垂直居中
-
-position:absolute;
-
-left:0;right:0;//水平居中
-
-top:0;bottom:0;//垂直居中
-
-margin:auto;
-
- 
-
-z-index：z轴坐标，无单位
+### 绝对定位★
+- `position:absolute`；
+1. 相对于[**其已定位的包含块**]进行边偏移；
+2. 已从**文档流**中**完全删除**，就好像该元素原来不存在一样；
+3. 元素定位后生成一个**块级框**，而不论原来它在正常流中生成何种类型的框；
+4. 绝对定位与文档流无关，所以可以覆盖在页面其他元素上；
+5. 可通过`z-index`控制堆叠次序；`z-index` 仅能在定位元素上奏效；
+6. 一般采取[子绝父相]策略；
 
 
 
-## 开发技巧
 
-外边距实现盒子水平居中：`*{padding:0;margin:0;}`；
+## 日常开发技巧
 
-清除盒子内外边距：`margin:0 auto`；
+使用外部样式表，引入外部.css文件；
 
-清除浮动：`clear:both`；
+例行设置：
 
-垂直居中：`line-height:盒高`；
+1. 清除盒子内外边距：`*{padding:0;margin:0;}`；
+2. 链接取消下划线：`a{text-decoration:none}`；
+3. 列表取消列表项标志：`ul{list-style:none}`；
 
-链接取消下划线：`a{text-decoration:none}`；
+功能型样式：
 
-列表取消列表项标志：ul{list-style:none}；
+- 外边距实现盒子水平居中：`margin:0 auto`；
+- 垂直居中：`line-height:盒高`；
+- 清除浮动：`<div style="clear:both;"></div> `；
 
 
 
@@ -458,3 +469,7 @@ z-index：z轴坐标，无单位
 | rgb(0~255,0~255,0~255) | RGB值（如rgb(0,0,0)）            |
 | rgb(x%,x%,x%)          | RGB百分比值（如rgb(100%,0%,0%)） |
 | \#rrggbb               | 十六进制数（如#c3c3c3）          |
+
+
+
+> 参考资料W3school：http://www.w3school.com.cn/css/index.asp
