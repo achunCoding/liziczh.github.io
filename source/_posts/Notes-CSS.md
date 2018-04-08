@@ -424,18 +424,18 @@ border/padding/margin综合设置提示：
 
 
 
-## 日常开发技巧
+## 页面日常开发习惯
+
+页面布局：div+CSS；
 
 使用外部样式表，引入外部.css文件；
 
 例行设置：
-
 1. 清除盒子内外边距：`*{padding:0;margin:0;}`；
 2. 链接取消下划线：`a{text-decoration:none}`；
 3. 列表取消列表项标志：`ul{list-style:none}`；
 
 功能型样式：
-
 - 外边距实现盒子水平居中：`margin:0 auto`；
 - 垂直居中：`line-height:盒高`；
 - 清除浮动：`<div style="clear:both;"></div> `；

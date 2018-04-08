@@ -70,9 +70,8 @@ HTML注释：`<!-- HTML注释格式 -->`
 
 ### link标签-链接外部资源
 
-- `<link rel="stylesheet" type="text/css" href="文件url" />`
-
-  多用于链接外部css文件。
+- 链接外部css文件：`<link rel="stylesheet" type="text/css" href="文件url" />`
+- 链接icon文件：`<link rel="icon" href="favicon.ico" />`
 
 ### base标签-基准链接
 
