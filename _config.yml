@@ -17,6 +17,10 @@ url: https://liziczh.github.io
 root: /
 permalink: :year/:month/:day/:title.html
 permalink_defaults:
+# permalink: post/:abbrlink.html
+# abbrlink:
+#   alg: crc32  # 算法：crc16(default) and crc32
+#   rep: hex    # 进制：dec(default) and hex
 
 # Directory
 source_dir: source
@@ -57,10 +61,13 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
-	生活: life
+	杂谈: talks
+  旧事: life
 	其他: other
 tag_map:
-  生活: life
+  学习笔记: notes
+  杂谈: talks
+  旧事: stories
 	其他: other
 
 # Date / Time format

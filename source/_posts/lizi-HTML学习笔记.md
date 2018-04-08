@@ -1,11 +1,12 @@
 ---
 title: lizi-HTML学习笔记
-date: 2018-04-03 22:36:54
 tags:
-- html
-- 学习笔记
+  - html
+  - 学习笔记
 categories: Web
 comments: true
+abbrlink: 1b9dba06
+date: 2018-04-03 22:36:54
 ---
 
 # HTML

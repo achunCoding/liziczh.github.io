@@ -1,11 +1,12 @@
 ---
 title: lizi-CSS学习笔记
-date: 2018-04-05 17:21:22
 tags:
-- css
-- 学习笔记
+  - css
+  - 学习笔记
 categories: Web
 comments: true
+abbrlink: 53184
+date: 2018-04-05 17:21:22
 ---
 
 # CSS
@@ -311,7 +312,7 @@ CSS注释：`/* CSS注释内容 */`
 
 ## CSS框模型（Box Model）★
 
-![boxmodel](lizi-CSS-boxmodel.gif)
+![boxmodel](http://p6uturdzt.bkt.clouddn.com/lizi-CSS-boxmodel.gif)
 
 ### 边框-border
 1. 边框宽度：`border-width:px`；
