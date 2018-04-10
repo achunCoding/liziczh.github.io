@@ -11,7 +11,9 @@ date: 2018-04-05 17:21:22
 
 # CSS
 
-CSS：层叠样式表（Cascading Style Sheets）
+CSS 层叠样式表（Cascading Style Sheets）
+
+CSS主要通过为HTML元素增添样式以修饰静态页面，实现了内容与变现分离。
 
 网页布局：div+CSS；
 
@@ -411,6 +413,8 @@ border/padding/margin综合设置提示：
 - `position:relative`；
 1. 相对于在文档流中的原位置进行边偏移；
 2. 仍占据文档流中的原位置；
+
+![relative](http://p6uturdzt.bkt.clouddn.com/lizi-css-relative.gif)
 
 ### 绝对定位★
 - `position:absolute`；
