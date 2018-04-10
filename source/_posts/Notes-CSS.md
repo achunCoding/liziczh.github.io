@@ -1,5 +1,5 @@
 ---
-title: Notes-CSS
+title: Notes | CSS
 tags:
   - css
   - 学习笔记

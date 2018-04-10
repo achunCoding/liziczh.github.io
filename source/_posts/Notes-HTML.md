@@ -1,5 +1,5 @@
 ---
-title: Notes-HTML
+title: Notes | HTML
 tags:
   - html
   - 学习笔记
