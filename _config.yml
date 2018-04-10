@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://liziczh.github.io
+url: https://liziczh.com
 root: /
 permalink: :year/:month/:day/:title.html
 permalink_defaults:
@@ -104,8 +104,8 @@ feed:
 deploy:
   type: git
   repo: 
-    github: git@github.com:liziczh/liziczh.github.io.git,master
-    coding: git@git.coding.net:shomyliu/shomyliu.git,master
+    github: git@github.com:liziczh/liziczh.github.io.git
+    coding: git@git.coding.net:liziczh/liziczh.coding.me.git
   branch: master
 
 search:
