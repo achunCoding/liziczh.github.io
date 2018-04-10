@@ -15,14 +15,16 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://liziczh.com
 root: /
-permalink: :year/:month/:day/:title.html
+# permalink: :year/:month/:day/:title.html  #太长，多/不利于网络爬虫抓取
+# permalink: :title.html #title存在汉字，导致url存在汉字。
+# 永久链接字符化
+permalink: :abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 permalink_defaults:
 
-# 永久链接字符化
-# permalink: post/:abbrlink.html
-# abbrlink:
-#   alg: crc32  # 算法：crc16(default) and crc32
-#   rep: hex    # 进制：dec(default) and hex
+
 
 # Directory
 source_dir: source
