@@ -1,0 +1,205 @@
+---
+title: Hexo个人博客搭建
+comments: true
+tags:
+  - hexo
+categories: Hexo
+abbrlink: be06e9d8
+date: 2018-04-11 19:57:46
+---
+
+# Hexo个人博客搭建
+
+清明四月飞雪，深居简出，闲来无聊，学以致用，搭建一个属于自己的博客站点。
+
+本篇主要记录使用hexo+pages搭建个人博客的流程。
+
+其中[Hexo](https://hexo.io/zh-cn/) 是一个博客框架，可解析markdown文章，生成静态页面。在代码托管平台[github](https://github.com)（国外）、[coding](https://coding.net)（国内）上都有pages服务，提供免费的静态网页托管和演示服务。
+
+<!-- more -->
+
+搭建步骤：
+1. 安装git，nodejs
+2. 安装hexo
+3. 本地搭建站点（线下访问）
+4. 部署到github/coding（线上访问）
+5. 站点信息配置
+
+## 安装hexo
+
+1.安装Git 。安装完毕后，在任意文件夹下**鼠标右击**即可打开 Git Bash，输入命令，进行Git操作。
+&nbsp;&nbsp;&nbsp;查看Git版本：`git version`，验证是否安装成功。
+
+2.安装Node.js。Hexo是基于nodejs的博客框架，而且nodejs还集成了npm包管理工具。
+&nbsp;&nbsp;&nbsp;查看nodejs版本：`node -v`，验证是否安装成功。
+
+3.使用npm安装hexo：`npm install hexo-cli -g`
+&nbsp;&nbsp;&nbsp;如需卸载hexo：`npm uninstall hexo -g`
+&nbsp;&nbsp;&nbsp;查看hexo版本：`hexo -v`，验证是否安装成功。
+
+## hexo建站
+1.新建一个blog文件夹，`cd`到blog文件夹下，打开Git Bash。
+2.hexo初始化：`hexo init`
+3.安装依赖包：`npm install`
+4.初始化完成，在blog下就会生成以下文件目录：
+```
+.
+├── node_modules # 依赖模块
+├── scaffolds    # 文章模板
+├── source       # 用户源文件：页面，文章markdown文件
+|   └── _posts   # 创建的文章
+└── themes       # 主题
+├── .gitignore   # git忽略文件信息
+├── _config.yml  # 站点配置文件
+├── package.json # 应用程序的信息
+```
+
+5.hexo本地生成静态页面
+```yaml
+hexo clean     # 清理本地静态文件；
+hexo generate  # 生成静态页面，即public文件夹；
+hexo server    # 启用hexo本地服务器；
+```
+这时，打开浏览器在地址栏输入[http://localhost:4000](http://localhost:4000)即可本地访问静态博客页面。
+
+## 配置github/coding pages
+
+github和coding可以双线配置，也可以选择其中一个配置。推荐双线配置，coding用于国内访问速度较快，github用于境外访问。
+
+1.登录github，新建一个仓库[repo]：`yourname.github.io`。
+&nbsp;&nbsp;&nbsp;其中`yourname`是你的github用户名，github强制后缀为`github.io`才能启用github pages服务。
+
+2.登录coding，新建一个仓库[repo]：`yourname.coding.me`。打开静态pages服务。
+&nbsp;&nbsp;&nbsp;其中`yourname`是你的coding用户名，coding不强制后缀为`coding.me`。
+
+3.Git Bash配置github账户信息：
+```
+git config --global user.name "YourName"
+git config --global user.email "YourEmail"
+```
+
+4.配置SSH协议
+①生成rsa秘钥：`ssh-keygen -t rsa -C "youremail@example.com`
+②打印公钥：`cd ~/.ssh`，`cat id_rsa.pub`
+③复制秘钥至github/coding->用户setting->SSH keys，New SSH Key；
+④验证是否添加成功：`ssh -T git@github.com`
+
+## 部署到github/coding
+
+1.修改**站点配置文件**`_config.yml`：
+```yaml
+    deploy:
+      type: git
+      repo: 
+      	github: git@github.com:yourname/yourname.github.io.git 
+      	coding: git@git.coding.net:yourname/yourname.coding.me.git 
+      branch: master
+```
+
+2.安装Git部署插件：`npm install hexo-deployer-git --save`
+
+3.部署：
+```yaml
+hexo clean     # 清理本地静态文件；
+hexo generate  # 生成静态页面，即public文件夹；
+hexo deploy    # 部署到github/coding；
+```
+站点搭建完毕，打开浏览器在地址栏输入以下链接可随时访问自己的博客了。
+- github pages：[http://yourname.github.io](http://yourname.github.io)
+- coding pages：[http://yourname.coding.me](http://yourname.coding.me)
+
+4.站点搭建完毕，blog下的文件目录如下：
+```yaml
+.
+├── .deploy_git  # （新增）hexo deploy 生成的git部署文件
+├── public       # （新增）hexo generate 生成的静态文件
+├── db.json      # （新增）hexo generate 生成的数据
+├── node_modules # 依赖模块，插件模块
+├── scaffolds    # 文章模板
+├── source       # 用户源文件：页面，文章markdown文件
+|   └── _posts   # 文章
+└── themes       # 主题
+├── .gitignore   # git时需忽略文件
+├── _config.yml  # 站点配置文件
+├── package.json # 应用程序的信息
+```
+## 更换自己喜欢的主题
+
+1.hexo的默认主题为landscape，可以到[Themes|Hexo](https://hexo.io/themes/)选择自己喜欢的主题，复制主题在github的url。
+   ![clone theme](http://p6uturdzt.bkt.clouddn.com/clone%20theme.PNG)
+2.在themes文件夹下，打开GitBash，克隆主题至themes文件夹中。
+```
+git clone https://github.com/theme-next/hexo-theme-next.git
+```
+3.更改**站点配置文件**`_config.yml`：
+```
+theme: 主题文件名
+```
+
+## 站点基本配置
+
+打开**站点配置文件**`_config.yml`，自行发挥。
+
+```yaml
+# 注意：yaml语言使用缩进表示层级关系。
+# 注意：键值对中的冒号（:）后面有一个半角空格。
+
+# 网站
+title: #网站标题
+subtitle: #网站副标题
+description: #网站描述
+keywords: #关键字
+author: #你的名字,文档作者
+language: #网站的语言
+timezone: #时区，中国：Asia/Shanghai
+# 网址
+url: https://yoursite.com  #你的网址url
+root: /
+permalink: :year/:month/:day/:title.html #文章永久链接
+permalink_defaults:
+# 主题
+theme: landscape  # 主题文件的名称
+# 部署
+deploy:
+  type: git
+  repo: 
+    github: git@github.com:yourname/yourname.github.io.git  
+    coding: git@git.coding.net:yourname/yourname.coding.me.git 
+  branch: master
+```
+
+> 详细配置请参考[hexo配置](https://hexo.io/zh-cn/docs/configuration.html)，此处不再赘述。
+
+## 写文章
+
+1.在blog文件夹下，打开Git Bash，`hexo new "文章名"`；
+2.在`source/_post`下可以找到你创建的`文章名.md`，打开编辑即可。
+3.编辑结束，部署：
+```yaml
+hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
+hexo g -d   # 生成静态页面后直接部署；
+```
+部署完毕之后，进入以下链接刷新就可以看到你的文章了。
+- github pages：[http://yourname.github.io](http://yourname.github.io)
+- coding pages：[http://yourname.coding.me](http://yourname.coding.me)
+
+## 附：hexo常用命令
+
+| 命令                        | 描述                                                       |
+| --------------------------- | ---------------------------------------------------------- |
+| `hexo version`              | 显示 Hexo 版本                                             |
+| `hexo init [folder]`        | 新建一个网站<br>若未设置folder，默认为当前文件夹；         |
+| `hexo new "title"`          | 新建一篇文章.md                                            |
+| `hexo new page "title"`     | 新建一个页面.md，如tags，categories；                      |
+| `hexo clean`                | 清理缓存文件                                               |
+| `hexo generate`<br>`hexo g` | 生成静态页面                                               |
+| `hexo server`<br>`hexo s`   | 启用服务器，[http://localhost:4000](http://localhost:4000) |
+| `hexo deploy`<br>`hexo d`   | 部署文件                                                   |
+| `hexo g -d`<br>`hexo d -g`  | 生成静态文件后直接部署<br>部署之前先生成静态文件           |
+
+> 若想了解更多关于hexo命令的介绍，请参考[指令 | hexo](https://hexo.io/zh-cn/docs/commands.html)
+
+## 小结
+- 此次搭建博客站点牵涉到很多以前不了解的内容：git使用，nodejs，hexo，github，ssh与http；努力学习，下次再详细介绍一下这些内容。
+- 兴趣是学习的源动力。
+- 本文若有地方表述错误，还望大佬指正，不胜感激。
