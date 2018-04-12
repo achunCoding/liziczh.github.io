@@ -101,7 +101,7 @@ seo: false
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 
 # ---------------------------------------------------------------
@@ -187,6 +187,7 @@ links_layout: inline
 links:
   博客园: https://www.cnblogs.com
   知乎: https://www.zhihu.com
+  掘金: https://juejin.im
   segmentfault: https://segmentfault.com
   V2EX: https://www.v2ex.com
   Linkedin: https://www.linkedin.com

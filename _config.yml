@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Lizi's Blogs
+title: 物联一班陈同学
 subtitle:
 description: 记录 | 旧事 | 杂谈
 keywords:
@@ -59,7 +59,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 5
+  per_page: 10
   order_by: -date
   
 # Category & Tag

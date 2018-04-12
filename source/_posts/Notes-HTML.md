@@ -2,7 +2,7 @@
 title: Notes | HTML
 tags:
   - html
-  - 学习笔记
+  - Notes
 categories: Web
 comments: true
 abbrlink: 1b9dba06

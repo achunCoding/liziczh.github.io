@@ -5,7 +5,7 @@ tags:
   - hexo
 categories: Hexo
 abbrlink: be06e9d8
-date: 2018-04-11 19:57:46
+date: 2018-04-11 10:57:46
 ---
 
 # Hexo个人博客搭建
@@ -59,6 +59,8 @@ date: 2018-04-11 19:57:46
 hexo clean     # 清理本地静态文件；
 hexo generate  # 生成静态页面，即public文件夹；
 hexo server    # 启用hexo本地服务器；
+# 注：Hexo 3.0 把服务器独立成了个别模块，您必须先安装 hexo-server 才能使用。
+# hexo-server安装命令：npm install hexo-server --save
 ```
 这时，打开浏览器在地址栏输入[http://localhost:4000](http://localhost:4000)即可本地访问静态博客页面。
 
@@ -170,9 +172,11 @@ deploy:
 
 > 详细配置请参考[hexo配置](https://hexo.io/zh-cn/docs/configuration.html)，此处不再赘述。
 
-## 写文章
 
-1.在blog文件夹下，打开Git Bash，`hexo new "文章名"`；
+
+## 写博客
+
+1.在blog文件夹下，打开Git Bash，`hexo new post "文章名"`；
 2.在`source/_post`下可以找到你创建的`文章名.md`，打开编辑即可。
 3.编辑结束，部署：
 ```yaml
@@ -189,7 +193,7 @@ hexo g -d   # 生成静态页面后直接部署；
 | --------------------------- | ---------------------------------------------------------- |
 | `hexo version`              | 显示 Hexo 版本                                             |
 | `hexo init [folder]`        | 新建一个网站<br>若未设置folder，默认为当前文件夹；         |
-| `hexo new "title"`          | 新建一篇文章.md                                            |
+| `hexo new post "title"`     | 新建一篇文章.md                                            |
 | `hexo new page "title"`     | 新建一个页面.md，如tags，categories；                      |
 | `hexo clean`                | 清理缓存文件                                               |
 | `hexo generate`<br>`hexo g` | 生成静态页面                                               |
