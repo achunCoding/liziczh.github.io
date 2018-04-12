@@ -3,8 +3,8 @@ title: Notes | CSS
 comments: true
 date: 2018-04-05 17:21:22
 tags:
-  - css
-  - Notes
+- css
+- Notes
 categories: Web
 abbrlink: 53184
 ---
@@ -57,7 +57,7 @@ CSS注释：`/* CSS注释内容 */`
 ```
 3.外部样式表（外联表）：外部**.css**文件
 
-4.引入外部样式表：`<link rel="stylesheet" type="text/css" href="url" />`；
+4.引入外部样式表：`<link rel="stylesheet" type="text/css" href="url" />`
 
 5.三种样式表总结
 
@@ -73,18 +73,46 @@ CSS注释：`/* CSS注释内容 */`
 
 ### CSS字体-font★
 
-1. 字体系列：`font-family:"宋体","黑体"`；
-   font-family是一个字体族的优先表，如果浏览器不支持第一个字体，则会尝试下一个。
-2. 字体风格：`font-style:normal/italic/oblique`；
-  - `normal`标准；
-  - `italic`斜体；
-  - `oblique`倾斜；
-3. 字体粗细：`font-weight:400`；
-  - 加粗度：`100`，`200`，`300`...`900`；
-  - `normal`=`400 `；`blod`=`700`；
-  - `bolder`更粗，`lighter`更细；
-4. 字体大小：`font-size:px/em/%`；
-5. font综合设置：` font : font-style font-weight font-size/line-height font-family`；
+1.字体系列：
+
+```css
+font-family : "宋体","微软雅黑";
+```
+
+font-family是一个字体族的优先表，如果浏览器不支持第一个字体，则会尝试下一个。
+
+2.字体风格：
+
+```css
+font-style : normal/italic/oblique;
+/*
+- normal：标准
+- italic：斜体
+- oblique：倾斜
+*/
+```
+
+3.字体粗细：
+
+```css
+font-weight : 400;
+/* 加粗度：100,200,300,400,500,600,700,800,900 */
+/* normal=400 | blod=700 */
+/* bolder：更粗 | lighter：更细*/
+```
+
+4.字体大小：
+
+```css
+font-size : px/em/%
+```
+
+5.font综合设置：
+
+```css
+font : font-style font-weight font-size/line-height font-family
+```
+
 ```css
 注意：
 - ！英文字体名一般不需要加引号，设置英文字体名必须位于中文字体名之前；
@@ -93,76 +121,249 @@ CSS注释：`/* CSS注释内容 */`
 ```
 
 ### CSS文本-text★
-1. 文本缩进：`text-indent:em/px/%`；
-2. 水平对齐：`text-align:left/center/right`；
-3. 单词间隔：`word-spacing:em/px`；只适用于英文；
-4. 字符间隔：`letter-spacin:em/px`；
-5. 文本装饰：`text-decoration:none`；
-  - `none`：标准文本
-  - `underline`：文本下一条线
-  - `overline`：文本上一条线
-  - `line-through`：穿过文本下的一条线
-  - `blink`：闪烁文本
-6. 行高：`line-height:px`； 一般文本行高比字号大7-8像素即可。
-7. 文本阴影：`text-shadow: 水平位置 垂直位置 模糊偏移 阴影颜色`；
-8. 【CSS3】**颜色透明度**：`rgba(0~255, 0~255, 0~255, 0~1)`；
+1.文本缩进：
+
+```css
+text-indent : em/px/%;
+```
+
+2.水平对齐：
+
+```css
+text-align : left/center/right;
+```
+
+3.单词间隔（只适用于英文）:
+
+```css
+word-spacing : em/px;
+```
+
+4.字符间隔：
+
+```css
+letter-spacin : em/px;
+```
+
+5.文本装饰：
+
+```css
+text-decoration : none/underline/overline/line-through/blink;
+/* 
+- none：无
+- underline：下划线
+- overline：上划线
+- line-through：穿过一条线
+- blink：闪
+*/
+```
+
+6.行高：
+
+```css
+line-height : px/em/%;  
+/* 一般文本行高比字号大7-8像素即可 */
+```
+
+7.文本阴影：
+
+```css
+text-shadow : 水平位置 垂直位置 模糊偏移 阴影颜色;
+```
+
+8.【CSS3】**颜色透明度**：
+
+```css
+rgba(0~255, 0~255, 0~255, 0~1);
+/* 模糊度：0~1 */
+```
 
 ### CSS背景-background★
-1. 背景色：`background-color：rgb()`；
-2. 背景图：`background-image:url()`；
-3. 背景平铺：`background-repeat:repeat/no-repeat`；
-  - `repeat`：平铺
-  - `no-repeat`：不平铺
-  - `repeat-x`：横向平铺
-  - `repeat-y`：纵向平铺
-4. 背景定位：`background-position:Xpx Ypx`；
-  - `Xpx Ypx`|`X% Y%`：位置信息
-  - `top`，`bottom`，`center`，`left`，`right`；
-  ！若只设了一个值，那么第二个值将是`center`；
-5. 背景关联：`backgrount-attchment:fixed/scroll`；
-  - `scroll`：默认值。背景图像会随着页面其余部分的滚动而移动；
-  - `fixed`：图像固定；当页面的其余部分滚动时，背景图像不会移动；
-6. 背景综合设置：`background: bg-color bg-image bg-repeat bg-attchment bg-position(x,y) `；
-7. 【CSS3】背景尺寸：`background-size:contain/cover`；
-  - `contain`：保证背景图片完整性；
-  - `cover`：保证背景图片完全覆盖整个区域；
-  - `width&height`：设置背景的宽&高；（一般设置1个参数，设置2个参数会导致图片变形）
+1.背景色：
+
+```css
+background-color：rgb();
+```
+
+2.背景图：
+
+```css
+background-image : url();
+```
+
+3.背景平铺：
+
+```css
+background-repeat : repeat/no-repeat;
+/*
+- repeat：平铺
+- no-repeat：不平铺
+- repeat-x：横向平铺
+- repeat-y：纵向平铺
+*/
+```
+
+3.背景定位：
+
+```css
+background-position : X坐标/位置 Y坐标/位置;
+/* 坐标：px/em/% */
+/* 位置：top，bottom，center，left，right； 
+   若只设了一个值，那么第二个值将是center； */
+```
+
+4.背景关联：
+
+```css
+backgrount-attchment : fixed/scroll;
+/*
+- scroll：默认值。背景图像会随着页面其余部分的滚动而移动；
+- fixed：图像固定；当页面的其余部分滚动时，背景图像不会移动；
+*/
+```
+
+5.背景综合设置：
+
+```css
+background: bg-color bg-image bg-repeat bg-attchment bg-position(x,y);
+```
+
+
+
+6.【CSS3】背景尺寸：
+
+```css
+background-size : contain/cover;
+/*
+- contain：保证背景图片完整性；
+- cover：保证背景图片完全覆盖整个区域；
+- width&height：设置背景的宽&高；（一般设置1个参数，设置2个参数会导致图片变形）
+*/
+```
 
 ### *CSS列表-list-style
 
-1. 列表项标志：`list-style-type:none/disc/circle/square/decimal...`；
-2. 列表项图像：`list-style-image:url()`；
-3. 列表标志位置：`list-style-position:inside/outside`；
-4. 列表综合设置：`list-style:image type position `；
+1.列表项标志：
+
+```css
+list-style-type : none/disc/circle/square/decimal...;
+/* 
+none：无
+disc：实心圆
+circle：空心圆
+square：实心方块
+decimal：数字
+*/
+```
+
+2.列表项图像：
+
+```css
+list-style-image : url();
+```
+
+3.列表标志位置：
+
+```css
+list-style-position : inside/outside;
+/*
+outside：默认值。保持标记位于文本的左侧。列表项目标记放置在文本以外，且环绕文本不根据标记对齐。
+inside：列表项目标记放置在文本以内，且环绕文本根据标记对齐。
+*/
+```
+
+4.列表综合设置：
+
+```css
+list-style : image type position;
+```
 
 ### *CSS表格
-1. 折叠边框：`border-collapse:collapse`；
-2. 水平对齐：`text-align:left/center/right`；
-3. 垂直对齐：`vertical-align:top/center/bottom`；
-4. 空单元格显示/隐藏：`empty-cells:show/hide`；
-5. 表格标题在上/在下：`caption-side:top/bottom`；
+
+1.折叠边框
+
+```css
+border-collapse : collapse;
+```
+
+2.水平对齐
+
+```css
+text-align : left/center/right;
+```
+
+3.垂直对齐
+
+```css
+vertical-align : top/center/bottom;
+```
+
+4.空单元格显示/隐藏
+
+```css
+empty-cells : show/hide;
+```
+
+5.表格标题在上/在下
+
+```css
+caption-side : top/bottom;
+```
 
 ### *CSS轮廓-outline
-1. 轮廓颜色：`outline-color:rgb()`；
-2. 轮廓样式：`outline-style:solid/dotted/dashed/double`；详见[框模型-border]；
-3. 轮廓宽度：`outline-width:thick/medium/thin/px`；
-  - 粗`thick`；中`medium`；细`thin`；
-4. 轮廓综合设置：`outline:color style width`；
 
+1.轮廓颜色：
+
+```css
+outline-color : rgb()
+```
+
+2.轮廓样式：
+
+```css
+outline-style : solid/dotted/dashed/double...;
+/*
+- soild：实线
+- dotted：点线
+- dashed：虚线
+- double：双实线
+*/
+```
+
+3.轮廓宽度：
+
+```css
+outline-width : thick/medium/thin/px;
+/*
+- thick：粗
+- medium：中
+- thin：细
+*/
+```
+
+4.轮廓综合设置：
+
+```css
+outline : color style width;
+```
 
 ### 标签显示模式★
 
-- `display:none`：不显示；
-- `display:block` ：块级元素；
-- `display:inline` ：行内元素；
-- `display:inline-block`： 行内块元素；
+| display        | 描述       |
+| -------------- | ---------- |
+| `none`         | 不显示     |
+| `block`        | 块级元素   |
+| `inline`       | 行内元素   |
+| `inline-block` | 行内块元素 |
 
 ### 内容溢出盒子★
 
-- `overflow:visible`：默认值。内容溢出部分显示在盒子外；
-- `overflow:hidden`：隐藏内容溢出部分；
-- `overflow:scroll`：内容溢出会被修剪，则浏览器会显示滚动条以便查看其余的内容；
-- `overflow:auto`：如果内容溢出被修剪，则浏览器会显示滚动条以便查看其余的内容；
+| overflow  | 描述                                                         |
+| --------- | ------------------------------------------------------------ |
+| `visible` | 默认值。内容溢出部分显示在盒子外；                           |
+| `hidden`  | 隐藏内容溢出部分                                             |
+| `scroll`  | 如果内容溢出会被修剪，则浏览器会显示滚动条以便查看其余的内容； |
+| `auto`    | 如果内容溢出被修剪，则浏览器会显示滚动条以便查看其余的内容； |
 
 
 
@@ -276,6 +477,7 @@ CSS注释：`/* CSS注释内容 */`
 - `nth-child(n)`：第n个元素（n=1,2,3...）；
 - `nth-last-child(n)`：倒数第n个元素（n=1,2,3...）;
   [n=`odd`：奇数 | n=`even`：偶数]
+
 ```css
 注意：
 - ！不是第一个HTML标签，而是第一个HTML元素
@@ -300,19 +502,25 @@ CSS注释：`/* CSS注释内容 */`
 **伪元素：**
 
 - `first-line`：第一行；
+
 - `first-letter`：第一个字符；
+
 - `before`：在标签之前添加`content:新内容`；
-  ```
-  标签::before{
-    content:新内容;
-  }
-  ```
+
+```
+标签::before{
+	content:新内容;
+}
+```
+
 - `after`：在标签之后添加`content:新内容`；
-  ```
-  标签::after{
-    content:新内容;
-  }
-  ```
+
+```
+标签::after{
+	content:新内容;
+}
+```
+
 - `selection`：选中区域；
 
 
@@ -320,25 +528,80 @@ CSS注释：`/* CSS注释内容 */`
 
 ## CSS框模型（Box Model）★
 
-![BoxModel](http://p6uturdzt.bkt.clouddn.com/lizi-CSS-boxmodel.gif)
+![BoxModel](http://p6uturdzt.bkt.clouddn.com/lizi-css-boxmodel.gif)
 
 ### 边框-border
-1. 边框宽度：`border-width:px`；
-2. 边框样式：`border-style:solid/dashed/dotteddouble`；
-  - `soild` 实线，`dashed` 虚线；
-  - `dotted`点线，`double`双实线；
-3. 边框颜色：`border-color:rgb()`；
-4. 边框综合设置：`border:width style color`；
-5. 单边边框：`border-top/right/bottom/left-属性:值`；
-6. 圆角边框：`border-radius:半径px`；
+
+1.边框宽度：
+
+```css
+border-width : px;
+```
+
+2.边框样式：
+
+```css
+border-style : solid/dashed/dotted/double;
+/*
+- solid：实线
+- dashed：虚线
+- dotted：点线
+- double：双实线
+*/
+```
+
+3.边框颜色：
+
+```css
+border-color : rgb();
+```
+
+4.边框综合设置：
+
+```css
+border : width style color;
+```
+
+5.单边边框：
+
+```css
+border-top/right/bottom/left-属性:值;
+/* 单独设置某一边，设置方式与border同理 */
+```
+
+6.圆角边框：
+
+```css
+border-radius : 左上角半径px 右上角半径px 右下角半径px 左下角半径px;
+```
 
 ### 内边距-padding
-1. 内边距：`padding:top-px right-px bottom-px left-px `；
-2. 单边内边距：`padding-top/right/bottom/left:值`；
+
+1.内边距：
+
+```css
+padding : top-px right-px bottom-px left-px
+```
+
+2.单边内边距：
+
+```css
+padding-top/right/bottom/left : px
+```
 
 ### 外边距-margin
-1. 外边距：`margin:top-px right-px bottom-px left-px`；
-2. 单边外边距：`margin-top/right/bottom/left:值`；
+
+1.外边距：
+
+```css
+margin:top-px right-px bottom-px left-px;
+```
+
+2.单边外边距：
+
+```css
+margin-top/right/bottom/left : px;
+```
 
 ```css
 border/padding/margin综合设置提示：
@@ -351,47 +614,54 @@ border/padding/margin综合设置提示：
 
 
 ### 垂直外边距合并现象★
-1. **相邻盒子**垂直外边距合并，margin合并取最大值；
-解决方案：只设置一个margin；
-2. **嵌套盒子**垂直外边距合并。
-解决方案：`border`，`padding`，**`overflow:hidden`**；
+1.**相邻盒子**垂直外边距合并，margin合并取最大值；
+&nbsp;&nbsp;&nbsp;解决方案：只设置一个margin；
+
+2.**嵌套盒子**垂直外边距合并。
+&nbsp;&nbsp;&nbsp;解决方案①：**`overflow:hidden`**；
+&nbsp;&nbsp;&nbsp;解决方案②：`border`，`padding`；
 
 ### CSS3盒子&IE6盒子
 - IE6框模型：`box-sizing:content-box`；
-    ```css
-    IE6框的大小：【width+左右padding+左右border+左右margin】
-                ×【height+上下padding+上下border+上下margin】
-    ```
+
+```css
+IE6框的大小：【width+左右padding+左右border+左右margin】
+		×【height+上下padding+上下border+上下margin】
+```
 
 - CSS3框模型：`box-sizing:border-box`；
-    ```css
-    CSS3框的大小：【width+左右margin】×【height+上下margin】
-        - CSS3盒的[width&height]包含[padding+border]；
-    ```
+
+```css
+CSS3框的大小：【width+左右margin】×【height+上下margin】
+		- CSS3盒的[width&height]包含[padding+border]
+```
 
 
 
 ## 浮动
 
 ### 浮动-float（难点）
-- **浮动：浮动块不在文档流中，不占文档流位置；但占浮动位置**。
+**浮动：浮动块不在文档流中，不占文档流位置；但占浮动位置**。
 
 - **浮动：`float:left/right`**；
 
-  （未完待详细解释）
+（未完待详细解释）
 
 ### 清除浮动-clear★
-- clear 属性规定元素的哪一侧不允许其他浮动元素。
+clear 属性规定元素的哪一侧不允许其他浮动元素。
+
 - 清除浮动：`clear:left/right/both`；
 
 **清除浮动的方式：**
-1. 【W3C推荐】在盒子末尾再添加一个如下的空盒子：
-  `<div style="clear:both;"></div> `；
-2. 在盒子样式中添加溢出隐藏样式：
-  `overflow:hidden`；
-3. 为盒子添加如下样式，在每次结束后都清除浮动：
-  `.clearfix:after{clear:both}`只适用于IE6、IE7。
 
+1.【W3C推荐】在盒子末尾再添加一个如下的空盒子：
+&nbsp;&nbsp;&nbsp;`<div style="clear:both;"></div> `；
+
+2.在盒子样式中添加溢出隐藏样式：
+&nbsp;&nbsp;&nbsp;`overflow:hidden`；
+
+3.为盒子添加如下样式，在每次结束后都清除浮动：
+&nbsp;&nbsp;&nbsp;`.clearfix:after{clear:both}`只适用于IE6、IE7。
 
 
 ## 定位
@@ -411,21 +681,21 @@ border/padding/margin综合设置提示：
 
 ### 相对定位★
 - `position:relative`；
-1. 相对于在文档流中的原位置进行边偏移；
-2. 仍占据文档流中的原位置；
+
+1.相对于在文档流中的原位置进行边偏移；
+2.仍占据文档流中的原位置；
 
 ![relative](http://p6uturdzt.bkt.clouddn.com/lizi-css-relative.gif)
 
 ### 绝对定位★
 - `position:absolute`；
-1. 相对于[**其已定位的包含块**]进行边偏移；
-2. 已从**文档流**中**完全删除**，就好像该元素原来不存在一样；
-3. 元素定位后生成一个**块级框**，而不论原来它在正常流中生成何种类型的框；
-4. 绝对定位与文档流无关，所以可以覆盖在页面其他元素上；
-5. 可通过`z-index`控制堆叠次序；`z-index` 仅能在定位元素上奏效；
-6. 一般采取[子绝父相]策略；
 
-
+1.相对于[**其已定位的包含块**]进行边偏移；
+2.已从**文档流**中**完全删除**，就好像该元素原来不存在一样；
+3.元素定位后生成一个**块级框**，而不论原来它在正常流中生成何种类型的框；
+4.绝对定位与文档流无关，所以可以覆盖在页面其他元素上；
+5.可通过`z-index`控制堆叠次序；`z-index` 仅能在定位元素上奏效；
+6.一般采取[子绝父相]策略；
 
 
 ## 页面日常开发习惯
@@ -435,15 +705,20 @@ border/padding/margin综合设置提示：
 使用外部样式表，引入外部.css文件；
 
 例行设置：
-1. 清除盒子内外边距：`*{padding:0;margin:0;}`；
-2. 链接取消下划线：`a{text-decoration:none}`；
-3. 列表取消列表项标志：`ul{list-style:none}`；
+
+```
+1.清除盒子内外边距：*{padding:0;margin:0;}；
+2.链接取消下划线：a{text-decoration:none}；
+3.列表取消列表项标志：ul{list-style:none}；
+```
 
 功能型样式：
-- 外边距实现盒子水平居中：`margin:0 auto`；
-- 垂直居中：`line-height:盒高`；
-- 清除浮动：`<div style="clear:both;"></div> `；
 
+```
+-外边距实现盒子水平居中：margin:0 auto；
+-垂直居中：line-height:盒高；
+-清除浮动：<div style="clear:both;"></div>；
+```
 
 
 

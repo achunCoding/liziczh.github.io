@@ -23,7 +23,7 @@ date: 2018-04-11 10:57:46
 2. 安装hexo
 3. 本地搭建站点（线下访问）
 4. 部署到github/coding（线上访问）
-5. 站点信息配置
+5. 站点配置
 
 ## 安装hexo
 
@@ -68,10 +68,10 @@ hexo server    # 启用hexo本地服务器；
 
 github和coding可以双线配置，也可以选择其中一个配置。推荐双线配置，coding用于国内访问速度较快，github用于境外访问。
 
-1.登录github，新建一个仓库[repo]：`yourname.github.io`。
+1.登录github，New repository：`yourname.github.io`。
 &nbsp;&nbsp;&nbsp;其中`yourname`是你的github用户名，github强制后缀为`github.io`才能启用github pages服务。
 
-2.登录coding，新建一个仓库[repo]：`yourname.coding.me`。打开静态pages服务。
+2.登录coding，新建一个仓库：`yourname.coding.me`。打开静态pages服务。
 &nbsp;&nbsp;&nbsp;其中`yourname`是你的coding用户名，coding不强制后缀为`coding.me`。
 
 3.Git Bash配置github账户信息：
@@ -90,12 +90,12 @@ git config --global user.email "YourEmail"
 
 1.修改**站点配置文件**`_config.yml`：
 ```yaml
-    deploy:
-      type: git
-      repo: 
-      	github: git@github.com:yourname/yourname.github.io.git 
-      	coding: git@git.coding.net:yourname/yourname.coding.me.git 
-      branch: master
+deploy:
+	type: git
+	repo: 
+		github: git@github.com:yourname/yourname.github.io.git 
+		coding: git@git.coding.net:yourname/yourname.coding.me.git 
+	branch: master
 ```
 
 2.安装Git部署插件：`npm install hexo-deployer-git --save`
@@ -106,11 +106,7 @@ hexo clean     # 清理本地静态文件；
 hexo generate  # 生成静态页面，即public文件夹；
 hexo deploy    # 部署到github/coding；
 ```
-站点搭建完毕，打开浏览器在地址栏输入以下链接可随时访问自己的博客了。
-- github pages：[http://yourname.github.io](http://yourname.github.io)
-- coding pages：[http://yourname.coding.me](http://yourname.coding.me)
-
-4.站点搭建完毕，blog下的文件目录如下：
+4.部署完毕，blog下的文件目录如下：
 ```yaml
 .
 ├── .deploy_git  # （新增）hexo deploy 生成的git部署文件
@@ -125,22 +121,22 @@ hexo deploy    # 部署到github/coding；
 ├── _config.yml  # 站点配置文件
 ├── package.json # 应用程序的信息
 ```
-## 更换自己喜欢的主题
 
-1.hexo的默认主题为landscape，可以到[Themes|Hexo](https://hexo.io/themes/)选择自己喜欢的主题，复制主题在github的url。
-   ![clone theme](http://p6uturdzt.bkt.clouddn.com/clone%20theme.PNG)
-2.在themes文件夹下，打开GitBash，克隆主题至themes文件夹中。
-```
-git clone https://github.com/theme-next/hexo-theme-next.git
-```
-3.更改**站点配置文件**`_config.yml`：
-```
-theme: 主题文件名
-```
+站点搭建完毕，打开浏览器在地址栏输入以下链接可随时访问自己的博客了。
 
-## 站点基本配置
+- github pages：[http://yourname.github.io](http://yourname.github.io)
+- coding pages：[http://yourname.coding.me](http://yourname.coding.me)
 
-打开**站点配置文件**`_config.yml`，自行发挥。
+## 站点配置
+
+区分配置文件：
+
+| 配置文件     | 路径                                      |
+| ------------ | ----------------------------------------- |
+| 站点配置文件 | `D://blog//_config.yml`                   |
+| 主题配置文件 | `D://blog//themes//你的主题//_config.yml` |
+
+打开**站点配置文件**`blog//_config.yml`，自行发挥，配置完毕，重新部署 `hexo g -d`；
 
 ```yaml
 # 注意：yaml语言使用缩进表示层级关系。
@@ -172,20 +168,121 @@ deploy:
 
 > 详细配置请参考[hexo配置](https://hexo.io/zh-cn/docs/configuration.html)，此处不再赘述。
 
+## 主题变更
 
+1.hexo默认主题为landscape，可以到[Themes|Hexo](https://hexo.io/themes/)选择自己喜欢的主题，复制主题在github仓库的url。
+   ![clone theme](http://p6uturdzt.bkt.clouddn.com/clone%20theme.PNG)
+2.在themes文件夹下，打开GitBash，克隆主题至themes文件夹中。
+```
+git clone https://github.com/theme-next/hexo-theme-next.git
+```
+3.更改**站点配置文件**`_config.yml`：
+```
+theme: 主题文件名
+```
+4.编辑结束，重新部署：
 
-## 写博客
-
-1.在blog文件夹下，打开Git Bash，`hexo new post "文章名"`；
-2.在`source/_post`下可以找到你创建的`文章名.md`，打开编辑即可。
-3.编辑结束，部署：
 ```yaml
 hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
 hexo g -d   # 生成静态页面后直接部署；
 ```
-部署完毕之后，进入以下链接刷新就可以看到你的文章了。
+部署完毕之后，进入以下链接刷新就可以看到你的新主题了。
+
 - github pages：[http://yourname.github.io](http://yourname.github.io)
 - coding pages：[http://yourname.coding.me](http://yourname.coding.me)
+
+## 写作
+
+1.新建：在blog文件夹下，打开Git Bash，`hexo new post "文章名"`；
+2.编辑：在`source//_post`下可以编辑你创建的`title.md`。
+3.重新部署：
+```yaml
+hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
+hexo g -d   # 生成静态页面后直接部署；
+```
+## 文档的Front-matter
+
+Front-matter 是文档最上方以 `---` 分隔的区域，用于指定文档一些的参数。
+
+```yaml
+---
+title: 文章标题
+date: yyyy-MM-dd hh:mm:ss
+tags: 
+categories: 
+comments: true
+---
+# 注意：键值对中的冒号（:）后面有一个半角空格。
+```
+
+| 参数       | 值                             | 描述                                     |
+| ---------- | ------------------------------ | ---------------------------------------- |
+| layout     | post<br>page<br>draft<br>false | 文章【默认值】<br>页面<br>草稿<br>不处理 |
+| title      | 文本                           | 标题                                     |
+| date       | yyyy-MM-dd hh:mm:ss            | 文件建立日期                             |
+| update     | yyyy-MM-dd hh:mm:ss            | 文件更新日期                             |
+| comments   | true<br>false                  | 开启文章评论功能，默认true               |
+| tags       |                                | 标签（只适用于post）                     |
+| categories |                                | 分类（只适用于post）                     |
+| permalink  | url                            | 永久链接                                 |
+
+> 不要处理我的文章：将文章Front-Matter中的`layout: false`；
+
+## 文章的[标签]与[分类]
+
+只有**文章**（post）支持[标签]和[分类]。
+
+1.添加[tags]页面：`hexo new page "tags"`
+&nbsp;&nbsp;&nbsp;在source中找到并编辑tags.md，在Front-matter部分添加：`layout:"tags"`
+
+2.添加[categoies]页面：`hexo new page "categories"`
+&nbsp;&nbsp;&nbsp;在source中找到并编辑categories.md，在Front-matter部分添加：`layout:"categories"`
+
+3.添加[about]页面：`hexo new page "about"`
+&nbsp;&nbsp;&nbsp;在source中找到并编辑about.md即可；
+
+4.匹配**站点配置文件**`blog//_config.yml`：
+
+```yaml
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+```
+
+5.匹配**主题配置文件**`blog//themes//你的主题//_config.yml`中`menu`：
+
+```yaml
+menu:
+  home: /
+  tags: /tags
+  categories: /categories
+  archives: /archives
+  about: /about
+```
+
+6.Front-matter中的[tags]写法：
+
+```yaml
+tags:
+- tag_1
+- tag_2
+# 标签之间相互独立
+```
+
+7.Front-matter中的[categories]写法：
+
+```yaml
+categories: 
+- 运动
+- [运动, 球类运动]
+- [运动, 球类运动, 网球]
+# 类别存在层级关系
+```
+
+这时，博客就可以实现一般的写作，标签，分类，归档了。
 
 ## 附：hexo常用命令
 
@@ -193,8 +290,7 @@ hexo g -d   # 生成静态页面后直接部署；
 | --------------------------- | ---------------------------------------------------------- |
 | `hexo version`              | 显示 Hexo 版本                                             |
 | `hexo init [folder]`        | 新建一个网站<br>若未设置folder，默认为当前文件夹；         |
-| `hexo new post "title"`     | 新建一篇文章.md                                            |
-| `hexo new page "title"`     | 新建一个页面.md，如tags，categories；                      |
+| `hexo new [layout] "title"` | 新建一篇文档，文档布局由layout决定                         |
 | `hexo clean`                | 清理缓存文件                                               |
 | `hexo generate`<br>`hexo g` | 生成静态页面                                               |
 | `hexo server`<br>`hexo s`   | 启用服务器，[http://localhost:4000](http://localhost:4000) |
