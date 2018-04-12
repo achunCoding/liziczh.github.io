@@ -2,7 +2,7 @@
 title: Notes | HTML
 tags:
   - html
-  - Notes
+  - notes
 categories: Web
 comments: true
 abbrlink: 1b9dba06

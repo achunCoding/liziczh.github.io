@@ -303,3 +303,7 @@ categories:
 - 此次搭建博客站点牵涉到很多以前不了解的内容：git使用，nodejs，hexo，github，ssh与http；努力学习，下次再详细介绍一下这些内容。
 - 兴趣是学习的源动力。
 - 本文若有地方表述错误，还望大佬指正，不胜感激。
+
+
+
+> 参考链接：[hexo文档](https://hexo.io/zh-cn/docs/)
