@@ -528,7 +528,7 @@ outline : color style width;
 
 ## CSS框模型（Box Model）★
 
-![BoxModel](http://p6uturdzt.bkt.clouddn.com/lizi-css-boxmodel.gif)
+![BoxModel](http://p6uturdzt.bkt.clouddn.com/css-boxmodel.gif)
 
 ### 边框-border
 
@@ -685,7 +685,7 @@ clear 属性规定元素的哪一侧不允许其他浮动元素。
 1.相对于在文档流中的原位置进行边偏移；
 2.仍占据文档流中的原位置；
 
-![relative](http://p6uturdzt.bkt.clouddn.com/lizi-css-relative.gif)
+![relative](http://p6uturdzt.bkt.clouddn.com/css-relative.gif)
 
 ### 绝对定位★
 - `position:absolute`；

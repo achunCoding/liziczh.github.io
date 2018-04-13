@@ -81,10 +81,25 @@ git config --global user.email "YourEmail"
 ```
 
 4.配置SSH协议
-①生成rsa秘钥：`ssh-keygen -t rsa -C "youremail@example.com`
-②打印公钥：`cd ~/.ssh`，`cat id_rsa.pub`
+①生成rsa秘钥：
+
+```
+ssh-keygen -t rsa -C "youremail@example.com
+```
+
+②输出公钥：
+
+```yaml
+cd ~/.ssh         # 进入虚拟目录ssh文件中
+cat id_rsa.pub    # 在终端显示id_rsa.pub文件内容
+```
+
 ③复制秘钥至github/coding->用户setting->SSH keys，New SSH Key；
-④验证是否添加成功：`ssh -T git@github.com`
+④验证是否添加成功：
+
+```
+ssh -T git@github.com
+```
 
 ## 部署到github/coding
 
@@ -171,7 +186,7 @@ deploy:
 ## 主题变更
 
 1.hexo默认主题为landscape，可以到[Themes|Hexo](https://hexo.io/themes/)选择自己喜欢的主题，复制主题在github仓库的url。
-   ![clone theme](http://p6uturdzt.bkt.clouddn.com/clone%20theme.PNG)
+   ![clone theme](http://p6uturdzt.bkt.clouddn.com/hexo-clone_theme.PNG)
 2.在themes文件夹下，打开GitBash，克隆主题至themes文件夹中。
 ```
 git clone https://github.com/theme-next/hexo-theme-next.git
@@ -233,15 +248,13 @@ comments: true
 只有**文章**（post）支持[标签]和[分类]。
 
 1.添加[tags]页面：`hexo new page "tags"`
-&nbsp;&nbsp;&nbsp;在source中找到并编辑tags.md，在Front-matter部分添加：`layout:"tags"`
-
-2.添加[categoies]页面：`hexo new page "categories"`
-&nbsp;&nbsp;&nbsp;在source中找到并编辑categories.md，在Front-matter部分添加：`layout:"categories"`
-
-3.添加[about]页面：`hexo new page "about"`
-&nbsp;&nbsp;&nbsp;在source中找到并编辑about.md即可；
-
-4.匹配**站点配置文件**`blog//_config.yml`：
+&nbsp;&nbsp;&nbsp;添加[categoies]页面：`hexo new page "categories"`
+&nbsp;&nbsp;&nbsp;添加[about]页面：`hexo new page "about"`
+2.在source文件夹中找到新建页面：tags.md，categories.md，about.md。
+&nbsp;&nbsp;&nbsp;编辑tags.md：在Front-matter部分添加`layout:"tags"`
+&nbsp;&nbsp;&nbsp;编辑categories.md：在Front-matter部分添加`layout:"categories"`
+&nbsp;&nbsp;&nbsp;编辑about.md，自行发挥。
+3.匹配**站点配置文件**`blog//_config.yml`：
 
 ```yaml
 # Directory
@@ -252,7 +265,7 @@ archive_dir: archives
 category_dir: categories
 ```
 
-5.匹配**主题配置文件**`blog//themes//你的主题//_config.yml`中`menu`：
+4.匹配**主题配置文件**`blog//themes//你的主题//_config.yml`中`menu`：
 
 ```yaml
 menu:
@@ -263,7 +276,7 @@ menu:
   about: /about
 ```
 
-6.Front-matter中的[tags]写法：
+5.Front-matter中的[tags]写法：
 
 ```yaml
 tags:
@@ -272,7 +285,7 @@ tags:
 # 标签之间相互独立
 ```
 
-7.Front-matter中的[categories]写法：
+6.Front-matter中的[categories]写法：
 
 ```yaml
 categories: 
@@ -282,7 +295,9 @@ categories:
 # 类别存在层级关系
 ```
 
-这时，博客就可以实现一般的写作，标签，分类，归档了。
+重新部署之后，个人博客的基本功能——写作，标签，分类，归档就全部实现了。
+
+
 
 ## 附：hexo常用命令
 
@@ -300,10 +315,6 @@ categories:
 > 若想了解更多关于hexo命令的介绍，请参考[指令 | hexo](https://hexo.io/zh-cn/docs/commands.html)
 
 ## 小结
-- 此次搭建博客站点牵涉到很多以前不了解的内容：git使用，nodejs，hexo，github，ssh与http；努力学习，下次再详细介绍一下这些内容。
+- 此次搭建博客站点牵涉到很多以前不是很了解的内容：git使用，nodejs，hexo，github，ssh与http；努力学习，下次再详细介绍一下这些内容。
 - 兴趣是学习的源动力。
-- 本文若有地方表述错误，还望大佬指正，不胜感激。
-
-
-
-> 参考链接：[hexo文档](https://hexo.io/zh-cn/docs/)
+- 本文若有地方表述错误，欢迎指正，不胜感激。

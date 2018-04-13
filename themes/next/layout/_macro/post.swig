@@ -343,11 +343,10 @@
     {#####################}
     {### END POST BODY ###}
     {#####################}
-
-    <div>
-      {% if not is_index %}
-        {% include 'passage-end-tag.swig' %}
-      {% endif %}
+    
+    <!--本文结束-->
+    <div style="text-align:center;color: #ccc;font-size:14px;">
+      ---------Thanks for your attention---------
     </div>
 
     {% if theme.wechat_subscriber.enabled and not is_index %}

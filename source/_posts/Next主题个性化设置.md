@@ -4,5 +4,338 @@ comments: false
 abbrlink: 35c54d61
 date: 2018-04-12 08:34:58
 tags:
-categories:
+- hexo
+categories: hexo
 ---
+
+# NexT主题自定义设置
+
+区分配置文件：
+
+| 配置文件         | 路径                                      |
+| ---------------- | ----------------------------------------- |
+| **站点配置文件** | `D://blog//_config.yml`                   |
+| **主题配置文件** | `D://blog//themes//你的主题//_config.yml` |
+
+<!-- more -->
+
+## 设置RSS
+
+1.安装RSS插件
+
+```
+npm install hexo-generator-feed --save
+```
+
+2.编辑**站点配置文件**，添加以下内容：
+
+```yaml
+#RSS订阅
+plugin: 
+- hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+```
+
+3.编辑**主题配置文件**，将rss字段置空。
+
+## 主题风格
+
+```yaml
+#Scheme 主题风格
+scheme: Muse
+#scheme: Mist
+#scheme: Pisces
+#scheme: Gemini
+```
+
+四个主题风格，自行选择，消去注释即生效。
+
+## 设置菜单
+
+```yaml
+menu:
+  home: / || home                  # 主页
+  tags: /tags/ || tags             # 标签
+  categories: /categories/ || th   # 分类
+  archives: /archives/ || archive  # 归档
+  about: /about/ || user           # 关于我
+# schedule: /schedule/ || calendar # 安排
+# sitemap: /sitemap.xml || sitemap # 站点地图
+# commonweal: /404/ || heartbeat   # 404公益
+```
+
+## 添加[标签]、[分类]、[关于]页面
+
+1.添加[tags]页面：`hexo new page "tags"`
+&nbsp;&nbsp;&nbsp;添加[categoies]页面：`hexo new page "categories"`
+&nbsp;&nbsp;&nbsp;添加[about]页面：`hexo new page "about"`
+2.在source文件夹中找到新建页面：tags.md，categories.md，about.md。
+&nbsp;&nbsp;&nbsp;编辑tags.md：在Front-matter部分添加`layout:"tags"`
+&nbsp;&nbsp;&nbsp;编辑categories.md：在Front-matter部分添加`layout:"categories"`
+&nbsp;&nbsp;&nbsp;编辑about.md，自行发挥。
+3.匹配**站点配置文件**`blog//_config.yml`：
+
+```yaml
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+```
+
+4.匹配**主题配置文件**`blog//themes//你的主题//_config.yml`中`menu`：
+
+```yaml
+menu:
+  home: /
+  tags: /tags
+  categories: /categories
+  archives: /archives
+  about: /about
+```
+
+5.Front-matter中的[tags]写法：
+
+```yaml
+tags:
+- tag_1
+- tag_2
+# 标签之间相互独立
+```
+
+6.Front-matter中的[categories]写法：
+
+```yaml
+categories: 
+- 运动
+- [运动, 球类运动]
+- [运动, 球类运动, 网球]
+# 类别存在层级关系
+```
+
+重新部署之后，个人博客的基本功能——写作，标签，分类，归档就全部实现了。
+
+## 添加自定义页面
+
+1.添加自定义页面：`hexo new page "customPage"`
+2.匹配**主题配置文件**中的`menu`：
+
+```yaml
+menu:
+  home: /
+  tags: /tags
+  categories: /categories
+  archives: /archives
+  about: /about               
+  customPage: /customPage    # 键值对匹配
+```
+
+3.在source中找到customPage.md文件，根据需求自行编辑。
+
+## 阅读全文
+
+在文章合适的位置添加`<!-- more -->`，Hexo推荐使用。
+
+## 设置favicon图标
+
+1.将favicon.png放到`themes//next//image`文件夹下
+2.**主题配置文件**更改图片路径：
+
+```yaml
+favicon:
+  small: /images/favicon-16x16.png         # 小图标：16x16
+  medium: /images/favicon-32x32.png        # 大图标：32x32
+  apple_touch_icon: /images/favicon.png    # apple图标大图
+  safari_pinned_tab: /images/logo.svg
+```
+
+## 设置头像
+
+1.将头像图片avatar.png放到`themes//next//image`文件夹下
+2.**主题配置文件**更改图片路径：
+
+```yaml
+avatar: /images/avatar.png  # avater图片路径
+```
+
+## 社交账号
+
+编辑**主题配置文件**，自行添加：
+
+```yaml
+social:
+  GitHub: https://github.com/yourname || github-icon
+  E-Mail: mailto:youremail || envelope-icon
+  Weibo： https://weibo.com/yourname
+```
+
+## 友情链接
+
+编辑**主题配置文件**，自行添加：
+
+```yaml
+links_icon: link
+links_title: Links
+#links_layout: block    #块状布局，选一个注一个
+links_layout: inline    #行内布局，选一个注一个
+links:
+  Github: https://www.github.com
+  知乎: https://www.zhihu.com
+```
+
+## 打赏
+
+编辑**主题配置文件**：
+
+```yaml
+# Reward
+reward_comment: 求打赏文本
+wechatpay: /images/wechatpay.png  # 微信收款二维码 图片路径
+alipay: /images/alipay.png        # 支付宝收款二维码 图片路径
+#bitcoin: /images/bitcoin.png     # 比特币
+```
+
+## 文章版权信息
+
+编辑**主题配置文件**，启用copyright服务：
+
+```yaml
+post_copyright:
+  enable: true
+```
+
+## 访客&访问量
+
+NexT主题中已经集成了**不蒜子统计**，直接编辑主题配置文件：
+
+```yaml
+busuanzi_count:
+  enable: true              # 开启busuanzi数据统计
+  total_visitors: true      # 访客
+  total_visitors_icon: user
+  total_views: true         # 访问量
+  total_views_icon: eye
+  post_views: true          # 文章阅读次数
+  post_views_icon: eye
+```
+
+## 百度统计
+
+1.登录百度统计，添加域名。若更换域名，需重新绑定。
+2.复制 `hm.js?` 后面那串统计脚本 id：
+![百度统计](http://p6uturdzt.bkt.clouddn.com/next-baidu_analytics.PNG)
+3.编辑**主题配置文件**，添加**脚本id**：
+
+```yaml
+# Baidu Analytics ID
+baidu_analytics: 脚本id
+```
+
+## 文章字数统计
+
+1.安装字数统计插件：
+
+```
+npm install hexo-symbols-count-time --save
+```
+
+2.编辑**主题配置文件**：
+
+```yaml
+symbols_count_time:
+  separated_meta: true     
+  item_text_post: true     # 文章字数
+  item_text_total: true    # 本站所有文章字数
+  awl: 5
+  wpm: 200
+```
+
+## 评论
+
+### 来必力
+
+1.登陆 [来必力](https://livere.com/) 获取你的 LiveRe UID。
+2.编辑**主题配置文件**，添加LiveRe UID：
+
+```yaml
+livere_uid: #你的LiveRe UID
+```
+
+3.记住将可评论文档的顶部属性中`comments: true`
+
+## 分享
+
+### jiathis分享
+
+编辑**主题配置文件**，添加jiathis_uid：
+
+```yaml
+jiathis:
+  uid: 2160658
+```
+
+### 百度分享
+
+编辑**主题配置文件**，设置baidushare：
+
+```yaml
+baidushare:
+  type: button       # type: button | slide
+```
+
+## 搜索服务
+
+### Local Search
+
+1.安装local search插件：
+
+```
+npm install hexo-generator-searchdb --save
+```
+
+2.编辑站点配置文件，新增以下内容：
+
+```yaml
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+```
+
+3.编辑主题配置文件，启用local search功能：
+
+```yaml
+local_search:
+  enable: true
+```
+
+## 修改文章底部标签[#]#
+
+1.打开编辑`themes//next//layout//_macro//post.swig`
+2.`Ctrl+F`找到`rel="tag">#`
+3.将`#`更换为`<i class="fa fa-tag"></i>`
+
+## 文章底部添加"本文结束"
+
+打开编辑`themes//next//layout//_macro//post.swig`，在文章结束的地方添加如下代码：
+
+```html
+<div style="text-align:center;color: #ccc;font-size:14px;">
+	---------本文结束---------
+</div>
+```
+
+![本文结束](http://p6uturdzt.bkt.clouddn.com/next-post_end.PNG)
+
+
+
+> 参考资料：[next主题|使用文档](http://theme-next.iissnan.com/)
+
+
+

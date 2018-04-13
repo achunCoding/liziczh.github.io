@@ -456,7 +456,7 @@ pangu: false
 #swiftype_key:
 
 # Baidu Analytics ID
-baidu_analytics: 641027a97c062750d11f87f4e82fc9ad
+baidu_analytics: fad26e690685f3b9d5d9e96cda8b1f71
 
 # Disqus
 disqus:
@@ -525,8 +525,8 @@ gitment:
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-# jiathis:
-#   uid: 2160658
+jiathis:
+  uid: 2160658
 #add_this_id:
 
 # NeedMoreShare2
