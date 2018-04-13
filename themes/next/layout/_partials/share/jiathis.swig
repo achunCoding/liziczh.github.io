@@ -1,4 +1,5 @@
 <!-- JiaThis Button BEGIN -->
+<!--
 <div class="jiathis_style">
 <span class="jiathis_txt">分享到：</span>
 <a class="jiathis_button_fav">收藏夹</a>
@@ -22,4 +23,26 @@ var jiathis_config={
 }
 </script>
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid={{ theme.jiathis.uid }}" charset="utf-8"></script>
+-->
+<!-- JiaThis Button END -->
+
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<a class="jiathis_button_fav"></a>
+<a class="jiathis_button_copy"></a>
+<a class="jiathis_button_cqq"></a>
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_tsina"></a>
+<a href="http://www.jiathis.com/share?uid={{ theme.jiathis.uid }}" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	data_track_clickback:true,
+	summary:"",
+	shortUrl:true,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid={{ theme.jiathis.uid }}" charset="utf-8"></script>
 <!-- JiaThis Button END -->

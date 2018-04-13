@@ -185,15 +185,16 @@ social_icons:
 # Blog rolls
 links_icon: link
 links_title: Links
-links_layout: block
-#links_layout: inline
+#links_layout: block
+links_layout: inline
 links:
   博客园: https://www.cnblogs.com
   知乎: https://www.zhihu.com
   掘金: https://juejin.im
+  Linkedin: https://www.linkedin.com
   segmentfault: https://segmentfault.com
   V2EX: https://www.v2ex.com
-  Linkedin: https://www.linkedin.com
+  
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.png
