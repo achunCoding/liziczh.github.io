@@ -5,7 +5,7 @@ abbrlink: 35c54d61
 date: 2018-04-12 08:34:58
 tags:
 - hexo
-categories: hexo
+categories: Hexo
 ---
 
 # NexT主题自定义设置
@@ -70,12 +70,19 @@ menu:
 
 ## 添加[标签]、[分类]、[关于]页面
 
-1.添加[tags]页面：`hexo new page "tags"`
-&nbsp;&nbsp;&nbsp;添加[categoies]页面：`hexo new page "categories"`
-&nbsp;&nbsp;&nbsp;添加[about]页面：`hexo new page "about"`
-2.在source文件夹中找到新建页面：tags.md，categories.md，about.md。
-&nbsp;&nbsp;&nbsp;编辑tags.md：在Front-matter部分添加`layout:"tags"`
-&nbsp;&nbsp;&nbsp;编辑categories.md：在Front-matter部分添加`layout:"categories"`
+只有**文章**（post）支持[标签]和[分类]。
+
+1.添加[tags]、[categoies]、[about]页面：
+
+```
+hexo new page "tags"
+hexo new page "categories"
+hexo new page "about"
+```
+
+2.在source文件夹中找到新建页面：
+&nbsp;&nbsp;&nbsp;编辑tags.md：添加`layout:"tags"`
+&nbsp;&nbsp;&nbsp;编辑categories.md：添加`layout:"categories"`
 &nbsp;&nbsp;&nbsp;编辑about.md，自行发挥。
 3.匹配**站点配置文件**`blog//_config.yml`：
 
@@ -117,8 +124,6 @@ categories:
 - [运动, 球类运动, 网球]
 # 类别存在层级关系
 ```
-
-重新部署之后，个人博客的基本功能——写作，标签，分类，归档就全部实现了。
 
 ## 添加自定义页面
 
@@ -326,9 +331,11 @@ local_search:
 打开编辑`themes//next//layout//_macro//post.swig`，在文章结束的地方添加如下代码：
 
 ```html
-<div style="text-align:center;color: #ccc;font-size:14px;">
-	---------本文结束---------
-</div>
+{% if not is_index %}
+	<div style="text-align:center;color: #ccc;font-size:14px;">
+		---------Thanks for your attention---------
+	</div>
+{% endif %}
 ```
 
 ![本文结束](http://p6uturdzt.bkt.clouddn.com/next-post_end.PNG)

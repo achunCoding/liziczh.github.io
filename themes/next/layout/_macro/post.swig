@@ -345,9 +345,11 @@
     {#####################}
     
     <!--本文结束-->
-    <div style="text-align:center;color: #ccc;font-size:14px;">
-      ---------Thanks for your attention---------
-    </div>
+    {% if not is_index %}
+      <div style="text-align:center;color: #ccc;font-size:14px;">
+        ---------Thanks for your attention---------
+      </div>
+    {% endif %}
 
     {% if theme.wechat_subscriber.enabled and not is_index %}
       <div>

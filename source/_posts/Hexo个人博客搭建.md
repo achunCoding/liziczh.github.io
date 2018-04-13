@@ -247,14 +247,19 @@ comments: true
 
 只有**文章**（post）支持[标签]和[分类]。
 
-1.添加[tags]页面：`hexo new page "tags"`
-&nbsp;&nbsp;&nbsp;添加[categoies]页面：`hexo new page "categories"`
-&nbsp;&nbsp;&nbsp;添加[about]页面：`hexo new page "about"`
-2.在source文件夹中找到新建页面：tags.md，categories.md，about.md。
-&nbsp;&nbsp;&nbsp;编辑tags.md：在Front-matter部分添加`layout:"tags"`
-&nbsp;&nbsp;&nbsp;编辑categories.md：在Front-matter部分添加`layout:"categories"`
+1.添加[tags]、[categoies]、[about]页面：
+
+```
+hexo new page "tags"
+hexo new page "categories"
+hexo new page "about"
+```
+
+2.在source文件夹中找到新建页面：
+&nbsp;&nbsp;&nbsp;编辑tags.md：添加`layout:"tags"`
+&nbsp;&nbsp;&nbsp;编辑categories.md：添加`layout:"categories"`
 &nbsp;&nbsp;&nbsp;编辑about.md，自行发挥。
-3.匹配**站点配置文件**`blog//_config.yml`：
+6.匹配**站点配置文件**`blog//_config.yml`：
 
 ```yaml
 # Directory
@@ -265,7 +270,7 @@ archive_dir: archives
 category_dir: categories
 ```
 
-4.匹配**主题配置文件**`blog//themes//你的主题//_config.yml`中`menu`：
+7.匹配**主题配置文件**`blog//themes//你的主题//_config.yml`中`menu`：
 
 ```yaml
 menu:
@@ -276,7 +281,7 @@ menu:
   about: /about
 ```
 
-5.Front-matter中的[tags]写法：
+8.Front-matter中的[tags]写法：
 
 ```yaml
 tags:
@@ -285,7 +290,7 @@ tags:
 # 标签之间相互独立
 ```
 
-6.Front-matter中的[categories]写法：
+9.Front-matter中的[categories]写法：
 
 ```yaml
 categories: 
@@ -295,7 +300,7 @@ categories:
 # 类别存在层级关系
 ```
 
-重新部署之后，个人博客的基本功能——写作，标签，分类，归档就全部实现了。
+重新部署之后，个人博客的基本功能，写作，标签，分类，归档就全部实现了。
 
 
 
