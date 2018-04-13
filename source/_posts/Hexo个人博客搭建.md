@@ -33,8 +33,13 @@ date: 2018-04-11 10:57:46
 2.安装Node.js。Hexo是基于nodejs的博客框架，而且nodejs还集成了npm包管理工具。
 &nbsp;&nbsp;&nbsp;查看nodejs版本：`node -v`，验证是否安装成功。
 
-3.使用npm安装hexo：`npm install hexo-cli -g`
-&nbsp;&nbsp;&nbsp;如需卸载hexo：`npm uninstall hexo -g`
+3.安装hexo：
+
+```yaml
+npm install hexo-cli -g   #安装hexo
+npm uninstall hexo -g     #卸载hexo
+```
+
 &nbsp;&nbsp;&nbsp;查看hexo版本：`hexo -v`，验证是否安装成功。
 
 ## hexo建站
@@ -113,7 +118,11 @@ deploy:
 	branch: master
 ```
 
-2.安装Git部署插件：`npm install hexo-deployer-git --save`
+2.安装Git部署插件：
+
+```
+npm install hexo-deployer-git --save
+```
 
 3.部署：
 ```yaml
@@ -129,7 +138,7 @@ hexo deploy    # 部署到github/coding；
 ├── db.json      # （新增）hexo generate 生成的数据
 ├── node_modules # 依赖模块，插件模块
 ├── scaffolds    # 文章模板
-├── source       # 用户源文件：页面，文章markdown文件
+├── source       # 用户源文件：页面&文章的markdown文件
 |   └── _posts   # 文章
 └── themes       # 主题
 ├── .gitignore   # git时需忽略文件
@@ -208,9 +217,15 @@ hexo g -d   # 生成静态页面后直接部署；
 
 ## 写作
 
-1.新建：在blog文件夹下，打开Git Bash，`hexo new post "文章名"`；
-2.编辑：在`source//_post`下可以编辑你创建的`title.md`。
-3.重新部署：
+1.新建：在blog文件夹下，打开Git Bash，新建文章：
+
+```
+hexo new post "title"
+```
+
+2.编辑：在`source//_post`下可以编辑你新建的文章。
+3.编辑完毕，重新部署：
+
 ```yaml
 hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
 hexo g -d   # 生成静态页面后直接部署；
@@ -259,7 +274,7 @@ hexo new page "about"
 &nbsp;&nbsp;&nbsp;编辑tags.md：添加`layout:"tags"`
 &nbsp;&nbsp;&nbsp;编辑categories.md：添加`layout:"categories"`
 &nbsp;&nbsp;&nbsp;编辑about.md，自行发挥。
-6.匹配**站点配置文件**`blog//_config.yml`：
+6.匹配**站点配置文件**：
 
 ```yaml
 # Directory
@@ -270,7 +285,7 @@ archive_dir: archives
 category_dir: categories
 ```
 
-7.匹配**主题配置文件**`blog//themes//你的主题//_config.yml`中`menu`：
+7.匹配**主题配置文件**中`menu`：
 
 ```yaml
 menu:

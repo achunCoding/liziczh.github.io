@@ -15,8 +15,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://liziczh.com
 root: /
-# permalink: :year/:month/:day/:title.html  #太长，多/不利于网络爬虫抓取
-# permalink: :title.html #title存在汉字，导致url存在汉字。
+# permalink: :year/:month/:day/:title.html
 # 永久链接字符化
 permalink: :abbrlink.html
 abbrlink:
@@ -24,13 +23,10 @@ abbrlink:
   rep: hex    # 进制：dec(default) and hex
 permalink_defaults:
 
-
-
 # Directory
 source_dir: source
 public_dir: public
 tag_dir: tags
-rss_dir: rss
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
@@ -92,15 +88,6 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
-#RSS订阅
-plugin: 
-- hexo-generator-feed
-#Feed Atom
-feed:
-  type: atom
-  path: atom.xml
-  limit: 0
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
@@ -110,6 +97,16 @@ deploy:
     coding: git@git.coding.net:liziczh/liziczh.coding.me.git
   branch: master
 
+#RSS订阅
+plugin: 
+- hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+
+#local search
 search:
   path: search.xml
   field: post

@@ -2,7 +2,7 @@
 #}{% set current = date(Date.now(), "YYYY") %}{#
 #}&copy; {% if theme.footer.since and theme.footer.since != current %}{{ theme.footer.since }} &mdash; {% endif %}{#
 #}<span itemprop="copyrightYear">{{ current }}</span>
-  <span class="with-love" id="animate"> 
+  <span class="with-love" id="animate">
     <i class="fa fa-{{ theme.footer.icon.name }}"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span>
@@ -13,7 +13,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     {% if theme.symbols_count_time.item_text_total %}
-      <span class="post-meta-item-text">{{ __('post.total_symbols')  + __('symbol.colon') }}</span>
+      <span class="post-meta-item-text">{{ __('post.total_symbols') + __('symbol.colon') }}</span>
     {% endif %}
     <span title="{{ __('post.total_symbols') }}">{#
     #}{{ symbolsCountTotal(site) }}{#
@@ -26,7 +26,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     {% if theme.symbols_count_time.item_text_total %}
-      <span class="post-meta-item-text">{{ __('post.total_time')  + __('symbol.colon') }}</span>
+      <span class="post-meta-item-text">{{ __('post.total_time') + __('symbol.colon') }}</span>
     {% endif %}
     <span title="{{ __('post.total_time') }}">{#
     #}{{ symbolsTimeTotal(site, theme.symbols_count_time.awl, theme.symbols_count_time.wpm) }}{#
@@ -34,10 +34,10 @@
   {% endif %}
 </div>
 
-
 {% if theme.seo %}
   {% set nofollow = ' rel="external nofollow"' %}
 {% endif %}
+
 
 
 <!-- busuanzi 我给移过来了，阿弥陀佛 -->
@@ -63,13 +63,15 @@
 <!-- busuanzi 我给移过来了，我佛慈悲 -->
 
 
-{% if theme.footer.powered %}
+
+
+{% if theme.footer.powered.enable %}
   <div class="powered-by">{#
-  #}{{ __('footer.powered', '<a class="theme-link" target="_blank"' + nofollow + ' href="https://hexo.io">Hexo</a>') }}{#
+  #}{{ __('footer.powered', '<a class="theme-link" target="_blank"' + nofollow + ' href="https://hexo.io">Hexo</a>') }}{% if theme.footer.powered.version %} v{{ hexo_version() }}{% endif %}{#
 #}</div>
 {% endif %}
 
-{% if theme.footer.powered and theme.footer.theme.enable %}
+{% if theme.footer.powered.enable and theme.footer.theme.enable %}
   <span class="post-meta-divider">|</span>
 {% endif %}
 

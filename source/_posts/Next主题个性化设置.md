@@ -84,7 +84,7 @@ hexo new page "about"
 &nbsp;&nbsp;&nbsp;编辑tags.md：添加`layout:"tags"`
 &nbsp;&nbsp;&nbsp;编辑categories.md：添加`layout:"categories"`
 &nbsp;&nbsp;&nbsp;编辑about.md，自行发挥。
-3.匹配**站点配置文件**`blog//_config.yml`：
+3.匹配**站点配置文件**：
 
 ```yaml
 # Directory
@@ -95,7 +95,7 @@ archive_dir: archives
 category_dir: categories
 ```
 
-4.匹配**主题配置文件**`blog//themes//你的主题//_config.yml`中`menu`：
+4.匹配**主题配置文件**中`menu`：
 
 ```yaml
 menu:
@@ -127,7 +127,12 @@ categories:
 
 ## 添加自定义页面
 
-1.添加自定义页面：`hexo new page "customPage"`
+1.添加自定义页面：
+
+```
+hexo new page "customPage"
+```
+
 2.匹配**主题配置文件**中的`menu`：
 
 ```yaml
@@ -324,7 +329,7 @@ local_search:
 
 1.打开编辑`themes//next//layout//_macro//post.swig`
 2.`Ctrl+F`找到`rel="tag">#`
-3.将`#`更换为`<i class="fa fa-tag"></i>`
+3.将`#`替换为`<i class="fa fa-tag"></i>`
 
 ## 文章底部添加"本文结束"
 
@@ -338,9 +343,13 @@ local_search:
 {% endif %}
 ```
 
-![本文结束](http://p6uturdzt.bkt.clouddn.com/next-post_end.PNG)
+![本文结束](http://p6uturdzt.bkt.clouddn.com/next-page_end.PNG)
 
+## 添加访客&访问量描述
 
+打开编辑`themes\next\layout\_third-party\analytics\busuanzi-counter.swig`
+
+![添加访客&访问量描述](http://p6uturdzt.bkt.clouddn.com/next-visitor.PNG)
 
 > 参考资料：[next主题|使用文档](http://theme-next.iissnan.com/)
 
