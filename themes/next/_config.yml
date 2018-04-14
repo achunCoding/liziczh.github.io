@@ -157,7 +157,7 @@ site_state: true
 social:
   GitHub: https://github.com/liziczh || github
   E-Mail: mailto:liziczh@foxmail.com || envelope
-  Weibo: https://weibo.com/p/1005055521704376/home
+  Weibo: https://weibo.com/p/1005055521704376/home || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -242,7 +242,7 @@ sidebar:
   scrollpercent: false
 
   # Enable sidebar on narrow view (only for Muse | Mist).
-  onmobile: false
+  onmobile: true
 
 
 # ---------------------------------------------------------------
@@ -332,7 +332,7 @@ post_edit:
 # ---------------------------------------------------------------
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
