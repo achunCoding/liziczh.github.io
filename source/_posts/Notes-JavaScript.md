@@ -99,10 +99,10 @@ x = 4;  //JS直接使用标识符声明变量，全局变量；
 
 ### JS变量作用域
 
-| 变量类型 | 描述                               |
-| -------- | ---------------------------------- |
-| 全局变量 | 定义在函数外的var变量 \| 无var变量 |
-| 局部变量 | 定义在函数内的var变量              |
+| 变量类型 | 描述                                |
+| -------- | ----------------------------------- |
+| 全局变量 | 定义在函数外的var变量  &  无var变量 |
+| 局部变量 | 定义在函数内的var变量               |
 
 ### JS变量提升（Hoisting）★
 
@@ -124,8 +124,6 @@ JavaScript是一种弱类型语言（动态类型），相同的变量可用作�
 NaN;    // 非数字，任何涉及NaN的计算，都返回NaN。
 ```
 
-- isNaN()：用来判断是否为一个非数字；
-
 **2.string | 字符串**：
 
 ```js
@@ -133,16 +131,6 @@ NaN;    // 非数字，任何涉及NaN的计算，都返回NaN。
 'abc';  // 单引号字符串
 "\r\n"  // 转义字符
 ```
-
-| 转义字符 | 描述 |
-| -------- | ---- |
-| `\n`     | 换行 |
-| `\r`     | 回车 |
-| `\t`     | 制表 |
-| `\b`     | 退格 |
-| `\'`     | `'`  |
-| `\"`     | `"`  |
-| `\\`     | `\`  |
 
 **3.boolean | 布尔型**：
 
@@ -195,7 +183,7 @@ var obj = new Object();  // 创建一个Object对象
 **2.Array | 数组**：[]
 
 ```js
-var arr = [1,2,3];  
+var arr = [1,2,3];  // 字面量
 ```
 
 ```js
@@ -205,7 +193,7 @@ var arr = new Array(1,2,3);  //创建一个数组对象
 **3.Function | 函数**：
 
 ```js
-function f(){}  // 一般函数声明方式
+function f(){}  // 一般函数声明
 ```
 
 ```js
@@ -260,7 +248,8 @@ typeof alert()    //function 函数
 5.赋值运算符：`=`，`+=`，`-=`，`*=`，`/=`，`%=`
 6.条件运算符：`a?b:c `
 
-JS运算符中存在**双等**与**三等**★：
+### 双等与三等★
+
 `==`和`!=`：只比较值，不比较类型。
 `===`和`!==`：既比较值，也比较类型。
 
@@ -350,13 +339,13 @@ for(var i in 对象){
 1.使用**字面量**创建字符串：
 
 ```js
-var str = "abc";  // 使用字面量创建字符串
+var str = "abc";  // 字面量
 ```
 
-2.使用**对象**创建字符串：
+2.使用**String对象**创建字符串：
 
 ```js
-var str = new String("abc"); //创建一个String对象
+var str = new String("abc"); //String对象
 ```
 
 ### 字符串拼接
@@ -364,6 +353,18 @@ var str = new String("abc"); //创建一个String对象
 ```js
 var str = "abc"+"def";  // 使用“+”拼接字符串
 ```
+
+### 转义字符
+
+| 转义字符 | 描述 |
+| -------- | ---- |
+| `\n`     | 换行 |
+| `\r`     | 回车 |
+| `\t`     | 制表 |
+| `\b`     | 退格 |
+| `\'`     | `'`  |
+| `\"`     | `"`  |
+| `\\`     | `\`  |
 
 ### string常用方法
 
@@ -390,11 +391,20 @@ var str = "abc"+"def";  // 使用“+”拼接字符串
 
 JS数组是动态数组，无需指定长度。
 
+JS弱类型，数组中可以有不同的变量类型。
+
 ### 创建数组
 
+1.使用**字面量**创建：
+
 ```js
-var arr=[];
-var arr=new Array();
+var arr=["a","b","c"];  // 字面量
+```
+
+2.使用**Array**创建：
+
+```js
+var arr=new Array("a","b","c");  //Array对象
 ```
 
 ### 遍历数组
@@ -417,28 +427,29 @@ for(var i in arr){
 
 ### Array常用方法
 
-| Array方法     | 描述                                                  |
-| ------------- | ----------------------------------------------------- |
-| isArray()     | 判断是否为数组                                        |
-| valueOf()     | 返回数组本身                                          |
-| toString()    | 将数组以字符串的形式返回                              |
-| push()        | 向数组末尾追加数据，返回当前数组的长度                |
-| pop()         | 删除数组最后一个元素                                  |
-| join()        | 将数组转换为字符串，默认按逗号隔开                    |
-| shift()       | 在数组头部删除一个元素                                |
-| unshift()     | 在数组头部添加一个元素                                |
-| reverse()     | 数组反转                                              |
-| slice()       | 数组截取                                              |
-| splice()      | 数组截取，并且可以插入新的元素(改变原数组)            |
-| sort()        | 排序；数字按大小排，字母按字典顺序排，汉字按Unicode排 |
-| indexOf()     | 索引                                                  |
-| lastIndexOf() | 反序索引                                              |
+| Array方法     | 描述                                                 |
+| ------------- | ------------------------------------------------ |
+| length        | 返回数组长度                                       |
+| isArray()     | 判断是否为数组                                          |
+| valueOf()     | 返回数组本身                                            |
+| toString()    | 将数组以字符串的形式返回                                  |
+| push()        | 向数组末尾追加元素，返回新的长度                          |
+| pop()         | 删除并返回数组的最后一个元素                              |
+| join()        | 将数组转换为字符串，默认按逗号隔开                        |
+| shift()       | 删除并返回数组的第一个元素                                |
+| unshift()     | 向数组的开头追加元素，返回新的长度                        |
+| reverse()     | 数组反转                                                  |
+| slice()       | 从某个已有的数组返回选定的元素                            |
+| splice()      | 删除元素，并向数组添加新元素                              |
+| sort()        | 排序；<br>数字按大小排，字母按字典顺序排，汉字按Unicode排 |
+| indexOf()     | 索引                                                      |
+| lastIndexOf() | 反序索引                                                  |
 
 ## JS函数
 
 JS函数是一种数据类型[function]，JS函数也是对象。
 
-### JS函数定义
+### 函数定义
 
 1.使用**函数声明**定义：
 
@@ -452,13 +463,7 @@ function 函数名([形参]){}  // 函数声明
 var 函数名 = function([形参]){}  // 函数表达式 | 匿名函数
 ```
 
-3.使用**Function()**定义：
-
-```
-
-```
-
-4.自执行函数：自己调用自己
+3.自执行函数：自己调用自己
 
 ```js
 (function 函数名([形参]){
@@ -466,13 +471,24 @@ var 函数名 = function([形参]){}  // 函数表达式 | 匿名函数
 })([实参]);
 ```
 
-### 函数参数
+※JS函数不会重载，只会执行最后一个函数；
 
-函数显式参数（形参）：parameters
+### Function常用方法
 
-函数隐式参数（实参）：arguments
+| function属性&方法 | 描述                                             |
+| ----------------- | ------------------------------------------------ |
+| eval()            | 计算 JavaScript 字符串，并把它作为脚本代码来执行 |
+| escape()          | 对字符串进行编码                                 |
+| unescape()          | 对字符串进行解码                                |
+| encodeURI()       | 把字符串编码为 URI                               |
+| decodeURI()       | 解码某个编码的 URI                               |
+| isNaN()           | 判断是否是非数字                                 |
+| Number()          | 把对象转换为数字                                 |
+| String()          | 把对象转换为字符串                               |
+| parseInt()        | 解析一个字符串并返回一个整数                     |
+| parseFloat()      | 解析一个字符串并返回一个浮点数                   |
 
-### 一等公民★
+### 函数提升（Hoisting）★
 
 **一等公民**：JS函数与JS变量处于同等地位，可作为一个值使用。
 1.将函数赋值给变量
@@ -480,67 +496,49 @@ var 函数名 = function([形参]){}  // 函数表达式 | 匿名函数
 3.将函数作为参数出入其他函数
 4.将函数作为返回结果
 
-### 函数提升（Hoisting）★
-
 **函数提升**：JS函数及变量的声明都将被提升到函数的最顶部。
 
-## JS弹出框
+### JS函数参数
 
-1.警告框：
+函数显式参数（形参）：parameters；
+函数隐式参数（实参）：arguments；
+默认参数：undefined；
 
-```js
-alert("警告");  // 警告框；
-```
+JS函数内置对象：argument，函数调用的参数数组。
 
-2.确认框：
+### JS闭包★
 
-```js
-var flag = confirm("确定要删除？"); // 确认框；确定：返回true; 取消：返回false;
-```
-
-3.提问框：
-
-```js
-var input = prompt("你的年龄？");  //提问框；
-```
+闭包是可访问上一层函数作用域里变量的函数，即便上一层函数已经关闭。
 
 
 
-# JS面向对象
+## JS对象
 
-## JS内置对象
+### JS内置对象
 
 JS内置对象（全局对象）：String，Number，Array，Math，Date；
 
-### String
+**Math**：
 
-eval("js代码")：执行内部js代码;非法调用报错
+静态调用方法；Math没有构造方法，不能生成实例。
 
-encodeURL(),decodeURL();
+```js
+random() // 随机数
+round()  // 四舍五入
+```
 
-parseInt(),parseFloat();
+**Date**：
 
-### Number
+```js
+var date = new Date();    // 当前日期和时间
+var time = getTime();     // 返回从 1970 年 1 月 1 日至今的毫秒数
+var year = getFullYear(); // 获取年份
+date.setFullYear(yyyy, mm, dd); // 设置具体的日期
+```
 
-### Array
+### JS创建对象
 
-### Math
-
-静态调用方法；因为没有构造方法所以不能生成实例
-
-### Date
-
-Date()：当前日期时间；
-
-getTime：1970距今的毫秒数；
-
-减法运算：时间间隔；
-
-## JS自定义对象
-
-
-
-1.简单方式一
+1.先new，再依次赋值
 
 ```js
 var obj = new Object();
@@ -551,10 +549,10 @@ obj.eat=function(){
 }
 ```
 
-2.简单方式二
+2.创建对象{}
 
 ```js
-var obj={
+var obj = {
 	name:"张三",
 	age:21,
 	eat:function() {
@@ -566,7 +564,7 @@ var obj={
 3.工厂函数创建对象
 
 ```js
-function createObject(name,age){
+function objectFactory(name,age){
 	return {
 		name:name,
 		age:age,
@@ -577,7 +575,7 @@ function createObject(name,age){
 }
 ```
 
-4.构造函数
+4.构造函数★
 
 ```js
 function Person(name,age){
@@ -589,37 +587,35 @@ function Person(name,age){
 }
 ```
 
-对象
+> 在 JavaScript 中，很多时候，你需要避免使用 `new `关键字。
 
-函数对象：new Object();
+Object常用方法
 
-普通对象：非new对象
+| Object方法               | 描述                 |
+| ------------------------ | -------------------- |
+| Object.keys(对象)        | 获取对象所有属性     |
+| Object.delete(对象.属性) | 删除对象某个属性     |
+| 属性名 in 对象           | 判断属性是否属于对象 |
 
-Object.keys(对象)：获取对象所有属性
+### JS原型★
 
-Object.delete(对象.属性):删除对象某个属性
+所有的函数对象(new)都存在原型对象(prototype)；
 
-属性名 in 对象:判断属性是否属于对象
+`函数对象.prototype`：指向函数对象的原型对象；
 
-
-
-## JS原型
-
-### 原型
-
-所有的[函数对象(new)]都存在[原型对象(prototype)]；
-
-函数对象.prototype：指向函数对象的原型对象；
-
-所有对象都存在__proto__属性，只有函数对象存在prototype属性；
+所有对象都存在`__proto__`属性，只有函数对象存在`prototype`属性；
 
 所有原型对象都存在constructor属性，指向prototype属性所在函数；A.prototype.constructor == A;
 
 原型对象（Person.prototype）是 构造函数（Person）的一个实例
 
+
+
 所有函数都可以通过prototype属性获取到函数原型，
 
 通过对prototype.属性赋的值赋值给所有对象
+
+
 
 prototype
 
@@ -631,26 +627,292 @@ prototype的两个属性：
 
 2.原型__proto__
 
+
+
 原型链
 
 由[对象__proto__属性]和[对象构造函数的__proto__属性]构成的链式结构，Object__proto__就是Object；
 
 原型链：对象属性调用优先级序列；本身属性>原型属性。
 
-​    
-
-继承：设置[子类的原型]是[父类的实例]
 
 
+原型继承：设置[子类的原型]是[父类的实例]；
 
 
 
+# JS DOM
+
+DOM文档对象模型
+
+![DOM树](http://p6uturdzt.bkt.clouddn.com/jsdom-htmltree.png)
 
 
 
+| document属性&方法        | 描述     |
+| ------------------------ | -------- |
+| document.doctype         | 文档类型 |
+| document.documentElement | 文档元素 |
+| document.domain          | 文档域名 |
+
+## DOM获取页面元素
+
+1.根据id获取元素：
+
+```js
+document.getElementById("id"); // 单个元素
+```
+
+2.根据标签名获取元素：
+
+```js
+document.getElementByTagName("标签名"); // 数组
+```
+
+3.根据name获取元素：
+
+```js
+document.getElementByName("name"); // 数组
+```
+
+4.根据类名获取元素：
+
+```js
+document.getElememtByClassName("类名"); // 数组
+```
+
+5.根据选择器获取元素：
+
+```js
+document.querySelectorAll("选择器"); // 数组
+```
+
+## DOM编程
+
+1.改变HTML输出流：
+
+```js
+document.write();  // 直接向HTML输出流写内容。
+```
+
+2.改变HTML内容：
+
+```js
+元素.innerText;  // 获取/设置文本值（对代码转义）
+元素.innerHTML;  // 获取/设置HTML代码
+```
+
+3.改变HTML属性：
+
+```js
+元素.HTML属性 = 新属性值 // 改变HTML属性
+```
+
+4.HTML自定义属性
+
+```js
+元素.setAttribute("属性","值")  // 设置属性
+元素.getAttribute("属性");      // 获取属性
+元素.removeAttribute("属性");   // 移除属性
+```
+
+5.改变CSS样式：
+
+```js
+元素.style.CSS样式 = 新样式 // 改变CSS样式
+```
+
+> CSS属性名多个单词以-分隔，JS调用CSS属性名多个单词以驼峰命名分隔；
 
 
 
-#JavaScript代码规范
+## DOM节点
 
-在 JavaScript 中，很多时候，你需要避免使用 `new `关键字。
+DOM节点：文档Document->元素Element->属性Attribute->文本Text；
+
+1.当前节点属性：
+nodeName：节点名称；
+nodeType：节点类型；Document=0，Element=1，Attribute=2，Text=3
+nodeValue：返回/设置当前文本节点的文本字符串
+textContent：当前节点及后代节点的文本内容
+
+2.当前节点的相关节点：
+ownerDocument：所属文档
+nextSibling：下一个同级节点
+previousSibling：前一个同级节点
+parentNode：父节点
+parentElement：父元素
+firstChild：子节点
+children：子元素
+
+3.针对父节点的操作
+appendChild()：追加一个子节点
+insertBefore(new,old)：父节点在旧节点前插入新节点
+removeChild()：父节点移除子节点元素
+replaceChild()：父节点替换子节点元素
+isEqualNode()：判断节点是否相同
+
+## DOM事件
+
+| 事件        | 描述         |
+| ----------- | ------------ |
+| onclick     | 点击事件     |
+| onfocus     | 元素获得焦点 |
+| onblur      | 元素失去焦点 |
+| onmouseover | 鼠标覆盖     |
+| onmouseout  | 鼠标移开     |
+| onchange    | 发生改变     |
+| onload      | 加载完成     |
+| onunload    | 退出页面     |
+| onerror     | 加载错误     |
+
+事件三要素：事件源，事件名称，事件处理程序;
+
+事件绑定：
+①获取元素：var 元素 = document.getElementByXXX("");
+②事件函数：元素.事件 = function(){ 事件处理程序 };
+this：事件源
+return false：取消事件源的默认动作
+
+事件传递方式：
+-事件捕获：Document -> Element -> Attribute -> Text；
+-事件冒泡：Document <- Element <- Attribute <- Text；
+默认事件传递方式：事件冒泡
+
+阻止事件传播的方式：
+标准方式：event.stopPropagation阻止事件传递；
+
+注册/移除事件的三种方式：
+1.事件源.on+事件类型：onclick
+2.事件源.addEventListener(eventName,eventHandler,[useCapture])
+&nbsp;&nbsp;&nbsp;useCapture==true;捕获阶段；默认值为false；IE9之前的不兼容
+3.事件源.attachEvent(eventName,eventHandler,[useCapture])
+
+
+
+# JS BOM
+
+BOM浏览器对象模型
+
+## window-浏览器窗口
+
+window对象：浏览器窗口；
+
+window对象是BOM顶级对象，document，location，history，navigator都是其子对象。
+
+| window属性&方法    | 描述                 |
+| ------------------ | -------------------- |
+| window.name        | window对象名称       |
+| window.innerHeight | 浏览器窗口的内部高度 |
+| window.innerWidth  | 浏览器窗口的内部宽度 |
+
+### JS入口函数
+
+```js
+// 加载完页面元素后再执行JS代码
+window.onload = function(){ JS代码 }
+```
+
+### JS弹出框
+
+1.警告框：
+
+```js
+window.alert("警告");  // 警告框；
+```
+
+2.确认框：
+
+```js
+var flag = window.confirm("确定要删除？"); // 确认框；
+// 确定：返回true | 取消：返回false
+```
+
+3.提问框：
+
+```js
+var input = window.prompt("你的年龄？");  //提问框；
+// 确定：返回输入值 | 取消：返回null
+```
+
+> 可省略windows对象，直接使用。
+
+### JS定时器
+
+1.单次定时器：
+
+```js
+// 设置单次定时器
+var timerId = window.setTimerout(function(){定时任务},timeout);  // 只执行一次
+// 清除单次定时器
+window.clearTimeout(timerId);
+```
+
+2.循环定时器：
+
+```js
+// 设置循环定时器
+var timerId = window.setInterval(function(){定时任务},timeout);  // 循环执行
+// 清除循环定时器
+window.clearInterval(timerId);
+```
+
+> 可省略windows对象，直接使用。
+
+```js
+// 循环定时器：由单次定时器取消。
+var timer2 = setInterval(function(){
+	document.write(new Date());//输出当前时间
+},1000)
+setTimeout(function(){
+	clearInterval(timer2);//清除定时器timer2
+},5000)
+```
+
+## location-浏览器url
+
+location对象：浏览器地址
+
+| location属性&方法 | 描述                                         |
+| ----------------- | -------------------------------------------- |
+| location.href     | 获取url                                      |
+| location.protocol | 返回所使用的 web 协议（http:// 或 https://） |
+| location.hostname | 返回 web 主机的域名                          |
+| location.pathname | 返回当前页面的路径和文件名                   |
+| location.port     | 返回 web 主机的端口（80 或 443）             |
+| location.assign() | 加载页面                                     |
+| location.reload() | 重新加载                                     |
+
+> url统一资源定位符
+> url格式：scheme://host:port/path?query#fragment
+> scheme：通信协议；如http，ftp，maito，https等；
+> host：主机；服务器域名系统主机名、IP地址；
+> port：端口；http默认端口80；
+> path：路径；
+> query：查询；可选，用于给动态网页传递参数，参数名1=值1&参数名2=值2；
+> fragment：信息片段；字符串，锚点；
+
+## history-会话历史
+
+history对象：会话历史
+
+| history属性&方法 | 描述         |
+| ---------------- | ------------ |
+| back()           | 后退，go(-1) |
+| forword()        | 前进，go(1)  |
+| go(n)            | 跳转n步      |
+
+## navigator-浏览器信息
+
+navigator对象：浏览器信息
+
+| navigator属性&方法   | 描述                           |
+| -------------------- | ------------------------------ |
+| navigator.appName    | 浏览器名称                     |
+| navigator.appVersion | 浏览器版本                     |
+| navigator.language   | 浏览器语言                     |
+| navigator.platform   | 操作系统类型                   |
+| navigator.userAgent  | 浏览器设定的`User-Agent`字符串 |
+
+
+
