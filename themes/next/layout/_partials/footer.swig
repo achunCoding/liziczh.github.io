@@ -86,7 +86,7 @@
 
 
 {% if theme.footer.powered.enable and theme.footer.theme.enable %}
-  <div class="theme-info">
+  <div class="copyright">
     Hosted by <a href="https://pages.coding.me">Coding Pages</a>
     &&nbsp;<a href="https://pages.github.com">GitHub Pages</a>
   </div>
