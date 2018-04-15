@@ -84,8 +84,20 @@
 #}</div>
 {% endif %}
 
+
+{% if theme.footer.powered.enable and theme.footer.theme.enable %}
+  <div class="theme-info">
+    Hosted by <a href="https://pages.coding.me">Coding Pages</a>
+    &&nbsp;<a href="https://pages.github.com">GitHub Pages</a>
+  </div>
+{% endif %}
+
+
+
 {% if theme.footer.custom_text %}
   <div class="footer-custom">{#
   #}{{ theme.footer.custom_text }}{#
 #}</div>
 {% endif %}
+
+
