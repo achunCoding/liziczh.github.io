@@ -8,7 +8,23 @@ tags:
 categories: Hexo
 ---
 
-# NexT主题自定义设置
+# NexT主题个性化设置
+NexT is a high quality elegant [Hexo](http://hexo.io/) theme. It is crafted from scratch, with love.
+
+## Live Preview
+
+- Muse scheme: [LEAFERx](https://leaferx.online/) | [XiaMo](https://notes.wanghao.work/) | [OAwan](https://oawan.me/)
+- Mist scheme: [Jeff](https://blog.zzbd.org/) | [uchuhimo](http://uchuhimo.me/) | [xirong](http://www.ixirong.com/)
+- Pisces scheme: [Vi](http://notes.iissnan.com/) | [Acris](https://acris.me/) | [Rainy](https://rainylog.com/)
+-  Gemini scheme: [Ivan.Nginx](https://almostover.ru/) | [Raincal](https://raincal.com/) | [Dandy](https://dandyxu.me/)
+
+<!-- more -->
+
+## Installation
+
+```shell
+$ git clone https://github.com/theme-next/hexo-theme-next themes/next
+```
 
 区分配置文件：
 
@@ -17,13 +33,11 @@ categories: Hexo
 | **站点配置文件** | `D://blog//_config.yml`                   |
 | **主题配置文件** | `D://blog//themes//你的主题//_config.yml` |
 
-<!-- more -->
-
 ## 设置RSS
 
 1.安装RSS插件
 
-```
+```shell
 npm install hexo-generator-feed --save
 ```
 
@@ -74,7 +88,7 @@ menu:
 
 1.添加[tags]、[categoies]、[about]页面：
 
-```
+```shell
 hexo new page "tags"
 hexo new page "categories"
 hexo new page "about"
@@ -129,7 +143,7 @@ categories:
 
 1.添加自定义页面：
 
-```
+```shell
 hexo new page "customPage"
 ```
 
@@ -146,6 +160,22 @@ menu:
 ```
 
 3.在source中找到customPage.md文件，根据需求自行编辑。
+
+##添加更新时间
+
+编辑**主题配置文件**：
+
+```yaml
+post_meta:
+  item_text: true
+  created_at: true   # 创建时间
+  updated_at: true   # 更新时间
+  # Only show 'updated' if different from 'created'.
+  updated_diff: false # 只使用更新时间
+  # If true, post's time format will be hexo config's date_format + ' ' + time_format.
+  date_time_merge: false
+  categories: true
+```
 
 ## 阅读全文
 
@@ -250,7 +280,7 @@ baidu_analytics: 脚本id
 
 1.安装字数统计插件：
 
-```
+```shell
 npm install hexo-symbols-count-time --save
 ```
 
@@ -304,7 +334,7 @@ baidushare:
 
 1.安装local search插件：
 
-```
+```shell
 npm install hexo-generator-searchdb --save
 ```
 
@@ -347,7 +377,7 @@ local_search:
 
 ## 添加访客&访问量描述
 
-打开编辑`themes\next\layout\_third-party\analytics\busuanzi-counter.swig`
+打开编辑`themes\next\layout\_third-party\analytics\busuanzi-counter.swig`：
 
 ![添加访客&访问量描述](http://p6uturdzt.bkt.clouddn.com/next-visitor.PNG)
 
