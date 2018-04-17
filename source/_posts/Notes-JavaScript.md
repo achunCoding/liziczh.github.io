@@ -115,6 +115,19 @@ x = 4;  //JS直接使用标识符声明变量，全局变量；
 
 JS是一种弱类型语言（动态类型），同一个变量可存放不同类型的值。
 
+**typeof操作符**：检测变量数据类型；
+
+```js
+typeof 3.14       //number 数字
+typeof NaN        //number 数字
+typeof '123'      //string 字符串
+typeof true       //boolean 布尔值
+typeof undefined  //undefined 未赋值变量
+typeof null       //object 空对象引用
+typeof {}         //object 对象
+typeof []         //object 数组对象
+typeof alert()    //function 函数
+```
 ### 原始类型
 
 **1.Number | 数字**：
@@ -171,21 +184,6 @@ null; // 空对象指针，（用于对象类型）
 number(null)==0
 number(undefined)==NaN;
 /* 目前null与undefined基本同义 */
-```
-
-**-typeof操作符**：
-
-```js
-/* typeof操作符：检测变量数据类型 */
-typeof 3.14       //number 数字
-typeof NaN        //number 数字
-typeof '123'      //string 字符串
-typeof true       //boolean 布尔值
-typeof undefined  //undefined 未赋值变量
-typeof null       //object 空对象引用
-typeof {}         //object 对象
-typeof []         //object 数组对象
-typeof alert()    //function 函数
 ```
 
 ### 类型转换
@@ -280,17 +278,7 @@ var f = function(){}  // 函数表达式
 var f = new Function(arg1, arg2, ..., argN, function_body) // 函数对象
 ```
 
-**4.String | 字符串**：
-
-```js
-var str = "abc";  // 字面量
-```
-
-```js
-var str = new String("abc"); // 字符串对象
-```
-
-更多引用类型：Boolean，Number，Date，RegExp，Error，EvalError，RangeError，ReferenceError，SyntaxError，TypeError，URIError。
+更多引用类型：String，Boolean，Number，Math，Date，RegExp，Error，EvalError，RangeError，ReferenceError，SyntaxError，TypeError，URIError。
 
 ## JS运算符
 
@@ -398,7 +386,7 @@ var str = "abc";  // 字面量
 **2.**使用**String对象**创建字符串：
 
 ```js
-var str = new String("abc"); //String对象
+var str = new String("abc"); // String对象
 ```
 
 ### 字符串拼接
@@ -467,11 +455,11 @@ for(var i in arr){
 
 ### Array对象
 
-| Array方法     | 描述                                                 |
-| ------------- | ------------------------------------------------ |
-| length        | 返回数组长度                                       |
-| isArray()     | 判断是否为数组                                          |
-| valueOf()     | 返回数组本身                                            |
+| Array方法     | 描述                                                      |
+| ------------- | --------------------------------------------------------- |
+| length        | 返回数组长度                                              |
+| isArray()     | 判断是否为数组                                            |
+| valueOf()     | 返回数组对象的原始值                                      |
 | toString()    | 将数组以字符串的形式返回                                  |
 | push()        | 向数组末尾追加元素，返回新的长度                          |
 | pop()         | 删除并返回数组的最后一个元素                              |
@@ -482,8 +470,8 @@ for(var i in arr){
 | slice()       | 从某个已有的数组返回选定的元素                            |
 | splice()      | 删除元素，并向数组添加新元素                              |
 | sort()        | 排序；<br>数字按大小排，字母按字典顺序排，汉字按Unicode排 |
-| indexOf()     | 索引                                                      |
-| lastIndexOf() | 反序索引                                                  |
+| indexOf()     | 返回元素索引                                              |
+| lastIndexOf() | 返回元素反序索引                                          |
 
 ## JS函数
 
@@ -533,7 +521,7 @@ var function_name = new Function(arg1, arg2, ..., argN, function_body)
 
 | function属性&方法 | 描述                                             |
 | ----------------- | ------------------------------------------------ |
-| eval()            | 计算 JavaScript 字符串，并把它作为脚本代码来执行 |
+| eval("JS代码") | 计算 JavaScript 字符串，并把它作为脚本代码来执行 |
 | escape()          | 对字符串进行编码                                 |
 | unescape()          | 对字符串进行解码                                |
 | encodeURI()       | 把字符串编码为 URI                               |
@@ -595,25 +583,66 @@ function addNum(iNum1, iNum2) {
 
 ## JS对象
 
+### Object对象
+
+```js
+/* Object属性 */
+obj.constructor // 指向对象构造器
+obj.prototype // 指向对象原型
+/* Object方法 */
+Object.assign({}, obj) // 对象复制
+Object.assign(obj1, obj2, obj3) // 对象合并
+Object.create(proto, [prop_Object]) // 模拟类（class）
+Object.is(obj1, obj2) //判断两个值是否相同
+Object.keys() // 返回对象所有属性组成的数组
+Object.delete(obj.prop) // 删除对象的某个属性
+```
+
+| Object属性&方法 | 描述 |
+| --------------- | ---- |
+| constructor | 指向对象构造器 |
+| prototype | 指向对象原型 |
+| Object.assign({}, obj) | 对象复制 |
+| Object.assign(obj1, obj2, obj3) | 对象合并 |
+| Object.create(proto, [prop_Object])  |  模拟类（class） |
+| Object.is(obj1, obj2) | 判断两个值是否严格相同 |
+| Object.keys(obj)        | 返回对象所有属性的数组     |
+| Object.delete(obj.prop) | 删除对象某个属性     |
+
+**in操作符**：判断属性是否属于对象。
+
+```js
+prop in obj  // 判断prop是否属于obj
+```
+
 ### 内置对象
 
-JS内置对象：由 ECMAScript 实现提供的、独立于宿主环境的所有对象，在 ECMAScript 程序开始执行时出现。
-JS内置对象（本地对象/全局对象）：Object，String，Array，Function，Boolean，Number，Date，RegExp，Error，EvalError，RangeError，ReferenceError，SyntaxError，TypeError，URIError。
+JS内置对象（本地对象/全局对象）：由 ECMAScript 实现提供的、独立于宿主环境的所有对象，在 ECMAScript 程序开始执行时出现。
+JS内置对象：Object，String，Array，Function，Boolean，Number，Math，Date，RegExp，Error等。
 
 其中**Object**，**String**，**Array**，**Function**请参考上文。
 
 **Number对象**：
 
-
+| Number属性&方法 | 描述                                  |
+| --------------- | ------------------------------------- |
+| NaN             | 非数字值                              |
+| MAX_VALUE       | 最大值                                |
+| MIN_VALUE       | 最小值                                |
+| toFixed(n)      | 返回指定n位小数的数字的字符串         |
+| toExponential() | 返回指数为n的科学计数法的数字的字符串 |
+| toPrecision()   | 把数字四舍五入格式化为指定的长度      |
 
 **Math对象**：
 
 静态调用方法；Math没有构造方法，不能生成实例。
 
-```js
-Math.random() // 随机数
-Math.round()  // 四舍五入
-```
+| Math属性&方法 | 描述     |
+| ------------- | -------- |
+| Math.random() | 随机数   |
+| Math.round()  | 四舍五入 |
+| Math.ceil()   | 向上取整 |
+| Math.floor()  | 向下取整 |
 
 **Date对象**：
 
@@ -624,7 +653,7 @@ var year = date.getFullYear(); // 获取年份
 date.setFullYear(yyyy, mm, dd); // 设置具体的日期
 ```
 
-> **JS内置对象**详细请参考：[JavaScript 对象参考手册](http://www.w3school.com.cn/jsref/index.asp)；
+> 详细了解**JS内置对象**请参考：[JavaScript 对象参考手册](http://www.w3school.com.cn/jsref/index.asp)；
 
 ### 创建对象
 
@@ -677,19 +706,17 @@ function Person(name,age){
 }
 ```
 
+**this关键字**：指向调用该方法的对象。
+
+**instanceof操作符**：判断对象是否为类（构造方法）的一个实例。
+
+```js
+var obj = new Object();
+obj instanceof Object;  // true  判断obj是否为Object的一个实例。
+```
 > 在 JavaScript 中，很多时候，你需要避免使用 `new `关键字。
 
-Object常用方法
 
-| Object方法               | 描述                 |
-| ------------------------ | -------------------- |
-| Object.keys(对象)        | 获取对象所有属性     |
-| Object.delete(对象.属性) | 删除对象某个属性     |
-| 属性名 in 对象           | 判断属性是否属于对象 |
-
-### this关键字
-
-`this`：指向调用该方法的对象。
 
 ### JS原型★
 
@@ -743,12 +770,6 @@ DOM文档对象模型
 
 
 
-| document属性&方法        | 描述     |
-| ------------------------ | -------- |
-| document.doctype         | 文档类型 |
-| document.documentElement | 文档元素 |
-| document.domain          | 文档域名 |
-
 ## DOM获取页面元素
 
 1.根据id获取元素：
@@ -781,7 +802,7 @@ document.getElememtByClassName("类名"); // 数组
 document.querySelectorAll("选择器"); // 数组
 ```
 
-## DOM编程
+## DOM修改
 
 1.改变HTML输出流：
 
@@ -792,7 +813,7 @@ document.write();  // 直接向HTML输出流写内容。
 2.改变HTML内容：
 
 ```js
-元素.innerText;  // 获取/设置文本值（对代码转义）
+元素.innerText;  // 获取/设置文本值（对代码转义为文本）
 元素.innerHTML;  // 获取/设置HTML代码
 ```
 
@@ -802,11 +823,11 @@ document.write();  // 直接向HTML输出流写内容。
 元素.HTML属性 = 新属性值 // 改变HTML属性
 ```
 
-4.HTML自定义属性
+4.自定义HTML属性
 
 ```js
-元素.setAttribute("属性","值")  // 设置属性
 元素.getAttribute("属性");      // 获取属性
+元素.setAttribute("属性","值")  // 设置属性
 元素.removeAttribute("属性");   // 移除属性
 ```
 
@@ -818,33 +839,48 @@ document.write();  // 直接向HTML输出流写内容。
 
 > CSS属性名多个单词以-分隔，JS调用CSS属性名多个单词以驼峰命名分隔；
 
-
-
-## DOM节点
+## DOM节点操作
 
 DOM节点：文档Document->元素Element->属性Attribute->文本Text；
 
-1.当前节点属性：
-nodeName：节点名称；
-nodeType：节点类型；Document=0，Element=1，Attribute=2，Text=3
-nodeValue：返回/设置当前文本节点的文本字符串
-textContent：当前节点及后代节点的文本内容
+**1.当前节点属性**：
 
-2.当前节点的相关节点：
-ownerDocument：所属文档
-nextSibling：下一个同级节点
-previousSibling：前一个同级节点
-parentNode：父节点
-parentElement：父元素
-firstChild：子节点
-children：子元素
+| 当前节点属性 | 描述                                             |
+| ------------ | ------------------------------------------------ |
+| nodeName     | 节点名称                                         |
+| nodeValue    | 返回/设置当前文本节点的文本字符串                |
+| textContent  | 当前节点及后代节点的文本内容                     |
+| nodeValue    | 节点类型；元素=1\|属性=2\|文本=3\|注释=8\|文档=9 |
 
-3.针对父节点的操作
-appendChild()：追加一个子节点
-insertBefore(new,old)：父节点在旧节点前插入新节点
-removeChild()：父节点移除子节点元素
-replaceChild()：父节点替换子节点元素
-isEqualNode()：判断节点是否相同
+**2.当前节点的相关节点**：
+
+| 当前节点的相关节点 | 描述           |
+| ------------------ | -------------- |
+| ownerDocument      | 所属文档       |
+| previousSibling    | 前一个同级节点 |
+| nextSibling        | 下一个同级节点 |
+| parentNode         | 父节点         |
+| parentElement      | 父元素         |
+| firstChild         | 子节点         |
+| children           | 子元素         |
+
+**3.针对父节点的操作**：
+
+| 针对父节点的DOM方法   | 描述                 |
+| --------------------- | -------------------- |
+| appendChild()         | 追加一个子节点       |
+| removeChild()         | 移除子节点           |
+| replaceChild()        | 替换子节点           |
+| insertBefore(new,old) | 在旧节点前插入新节点 |
+| isEqualNode()         | 判断节点是否相同     |
+
+**4.创建节点**：
+
+| 创建节点          | 描述         |
+| ----------------- | ------------ |
+| createAttribute() | 创建属性节点 |
+| createElement()   | 创建元素节点 |
+| createTextNode()  | 创建文本节点 |
 
 ## DOM事件
 
@@ -881,8 +917,6 @@ return false：取消事件源的默认动作
 2.事件源.addEventListener(eventName,eventHandler,[useCapture])
 &nbsp;&nbsp;&nbsp;useCapture==true;捕获阶段；默认值为false；IE9之前的不兼容
 3.事件源.attachEvent(eventName,eventHandler,[useCapture])
-
-
 
 # JS BOM
 
