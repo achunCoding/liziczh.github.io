@@ -238,6 +238,8 @@ Boolean(new object()); //true - 对象
 
 ### 引用类型
 
+引用类型：对象，一组属性和方法的集合。
+
 **1.Object | 对象**：{}
 
 ```js
@@ -285,7 +287,7 @@ var str = "abc";  // 字面量
 ```
 
 ```js
-var str = new String("abc"); //字符串对象
+var str = new String("abc"); // 字符串对象
 ```
 
 更多引用类型：Boolean，Number，Date，RegExp，Error，EvalError，RangeError，ReferenceError，SyntaxError，TypeError，URIError。
@@ -383,7 +385,7 @@ for(var i in 对象){
 
 ## JS字符串
 
-字符串本质是一个不可变的字符数组。
+JS字符串本质是一个不可变的字符数组。
 
 ### 创建字符串
 
@@ -429,8 +431,7 @@ var str = "abc"+"def";  // 使用“+”拼接字符串
 ## JS数组
 
 JS数组是动态数组，无需指定长度。
-
-JS弱类型，数组中可以有不同的变量类型。
+JS是弱类型的，数组中可以有不同的变量类型。
 
 ### 创建数组
 
@@ -443,7 +444,7 @@ var arr=["a","b","c"];  // 字面量
 **2.**使用**Array**创建：
 
 ```js
-var arr=new Array("a","b","c");  //Array对象
+var arr=new Array("a","b","c");  // Array对象
 ```
 
 ### 遍历数组
@@ -508,7 +509,7 @@ var 函数名 = function(arg0, arg1, ... argN){}  // 函数表达式 | 匿名函
 var function_name = new Function(arg1, arg2, ..., argN, function_body)
 ```
 
-**4.****自执行函数**：自己调用自己
+**4.自执行函数**：自己调用自己
 
 ```js
 (function 函数名([形参]){
@@ -519,10 +520,10 @@ var function_name = new Function(arg1, arg2, ..., argN, function_body)
 ### 函数提升★
 
 **一等公民**：JS函数与JS变量处于同等地位，可作为一个值使用。
-1.将函数赋值给变量
-2.将函数赋值给对象的属性
-3.将函数作为参数出入其他函数
-4.将函数作为返回结果
+①将函数赋值给变量
+②将函数赋值给对象的属性
+③将函数作为参数出入其他函数
+④将函数作为返回结果
 
 **函数提升（Hoisting）**：JS函数及变量的声明都将被提升到函数的最顶部。
 
@@ -562,7 +563,6 @@ arguments.length  // 参数数组长度，参数个数
 ```
 
 2.模拟函数重载：
-
 使用`arguments.length`判断传递给函数的参数个数，即可模拟重载。
 
 ```js
@@ -579,7 +579,7 @@ doAdd(10,20); // 返回30
 
 ### JS闭包★
 
-闭包（closure）指的是词法表示包括不被计算的变量的函数，即函数可以使用函数之外定义的变量。
+**闭包（closure）**指的是词法表示包括不被计算的变量的函数，即函数可以使用函数之外定义的变量。
 
 ```js
 // 闭包实例
@@ -597,25 +597,34 @@ function addNum(iNum1, iNum2) {
 
 ### 内置对象
 
-JS内置对象（全局对象）：String，Number，Array，Math，Date；
+JS内置对象：由 ECMAScript 实现提供的、独立于宿主环境的所有对象，在 ECMAScript 程序开始执行时出现。
+JS内置对象（本地对象/全局对象）：Object，String，Array，Function，Boolean，Number，Date，RegExp，Error，EvalError，RangeError，ReferenceError，SyntaxError，TypeError，URIError。
+
+其中**Object**，**String**，**Array**，**Function**请参考上文。
+
+**Number对象**：
+
+
 
 **Math对象**：
 
 静态调用方法；Math没有构造方法，不能生成实例。
 
 ```js
-random() // 随机数
-round()  // 四舍五入
+Math.random() // 随机数
+Math.round()  // 四舍五入
 ```
 
 **Date对象**：
 
 ```js
 var date = new Date();    // 当前日期和时间
-var time = getTime();     // 返回从 1970 年 1 月 1 日至今的毫秒数
-var year = getFullYear(); // 获取年份
+var time = date.getTime();     // 返回从 1970 年 1 月 1 日至今的毫秒数
+var year = date.getFullYear(); // 获取年份
 date.setFullYear(yyyy, mm, dd); // 设置具体的日期
 ```
+
+> **JS内置对象**详细请参考：[JavaScript 对象参考手册](http://www.w3school.com.cn/jsref/index.asp)；
 
 ### 创建对象
 
@@ -656,7 +665,7 @@ function objectFactory(name,age){
 }
 ```
 
-4.构造函数★：
+**4.构造函数★**：
 
 ```js
 function Person(name,age){
