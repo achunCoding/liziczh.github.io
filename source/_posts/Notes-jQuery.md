@@ -1,10 +1,11 @@
 ---
 title: Notes | jQuery
+id: notes-jquery
 comments: true
 tags:
-- notes  
-- jquery
+  - notes
+  - jquery
 categories: Web
-abbrlink: '55291499'
+abbrlink: 24018
 date: 2018-04-09 16:34:00
 ---

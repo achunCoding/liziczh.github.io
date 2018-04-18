@@ -1,12 +1,13 @@
 ---
 title: Notes | CSS
+id: notes-css
 comments: true
-date: 2018-04-05 17:21:22
 tags:
-- css
-- notes
+  - css
+  - notes
 categories: Web
-abbrlink: 53184
+abbrlink: 1617
+date: 2018-04-05 17:21:22
 ---
 
 # CSS

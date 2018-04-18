@@ -1,11 +1,12 @@
 ---
 title: Notes | HTML
+id: notes-html
 tags:
   - html
   - notes
 categories: Web
 comments: true
-abbrlink: 1b9dba06
+abbrlink: 19580
 date: 2018-04-03 22:36:54
 ---
 

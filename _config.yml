@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Lizi's Blog
+title: 自然生长
 subtitle:
 description: 记录 | 旧事 | 杂谈
 keywords: Hexo, Blog, html, css, js
@@ -16,11 +16,7 @@ timezone: Asia/Shanghai
 url: https://liziczh.com
 root: /
 # permalink: :year/:month/:day/:title.html
-# 永久链接字符化
-permalink: :abbrlink.html
-abbrlink:
-  alg: crc32  # 算法：crc16(default) and crc32
-  rep: hex    # 进制：dec(default) and hex
+permalink: :id.html
 permalink_defaults:
 
 # Directory

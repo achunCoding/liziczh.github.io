@@ -41,6 +41,7 @@
 
 
 <!-- busuanzi 我给移过来了，阿弥陀佛 -->
+<!--
 {% if theme.busuanzi_count.enable %}
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -60,6 +61,7 @@
   {% endif %}
 </div>
 {% endif %}
+-->
 <!-- busuanzi 我给移过来了，我佛慈悲 -->
 
 

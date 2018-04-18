@@ -1,11 +1,12 @@
 ---
 title: Next主题个性化设置
+id: next-settings
 comments: true
-abbrlink: 35c54d61
-date: 2018-04-12 08:34:58
 tags:
-- hexo
+  - hexo
 categories: Hexo
+abbrlink: 52716
+date: 2018-04-12 08:34:58
 ---
 
 # NexT主题个性化设置

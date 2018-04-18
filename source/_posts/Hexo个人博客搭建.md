@@ -1,10 +1,10 @@
 ---
 title: Hexo个人博客搭建
+id: hexo-blog-build
 comments: true
 tags:
   - hexo
 categories: Hexo
-abbrlink: be06e9d8
 date: 2018-04-11 10:57:46
 ---
 
@@ -47,7 +47,7 @@ npm uninstall hexo -g     #卸载hexo
 2.hexo初始化：`hexo init`
 3.安装依赖包：`npm install`
 4.初始化完成，在blog下就会生成以下文件目录：
-```
+```yaml
 .
 ├── node_modules # 依赖模块
 ├── scaffolds    # 文章模板
@@ -56,11 +56,11 @@ npm uninstall hexo -g     #卸载hexo
 └── themes       # 主题
 ├── .gitignore   # git忽略文件信息
 ├── _config.yml  # 站点配置文件
-├── package.json # 应用程序的信息
+├── package.json # 已安装插件映射表，下次只需npm install即直接安装表插件
 ```
 
 5.hexo本地生成静态页面
-```yaml
+```shell
 hexo clean     # 清理本地静态文件；
 hexo generate  # 生成静态页面，即public文件夹；
 hexo server    # 启用hexo本地服务器；
@@ -80,7 +80,7 @@ github和coding可以双线配置，也可以选择其中一个配置。推荐�
 &nbsp;&nbsp;&nbsp;其中`yourname`是你的coding用户名，coding不强制后缀为`coding.me`。
 
 3.Git Bash配置github账户信息：
-```
+```shell
 git config --global user.name "YourName"
 git config --global user.email "YourEmail"
 ```
@@ -88,13 +88,13 @@ git config --global user.email "YourEmail"
 4.配置SSH协议
 ①生成rsa秘钥：
 
-```
+```shell
 ssh-keygen -t rsa -C "youremail@example.com
 ```
 
 ②输出公钥：
 
-```yaml
+```shell
 cd ~/.ssh         # 进入虚拟目录ssh文件中
 cat id_rsa.pub    # 在终端显示id_rsa.pub文件内容
 ```
@@ -102,7 +102,7 @@ cat id_rsa.pub    # 在终端显示id_rsa.pub文件内容
 ③复制秘钥至github/coding->用户setting->SSH keys，New SSH Key；
 ④验证是否添加成功：
 
-```
+```shell
 ssh -T git@github.com
 ```
 
@@ -120,30 +120,30 @@ deploy:
 
 2.安装Git部署插件：
 
-```
+```shell
 npm install hexo-deployer-git --save
 ```
 
 3.部署：
-```yaml
+```shell
 hexo clean     # 清理本地静态文件；
 hexo generate  # 生成静态页面，即public文件夹；
 hexo deploy    # 部署到github/coding；
 ```
 4.部署完毕，blog下的文件目录如下：
-```yaml
+```shell
 .
 ├── .deploy_git  # （新增）hexo deploy 生成的git部署文件
 ├── public       # （新增）hexo generate 生成的静态文件
 ├── db.json      # （新增）hexo generate 生成的数据
-├── node_modules # 依赖模块，插件模块
+├── node_modules # 依赖模块
 ├── scaffolds    # 文章模板
 ├── source       # 用户源文件：页面&文章的markdown文件
 |   └── _posts   # 文章
 └── themes       # 主题
 ├── .gitignore   # git时需忽略文件
 ├── _config.yml  # 站点配置文件
-├── package.json # 应用程序的信息
+├── package.json # 已安装插件映射表，下次只需npm install即直接安装表插件
 ```
 
 站点搭建完毕，打开浏览器在地址栏输入以下链接可随时访问自己的博客了。
@@ -197,16 +197,16 @@ deploy:
 1.hexo默认主题为landscape，可以到[Themes|Hexo](https://hexo.io/themes/)选择自己喜欢的主题，复制主题在github仓库的url。
    ![clone theme](http://p6uturdzt.bkt.clouddn.com/hexo-clone_theme.PNG)
 2.在themes文件夹下，打开GitBash，克隆主题至themes文件夹中。
-```
+```shell
 git clone https://github.com/theme-next/hexo-theme-next.git
 ```
 3.更改**站点配置文件**`_config.yml`：
-```
+```yaml
 theme: 主题文件名
 ```
 4.编辑结束，重新部署：
 
-```yaml
+```shell
 hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
 hexo g -d   # 生成静态页面后直接部署；
 ```
@@ -219,14 +219,14 @@ hexo g -d   # 生成静态页面后直接部署；
 
 1.新建：在blog文件夹下，打开Git Bash，新建文章：
 
-```
+```shell
 hexo new post "title"
 ```
 
 2.编辑：在`source//_post`下可以编辑你新建的文章。
 3.编辑完毕，重新部署：
 
-```yaml
+```shell
 hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
 hexo g -d   # 生成静态页面后直接部署；
 ```
@@ -264,7 +264,7 @@ comments: true
 
 1.添加[tags]、[categoies]、[about]页面：
 
-```
+```shell
 hexo new page "tags"
 hexo new page "categories"
 hexo new page "about"
