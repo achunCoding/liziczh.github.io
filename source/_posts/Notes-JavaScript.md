@@ -620,9 +620,7 @@ JS内置对象：Object，String，Array，Function，Boolean，Number，Math，
 | toExponential() | 返回指数为n的科学计数法的数字的字符串 |
 | toPrecision()   | 把数字四舍五入格式化为指定的长度      |
 
-**Math对象**：
-
-静态调用方法；Math没有构造方法，不能生成实例。
+**Math对象**：静态调用方法；Math没有构造方法，不能生成实例。
 
 | Math属性&方法 | 描述     |
 | ------------- | -------- |
@@ -765,29 +763,83 @@ DOM文档对象模型
 document.getElementById("id"); // 单个元素
 ```
 
-2.根据标签名获取元素：
+2.根据标签名获取元素数组：
 
 ```js
 document.getElementByTagName("标签名"); // 数组
 ```
 
-3.根据name获取元素：
+3.根据name获取元素数组：
 
 ```js
 document.getElementByName("name"); // 数组
 ```
 
-4.根据类名获取元素：
+4.根据类名获取元素数组：
 
 ```js
 document.getElememtByClassName("类名"); // 数组
 ```
 
-5.根据选择器获取元素：
+5.根据选择器获取元素数组：
 
 ```js
 document.querySelectorAll("选择器"); // 数组
 ```
+
+## DOM节点
+
+DOM节点：文档Document->元素Element->属性Attribute->文本Text；
+
+**1.当前节点属性**：
+
+| 当前节点属性 | 描述                                                         |
+| ------------ | ------------------------------------------------------------ |
+| nodeName     | 文档节点：#document<br>元素节点：标签名<br>属性节点：属性名<br>文本节点：#text |
+| nodeValue    | 元素节点：undefined / null<br>属性节点：属性值<br>文本节点：文本 |
+| nodeType     | 元素：1<br>属性：2<br>文本：3<br>注释：8<br>文档：9         |
+| innerHTML    | 读取：当前节点及后代节点的HTML代码<br>写入：HTML代码，新的DOM树 |
+| innerText    | 读取：当前节点的文本内容<br>写入：文本值（对html转义）       |
+| textContent  | 当前节点及后代节点的文本内容                                 |
+
+
+**2.当前节点的相关节点**：
+
+| 当前节点的相关节点 | 描述           |
+| ------------------ | -------------- |
+| ownerDocument      | 所属文档       |
+| previousSibling    | 前一个同级节点 |
+| nextSibling        | 下一个同级节点 |
+| parentNode         | 父节点         |
+| parentElement      | 父元素         |
+| firstChild         | 子节点         |
+| children           | 子元素         |
+
+**3.针对父节点的操作**：
+
+| 针对父节点的DOM方法   | 描述                 |
+| --------------------- | -------------------- |
+| appendChild()         | 追加一个子节点       |
+| removeChild()         | 移除子节点           |
+| replaceChild()        | 替换子节点           |
+| insertBefore(new,old) | 在旧节点前插入新节点 |
+| isEqualNode()         | 判断节点是否相同     |
+
+**4.创建节点**：
+
+| 创建节点          | 描述         |
+| ----------------- | ------------ |
+| createAttribute() | 创建属性节点 |
+| createElement()   | 创建元素节点 |
+| createTextNode()  | 创建文本节点 |
+
+**5.自定义属性**：
+
+| 自定义属性                    | 描述             |
+| ----------------------------- | ---------------- |
+| getAttribute("attr")          | 获取属性         |
+| setAttribute("attr", "value") | 设置属性及属性值 |
+| removeAttribute("attr")       | 移除属性         |
 
 ## DOM修改
 
@@ -824,96 +876,93 @@ document.write();  // 直接向HTML输出流写内容。
 元素.style.CSS样式 = 新样式 // 改变CSS样式
 ```
 
-> CSS属性名多个单词以-分隔，JS调用CSS属性名多个单词以驼峰命名分隔；
-
-## DOM节点操作
-
-DOM节点：文档Document->元素Element->属性Attribute->文本Text；
-
-**1.当前节点属性**：
-
-| 当前节点属性 | 描述                                                   |
-| ------------ | ------------------------------------------------------ |
-| nodeName     | 节点名称                                               |
-| nodeValue    | 当前文本节点的文本字符串                               |
-| textContent  | 当前节点及后代节点的文本内容                           |
-| nodeValue    | 节点类型；<br>元素=1，属性=2，文本=3<br>注释=8，文档=9 |
-
-**2.当前节点的相关节点**：
-
-| 当前节点的相关节点 | 描述           |
-| ------------------ | -------------- |
-| ownerDocument      | 所属文档       |
-| previousSibling    | 前一个同级节点 |
-| nextSibling        | 下一个同级节点 |
-| parentNode         | 父节点         |
-| parentElement      | 父元素         |
-| firstChild         | 子节点         |
-| children           | 子元素         |
-
-**3.针对父节点的操作**：
-
-| 针对父节点的DOM方法   | 描述                 |
-| --------------------- | -------------------- |
-| appendChild()         | 追加一个子节点       |
-| removeChild()         | 移除子节点           |
-| replaceChild()        | 替换子节点           |
-| insertBefore(new,old) | 在旧节点前插入新节点 |
-| isEqualNode()         | 判断节点是否相同     |
-
-**4.创建节点**：
-
-| 创建节点          | 描述         |
-| ----------------- | ------------ |
-| createAttribute() | 创建属性节点 |
-| createElement()   | 创建元素节点 |
-| createTextNode()  | 创建文本节点 |
+> CSS属性名多个单词以-分隔s，JS调用CSS属性名多个单词采用驼峰命名；
+> 即在JS中使用fontSize来表示CSS中的font-size。
 
 ## DOM事件
 
-| 事件        | 描述         |
+事件三要素：事件源，事件名称，事件处理程序；
+
+| 事件句柄    | 描述         |
 | ----------- | ------------ |
-| onclick     | 点击事件     |
+| onclick     | 鼠标单击     |
 | onfocus     | 元素获得焦点 |
 | onblur      | 元素失去焦点 |
 | onmouseover | 鼠标覆盖     |
 | onmouseout  | 鼠标移开     |
+| onmouseup   | 鼠标点击     |
+| onmousedown | 鼠标松开     |
+| onscroll    | 窗口滚动     |
 | onchange    | 发生改变     |
 | onload      | 加载完成     |
 | onunload    | 退出页面     |
 | onerror     | 加载错误     |
 
-事件三要素：事件源，事件名称，事件处理程序;
+### 事件传播
 
-事件绑定：
-①获取元素：var 元素 = document.getElementByXXX("");
-②事件函数：元素.事件 = function(){ 事件处理程序 };
-this：事件源
-return false：取消事件源的默认动作
+**事件传播方式**：
+①事件捕获：Window->Document -> Element -> Attribute -> Text；
+②事件冒泡：Window<-Document <- Element <- Attribute <- Text；
+注意：focus blur scroll事件除外其它的大部分事件都会冒泡 
 
-事件传递方式：
--事件捕获：Document -> Element -> Attribute -> Text；
--事件冒泡：Document <- Element <- Attribute <- Text；
-默认事件传递方式：事件冒泡
+**阻止事件传播**：
 
-阻止事件传播的方式：
-标准方式：event.stopPropagation阻止事件传递；
+```js
+event.stopPropagation()
+```
 
-注册/移除事件的三种方式：
-1.事件源.on+事件类型：onclick
-2.事件源.addEventListener(eventName,eventHandler,[useCapture])
-&nbsp;&nbsp;&nbsp;useCapture==true;捕获阶段；默认值为false；IE9之前的不兼容
-3.事件源.attachEvent(eventName,eventHandler,[useCapture])
+### 事件注册
+
+**注册/移除事件**的三种方式：
+①on事件：
+
+```js
+事件源.onclick = function(){}
+```
+
+②addEventListener()：
+
+```js
+事件源.addEventListener('click',function(){},[useCapture])
+// 捕获阶段：useCapture=true; 默认值为false；（IE9+）
+```
+
+③attachEvent()：
+
+```js
+事件源.attachEvent(eventName,function(){},[useCapture])
+// 捕获阶段：useCapture=true; 默认值为false；（IE8-）
+```
+**取消事件默认行为**：
+
+①阻止独享属性（on+event）绑定的事件的默认事件：
+
+```js
+return false;
+```
+
+②阻止通过addEventListener()添加的事件的默认事件：
+
+```js
+event.preventDefault();
+```
+
+③阻止通过attachEvent()添加的事件的默认事件：
+
+```js
+event.returnValue = false;
+```
+
+
 
 # JS BOM
 
 BOM浏览器对象模型
+其中window对象是BOM顶级对象，document，location，history，navigator都是其子对象。
 
 ## window-浏览器窗口
 
 window对象：浏览器窗口；
-
-window对象是BOM顶级对象，document，location，history，navigator都是其子对象。
 
 | window属性&方法    | 描述                 |
 | ------------------ | -------------------- |
