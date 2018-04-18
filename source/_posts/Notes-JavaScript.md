@@ -521,7 +521,7 @@ var function_name = new Function(arg1, arg2, ..., argN, function_body)
 
 | function属性&方法 | 描述                                             |
 | ----------------- | ------------------------------------------------ |
-| eval("JS代码") | 计算 JavaScript 字符串，并把它作为脚本代码来执行 |
+| eval("JS代码") | 执行JS代码 |
 | escape()          | 对字符串进行编码                                 |
 | unescape()          | 对字符串进行解码                                |
 | encodeURI()       | 把字符串编码为 URI                               |
