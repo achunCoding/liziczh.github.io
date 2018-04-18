@@ -6,16 +6,13 @@ tags:
   - css
   - notes
 categories: Web
-abbrlink: 1617
 date: 2018-04-05 17:21:22
 ---
 
 # CSS
 
 CSS 层叠样式表（Cascading Style Sheets）
-
 CSS主要通过为HTML元素增添样式以修饰静态页面，实现了内容与表现分离。
-
 网页布局：div+CSS；
 
 <!-- more -->

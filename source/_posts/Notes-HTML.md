@@ -6,14 +6,12 @@ tags:
   - notes
 categories: Web
 comments: true
-abbrlink: 19580
 date: 2018-04-03 22:36:54
 ---
 
 # HTML
 
 HTML超文本标记语言。其中“超文本“指页面内可以包含图片、链接、程序、音频、视频等非文字元素，即一个页面（page）可以包含：文本、图片、链接、程序、音频、视频等元素。
-
 HTML常用于编写页面主体结构，CSS用于对页面进行静态修饰，JavaScript用于对网页增加动态功能。
 
 <!-- more -->
