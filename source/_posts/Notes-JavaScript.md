@@ -6,7 +6,6 @@ tags:
   - notes
   - js
 categories: Web
-abbrlink: 58441
 date: 2018-04-07 14:27:12
 ---
 
@@ -586,19 +585,6 @@ function addNum(iNum1, iNum2) {
 
 ### Object对象
 
-```js
-/* Object属性 */
-obj.constructor // 指向对象构造器
-obj.prototype // 指向对象原型
-/* Object方法 */
-Object.assign({}, obj) // 对象复制
-Object.assign(obj1, obj2, obj3) // 对象合并
-Object.create(proto, [prop_Object]) // 模拟类（class）
-Object.is(obj1, obj2) //判断两个值是否相同
-Object.keys() // 返回对象所有属性组成的数组
-Object.delete(obj.prop) // 删除对象的某个属性
-```
-
 | Object属性&方法 | 描述 |
 | --------------- | ---- |
 | constructor | 指向对象构造器 |
@@ -846,12 +832,12 @@ DOM节点：文档Document->元素Element->属性Attribute->文本Text；
 
 **1.当前节点属性**：
 
-| 当前节点属性 | 描述                                             |
-| ------------ | ------------------------------------------------ |
-| nodeName     | 节点名称                                         |
-| nodeValue    | 返回/设置当前文本节点的文本字符串                |
-| textContent  | 当前节点及后代节点的文本内容                     |
-| nodeValue    | 节点类型；元素=1\|属性=2\|文本=3\|注释=8\|文档=9 |
+| 当前节点属性 | 描述                                                   |
+| ------------ | ------------------------------------------------------ |
+| nodeName     | 节点名称                                               |
+| nodeValue    | 当前文本节点的文本字符串                               |
+| textContent  | 当前节点及后代节点的文本内容                           |
+| nodeValue    | 节点类型；<br>元素=1，属性=2，文本=3<br>注释=8，文档=9 |
 
 **2.当前节点的相关节点**：
 
