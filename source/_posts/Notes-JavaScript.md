@@ -660,7 +660,7 @@ var obj = {
 	var name = "张三";
 	var age = 20;
 	var eat = function(){
-        alert(this.name + "正在吃饭~");
+		alert(this.name + "正在吃饭~");
 	}
 };
 ```
@@ -703,47 +703,59 @@ obj instanceof Object;  // true  判断obj是否为Object的一个实例。
 
 
 
-### JS原型★
+## JS原型（难点）
 
-所有的函数对象(new)都存在原型对象(prototype)；
+原型简化了继承，是JS中最漂亮的设计。
 
-`函数对象.prototype`：指向函数对象的原型对象；
+### 构造函数
 
-所有对象都存在`__proto__`属性，只有函数对象存在`prototype`属性；
+JavaScript是一门面向对象的编程语言，所有数据类型都是对象。
+Brendan Eich为JavaScript设计了**继承**机制，但并未引入“类”的概念，而是采用**构造函数**直接生成实例。
 
-所有原型对象都存在constructor属性，指向prototype属性所在函数；A.prototype.constructor == A；
+```js
+// 构造函数
+function Person(name,age){
+	this.name=name,
+	this.age=age,
+	this.eat=function(){
+		console.log(this.name+"吃馒头");
+	}
+}
+// 使用[构造函数]生成实例
+var p1 = new Person("Tom",20);
+```
 
-原型对象（Person.prototype）是 构造函数（Person）的一个实例；
+### 原型对象
 
+**引入prototype属性**：
 
+使用**构造函数**直接生成实例，存在一个问题：无法共享数据。
 
-所有函数都可以通过prototype属性获取到函数原型，
+为了共享的通用属性和方法，Brendan Eich为构造函数设置了一个prototype属性，指向构造函数的原型对象。
 
-通过对prototype.属性赋的值赋值给所有对象
-
-
-
-prototype
-
-作用：创建类的公有属性和公有方法
-
-prototype的两个属性：
-
-1.构造器constructor
-
-2.原型__proto__
-
-
-
-原型链
-
-由[对象__proto__属性]和[对象构造函数的__proto__属性]构成的链式结构，Object__proto__就是Object；
-
-原型链：对象属性调用优先级序列；本身属性>原型属性。
+原型对象用于存放所有实例共享的通用属性和方法。构造函数每生成一个实例对象，将自动引用prototype对象中共享的属性和方法。
 
 
 
-原型继承：设置[子类的原型]是[父类的实例]；
+**原型对象的属性**：
+①`__proto__`：指向创建它的函数对象的原型对象prototype；
+②`constructor`：指向构造器；
+
+```js
+obj.prototype.constructor = obj
+```
+
+### 原型链
+
+**原型链**：JS对象（不论是普通对象还是函数对象）都有`__proto__`属性，指向**创建它**的**函数对象**的**原型对象**[prototype]。通过`__proto__`向上遍历直到`Object.prototype.__proto__ = null`构成原型链。
+
+### 原型继承
+
+原型继承：当查找一个对象的属性时，JavaScript 会向上遍历原型链，直到找到相应的属性为止。
+
+原型继承的本质：由于所有的实例对象共享同一个prototype对象，那么从外界看起来，prototype对象就好像是实例对象的原型，而实例对象则好像"继承"了prototype对象一样。
+
+原型继承：设置[子类的原型]是[父类的实例]。
 
 
 
