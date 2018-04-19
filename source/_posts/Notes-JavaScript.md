@@ -70,6 +70,7 @@ alert();           //弹出框输出
 console.log();     //在console显示
 document.write();  //写入HTML文件中
 ```
+
 ## JS标识符
 
 JS**标识符命名**规则：
@@ -128,6 +129,7 @@ typeof {}         //object 对象
 typeof []         //object 数组对象
 typeof alert()    //function 函数
 ```
+
 ### 原始类型
 
 **1.Number | 数字**：
@@ -699,6 +701,7 @@ function Person(name,age){
 var obj = new Object();
 obj instanceof Object;  // true  判断obj是否为Object的一个实例。
 ```
+
 > 在 JavaScript 中，很多时候，你需要避免使用 `new `关键字。
 
 
@@ -728,14 +731,9 @@ var p1 = new Person("Tom",20);
 ### 原型对象
 
 **引入prototype属性**：
-
 使用**构造函数**直接生成实例，存在一个问题：无法共享数据。
-
 为了共享的通用属性和方法，Brendan Eich为构造函数设置了一个prototype属性，指向构造函数的原型对象。
-
 原型对象用于存放所有实例共享的通用属性和方法。构造函数每生成一个实例对象，将自动引用prototype对象中共享的属性和方法。
-
-
 
 **原型对象的属性**：
 ①`__proto__`：指向创建它的函数对象的原型对象prototype；
@@ -752,9 +750,7 @@ obj.prototype.constructor = obj
 ### 原型继承
 
 原型继承：当查找一个对象的属性时，JavaScript 会向上遍历原型链，直到找到相应的属性为止。
-
 原型继承的本质：由于所有的实例对象共享同一个prototype对象，那么从外界看起来，prototype对象就好像是实例对象的原型，而实例对象则好像"继承"了prototype对象一样。
-
 原型继承：设置[子类的原型]是[父类的实例]。
 
 
@@ -1093,6 +1089,6 @@ navigator对象：浏览器信息
 > 参考资料：
 > W3school：[JavaScript教程](ECMAScript)，[ECMAScript](http://www.w3school.com.cn/js/pro_js_history.asp)；
 > 菜鸟教程：[JavaScript教程](http://www.runoob.com/js/js-tutorial.html)；
-
+> 阮一峰老师：[Javascript继承机制的设计思想](http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html)
 
 
