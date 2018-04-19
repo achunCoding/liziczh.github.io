@@ -7,12 +7,13 @@ tags:
   - notes
 categories: Web
 date: 2018-04-05 17:21:22
+
 ---
 
 # CSS
 
 CSS 层叠样式表（Cascading Style Sheets）
-CSS主要通过为HTML元素增添样式以修饰静态页面，实现了内容与表现分离。
+CSS主要通过为HTML元素增添样式的方式修饰静态页面，实现了内容与表现分离。
 网页布局：div+CSS；
 
 <!-- more -->
@@ -57,6 +58,7 @@ CSS注释：`/* CSS注释内容 */`
       }
   </style>
 ```
+
 3.外部样式表（外联表）：外部**.css**文件
 
 4.引入外部样式表：
@@ -376,6 +378,7 @@ outline : color style width;
 # CSS选择器
 
 ## 元素选择器
+
 ```css
 标签{ 
 	属性:值;
@@ -383,15 +386,18 @@ outline : color style width;
 ```
 
 ## 类选择器
+
 ```css
 .类名{
 	属性:值;
 }
 ```
+
 单类名调用：`class="类名"`；
 多类名调用：`class="类名1 类名2 ..."`；
 
 ## id选择器
+
 ```css
 #id{
 	属性:值;
@@ -399,11 +405,13 @@ outline : color style width;
 ```
 
 ## 通配符选择器
+
 ```css
 *{                
 	属性:值;
 }
 ```
+
 > 作用域：整个HTML页面
 >
 
@@ -430,6 +438,7 @@ outline : color style width;
     属性:值;
 }
 ```
+
 > 作用于先代元素内的[所有的后代元素]；
 
 ## 子元素选择器★
@@ -439,6 +448,7 @@ outline : color style width;
     属性:值;
 }
 ```
+
 > 只作用于父元素内的[直接子元素]；
 
 ## 相邻兄弟选择器
@@ -448,6 +458,7 @@ outline : color style width;
     属性:值;
 }
 ```
+
 > 作用于**紧接在**伯元素后的[仲元素]；
 
 ## 属性选择器
@@ -465,6 +476,7 @@ outline : color style width;
 ```
 
 ## 伪类选择器
+
 ```css
 选择器:伪类{
 	属性:值;
@@ -491,6 +503,7 @@ outline : color style width;
 ```
 
 **3.【CSS3】目标伪类：**
+
 ```css
 /*:target 选择器用于选取当前活动的目标元素*/
 :target{
@@ -661,13 +674,24 @@ clear 属性规定元素的哪一侧不允许其他浮动元素。
 **清除浮动的方式：**
 
 1.【W3C推荐】在盒子末尾再添加一个如下的空盒子：
-&nbsp;&nbsp;&nbsp;`<div style="clear:both;"></div> `；
+
+```html
+<div style="clear:both;"></div> 
+```
 
 2.在盒子样式中添加溢出隐藏样式：
-&nbsp;&nbsp;&nbsp;`overflow:hidden`；
+
+```css
+overflow:hidden
+```
 
 3.为盒子添加如下样式，在每次结束后都清除浮动：
-&nbsp;&nbsp;&nbsp;`.clearfix:after{clear:both}`只适用于IE6、IE7。
+
+```css
+.clearfix:after{clear:both}  /* 只适用于IE6、IE7。 */
+```
+
+
 
 
 # 定位

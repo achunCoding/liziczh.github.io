@@ -49,6 +49,7 @@ HTML注释：`<!-- HTML注释格式 -->`
 </body>
 </html>
 ```
+
 # HTML-头部标签
 
 ## meta标签-元信息
@@ -61,7 +62,6 @@ HTML注释：`<!-- HTML注释格式 -->`
 ```
 
 2.meta标签属性：**键值对**
-
 - name:content
 - http-equiv:content
 
@@ -125,6 +125,7 @@ HTML元素：从开始标签（start tag）到结束标签（end tag）的所有
 | 行内块元素   | `<img/>`、`<td></td>`...      |
 
 ## HTML标签属性
+
 HTML标签属性格式：**name="value"** ；
 
 | 属性  | 值               | 描述                                     |
@@ -189,20 +190,25 @@ HTML标签属性格式：**name="value"** ；
 ## 列表标签
 
 ### 无序列表-ul
+
 ```html
 <ul>
 	<li>表项1</li>
 	<li>表项2</li>
 </ul>
 ```
+
 ### 有序列表-ol
+
 ```html
 <ol>
 	<li>表项1</li>
 	<li>表项2</li>
 </ol>
 ```
+
 ### 自定义列表-dl
+
 ```html
 <dl>
 	<dt>上级表项1</dt>
@@ -213,9 +219,11 @@ HTML标签属性格式：**name="value"** ；
 		<dd>下级表项22</dd>
 </dl>
 ```
+
 > 列表项计数问题：从1开始计数，dl从dt开始计数；
 
 ## 表格标签-table
+
 ```html
 <table border="1px">
 	<thead>
@@ -236,6 +244,7 @@ HTML标签属性格式：**name="value"** ；
 	</tbody>
 </table>
 ```
+
 > 空单元格边框未显示问题：在空单元格中添加一个空格占位符`&nbsp;`；
 
 `<table>`属性：
@@ -249,22 +258,23 @@ HTML标签属性格式：**name="value"** ；
 
 
 
-
 ## 表单标签-form
+
 ```html
 <form action="" method="GET">
 	表单域：表单元素；
 </form>
 ```
+
 | `<form>`属性 | 值                  | 描述                         |
 | ------------ | ------------------- | ---------------------------- |
 | action       | url                 | 规定提交表单的目的地址url    |
 | method       | **GET**<br>**POST** | 规定提交表单使用的 HTTP 方法 |
 | target       | _self<br>\_blank    | 规定action的打开方式         |
-> **HTTP 方法**：
+
+> > **HTTP 方法**：
 > - **GET**：表单数据在地址栏可见，明文；（默认）
 > - **POST**：表单数据在地址栏不可见，密文；
-
 
 
 ### input标签★

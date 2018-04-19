@@ -5,7 +5,6 @@ comments: true
 tags:
   - hexo
 categories: Hexo
-abbrlink: 52716
 date: 2018-04-12 08:34:58
 ---
 
@@ -381,6 +380,24 @@ local_search:
 打开编辑`themes\next\layout\_third-party\analytics\busuanzi-counter.swig`：
 
 ![添加访客&访问量描述](http://p6uturdzt.bkt.clouddn.com/next-visitor.PNG)
+
+## 添加Host-by描述
+
+最近，银牌会员的Coding Pages在访问时会加载广告，需要在网站首页任意位置放置「Hosted by Coding Pages」，通过审核将取消广告。
+打开编辑`themes//next//layout//_partials//footer.swig`，在末尾添加如下代码，将「Hosted by Coding Pages」置于页面底部。
+
+```html
+{% if theme.footer.powered.enable and theme.footer.theme.enable %}
+  <div class="copyright">
+    Hosted by <a href="https://pages.coding.me">Coding Pages</a>
+    &&nbsp;<a href="https://pages.github.com">GitHub Pages</a>
+  </div>
+{% endif %}
+```
+
+
+
+
 
 > 参考资料：[next主题|使用文档](http://theme-next.iissnan.com/)
 

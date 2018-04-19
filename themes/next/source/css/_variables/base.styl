@@ -93,8 +93,8 @@ $font-weight-bolder       = 700
 // Font size
 $font-size-base           = 14px
 $font-size-base           = unit(hexo-config('font.global.size'), px) if hexo-config('font.global.size') is a 'unit'
-$font-size-small          = $font-size-base - 2px
-$font-size-smaller        = $font-size-base - 4px
+$font-size-small          = $font-size-base
+$font-size-smaller        = $font-size-base - 2px
 $font-size-large          = $font-size-base + 2px
 $font-size-larger         = $font-size-base + 4px
 
@@ -315,9 +315,9 @@ $b2t-color                    = white
 $b2t-bg-color                 = $black-deep
 
 // full-image
-$full-image-width             = 110%
-$full-image-margin-horizontal = -5%
-$full-image-margin-vertical   = 25px
+//$full-image-width             = 110%
+//$full-image-margin-horizontal = -5%
+//$full-image-margin-vertical   = 25px
 
 //  .post-expand .post-eof
 //  In Muse scheme, margin above and below the post separator

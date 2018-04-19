@@ -11,9 +11,7 @@ date: 2018-04-11 10:57:46
 # Hexo个人博客搭建
 
 清明四月飞雪，深居简出，闲来无聊，学以致用，搭建一个属于自己的博客站点。
-
 本篇主要记录使用hexo+pages搭建个人博客的流程。
-
 其中[Hexo](https://hexo.io/zh-cn/) 是一个博客框架，可解析markdown文章，生成静态页面。在代码托管平台[github](https://github.com)（国外）、[coding](https://coding.net)（国内）上都有pages服务，提供免费的静态网页托管和演示服务。
 
 <!-- more -->
@@ -47,6 +45,7 @@ npm uninstall hexo -g     #卸载hexo
 2.hexo初始化：`hexo init`
 3.安装依赖包：`npm install`
 4.初始化完成，在blog下就会生成以下文件目录：
+
 ```yaml
 .
 ├── node_modules # 依赖模块
@@ -60,6 +59,7 @@ npm uninstall hexo -g     #卸载hexo
 ```
 
 5.hexo本地生成静态页面
+
 ```shell
 hexo clean     # 清理本地静态文件；
 hexo generate  # 生成静态页面，即public文件夹；
@@ -67,6 +67,7 @@ hexo server    # 启用hexo本地服务器；
 # 注：Hexo 3.0 把服务器独立成了个别模块，您必须先安装 hexo-server 才能使用。
 # hexo-server安装命令：npm install hexo-server --save
 ```
+
 这时，打开浏览器在地址栏输入[http://localhost:4000](http://localhost:4000)即可本地访问静态博客页面。
 
 ## 配置github/coding pages
@@ -80,6 +81,7 @@ github和coding可以双线配置，也可以选择其中一个配置。推荐�
 &nbsp;&nbsp;&nbsp;其中`yourname`是你的coding用户名，coding不强制后缀为`coding.me`。
 
 3.Git Bash配置github账户信息：
+
 ```shell
 git config --global user.name "YourName"
 git config --global user.email "YourEmail"
@@ -109,6 +111,7 @@ ssh -T git@github.com
 ## 部署到github/coding
 
 1.修改**站点配置文件**`_config.yml`：
+
 ```yaml
 deploy:
 	type: git
@@ -125,12 +128,15 @@ npm install hexo-deployer-git --save
 ```
 
 3.部署：
+
 ```shell
 hexo clean     # 清理本地静态文件；
 hexo generate  # 生成静态页面，即public文件夹；
 hexo deploy    # 部署到github/coding；
 ```
+
 4.部署完毕，blog下的文件目录如下：
+
 ```shell
 .
 ├── .deploy_git  # （新增）hexo deploy 生成的git部署文件
@@ -197,21 +203,25 @@ deploy:
 1.hexo默认主题为landscape，可以到[Themes|Hexo](https://hexo.io/themes/)选择自己喜欢的主题，复制主题在github仓库的url。
    ![clone theme](http://p6uturdzt.bkt.clouddn.com/hexo-clone_theme.PNG)
 2.在themes文件夹下，打开GitBash，克隆主题至themes文件夹中。
+
 ```shell
 git clone https://github.com/theme-next/hexo-theme-next.git
 ```
+
 3.更改**站点配置文件**`_config.yml`：
+
 ```yaml
 theme: 主题文件名
 ```
+
 4.编辑结束，重新部署：
 
 ```shell
 hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
 hexo g -d   # 生成静态页面后直接部署；
 ```
-部署完毕之后，进入以下链接刷新就可以看到你的新主题了。
 
+部署完毕之后，进入以下链接刷新就可以看到你的新主题了。
 - github pages：[http://yourname.github.io](http://yourname.github.io)
 - coding pages：[http://yourname.coding.me](http://yourname.coding.me)
 
@@ -317,6 +327,25 @@ categories:
 
 重新部署之后，个人博客的基本功能，写作，标签，分类，归档就全部实现了。
 
+## 绑定自己的域名
+
+若不喜欢域名后缀为github.io或coding.me，可以自己注册一个域名进行绑定。
+
+1.域名注册：在[阿里云](https://wanwang.aliyun.com/?utm_content=se_1101810)/[腾讯云](https://dnspod.cloud.tencent.com/?fromSource=gwzcw.185882.185882.185882)等注册一个域名。
+
+2.Github Pages域名解析：
+①添加两个`A记录`：主机记录为`@`，记录值为`192.30.252.153`和`192.30.252.154`，指向github的两台主机。
+②添加一个`CNAME记录`：主机记录为`www`，记录值为`yourname.github.io`。
+
+3.Coding Pages域名解析：
+①打开控制台`ping pages.coding.me`，获取IP。
+②添加一个`A记录`：主机记录为`@`，记录值为ping得的IP。
+③添加一个`CNAME记录`：主机记录为`www`，记录值为`pages.coding.me`。
+
+![dns](http://p6uturdzt.bkt.clouddn.com/hexo-dns.PNG)
+
+由于国内访问Github Pages速度较慢，所以我将Coding Pages解析线路设为默认，供国内访问；将Github Pages解析线路设为境外，供国外访问。
+
 
 
 ## 附：hexo常用命令
@@ -335,6 +364,4 @@ categories:
 > 若想了解更多关于hexo命令的介绍，请参考[指令 | hexo](https://hexo.io/zh-cn/docs/commands.html)
 
 ## 小结
-- 此次搭建博客站点牵涉到很多以前不是很了解的内容：git使用，nodejs，hexo，github，ssh与http；努力学习，下次再详细介绍一下这些内容。
-- 兴趣是学习的源动力。
-- 本文若有地方表述错误，欢迎指正，不胜感激。
+- 本文若存在表述错误，欢迎指正，不胜感激。
