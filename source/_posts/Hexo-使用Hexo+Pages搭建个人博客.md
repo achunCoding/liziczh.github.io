@@ -1,5 +1,5 @@
 ---
-title: Hexo个人博客搭建
+title: 使用Hexo+Pages搭建个人博客
 id: hexo-blog-build
 comments: true
 tags:
@@ -8,7 +8,7 @@ categories: Hexo
 date: 2018-04-11 10:57:46
 ---
 
-# Hexo个人博客搭建
+# 使用Hexo+Pages搭建个人博客
 
 清明四月飞雪，深居简出，闲来无聊，学以致用，搭建一个属于自己的博客站点。
 本篇主要记录使用hexo+pages搭建个人博客的流程。
@@ -33,7 +33,7 @@ date: 2018-04-11 10:57:46
 
 3.安装hexo：
 
-```yaml
+```shell
 npm install hexo-cli -g   #安装hexo
 npm uninstall hexo -g     #卸载hexo
 ```
