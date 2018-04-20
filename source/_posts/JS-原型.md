@@ -1,5 +1,5 @@
 ---
-title: JavaScript | 原型
+title: JS | 原型
 comments: true
 date: 2018-04-19 17:45:07
 id: js-prototype
@@ -8,7 +8,7 @@ tags:
 categories: Web
 ---
 
-<!--# JavaScript | 原型-->
+<!--# JS | 原型-->
 
 原型（prototype）简化了继承。
 

@@ -1,5 +1,5 @@
 ---
-title: Next主题个性化设置
+title: Hexo | Next主题个性化设置
 id: next-settings
 comments: true
 tags:

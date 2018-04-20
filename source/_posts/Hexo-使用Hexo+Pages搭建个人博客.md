@@ -1,5 +1,5 @@
 ---
-title: 使用Hexo+Pages搭建个人博客
+title: Hexo | 使用Hexo+Pages搭建个人博客
 id: hexo-blog-build
 comments: true
 tags:
