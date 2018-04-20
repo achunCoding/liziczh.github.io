@@ -8,7 +8,7 @@ tags:
 categories: Web
 ---
 
-## JavaScript原型
+<!--# JavaScript | 原型-->
 
 原型（prototype）简化了继承。
 

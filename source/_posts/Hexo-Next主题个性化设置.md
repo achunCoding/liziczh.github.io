@@ -8,7 +8,8 @@ categories: Hexo
 date: 2018-04-12 08:34:58
 ---
 
-# NexT主题个性化设置
+<!--# Next主题个性化设置-->
+
 NexT is a high quality elegant [Hexo](http://hexo.io/) theme. It is crafted from scratch, with love.
 
 ## Live Preview
