@@ -1,5 +1,5 @@
 ---
-title: Hexo | 使用Hexo+Pages搭建个人博客
+title: Hexo系列 | （一）使用Hexo+Pages搭建个人博客
 id: hexo-blog-build
 comments: true
 tags:
@@ -8,7 +8,7 @@ categories: Hexo
 date: 2018-04-11 10:57:46
 ---
 
-<!--# 使用Hexo+Pages搭建个人博客-->
+<!--# Hexo系列 | （一）使用Hexo+Pages搭建个人博客-->
 
 清明四月飞雪，深居简出，闲来无聊，学以致用，搭建一个属于自己的博客站点。
 本篇主要记录使用hexo+pages搭建个人博客的流程。

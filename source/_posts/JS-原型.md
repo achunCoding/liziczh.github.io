@@ -1,7 +1,7 @@
 ---
 title: JS | 原型
 comments: true
-date: 2018-04-19 17:45:07
+date: 2018-04-10 17:45:07
 id: js-prototype
 tags:
 - js

@@ -1,6 +1,7 @@
 ---
 title: Notes | JavaScript
 id: notes-js
+top: 1
 comments: true
 tags:
   - notes
