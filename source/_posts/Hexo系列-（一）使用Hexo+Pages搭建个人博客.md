@@ -209,6 +209,8 @@ deploy:
 git clone https://github.com/theme-next/hexo-theme-next.git
 ```
 
+克隆之后，记住删除`themes\你的主题名`中的`.git`，`.github`，`.gitignore`等Git仓库文件。
+
 3.更改**站点配置文件**`_config.yml`：
 
 ```yaml

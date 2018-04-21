@@ -16,7 +16,7 @@ Hexo博客存在一个问题：如果存储blog文件的电脑系统崩溃了，
 
 <!-- more -->
 
-## 上传本地站点文件至hexo分支
+## 多机同步更新的前提：hexo分支
 
 Hexo博客站点的必要文件：
 
@@ -27,11 +27,11 @@ Hexo博客站点的必要文件：
 ├── themes       # 主题
 ├── .gitignore   # git忽略文件信息
 ├── _config.yml  # 站点配置文件
-├── package.json # 已安装插件映射表，下次只需npm install即直接安装表插件
+├── package.json # 已安装插件映射表，下次只需npm install即直接安装表中的插件
 ├── package-lock.json
 ```
 
-编辑`.gitignore`文件，使Git上传时忽略不必要的文件：
+编辑**站点根目录**下的`.gitignore`文件，使Git上传时忽略不必要的文件：
 
 ```
 .DS_Store
@@ -43,36 +43,38 @@ public/
 .deploy*/
 ```
 
-在`yourname.github.io`中创建一个hexo分支，并将hexo分支设为默认分支。
+1.删除`themes\next`中的`.git`，`.github`，`.gitignore`等Git仓库文件，只保留站点根目录下的`.gitignore`。
+
+2.在Hexo博客站点根目录（即blog文件夹）中GitBash：
+
+```shell
+git init
+git checkout -b hexo
+git add .
+git commit -m "提交说明"
+git push origin hexo
+```
 
 
 
-
-
-## 多机同步更新
+## 多机同步更新博客
 
 ### 安装前提
 
 1.安装Git
 2.安装nodejs
+3.配置SSH协议
 
 ### 博客还原
 
-克隆hexo分支的站点文件至本地：
-
 ```shell
-git clone -b hexo https://github.com/yourname/yourname.github.io.git
-```
-
-`cd`到`yourname.github.io`文件夹中：
-
-```shell
+# 克隆hexo分支到本地
+git clone -b hexo https://github.com/yourname/yourname.github.io.git 
+cd yourname.github.io # 进入yourname.github.io文件夹
 npm install # 安装依赖，根据package.json自动安装之前安装过的插件
 npm install hexo-cli -g  # 安装hexo命令行模式
 hexo init  # hexo初始化
 ```
-
-正常使用Hexo博客。
 
 ### 正常使用
 
