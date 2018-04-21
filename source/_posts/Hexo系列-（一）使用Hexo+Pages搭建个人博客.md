@@ -35,7 +35,7 @@ date: 2018-04-11 10:57:46
 
 ```shell
 npm install hexo --save   #安装hexo
-npm install hexo-cli -g   #安装hexo-cli
+npm install hexo-cli -g   #安装hexo命令行模式
 npm uninstall hexo -g     #卸载hexo
 ```
 
