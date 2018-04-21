@@ -34,7 +34,8 @@ date: 2018-04-11 10:57:46
 3.安装hexo：
 
 ```shell
-npm install hexo-cli -g   #安装hexo
+npm install hexo --save   #安装hexo
+npm install hexo-cli -g   #安装hexo-cli
 npm uninstall hexo -g     #卸载hexo
 ```
 
