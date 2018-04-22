@@ -10,8 +10,8 @@ categories: Hexo
 
 <!--# Hexo系列 | （三）URL优化及站点提交-->
 
-在博客站点搭建完毕之后，搜索引擎仍然无法搜索到我们的博客，所以我们需要将自己的站点提交给搜索引擎。
-在提交站点之前，为了方便爬虫爬取网页，我们需要先优化一下自己网站的URL。
+在站点搭建完成之后，搜索引擎是无法搜索到我们自己的网站的。如果想要在搜索引擎中搜索到自己的博客，我们就需要将自己的站点提交给搜索引擎。
+在站点提交之前，为了方便搜索引擎的爬虫爬取网页，我们需要先优化一下自己网站的URL。
 
 <!--more-->
 
@@ -20,17 +20,19 @@ categories: Hexo
 一个好的URL设计，不仅有利于网络爬虫的爬取，更有利于用户的体验。
 正确的URL设计应该满足：长度尽量短，目录层次尽量少，全小写，连字符使用中划线`-`，具有描述性，包含关键词等。
 
-**URL优化策略（一）**：自定义id属性
+### 文章URL优化
+
+**文章URL优化策略（一）**：自定义id属性
 
 1.为每篇文章Front-matter添加id属性，作为文章URL，确保id属性的值满足以上条件。
-2.编辑站点配置文件：
+2.编辑**站点配置文件**：
 
 ```yaml
 # permalink: :year/:month/:day/:title.html  # 默认永久链接冗长，title中存在中文字符。
 permalink: :id.html # 尽量短，层次少，全小写，中划线连字，具有描述性，包含关键词
 ```
 
-**URL优化策略（二）**：abbrlink链接唯一化
+**文章URL优化策略（二）**：abbrlink链接唯一化
 
 1.安装abbrlink插件：
 
@@ -38,13 +40,30 @@ permalink: :id.html # 尽量短，层次少，全小写，中划线连字，具�
 npm install hexo-abbrlink --save  
 ```
 
-2.编辑站点配置文件：
+2.编辑**站点配置文件**：
 
 ```yaml
 permalink: :abbrlink.html   # 生成唯一链接
 abbrlink:
   alg: crc32  # 算法：crc16(default) and crc32
   rep: dec    # 进制：dec(default) and hex
+```
+
+### 标签&分类URL优化
+
+我们在对文章分类或添加标签时，难免会用到中文或其他字符，而我们又在尽量避免中文字符出现在URL中，所以我们需要对中文分类&标签进行映射操作。
+
+编辑**站点配置文件**：
+
+```yaml
+# 分类名映射
+category_map:  
+  生活: life
+  其他: other
+# 标签名映射
+tag_map:
+  生活: life
+  其他: other
 ```
 
 ## 站点提交
@@ -66,10 +85,10 @@ site:example.com
 
 ### **3.验证网站所有权**
 
-验证方式有三种 ：文件验证、HTML标签验证和CNAME验证，任选一种验证成功即可。
+验证方式有三种：文件验证、HTML标签验证和CNAME验证，任选一种验证成功即可。
 
 (1)文件验证：
-下载验证文件，一个存放着token的html文件。
+下载验证文件，一个存放着token信息的html文件。
 将验证文件置于网站根目录下（blog/source/或者theme/next/）。
 
 (2)HTML标签验证：
@@ -92,7 +111,7 @@ site:example.com
 
 ### **4.生成网站地图**
 
-编辑站点配置文件，确保url是你的域名地址：
+编辑**站点配置文件**，确保url是你的域名地址：
 
 ```yaml
 url: https://<你的域名>
@@ -103,10 +122,10 @@ url: https://<你的域名>
 ```shell
 npm install hexo-generator-sitemap --save   # 安装谷歌站点地图插件
 npm install hexo-generator-baidu-sitemap --save  # 安装百度站点地图插件
-hexo generate  # 生成sitemap.xml和baidusitemap.xml
+hexo g  # 生成sitemap.xml和baidusitemap.xml
 ```
 
-### 5.链接提交方式
+### 5.链接提交
 
 > 如何选择链接提交方式？
 > ①主动推送：最为快速的提交方式，推荐您将站点当天新产出链接立即通过此方式推送给百度，以保证新链接可以及时被百度收录。
@@ -116,7 +135,7 @@ hexo generate  # 生成sitemap.xml和baidusitemap.xml
 >
 > 效率：主动推送>自动推送>sitemap
 
-**主动推送**：
+**使用submit插件实现主动推送**：
 
 1.安装百度提交插件：
 
@@ -124,35 +143,44 @@ hexo generate  # 生成sitemap.xml和baidusitemap.xml
 npm install hexo-baidu-url-submit --save
 ```
 
-2.编辑站点配置文件，配置以下信息：
+2.编辑**站点配置文件**，配置以下信息：
 
 ```yaml
 baidu_url_submit:
-  count: 3  # 比如3，代表提交最新的三个链接
+  count: 3  # 提交最新链接数
   host: <域名>  # 你所提交的域名
   token: yourtoken # 秘钥，请不要发布在公众仓库中
   path: baidu_urls.txt # 文本文档路径，新链接会保存在此文本文档中
 ```
 
-3.编辑站点配置文件，为deploy新增一个type：
+3.编辑**站点配置文件**，为deploy新增一个type：
 
 ```yaml
 deploy:
-	-type: baidu_url_submitter  # 为deploy新增一个type
+	type: baidu_url_submitter  # 为deploy新增一个type
 ```
 
 **自动推送**：
 
-若主题已经集成了自动推送的JS代码，直接编辑next主题配置文件：
+若主题已经集成了自动推送的JS代码，直接在**主题配置文件**中设置百度推送属性即可。
 
 ```yaml
-baidu_push: true  # 将百度推送置true
+# 例如next主题：直接将baidu_push置true即可
+baidu_push: true  
 ```
 
-如果主题没有集成自动推送的JS代码，参考类似于以下路径，插入head文件中。
+如果主题没有集成自动推送的JS代码，插入主题中layout下的**head**文件中。
 
-```
+```shell
+# 主题不同，可能路径不同，但大都类似于以下路径
 blog\themes\你的主题\layout\_partial\head.ejs
 ```
 
-推送之后，大概一个礼拜左右，百度就会收录你的站点了。
+
+
+推送之后，大概一个礼拜左右，你就可以在百度搜索到你的博客了。
+
+
+
+emmmmmm......
+Coding在Pages服务页面添加了广告，所以配置完你还是无法搜索到自己的博客。
