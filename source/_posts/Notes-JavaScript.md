@@ -729,7 +729,7 @@ var p1 = new Person("Tom",20);
 ### 原型对象
 
 **引入prototype属性**：
-使用构造函数直接生成实例，存在一个问题：无法共享数据。
+使用构造函数直接生成实例，存在一个问题：无法共享通用数据。
 为了共享的通用属性和方法，Brendan Eich为构造函数设置了一个**prototype属性**，指向**构造函数的原型对象**。
 原型对象用于存放所有实例共享的通用属性和方法。构造函数每生成一个实例对象，将自动引用prototype对象中共享的属性和方法。
 
@@ -771,9 +771,6 @@ Obj.prototype.constructor = Obj
 ```js
 son.prototype = new Father()
 ```
-
-
-
 # JS DOM
 
 DOM文档对象模型

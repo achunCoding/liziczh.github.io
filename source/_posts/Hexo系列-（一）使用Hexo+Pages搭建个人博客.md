@@ -89,6 +89,7 @@ git config --global user.email "YourEmail"
 ```
 
 4.配置SSH协议
+
 ①生成rsa秘钥：
 
 ```shell
@@ -109,9 +110,7 @@ cat id_rsa.pub    # 在终端显示id_rsa.pub文件内容
 ssh -T git@github.com
 ```
 
-## 部署到github/coding
-
-1.修改**站点配置文件**`_config.yml`：
+⑤修改**站点配置文件**`_config.yml`：
 
 ```yaml
 deploy:
@@ -121,14 +120,15 @@ deploy:
 		coding: git@git.coding.net:yourname/yourname.coding.me.git 
 	branch: master
 ```
+## 部署到github/coding
 
-2.安装Git部署插件：
+1.安装Git部署插件：
 
 ```shell
 npm install hexo-deployer-git --save
 ```
 
-3.部署：
+2.部署：
 
 ```shell
 hexo clean     # 清理本地静态文件；
@@ -136,7 +136,7 @@ hexo generate  # 生成静态页面，即public文件夹；
 hexo deploy    # 部署到github/coding；
 ```
 
-4.部署完毕，blog下的文件目录如下：
+3.部署完毕，站点文件目录如下：
 
 ```shell
 .
@@ -366,5 +366,7 @@ categories:
 
 > 若想了解更多关于hexo命令的介绍，请参考[指令 | hexo](https://hexo.io/zh-cn/docs/commands.html)
 
+
 ## 小结
+
 - 本文若存在表述错误，欢迎指正，不胜感激。

@@ -1,6 +1,6 @@
 ---
 title: Hexo系列 | （二）Next主题个性化设置
-id: next-settings
+id: hexo-next-settings
 comments: true
 tags:
   - hexo
