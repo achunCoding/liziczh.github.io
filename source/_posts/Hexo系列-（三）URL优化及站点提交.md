@@ -87,18 +87,18 @@ site:example.com
 
 验证方式有三种：文件验证、HTML标签验证和CNAME验证，任选一种验证成功即可。
 
-(1)文件验证：
+**(1)文件验证**：
 下载验证文件，一个存放着token信息的html文件。
 将验证文件置于网站根目录下（blog/source/或者theme/next/）。
 
-(2)HTML标签验证：
+**(2)HTML标签验证**：
 将以下代码添加到你的网站首页HTML代码的`<head></head>`中
 
 ```html
 <mate name="baidu-site-verification" content="你的token">
 ```
 
-(3)CNAME验证：
+**(3)CNAME验证**：
 如果你绑定了自己的域名，只需添加一条CNAME域名解析记录：
 
 | 记录类型 | 主机记录  | 记录值           |
@@ -183,4 +183,4 @@ blog\themes\你的主题\layout\_partial\head.ejs
 
 
 emmmmmm......
-Coding在Pages服务页面添加了广告，所以配置完你还是无法搜索到自己的博客。
+Coding在Pages服务页面添加了广告，所以现在配置完还是无法搜索到自己的博客。

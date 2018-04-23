@@ -26,23 +26,26 @@ date: 2018-04-11 10:57:46
 ## 安装hexo
 
 1.安装Git 。安装完毕后，在任意文件夹下**鼠标右击**即可打开 Git Bash，输入命令，进行Git操作。
-&nbsp;&nbsp;&nbsp;查看Git版本：`git version`，验证是否安装成功。
+
+```shell
+git version  # 查看Git版本，验证是否安装成功
+```
 
 2.安装Node.js。Hexo是基于nodejs的博客框架，而且nodejs还集成了npm包管理工具。
-&nbsp;&nbsp;&nbsp;查看nodejs版本：`node -v`，验证是否安装成功。
+
+```shell
+node -v    # 查看nodejs版本，验证是否安装成功
+```
 
 3.安装hexo：
 
 ```shell
-npm install hexo --save   #安装hexo
-npm install hexo-cli -g   #安装hexo命令行模式
-npm uninstall hexo -g     #卸载hexo
+npm install hexo --save   # 安装hexo
+hexo -v  # 查看hexo版本，验证是否安装成功
 ```
 
-&nbsp;&nbsp;&nbsp;查看hexo版本：`hexo -v`，验证是否安装成功。
-
 ## hexo建站
-1.新建一个blog文件夹，`cd`到blog文件夹下，打开Git Bash。
+1.新建一个blog文件夹，打开blog文件夹，Git Bash。
 2.hexo初始化：`hexo init`
 3.安装依赖包：`npm install`
 4.初始化完成，在blog下就会生成以下文件目录：
@@ -78,10 +81,10 @@ github和coding可以双线配置，也可以选择其中一个配置。推荐�
 1.登录github，New repository：`yourname.github.io`。
 &nbsp;&nbsp;&nbsp;其中`yourname`是你的github用户名，github强制后缀为`github.io`才能启用github pages服务。
 
-2.登录coding，新建一个仓库：`yourname.coding.me`。打开静态pages服务。
+2.登录coding，新建仓库：`yourname.coding.me`。打开静态pages服务。
 &nbsp;&nbsp;&nbsp;其中`yourname`是你的coding用户名，coding不强制后缀为`coding.me`。
 
-3.Git Bash配置github账户信息：
+3.Git Bash配置git信息：
 
 ```shell
 git config --global user.name "YourName"
@@ -90,27 +93,24 @@ git config --global user.email "YourEmail"
 
 4.配置SSH协议
 
-①生成rsa秘钥：
+①生成SSH秘钥：
 
 ```shell
-ssh-keygen -t rsa -C "youremail@example.com
-```
-
-②输出公钥：
-
-```shell
+ssh-keygen -t rsa -C "youremail@example.com"  # 生成rsa秘钥
 cd ~/.ssh         # 进入虚拟目录ssh文件中
-cat id_rsa.pub    # 在终端显示id_rsa.pub文件内容
+cat id_rsa.pub    # 显示id_rsa.pub文件内容
 ```
 
-③复制秘钥至github/coding->用户setting->SSH keys，New SSH Key；
-④验证是否添加成功：
+②复制秘钥至github/coding->用户setting->SSH keys，New SSH Key；
+
+③验证是否添加成功
 
 ```shell
-ssh -T git@github.com
+ssh -T git@github.com  # 验证github是否添加成功
+ssh -T git@coding.net  # 验证coding是否添加成功
 ```
 
-⑤修改**站点配置文件**`_config.yml`：
+④修改**站点配置文件**`_config.yml`：
 
 ```yaml
 deploy:
