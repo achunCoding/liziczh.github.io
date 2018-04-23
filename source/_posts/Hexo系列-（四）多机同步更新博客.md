@@ -63,7 +63,6 @@ git push origin hexo  # 将本地仓库推送至远程仓库
 
 1.安装Git
 2.安装nodejs
-3.配置SSH协议
 
 ### 博客还原
 
@@ -71,9 +70,7 @@ git push origin hexo  # 将本地仓库推送至远程仓库
 # 克隆hexo分支到本地
 git clone -b hexo https://github.com/yourname/yourname.github.io.git 
 cd yourname.github.io # 进入yourname.github.io文件夹
-npm install # 安装依赖，根据package.json自动安装之前安装过的插件
-npm install hexo-cli -g  # 安装hexo命令行模式
-hexo init  # hexo初始化
+npm install # 安装所有依赖，根据package.json自动安装之前安装过的插件
 ```
 
 ### 正常使用
