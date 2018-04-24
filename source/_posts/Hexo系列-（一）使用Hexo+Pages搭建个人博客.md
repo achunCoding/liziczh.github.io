@@ -10,7 +10,7 @@ date: 2018-04-11 10:57:46
 
 <!--# Hexo系列 | （一）使用Hexo+Pages搭建个人博客-->
 
-清明四月飞雪，深居简出，闲来无聊，学以致用，搭建一个属于自己的博客站点。
+清明四月飞雪，深居简出，闲来无聊，搭建一个属于自己的博客站点。
 本篇主要记录使用hexo+pages搭建个人博客的流程。
 其中[Hexo](https://hexo.io/zh-cn/) 是一个博客框架，可解析markdown文章，生成静态页面。在代码托管平台[github](https://github.com)（国外）、[coding](https://coding.net)（国内）上都有pages服务，提供免费的静态网页托管和演示服务。
 
@@ -91,9 +91,13 @@ git config --global user.name "YourName"
 git config --global user.email "YourEmail"
 ```
 
-4.配置SSH协议
+4.配置网络传输协议
 
-①生成SSH秘钥：
+在管理Git项目时，一般使用ssh或https作为安全传输协议，任选其一即可。
+
+(1) SSH协议
+
+①SSH秘钥：
 
 ```shell
 ssh-keygen -t rsa -C "youremail@example.com"  # 生成rsa秘钥
@@ -110,7 +114,7 @@ ssh -T git@github.com  # 验证github是否添加成功
 ssh -T git@coding.net  # 验证coding是否添加成功
 ```
 
-④修改**站点配置文件**`_config.yml`：
+④编辑**站点配置文件**`_config.yml`：
 
 ```yaml
 deploy:
@@ -120,6 +124,21 @@ deploy:
 		coding: git@git.coding.net:yourname/yourname.coding.me.git 
 	branch: master
 ```
+(2) HTTPS协议
+
+①直接编辑**站点配置文件**`_config.yml`：
+
+```yaml
+deploy:
+	type: git
+	repo: 
+		github: https://github.com/liziczh/liziczh.github.io.git
+    	coding: https://git.coding.net/liziczh/liziczh.coding.me.git
+	branch: master
+```
+
+②验证用户名和密码。
+
 ## 部署到github/coding
 
 1.安装Git部署插件：
