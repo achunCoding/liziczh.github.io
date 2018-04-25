@@ -41,6 +41,7 @@ node -v    # 查看nodejs版本，验证是否安装成功
 
 ```shell
 npm install hexo --save   # 安装hexo
+npm install hexo-cli -g   # 安装hexo命令行模式
 hexo -v  # 查看hexo版本，验证是否安装成功
 ```
 

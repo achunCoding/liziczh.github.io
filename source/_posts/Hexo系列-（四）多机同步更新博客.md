@@ -67,6 +67,8 @@ git push origin hexo  # 将本地仓库推送至远程仓库
 ```shell
 git clone -b hexo https://github.com/yourname/yourname.github.io.git  # 克隆hexo分支到本地
 cd yourname.github.io    # 进入yourname.github.io文件夹
+npm install hexo --save   # 安装hexo
+npm install hexo-cli -g   # 安装hexo命令行模式
 npm install    # 安装所有依赖，根据package.json自动安装之前安装过的插件
 ```
 
