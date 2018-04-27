@@ -13,6 +13,8 @@ categories: DateBase
 SQL结构化查询语言，用于访问和处理关系数据库的标准语言。
 将SQL分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。
 
+<!--more-->
+
 # SQL DML
 
 - SELECT：查询
