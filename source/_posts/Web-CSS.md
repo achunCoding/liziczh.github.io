@@ -1,10 +1,9 @@
 ---
-title: Notes | CSS
-id: notes-css
+title: Web | CSS
+id: web-css
 comments: true
 tags:
   - css
-  - notes
 categories: Web
 date: 2018-04-05 17:21:22
 

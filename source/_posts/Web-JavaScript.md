@@ -1,10 +1,9 @@
 ---
-title: Notes | JavaScript
-id: notes-js
+title: Web | JavaScript
+id: web-js
 top: 1
 comments: true
 tags:
-  - notes
   - js
 categories: Web
 date: 2018-04-07 14:27:12

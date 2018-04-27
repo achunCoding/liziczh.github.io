@@ -1,9 +1,8 @@
 ---
-title: Notes | HTML
-id: notes-html
+title: Web | HTML
+id: web-html
 tags:
   - html
-  - notes
 categories: Web
 comments: true
 date: 2018-04-03 22:36:54
