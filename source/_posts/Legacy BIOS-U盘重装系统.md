@@ -1,13 +1,14 @@
 ---
-title: 记录 | Legacy BIOS-U盘重装系统
+title: Legacy BIOS | U盘重装系统
 id: bios-reinstallos
 comments: true
 date: 2018-04-10 12:09:34
 tags:
+- reOS
 categories:
 ---
 
-<!--# 记录 | Legacy启动-U盘重装系统-->
+<!--# Legacy BIOS | U盘重装系统-->
 
 这是很久之前写的一篇精简版装机记录。
 当时是为我的老电脑换SSD，需要重新装机时写的记录文档，并不一定适合所有机器；而且当时还没有骨骼清奇的UFEI启动，不过总体过程大致相同，准备工具-->PE清系统盘-->安装系统-->安装驱动-->安装软件。
