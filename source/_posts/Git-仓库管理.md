@@ -1,5 +1,5 @@
 ---
-title: Git | 入门
+title: Git | 仓库管理
 comments: true
 date: 2018-04-30 23:56:55
 id: git-primer
@@ -8,7 +8,11 @@ tags:
 categories: Git
 ---
 
-# Git使用
+# Git仓库管理
+
+Git版本控制系统
+
+<!--more-->
 
 ## Git配置
 
