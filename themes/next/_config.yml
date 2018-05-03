@@ -377,10 +377,10 @@ sidebar_width:
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 font:
-  enable: false
+  enable: true
 
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
-  host: //fonts.loli.net
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default).镜像： //fonts.loli.net
+  host: 
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -397,21 +397,21 @@ font:
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Roboto Slab
     size:
 
   # Font settings for posts.
   # Fallback to `global` font settings.
   posts:
     external: true
-    family:
+    family: Monda
 
   # Font settings for Logo.
   # Fallback to `global` font settings.
   logo:
     external: true
-    family:
-    size:
+    family: 
+    size: 
 
   # Font settings for <code> and code blocks.
   codes:
