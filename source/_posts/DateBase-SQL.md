@@ -1,5 +1,5 @@
 ---
-title: Notes | SQL
+title: DateBase | SQL
 comments: true
 date: 2018-04-27 19:32:29
 id: notes-sql
