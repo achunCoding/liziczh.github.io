@@ -23,6 +23,8 @@ jQuery库特性：
 - AJAX
 - Utilities
 
+<!--more-->
+
 # 引入jQuery
 
 ## jQuery版本
