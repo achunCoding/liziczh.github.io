@@ -10,14 +10,13 @@ categories: Web
 
 <!--# JS | 原型-->
 
-原型（prototype）简化了继承。
+JavaScript是一门面向对象的编程语言，Brendan Eich为JavaScript设计了**继承**机制，但为了简化继承，并未引入“类”的概念，而是采用**构造函数**直接生成实例，采用**原型 (prototype) **共享通用数据。
 
 <!-- more -->
 
 ### 构造函数
 
-JavaScript是一门面向对象的编程语言，所有数据类型都是对象。
-Brendan Eich为JavaScript设计了**继承**机制，但并未引入“类”的概念，而是采用**构造函数**直接生成实例。
+Brendan Eich为JavaScript设计了**继承**机制，采用**构造函数**直接生成实例。
 
 ```js
 // 构造函数
@@ -80,3 +79,4 @@ son.prototype = new Father()
 
 > 参考资料：
 > 阮一峰老师：[Javascript继承机制的设计思想](http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html)
+
