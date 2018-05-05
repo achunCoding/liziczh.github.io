@@ -46,6 +46,7 @@ hexo -v  # 查看hexo版本，验证是否安装成功
 ```
 
 ## hexo建站
+
 1.新建一个blog文件夹，打开blog文件夹，Git Bash。
 2.hexo初始化：`hexo init`
 3.安装依赖包：`npm install`
@@ -138,7 +139,7 @@ deploy:
 	branch: master
 ```
 
-②验证用户名和密码。
+②验证github/coding用户名和密码。
 
 ## 部署到github/coding
 

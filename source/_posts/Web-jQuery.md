@@ -52,10 +52,12 @@ jQuery版本分类：
 
 jQuery简化了JS编程，多数JS功能实现都被封装成了函数，而调用这些jQuery函数必须使用jQuery对象。
 
+jQuery对象本质就是DOM对象数组与jQuery方法的集合。
+
 ```js
-// jQuery对象转DOM对象
-var $jQueryObj = $(DOMObj);
 // DOM对象转jQuery对象
+var $jQueryObj = $(DOMObj);  // $(DOMObj)实际是一个对象数组（id选择器除外）
+// jQuery对象转DOM对象
 var DOMObj = $jQueryObj[0];
 var DOMObj = $jQueryObj.get(0);
 ```
@@ -86,7 +88,7 @@ $(function(){
 
 ## jQuery基础语法
 
-```javascript
+```js
 $("选择器").操作函数()
 jQuery("选择器").操作函数()
 ```
@@ -157,8 +159,8 @@ jQuery选择器：获取元素
 | `:checkbox` | 所有`type="checkbox"`的`<input>`元素 |
 | `:submit`   | 所有`type="submit"`的`<input>`元素   |
 | `:reset`    | 所有`type="reset"`的`<input>`元素    |
-| `:button`   | 所有type="button"的`<input>`元素     |
-| `:image`    | 所有type="image"的`<input>`元素      |
+| `:button`   | 所有`type="button"`的`<input>`元素   |
+| `:image`    | 所有`type="image"`的`<input>`元素    |
 | `:file`     | 所有`type="file"`的`<input>`元素     |
 | `:enable`   | 所有激活的`<input>`元素              |
 | `:disabled` | 所有禁用的`<input>`元素              |
@@ -205,7 +207,7 @@ $("selector").attr("属性名", "值");  // 设置HTML属性
 
 ### 回调函数
 
-
+回调函数，意指先在系统的某个地方对函数进行注册，让系统知道这个函数的存在，然后在以后，当某个事件发生时，再调用这个函数对事件进行响应。 
 
 ### DOM 插入元素
 
@@ -283,7 +285,7 @@ $("selector").css("样式属性","值");  // 设置样式属性
 $("selector").css({"样式属性":"值","样式属性":"值",...});  // 设置多个样式属性
 ```
 
-### DOM 元素宽高
+### DOM 元素尺寸
 
 **1.width()**：设置或返回元素的宽度（不包括内边距、边框、外边距）
 
@@ -333,13 +335,15 @@ $("selector").outerWidth(true);
 $("selector").outerHeight(true);
 ```
 
-**9.scrollTop()**：滚动条顶部偏移量
+### DOM 位置
+
+**1.scrollTop()**：滚动条顶部偏移量
 
 ```js
 $("selector").scrollTop();
 ```
 
-**10.scrollLeft()**：滚动条左边偏移量
+**2.scrollLeft()**：滚动条左边偏移量
 
 ```js
 $("selector").scrollLeft();
@@ -425,7 +429,7 @@ $("selector").prevAll("筛选选择器");  // 返回元素之前的兄弟元素�
 $("selector1").prevUntil("selector2");  // 从selector1水平向前遍历直到selector2
 ```
 
-### 元素过滤
+### 元素筛选
 
 **1.eq()**：返回被选元素中带有指定索引的元素
 
@@ -443,6 +447,18 @@ $("selector").filter("筛选选择器");  // 返回匹配筛选选择器的元�
 
 ```js
 $("selector").not("筛选选择器");  // 返回不匹配筛选选择器的元素
+```
+
+**4.first()**：获取第一个元素
+
+```js
+$("selector").first();
+```
+
+**5.last()**：获取最后一个元素
+
+```js
+$("selector").last();
 ```
 
 # jQuery效果
@@ -546,9 +562,25 @@ $("selector").stop(stopAll,goToEnd);
 
 # jQuery事件机制
 
-## 事件函数
+## 事件
 
-
+| 事件句柄    | 描述         |
+| ----------- | ------------ |
+| ready    | DOM载入      |
+| click     | 鼠标单击     |
+| focus     | 元素获得焦点 |
+| blur      | 元素失去焦点 |
+| mouseover | 鼠标覆盖     |
+| mouseout  | 鼠标移开     |
+| mouseup   | 鼠标点击     |
+| mousedown | 鼠标松开     |
+| scroll    | 窗口滚动     |
+| change    | 发生改变     |
+| unload    | 退出页面     |
+| submit    | 点击提交     |
+| keydown	  | 某个键盘的键被按下 |
+| keypress  | 某个键盘的键被按下或按住 |
+| keyup	  | 某个键盘的键被松开|
 
 ## 事件绑定方式
 
@@ -617,13 +649,43 @@ $("selector").off("events"[,"selector"][,handler],map);
 > handler：规定要删除的具体事件处理函数 ，[可选]
 > map：规定事件映射 (*{event:function, event:function, ...})* ，包含要添加到元素的一个或多个事件，以及当事件发生时运行的函数。 
 
-# jQuery其他
+# jQuery杂项（难点）
 
 ## 链式编程
 
+链式编程栗子如下，使用一个jQuery对象不断地调用(点调用)函数：
 
+```js
+$("div").addClass("highlight").children("a").show().end().siblings().removeClass("highlight").children("a").hide();
+```
+
+> 非筛选函数：函数返回本身，jQuery对象不发生改变，如addClass()，hide()...
+> 筛选函数：函数返回新的jQuery对象，如find()，parent()...
+>
+
+**链式编程原理**：jQuery的**非筛选函数**都返回其本身
+
+```js
+return this
+```
+
+**end()**：结束当前链条中的最近的筛选操作，并将匹配元素集还原为之前的状态
+
+```js
+jQueryObj.end()
+```
+
+**链式编程本质★**：
+jQuery对象(即包装后的DOM对象)
+①调用**筛选/遍历函数**后返回新的jQuery对象，将新的jQuery对象压入栈内；
+②调用**非筛选/遍历函数**后返回本身(return this)。
+③调用**end()**将栈顶元素 (当前jQuery对象) 弹出栈，指向新的栈顶元素 (最近上一次的jQuery对象)。
 
 ## 隐式迭代
+
+jQuery对象本质是DOM数组与jQuery方法的集合。
+
+$(".class")返回一个jQuery对象数组
 
 
 
@@ -633,7 +695,7 @@ $("selector").off("events"[,"selector"][,handler],map);
 
 ## 多库共存
 
-jQuery使用$标识符作为jQuery的简写 ，如果页面上同时存在其他JS框架正在使用相同的简写符号怎么办呢？
+jQuery使用`$`标识符作为`jQuery`的简写 ，如果页面上同时存在其他JS库正在使用相同的简写符号怎么办呢？
 
 **noConflict()**：释放$标识符的控制
 
