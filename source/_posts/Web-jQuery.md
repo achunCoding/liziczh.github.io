@@ -52,11 +52,11 @@ jQuery版本分类：
 
 jQuery简化了JS编程，多数JS功能实现都被封装成了函数，而调用这些jQuery函数必须使用jQuery对象。
 
-jQuery对象本质就是DOM对象数组与jQuery方法的集合。
+jQuery对象本质是一个DOM对象数组。
 
 ```js
 // DOM对象转jQuery对象
-var $jQueryObj = $(DOMObj);  // $(DOMObj)实际是一个对象数组（id选择器除外）
+var $jQueryObj = $(DOMObj);
 // jQuery对象转DOM对象
 var DOMObj = $jQueryObj[0];
 var DOMObj = $jQueryObj.get(0);
@@ -90,7 +90,6 @@ $(function(){
 
 ```js
 $("选择器").操作函数()
-jQuery("选择器").操作函数()
 ```
 
 `$()`：即`jQuery()`，本质是一个函数。
@@ -171,7 +170,7 @@ jQuery选择器：获取元素
 
 ## DOM 操作★
 
-### DOM 元素内容
+### DOM HTML内容
 
 **1.text()**：设置/获取**所选元素的文本内容**
 
@@ -196,18 +195,21 @@ $("selector").val("表单字段值");  // 设置表单字段的值
 
 ### DOM HTML属性
 
-**attr()**：HTML**自定义属性值**
+**1.attr()**：**HTML属性**，只能返回string的结果
 
 ```js
 $("selector").attr("属性名");  // 获取HTML属性
 $("selector").attr("属性名", "值");  // 设置HTML属性
+$("selector").attr({"属性名":"值", "属性名":"值"});  // 设置多个HTML属性
 ```
 
+**2.prop()**：**DOM属性**，如selected，disabled，checked等属性。
 
-
-### 回调函数
-
-回调函数，意指先在系统的某个地方对函数进行注册，让系统知道这个函数的存在，然后在以后，当某个事件发生时，再调用这个函数对事件进行响应。 
+```js
+$("selector").prop("属性名");  // 获取属性
+$("selector").prop("属性名", "值");  // 设置属性
+$("selector").prop({"属性名":"值", "属性名":"值"});  // 设置多个属性
+```
 
 ### DOM 插入元素
 
@@ -653,13 +655,13 @@ $("selector").off("events"[,"selector"][,handler],map);
 
 ## 链式编程
 
-链式编程栗子如下，使用一个jQuery对象不断地调用(点调用)函数：
+链式编程：使用一个jQuery对象不断地调用(点调用)函数。栗子如下：
 
 ```js
 $("div").addClass("highlight").children("a").show().end().siblings().removeClass("highlight").children("a").hide();
 ```
 
-> 非筛选函数：函数返回本身，jQuery对象不发生改变，如addClass()，hide()...
+> 非筛选函数：函数返回当前jQuery对象，jQuery对象不发生改变，如addClass()，hide()...
 > 筛选函数：函数返回新的jQuery对象，如find()，parent()...
 >
 
@@ -683,25 +685,35 @@ jQuery对象(即包装后的DOM对象)
 
 ## 隐式迭代
 
-jQuery对象本质是DOM数组与jQuery方法的集合。
+**隐式迭代**：jQuery对象本质是DOM对象数组，即`$("selector")`返回一个对象数组。jQuery会自动对匹配到的DOM数组进行循环遍历，执行所调用的函数。
 
-$(".class")返回一个jQuery对象数组
+**设置操作**：隐式迭代，循环遍历DOM对象数组执行设置函数。
 
-
+**获取操作**：大部分情况下返回第一个元素的值。
 
 ## each方法
 
+**each()**：为每个匹配元素规定运行的函数
 
+```js
+$("selector").each(function(index,element));
+```
+
+> function()：为每个匹配元素规定运行的函数，[必要参数]
+> index：选择器的index位置
+> element：当前的元素
 
 ## 多库共存
 
-jQuery使用`$`标识符作为`jQuery`的简写 ，如果页面上同时存在其他JS库正在使用相同的简写符号怎么办呢？
+jQuery使用`$`标识符作为`jQuery`的简写符号 ，如果页面上同时存在其他JS库正在使用相同的简写符号`$`怎么办呢？
 
-**noConflict()**：释放$标识符的控制
+**noConflict()**：释放`$`标识符的控制
 
 ```js
 var a = $.noConflict();  // 释放$的控制权，将$的能力赋予a。
 ```
+
+
 
 # jQuery应用Ajax
 
