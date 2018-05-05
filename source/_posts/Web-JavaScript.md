@@ -891,6 +891,44 @@ document.getElememtByClassName("类名"); // 返回数组
 document.querySelectorAll("选择器"); // 返回数组
 ```
 
+## DOM操作
+
+1.改变HTML输出流：
+
+```js
+document.write();  // 直接向HTML输出流写内容。
+```
+
+2.改变HTML内容：
+
+```js
+元素.innerText;  // 获取/设置文本值（对代码转义为文本）
+元素.innerHTML;  // 获取/设置HTML代码
+```
+
+3.改变HTML属性：
+
+```js
+元素.HTML属性 = 新属性值 // 改变HTML属性
+```
+
+4.自定义HTML属性
+
+```js
+元素.getAttribute("属性");      // 获取属性
+元素.setAttribute("属性","值")  // 设置属性
+元素.removeAttribute("属性");   // 移除属性
+```
+
+5.改变CSS样式：
+
+```js
+元素.style.CSS样式 = 新样式 // 改变CSS样式
+```
+
+> CSS属性名多个单词以-分隔s，JS调用CSS属性名多个单词采用驼峰命名；
+> 即在JS中使用fontSize来表示CSS中的font-size。
+
 ## DOM节点
 
 DOM节点：文档Document->元素Element->属性Attribute->文本Text；
@@ -944,46 +982,6 @@ DOM节点：文档Document->元素Element->属性Attribute->文本Text；
 | getAttribute("attr")          | 获取属性         |
 | setAttribute("attr", "value") | 设置属性及属性值 |
 | removeAttribute("attr")       | 移除属性         |
-
-## DOM操作
-
-1.改变HTML输出流：
-
-```js
-document.write();  // 直接向HTML输出流写内容。
-```
-
-2.改变HTML内容：
-
-```js
-元素.innerText;  // 获取/设置文本值（对代码转义为文本）
-元素.innerHTML;  // 获取/设置HTML代码
-```
-
-3.改变HTML属性：
-
-```js
-元素.HTML属性 = 新属性值 // 改变HTML属性
-```
-
-4.自定义HTML属性
-
-```js
-元素.getAttribute("属性");      // 获取属性
-元素.setAttribute("属性","值")  // 设置属性
-元素.removeAttribute("属性");   // 移除属性
-```
-
-5.改变CSS样式：
-
-```js
-元素.style.CSS样式 = 新样式 // 改变CSS样式
-```
-
-> CSS属性名多个单词以-分隔s，JS调用CSS属性名多个单词采用驼峰命名；
-> 即在JS中使用fontSize来表示CSS中的font-size。
-
-
 
 
 # JS BOM
