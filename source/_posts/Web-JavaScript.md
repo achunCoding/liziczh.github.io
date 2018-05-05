@@ -1,7 +1,6 @@
 ---
 title: Web | JavaScript
 id: web-js
-top: 1
 comments: true
 tags:
   - js
@@ -708,7 +707,7 @@ obj instanceof Object;  // true  判断obj是否为Object的一个实例。
 
 ## JS原型（难点）
 
-原型简化了继承。
+原型(prototype)简化了继承。
 
 ### 构造函数
 
@@ -770,6 +769,88 @@ Obj.prototype.constructor = Obj
 ```js
 son.prototype = new Father()
 ```
+## JS事件机制
+
+事件一般与函数配合使用，这样就可以使事件驱动函数执行。
+
+事件三要素：事件源，事件名称，事件处理程序；
+
+| 事件句柄    | 描述         |
+| ----------- | ------------ |
+| onclick     | 鼠标单击     |
+| onfocus     | 元素获得焦点 |
+| onblur      | 元素失去焦点 |
+| onmouseover | 鼠标覆盖     |
+| onmouseout  | 鼠标移开     |
+| onmouseup   | 鼠标点击     |
+| onmousedown | 鼠标松开     |
+| onscroll    | 窗口滚动     |
+| onchange    | 发生改变     |
+| onload      | 加载完成     |
+| onunload    | 退出页面     |
+| onerror     | 加载错误     |
+| onsubmit    | 点击提交     |
+| onreset     | 点击重置     |
+| onkeydown	  | 某个键盘的键被按下 |
+| onkeypress  | 某个键盘的键被按下或按住 |
+| onkeyup	  | 某个键盘的键被松开|
+
+### 事件传播
+
+**事件传播方式**：
+①事件捕获：Window->Document -> Element -> Attribute -> Text；
+②事件冒泡：Window<-Document <- Element <- Attribute <- Text；
+注意：focus blur scroll事件除外其它的大部分事件都会冒泡 
+
+**阻止事件传播**：
+
+```js
+event.stopPropagation()
+```
+
+### 事件注册
+
+**注册/移除事件**的三种方式：
+①**on事件**：
+
+```js
+事件源.onclick = function(){}
+```
+
+②**addEventListener()**：
+
+```js
+事件源.addEventListener('click',function(){},[useCapture])
+// 捕获阶段：useCapture=true; 默认值为false；（IE9+）
+```
+
+③**attachEvent()**：
+
+```js
+事件源.attachEvent(eventName,function(){},[useCapture])
+// 捕获阶段：useCapture=true; 默认值为false；（IE8-）
+```
+**取消事件默认行为**：
+
+①阻止独享属性（on+event）绑定的事件的默认事件：
+
+```js
+return false;
+```
+
+②阻止通过addEventListener()添加的事件的默认事件：
+
+```js
+event.preventDefault();
+```
+
+③阻止通过attachEvent()添加的事件的默认事件：
+
+```js
+event.returnValue = false;
+```
+
+
 # JS DOM
 
 DOM文档对象模型
@@ -783,31 +864,31 @@ DOM文档对象模型
 1.根据id获取元素：
 
 ```js
-document.getElementById("id"); // 单个元素
+document.getElementById("id"); // 返回单个元素
 ```
 
 2.根据标签名获取元素数组：
 
 ```js
-document.getElementByTagName("标签名"); // 数组
+document.getElementByTagName("标签名"); // 返回数组
 ```
 
 3.根据name获取元素数组：
 
 ```js
-document.getElementByName("name"); // 数组
+document.getElementByName("name"); // 返回数组
 ```
 
 4.根据类名获取元素数组：
 
 ```js
-document.getElememtByClassName("类名"); // 数组
+document.getElememtByClassName("类名"); // 返回数组
 ```
 
 5.根据选择器获取元素数组：
 
 ```js
-document.querySelectorAll("选择器"); // 数组
+document.querySelectorAll("选择器"); // 返回数组
 ```
 
 ## DOM节点
@@ -864,7 +945,7 @@ DOM节点：文档Document->元素Element->属性Attribute->文本Text；
 | setAttribute("attr", "value") | 设置属性及属性值 |
 | removeAttribute("attr")       | 移除属性         |
 
-## DOM修改
+## DOM操作
 
 1.改变HTML输出流：
 
@@ -902,79 +983,6 @@ document.write();  // 直接向HTML输出流写内容。
 > CSS属性名多个单词以-分隔s，JS调用CSS属性名多个单词采用驼峰命名；
 > 即在JS中使用fontSize来表示CSS中的font-size。
 
-## DOM事件
-
-事件三要素：事件源，事件名称，事件处理程序；
-
-| 事件句柄    | 描述         |
-| ----------- | ------------ |
-| onclick     | 鼠标单击     |
-| onfocus     | 元素获得焦点 |
-| onblur      | 元素失去焦点 |
-| onmouseover | 鼠标覆盖     |
-| onmouseout  | 鼠标移开     |
-| onmouseup   | 鼠标点击     |
-| onmousedown | 鼠标松开     |
-| onscroll    | 窗口滚动     |
-| onchange    | 发生改变     |
-| onload      | 加载完成     |
-| onunload    | 退出页面     |
-| onerror     | 加载错误     |
-
-### 事件传播
-
-**事件传播方式**：
-①事件捕获：Window->Document -> Element -> Attribute -> Text；
-②事件冒泡：Window<-Document <- Element <- Attribute <- Text；
-注意：focus blur scroll事件除外其它的大部分事件都会冒泡 
-
-**阻止事件传播**：
-
-```js
-event.stopPropagation()
-```
-
-### 事件注册
-
-**注册/移除事件**的三种方式：
-①on事件：
-
-```js
-事件源.onclick = function(){}
-```
-
-②addEventListener()：
-
-```js
-事件源.addEventListener('click',function(){},[useCapture])
-// 捕获阶段：useCapture=true; 默认值为false；（IE9+）
-```
-
-③attachEvent()：
-
-```js
-事件源.attachEvent(eventName,function(){},[useCapture])
-// 捕获阶段：useCapture=true; 默认值为false；（IE8-）
-```
-**取消事件默认行为**：
-
-①阻止独享属性（on+event）绑定的事件的默认事件：
-
-```js
-return false;
-```
-
-②阻止通过addEventListener()添加的事件的默认事件：
-
-```js
-event.preventDefault();
-```
-
-③阻止通过attachEvent()添加的事件的默认事件：
-
-```js
-event.returnValue = false;
-```
 
 
 
@@ -993,7 +1001,7 @@ window对象：浏览器窗口；
 | window.innerHeight | 浏览器窗口的内部高度 |
 | window.innerWidth  | 浏览器窗口的内部宽度 |
 
-### JS入口函数
+### 原生JS入口函数
 
 ```js
 // 原生JS入口函数：等待加载完页面元素后再执行JS代码
