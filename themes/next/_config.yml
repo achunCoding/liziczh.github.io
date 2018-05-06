@@ -206,7 +206,7 @@ toc:
   enable: true
 
   # Automatically add list number to toc.
-  number: true
+  number: false
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
@@ -304,7 +304,7 @@ alipay: /images/alipay.png
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: true
+  enable: false
   title: # custom header, leave empty to use the default one
   display_in_home: false
   params:
@@ -352,7 +352,7 @@ custom_logo:
 highlight_theme: night
 
 # Enable "cheers" for archive page.
-cheers_enabled: true
+cheers_enabled: false
 
 # Manual define the max content width
 # !!Only available for Gemini Scheme currently
