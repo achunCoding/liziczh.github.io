@@ -199,7 +199,7 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.png
 # in site  directory(source/uploads): /uploads/avatar.png
-avatar: /images/L.png
+avatar: /images/avatar.png
 
 # Table Of Contents in the Sidebar
 toc:
