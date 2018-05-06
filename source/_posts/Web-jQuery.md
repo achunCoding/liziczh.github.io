@@ -25,9 +25,9 @@ jQuery库特性：
 
 <!--more-->
 
-# 引入jQuery
+# 1. 引入jQuery
 
-## jQuery版本
+## 1.1 jQuery版本
 
 jQuery版本：
 - jQuery1.x.x：兼容IE6/7/8低级浏览器。
@@ -38,7 +38,7 @@ jQuery版本分类：
 - Development version：[jquery.js] 开发版，未压缩，用于测试和开发。
 - Production version：[jquery.min.js] 精简版，已被压缩。
 
-## 引入jQuery
+## 1.2 引入jQuery
 
 ```html
 <head>
@@ -46,9 +46,9 @@ jQuery版本分类：
 </head>
 ```
 
-# jQuery起步
+# 2. jQuery起步
 
-## jQuery对象与DOM对象
+## 2.1 jQuery对象与DOM对象
 
 jQuery简化了JS编程，多数JS功能实现都被封装成了函数，而调用这些jQuery函数必须使用jQuery对象。
 
@@ -64,7 +64,7 @@ var DOMObj = $jQueryObj.get(0);
 
 > jQuery对象命名一般以$为前缀
 
-## jQuery入口函数
+## 2.2 jQuery入口函数
 
 第一种写法：
 
@@ -86,7 +86,7 @@ $(function(){
 ①jQuery的入口函数只等待DOM树加载完即执行；
 ②JS入口函数需要等待所有资源加载完成再执行；
 
-## jQuery基础语法
+## 2.3 jQuery基础语法
 
 ```js
 $("选择器").操作函数()
@@ -94,11 +94,11 @@ $("选择器").操作函数()
 
 `$()`：即`jQuery()`，本质是一个函数。
 
-# jQuery选择器
+# 3. jQuery选择器
 
 jQuery选择器：获取元素
 
-## 元素选择器
+## 3.1 元素选择器
 
 | 元素选择器 | 描述         |
 | ---------- | ------------ |
@@ -111,7 +111,7 @@ jQuery选择器：获取元素
 | `s1 s2`    | 后代选择器   |
 | `s1 > s2`  | 子元素选择器 |
 
-## 属性选择器
+## 3.2 属性选择器
 
 | 属性选择器      | 描述                    |
 | --------------- | ----------------------- |
@@ -120,7 +120,7 @@ jQuery选择器：获取元素
 | `[attr!=value]` | 属性!=值的元素          |
 | `[attr$=value]` | 属性值以value结尾的元素 |
 
-## 过滤选择器
+## 3.3 过滤选择器
 
 | 位置     | 描述         |
 | -------- | ------------ |
@@ -147,7 +147,7 @@ jQuery选择器：获取元素
 | `:hidden`         | 所有隐藏的元素     |
 | `:visible`        | 所有可见的元素     |
 
-## 表单选择器
+## 3.4 表单选择器
 
 | 表单元素    | 描述                                 |
 | ----------- | ------------------------------------ |
@@ -166,11 +166,11 @@ jQuery选择器：获取元素
 | `:selected` | 所有被选取的`<input>`元素            |
 | `:checked`  | 所有被选中的`<input>`元素            |
 
-# jQueryDOM★
+# 4. jQueryDOM★
 
-## DOM 操作★
+## 4.1 DOM 操作★
 
-### DOM HTML内容
+### 4.1.1 DOM HTML内容
 
 **1.text()**：设置/获取**所选元素的文本内容**
 
@@ -193,7 +193,7 @@ $("selector").val();  // 获取表单字段的值
 $("selector").val("表单字段值");  // 设置表单字段的值
 ```
 
-### DOM HTML属性
+### 4.1.2 DOM HTML属性
 
 **1.attr()**：**HTML属性**，只能返回string的结果
 
@@ -211,7 +211,7 @@ $("selector").prop("属性名", "值");  // 设置属性
 $("selector").prop({"属性名":"值", "属性名":"值"});  // 设置多个属性
 ```
 
-### DOM 插入元素
+### 4.1.3 DOM 插入元素
 
 **1.append()**：在被选元素的结尾追加内容
 
@@ -237,7 +237,7 @@ $("selector").before("插入内容");
 $("selector").after("插入内容");
 ```
 
-### DOM 删除元素
+### 4.1.4 DOM 删除元素
 
 **1.remove()**：删除被选元素及其子元素
 
@@ -251,7 +251,7 @@ $("selector").remove();
 $("selector").empty();
 ```
 
-### DOM CSS类
+### 4.1.5 DOM CSS类
 
 **1.addClass()**：向被选元素添加一个或多个样式类
 
@@ -277,7 +277,7 @@ $("selector").toggleClass("类名");
 $("selector").hasClass("类名");
 ```
 
-### DOM CSS属性
+### 4.1.6 DOM CSS属性
 
 **1.css()**：设置或返回样式属性
 
@@ -287,7 +287,7 @@ $("selector").css("样式属性","值");  // 设置样式属性
 $("selector").css({"样式属性":"值","样式属性":"值",...});  // 设置多个样式属性
 ```
 
-### DOM 元素尺寸
+### 4.1.7 DOM 元素尺寸
 
 **1.width()**：设置或返回元素的宽度（不包括内边距、边框、外边距）
 
@@ -337,7 +337,7 @@ $("selector").outerWidth(true);
 $("selector").outerHeight(true);
 ```
 
-### DOM 位置
+### 4.1.8 DOM 位置
 
 **1.scrollTop()**：滚动条顶部偏移量
 
@@ -351,9 +351,9 @@ $("selector").scrollTop();
 $("selector").scrollLeft();
 ```
 
-## DOM 遍历★
+## 4.2 DOM 遍历★
 
-### 向上遍历-祖先
+### 4.2.1 向上遍历-祖先
 
 **1.parent()**：返回被选元素的直接父元素
 
@@ -373,7 +373,7 @@ $("selector").parents("筛选选择器");  // 所有祖先元素，可筛选
 $("selector1").parentsUntil("selector2"); 
 ```
 
-### 向下遍历-后代
+### 4.2.2 向下遍历-后代
 
 **1.children()**：返回被选元素的所有直接子元素
 
@@ -387,7 +387,7 @@ $("selector").children("筛选选择器");  // 返回直接子元素，可筛选
 $("selector").find("筛选选择器"); // 返回后代元素，可筛选
 ```
 
-### 水平遍历-兄弟
+### 4.2.3 水平遍历-兄弟
 
 **1.siblings()**：返回被选元素的所有兄弟元素
 
@@ -431,7 +431,7 @@ $("selector").prevAll("筛选选择器");  // 返回元素之前的兄弟元素�
 $("selector1").prevUntil("selector2");  // 从selector1水平向前遍历直到selector2
 ```
 
-### 元素筛选
+### 4.2.3 元素筛选
 
 **1.eq()**：返回被选元素中带有指定索引的元素
 
@@ -463,9 +463,9 @@ $("selector").first();
 $("selector").last();
 ```
 
-# jQuery效果
+# 5. jQuery效果
 
-## 隐藏/显示
+## 5.1 隐藏/显示
 
 **1.show()**：显示
 
@@ -488,7 +488,7 @@ $("selector").toggle(speed,callback)
 > speed：速度(ms)，[可选参数]
 > callback：当前动画 100% 完成之后执行的函数，[可选参数]
 
-##  淡入/淡出-fade
+##  5.2 淡入/淡出-fade
 
 **1.fadeIn()**：淡入已隐藏的元素
 
@@ -518,7 +518,7 @@ $("selector").fadeTo(speed,opacity,callback);
 > opacity：不透明度(0~1)，[可选参数]
 > callback：当前动画 100% 完成之后执行的函数，[可选参数]
 
-## 滑动-slide
+## 5.3 滑动-slide
 
 **1.slideDown()**：向下滑动元素
 
@@ -538,7 +538,7 @@ $("selector").slideUp(speed,callback);
 $("selector").slideToggle(speed,callback);
 ```
 
-## 自定义动画-animate
+## 5.4 自定义动画-animate
 
 **animate()**：自定义动画
 
@@ -551,7 +551,7 @@ $("selector").animate({params},speed,callback);
 > callback：当前动画 100% 完成之后执行的函数，[可选参数]
 >
 
-## 停止效果-stop
+## 5.5 停止效果-stop
 
 **stop()**：在动画或效果完成前对它们进行停止
 
@@ -562,9 +562,9 @@ $("selector").stop(stopAll,goToEnd);
 > stopAll：是否清除动画队列；默认false-仅停止活动的动画，允许队列中后面的动画执行。
 > goToEnd：是否立即完成当前动画 ；默认false。
 
-# jQuery事件机制
+# 6. jQuery事件机制
 
-## 事件
+## 6.1 事件类型
 
 | 事件句柄    | 描述         |
 | ----------- | ------------ |
@@ -584,7 +584,7 @@ $("selector").stop(stopAll,goToEnd);
 | keypress  | 某个键盘的键被按下或按住 |
 | keyup	  | 某个键盘的键被松开|
 
-## 事件绑定方式
+## 6.2 事件绑定方式
 
 **1.简单事件绑定**：
 
@@ -622,7 +622,7 @@ $("selector").on("events"[,"childSelector"][,data],handler)
 > data：传递给handler的数据，事件触发后通过event.data调用，[可选]
 > handler：事件处理函数
 
-## 事件移除方式
+## 6.3 事件移除方式
 
 **1.unbind()**：移除被选元素的事件 
 
@@ -651,9 +651,9 @@ $("selector").off("events"[,"selector"][,handler],map);
 > handler：规定要删除的具体事件处理函数 ，[可选]
 > map：规定事件映射 (*{event:function, event:function, ...})* ，包含要添加到元素的一个或多个事件，以及当事件发生时运行的函数。 
 
-# jQuery杂项（难点）
+# 7. jQuery杂项（难点）
 
-## 链式编程
+## 7.1 链式编程
 
 链式编程：使用一个jQuery对象不断地调用(点调用)函数。栗子如下：
 
@@ -683,7 +683,7 @@ jQuery对象(即包装后的DOM对象)
 ②调用**非筛选/遍历函数**后返回本身(return this)。
 ③调用**end()**将栈顶元素 (当前jQuery对象) 弹出栈，指向新的栈顶元素 (最近上一次的jQuery对象)。
 
-## 隐式迭代
+## 7.2 隐式迭代
 
 **隐式迭代**：jQuery对象本质是DOM对象数组，即`$("selector")`返回一个对象数组。jQuery会自动对匹配到的DOM数组进行循环遍历，执行所调用的函数。
 
@@ -691,7 +691,7 @@ jQuery对象(即包装后的DOM对象)
 
 **获取操作**：大部分情况下返回第一个元素的值。
 
-## each方法
+## 7.3 each方法
 
 **each()**：为每个匹配元素规定运行的函数
 
@@ -703,7 +703,7 @@ $("selector").each(function(index,element));
 > index：选择器的index位置
 > element：当前的元素
 
-## 多库共存
+## 7.4 多库共存
 
 jQuery使用`$`标识符作为`jQuery`的简写符号 ，如果页面上同时存在其他JS库正在使用相同的简写符号`$`怎么办呢？
 
@@ -715,7 +715,7 @@ var a = $.noConflict();  // 释放$的控制权，将$的能力赋予a。
 
 
 
-# jQuery应用Ajax
+# 8. jQuery应用Ajax
 
 未完待续...
 

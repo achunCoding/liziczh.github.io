@@ -23,7 +23,7 @@ date: 2018-04-11 10:57:46
 4. 部署到github/coding（线上访问）
 5. 站点配置
 
-## 安装hexo
+## 1. 安装hexo
 
 1.安装Git 。安装完毕后，在任意文件夹下**鼠标右击**即可打开 Git Bash，输入命令，进行Git操作。
 
@@ -45,7 +45,7 @@ npm install hexo-cli -g   # 安装hexo命令行模式
 hexo -v  # 查看hexo版本，验证是否安装成功
 ```
 
-## hexo建站
+## 2. hexo建站
 
 1.新建一个blog文件夹，打开blog文件夹，Git Bash。
 2.hexo初始化：`hexo init`
@@ -76,7 +76,7 @@ hexo server    # 启用hexo本地服务器；
 
 这时，打开浏览器在地址栏输入[http://localhost:4000](http://localhost:4000)即可本地访问静态博客页面。
 
-## 配置github/coding pages
+## 3. 配置github/coding pages
 
 github和coding可以双线配置，也可以选择其中一个配置。推荐双线配置，coding用于国内访问速度较快，github用于境外访问。
 
@@ -141,7 +141,7 @@ deploy:
 
 ②验证github/coding用户名和密码。
 
-## 部署到github/coding
+## 4. 部署到github/coding
 
 1.安装Git部署插件：
 
@@ -179,7 +179,7 @@ hexo deploy    # 部署到github/coding；
 - github pages：[http://yourname.github.io](http://yourname.github.io)
 - coding pages：[http://yourname.coding.me](http://yourname.coding.me)
 
-## 站点配置
+## 5. 站点配置
 
 区分配置文件：
 
@@ -220,7 +220,7 @@ deploy:
 
 > 详细配置请参考[hexo配置](https://hexo.io/zh-cn/docs/configuration.html)，此处不再赘述。
 
-## 主题变更
+## 6. 主题变更
 
 1.hexo默认主题为landscape，可以到[Themes|Hexo](https://hexo.io/themes/)选择自己喜欢的主题，复制主题在github仓库的url。
    ![clone theme](http://p6uturdzt.bkt.clouddn.com/hexo-clone_theme.PNG)
@@ -249,7 +249,7 @@ hexo g -d   # 生成静态页面后直接部署；
 - github pages：[http://yourname.github.io](http://yourname.github.io)
 - coding pages：[http://yourname.coding.me](http://yourname.coding.me)
 
-## 写作
+## 7. 写作
 
 1.新建：在blog文件夹下，打开Git Bash，新建文章：
 
@@ -264,7 +264,7 @@ hexo new post "title"
 hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
 hexo g -d   # 生成静态页面后直接部署；
 ```
-## 文档的Front-matter
+## 8. 文档的Front-matter
 
 Front-matter 是文档最上方以 `---` 分隔的区域，用于指定文档一些的参数。
 
@@ -292,7 +292,7 @@ comments: true
 
 > 不要处理我的文章：将文章Front-Matter中的`layout: false`；
 
-## 文章的[标签]与[分类]
+## 9. 文章的[标签]与[分类]
 
 只有**文章**（post）支持[标签]和[分类]。
 
@@ -351,7 +351,7 @@ categories:
 
 重新部署之后，个人博客的基本功能，写作，标签，分类，归档就全部实现了。
 
-## 绑定自己的域名
+## 10. 绑定自己的域名
 
 若不喜欢域名后缀为github.io或coding.me，可以自己注册一个域名进行绑定。
 
@@ -386,8 +386,3 @@ categories:
 | `hexo g -d`<br>`hexo d -g`  | 生成静态文件后直接部署<br>部署之前先生成静态文件           |
 
 > 若想了解更多关于hexo命令的介绍，请参考[指令 | hexo](https://hexo.io/zh-cn/docs/commands.html)
-
-
-## 小结
-
-- 本文若存在表述错误，欢迎指正，不胜感激。

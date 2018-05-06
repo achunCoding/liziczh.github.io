@@ -8,7 +8,7 @@ categories: Web
 date: 2018-04-07 14:27:12
 ---
 
-# JavaScript
+<!--# JavaScript-->
 
 JavaScript网络脚本语言，常用来为网页添加动态功能，与用户交互。
 JavaScript是一门轻量级，解释型，基于原型，面向对象，弱类型的网络脚本语言。
@@ -19,9 +19,9 @@ JavaScript是一门轻量级，解释型，基于原型，面向对象，弱类�
 
 <!-- more -->
 
-# JS基础
+# 1. JS基础
 
-## JS使用方式
+## 1.1 JS使用方式
 
 1.行内js：
 
@@ -46,7 +46,7 @@ JavaScript是一门轻量级，解释型，基于原型，面向对象，弱类�
 <script type="text/javascript" src="js/index.js"></script>
 ```
 
-## JS注释
+## 1.2 JS注释
 
 1.单行注释：
 
@@ -62,7 +62,7 @@ JavaScript是一门轻量级，解释型，基于原型，面向对象，弱类�
  */
 ```
 
-## JS输出语句
+## 1.3 JS输出语句
 
 ```js
 alert();           //弹出框输出
@@ -70,7 +70,7 @@ console.log();     //在console显示
 document.write();  //写入HTML文件中
 ```
 
-## JS标识符
+## 1.4 JS标识符
 
 JS**标识符命名**规则：
 ①见名知意
@@ -80,9 +80,9 @@ JS**标识符命名**规则：
 ⑤不能使用关键字
 ⑥严格区分大小写
 
-## JS变量
+## 1.5 JS变量
 
-### 变量声明
+### 1.5.1 变量声明
 
 JS是弱类型的，无需明确的变量声明，同一个变量可以存放不同类型的值。
 
@@ -98,20 +98,20 @@ var a = 3;  //JS使用var声明变量
 x = 4;  //JS直接使用标识符声明变量，全局变量； 
 ```
 
-### 变量作用域
+### 1.5.2 变量作用域
 
 | 变量类型 | 描述                                |
 | -------- | ----------------------------------- |
 | 全局变量 | 定义在函数外的var变量  &  无var变量 |
 | 局部变量 | 定义在函数内的var变量               |
 
-### 变量提升★
+### 1.5.3 变量提升★
 
 **变量提升（Hoisting）**：JS函数及变量的声明都将被提升到函数的最顶部。
 
 
 
-## JS数据类型
+## 1.6 JS数据类型
 
 JS是一种弱类型语言（动态类型），同一个变量可存放不同类型的值。
 
@@ -129,7 +129,7 @@ typeof []         //object 数组对象
 typeof alert()    //function 函数
 ```
 
-### 原始类型
+### 1.6.1 原始类型
 
 **1.Number | 数字**：
 
@@ -187,7 +187,7 @@ number(undefined)==NaN;
 /* 目前null与undefined基本同义 */
 ```
 
-### 类型转换
+### 1.6.2 类型转换
 
 1.转换成字符串：
 
@@ -235,7 +235,7 @@ Boolean(null);      //false：null
 Boolean(new object()); //true - 对象
 ```
 
-### 引用类型
+### 1.6.3 引用类型
 
 引用类型：对象，一组属性和方法的集合。
 
@@ -281,7 +281,7 @@ var f = new Function(arg1, arg2, ..., argN, function_body) // 函数对象
 
 更多引用类型：String，Boolean，Number，Math，Date，RegExp，Error，EvalError，RangeError，ReferenceError，SyntaxError，TypeError，URIError。
 
-## JS运算符
+## 1.7 JS运算符
 
 1.算术运算符：`+`，`-`，`*`，`/`，`%`，`++`，`--`
 2.关系运算符：`>`，`<`，`>=`，`<=`，`==`，`!=`
@@ -290,14 +290,14 @@ var f = new Function(arg1, arg2, ..., argN, function_body) // 函数对象
 5.赋值运算符：`=`，`+=`，`-=`，`*=`，`/=`，`%=`
 6.条件运算符：`a?b:c `
 
-### 双等与三等★
+**双等与三等★**：
 
 `==`&`!=`：只比较值，不比较类型。
 `===`&`!==`：既比较值，也比较类型。
 
-## JS语句
+## 1.8 JS语句
 
-### 判断语句
+### 1.8.1 判断语句
 
 **if语句**：
 
@@ -325,7 +325,7 @@ default:
 }
 ```
 
-### 循环语句
+### 1.8.2 循环语句
 
 **while循环**：
 
@@ -364,7 +364,7 @@ for(var i in 对象){
 }
 ```
 
-### 跳转语句
+### 1.8.3 跳转语句
 
 | 跳转语句 | 描述                         |
 | -------- | ---------------------------- |
@@ -372,11 +372,13 @@ for(var i in 对象){
 | continue | 跳出本次循环，进行下次循环； |
 | return   | 结束整个方法；               |
 
-## JS字符串
+# 2. JS高级
+
+## 2.1 JS字符串
 
 JS字符串本质是一个不可变的字符数组。
 
-### 创建字符串
+### 2.1.1 创建字符串
 
 **1.**使用**字面量**创建字符串：
 
@@ -390,13 +392,13 @@ var str = "abc";  // 字面量
 var str = new String("abc"); // String对象
 ```
 
-### 字符串拼接
+### 2.1.2 字符串拼接
 
 ```js
 var str = "abc"+"def";  // 使用“+”拼接字符串
 ```
 
-### String对象
+### 2.1.3 String对象
 
 | string属性&方法                | 描述                                                         |
 | ------------------------------ | ------------------------------------------------------------ |
@@ -417,12 +419,12 @@ var str = "abc"+"def";  // 使用“+”拼接字符串
 | replace()                      | 替换与正则表达式匹配的子串                                   |
 | split()                        | 把字符串分割为子字符串数组                                   |
 
-## JS数组
+## 2.2 JS数组
 
 JS数组是动态数组，无需指定长度。
 JS是弱类型的，数组中可以有不同的变量类型。
 
-### 创建数组
+### 2.2.1 创建数组
 
 **1.**使用**字面量**创建：
 
@@ -436,7 +438,7 @@ var arr=["a","b","c"];  // 字面量
 var arr=new Array("a","b","c");  // Array对象
 ```
 
-### 遍历数组
+### 2.2.2 遍历数组
 
 **1.**使用**普通for循环**遍历：
 
@@ -454,7 +456,7 @@ for(var i in arr){
 }
 ```
 
-### Array对象
+### 2.2.3 Array对象
 
 | Array方法     | 描述                                                      |
 | ------------- | --------------------------------------------------------- |
@@ -474,11 +476,11 @@ for(var i in arr){
 | indexOf()     | 返回元素索引                                              |
 | lastIndexOf() | 返回元素反序索引                                          |
 
-## JS函数
+## 2.3 JS函数
 
 JS函数是一种数据类型[function]，JS函数也是对象。
 
-### 函数定义
+### 2.3.1 函数定义
 
 **1.**使用**函数声明**定义：
 
@@ -506,7 +508,7 @@ var function_name = new Function(arg1, arg2, ..., argN, function_body)
 })([实参]);
 ```
 
-### 函数提升★
+### 2.3.2 函数提升★
 
 **一等公民**：JS函数与JS变量处于同等地位，可作为一个值使用。
 ①将函数赋值给变量
@@ -516,7 +518,7 @@ var function_name = new Function(arg1, arg2, ..., argN, function_body)
 
 **函数提升（Hoisting）**：JS函数及变量的声明都将被提升到函数的最顶部。
 
-### Function对象
+### 2.3.3 Function对象
 
 1.JS函数实际上是功能完整的对象。
 
@@ -541,7 +543,7 @@ var doAdd = new Function("num", "alert(num + 10)");
 doAdd(1);  // 返回11
 ```
 
-### arguments对象
+### 2.3.4 arguments对象
 
 JS函数内置对象：arguments对象，表示函数调用的参数数组。
 
@@ -566,7 +568,7 @@ doAdd(10);    // 返回11
 doAdd(10,20); // 返回30
 ```
 
-### JS闭包★
+### 2.3.5 JS闭包★
 
 **闭包（closure）**指的是词法表示包括不被计算的变量的函数，即函数可以使用函数之外定义的变量。
 
@@ -582,9 +584,9 @@ function addNum(iNum1, iNum2) {
 }
 ```
 
-## JS对象
+## 2.4 JS对象
 
-### Object对象
+### 2.4.1 Object对象
 
 | Object属性&方法 | 描述 |
 | --------------- | ---- |
@@ -603,7 +605,7 @@ function addNum(iNum1, iNum2) {
 prop in obj  // 判断prop是否属于obj
 ```
 
-### 内置对象
+### 2.4.2 内置对象
 
 JS内置对象（本地对象/全局对象）：由 ECMAScript 实现提供的、独立于宿主环境的所有对象，在 ECMAScript 程序开始执行时出现。
 JS内置对象：Object，String，Array，Function，Boolean，Number，Math，Date，RegExp，Error等。
@@ -641,7 +643,7 @@ date.setFullYear(yyyy, mm, dd); // 设置具体的日期
 
 > 详细了解**JS内置对象**请参考：[JavaScript 对象参考手册](http://www.w3school.com.cn/jsref/index.asp)；
 
-### 创建对象
+### 2.4.3 创建对象
 
 1.原始方式一：
 
@@ -705,11 +707,11 @@ obj instanceof Object;  // true  判断obj是否为Object的一个实例。
 
 
 
-## JS原型（难点）
+## 2.5 JS原型（难点）
 
 原型(prototype)简化了继承。
 
-### 构造函数
+### 2.5.1 构造函数
 
 JavaScript是一门面向对象的编程语言，所有数据类型都是对象。
 Brendan Eich为JavaScript设计了**继承**机制，但并未引入“类”的概念，而是采用**构造函数**直接生成实例。
@@ -724,7 +726,7 @@ function Person(name,age){
 var p1 = new Person("Tom",20);
 ```
 
-### 原型对象
+### 2.5.2 原型对象
 
 **引入prototype属性**：
 使用构造函数直接生成实例，存在一个问题：无法共享通用数据。
@@ -753,13 +755,13 @@ alert(p1.species); // 人类
 Obj.prototype.constructor = Obj
 ```
 
-### 原型链
+### 2.5.3 原型链
 
 **原型链**：JS对象（不论是普通对象还是函数对象）都有`__proto__`属性，指向**创建它**的**函数对象**的**原型对象**。通过`__proto__`向上遍历直到`Object.prototype.__proto__ = null`构成原型链。
 
 注意：使用`__proto__`可使**实例（子）**获取**构造器（父）**的原型对象，容易造成不必要的麻烦。所以`__proto__`仅是为了实现原型链继承机制而存在的一个属性，不推荐在编程中使用。
 
-### 原型继承
+### 2.5.4 原型继承
 
 原型继承：当查找一个对象的属性时，JavaScript会向上遍历原型链，直到找到相应的属性为止。
 原型继承的本质：由于所有的实例对象共享同一个prototype对象，那么从外界看起来，prototype对象就好像是实例对象的原型，而实例对象则好像"继承"了prototype对象一样。
@@ -769,9 +771,11 @@ Obj.prototype.constructor = Obj
 ```js
 son.prototype = new Father()
 ```
-## JS事件机制
+## 2.6 JS事件机制
 
 事件一般与函数配合使用，这样就可以使事件驱动函数执行。
+
+### 2.6.1 事件类型
 
 事件三要素：事件源，事件名称，事件处理程序；
 
@@ -795,7 +799,7 @@ son.prototype = new Father()
 | onkeypress  | 某个键盘的键被按下或按住 |
 | onkeyup	  | 某个键盘的键被松开|
 
-### 事件传播
+### 2.6.2 事件传播
 
 **事件传播方式**：
 ①事件捕获：Window->Document -> Element -> Attribute -> Text；
@@ -808,7 +812,7 @@ son.prototype = new Father()
 event.stopPropagation()
 ```
 
-### 事件注册
+### 2.6.3 事件注册
 
 **注册/移除事件**的三种方式：
 ①**on事件**：
@@ -851,7 +855,7 @@ event.returnValue = false;
 ```
 
 
-# JS DOM
+# 3. JS DOM
 
 DOM文档对象模型
 
@@ -859,7 +863,7 @@ DOM文档对象模型
 
 
 
-## DOM获取页面元素
+## 3.1 DOM获取页面元素
 
 1.根据id获取元素：
 
@@ -891,7 +895,7 @@ document.getElememtByClassName("类名"); // 返回数组
 document.querySelectorAll("选择器"); // 返回数组
 ```
 
-## DOM操作
+## 3.2 DOM操作
 
 1.改变HTML输出流：
 
@@ -929,7 +933,7 @@ document.write();  // 直接向HTML输出流写内容。
 > CSS属性名多个单词以-分隔s，JS调用CSS属性名多个单词采用驼峰命名；
 > 即在JS中使用fontSize来表示CSS中的font-size。
 
-## DOM节点
+## 3.3 DOM节点
 
 DOM节点：文档Document->元素Element->属性Attribute->文本Text；
 
@@ -984,12 +988,12 @@ DOM节点：文档Document->元素Element->属性Attribute->文本Text；
 | removeAttribute("attr")       | 移除属性         |
 
 
-# JS BOM
+# 4. JS BOM
 
 BOM浏览器对象模型
 其中window对象是BOM顶级对象，document，location，history，navigator都是其子对象。
 
-## window-浏览器窗口
+## 4.1 window-浏览器窗口
 
 window对象：浏览器窗口；
 
@@ -999,14 +1003,14 @@ window对象：浏览器窗口；
 | window.innerHeight | 浏览器窗口的内部高度 |
 | window.innerWidth  | 浏览器窗口的内部宽度 |
 
-### 原生JS入口函数
+### 4.1.1 原生JS入口函数
 
 ```js
 // 原生JS入口函数：等待加载完页面元素后再执行JS代码
 window.onload = function(){ JS代码 }  // 原生JS入口函数
 ```
 
-### JS弹出框
+### 4.1.2 JS弹出框
 
 1.警告框：
 
@@ -1030,7 +1034,7 @@ var input = window.prompt("你的年龄？");  //提问框；
 
 > 可省略windows对象，直接使用。
 
-### JS定时器
+### 4.1.3 JS定时器
 
 1.单次定时器：
 
@@ -1062,7 +1066,7 @@ setTimeout(function(){
 },5000)
 ```
 
-## location-浏览器url
+## 4.2 location-浏览器url
 
 location对象：浏览器地址
 
@@ -1085,7 +1089,7 @@ location对象：浏览器地址
 > query：查询；可选，用于给动态网页传递参数，参数名1=值1&参数名2=值2；
 > fragment：信息片段；字符串，锚点；
 
-## history-会话历史
+## 4.3 history-会话历史
 
 history对象：会话历史
 
@@ -1095,7 +1099,7 @@ history对象：会话历史
 | forword()        | 前进，go(1)  |
 | go(n)            | 跳转n步      |
 
-## navigator-浏览器信息
+## 4.4 navigator-浏览器信息
 
 navigator对象：浏览器信息
 
@@ -1106,6 +1110,10 @@ navigator对象：浏览器信息
 | navigator.language   | 浏览器语言                     |
 | navigator.platform   | 操作系统类型                   |
 | navigator.userAgent  | 浏览器设定的`User-Agent`字符串 |
+
+
+
+
 
 > 参考资料：
 > W3school：[JavaScript教程](ECMAScript)，[ECMAScript](http://www.w3school.com.cn/js/pro_js_history.asp)；

@@ -8,34 +8,14 @@ comments: true
 date: 2018-04-03 22:36:54
 ---
 
-# HTML
+<!--# HTML-->
 
 HTML超文本标记语言。其中“超文本“指页面内可以包含图片、链接、程序、音频、视频等非文字元素，即一个页面（page）可以包含：文本、图片、链接、程序、音频、视频等元素。
 HTML常用于编写页面主体结构，CSS用于对页面进行静态修饰，JavaScript用于对网页增加动态功能。
 
 <!-- more -->
 
-- [HTML基本结构](#1)
-- [HTML头部标签](#2)
-  - [meta标签](#2.1)
-  - [link标签](#2.2)
-  - [base标签](#2.3)
-- [HTML主体标签](#3)
-  - [HTML标签分类](#3.1)
-  - [HTML标签属性](#3.2)
-  - [排版标签](#3.3)
-  - [文本格式化标签](#3.4)
-  - [图片标签](#3.5)
-  - [链接标签](#3.6)
-  - [列表标签](#3.7)
-  - [表格标签](#3.8)
-  - [表单标签](#3.9)
-
-
-
-
-
-# HTML基本结构
+# 1. HTML基本结构
 
 HTML注释：`<!-- HTML注释格式 -->`
 
@@ -69,18 +49,18 @@ HTML注释：`<!-- HTML注释格式 -->`
 </html>
 ```
 
-# HTML-头部标签
+# 2. HTML-头部标签
 
-## meta标签-元信息
+## 2.1 meta标签-元信息
 
-1.meta标签：提供页面元信息，位于`<head></head>`中。
+(1) meta标签：提供页面元信息，位于`<head></head>`中。
 
-```
+```html
 <meta name="" content=""/>
 <meta http-equiv="" content=""/>
 ```
 
-2.meta标签属性：**键值对**
+(2) meta标签属性：**键值对**
 - name:content
 - http-equiv:content
 
@@ -99,7 +79,7 @@ HTML注释：`<!-- HTML注释格式 -->`
 <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东">
 ```
 
-## link标签-链接外部资源
+## 2.2 link标签-链接外部资源
 
 ```html
 <!--链接外部css文件-->
@@ -108,11 +88,11 @@ HTML注释：`<!-- HTML注释格式 -->`
 <link rel="icon" href="favicon.ico" />
 ```
 
-## base标签-基准链接
+## 2.3 base标签-基准链接
 
 base标签：为页面所有链接规定默认url或默认target。
 
-```
+```html
 <base href="" target="" />
 ```
 
@@ -121,13 +101,13 @@ base标签：为页面所有链接规定默认url或默认target。
 | herf          | url              | 规定页面所有链接的默认url      |
 | target        | _self<br>\_blank | 规定页面所有链接的默认打开方式 |
 
-# HTML标签
+# 3. HTML标签
 
 HTML元素：从开始标签（start tag）到结束标签（end tag）的所有代码；
 
 空元素：没有内容的 HTML 元素；推荐**在开始标签中关闭**；如`<br/>`；
 
-## HTML标签分类
+## 3.1 HTML标签分类
 按标签类型分类：
 
 | 标签类型 | 标签                             |
@@ -143,7 +123,7 @@ HTML元素：从开始标签（start tag）到结束标签（end tag）的所有
 | 行级元素     | `<span></span>`，`<a></a>`... |
 | 行内块元素   | `<img/>`、`<td></td>`...      |
 
-## HTML标签属性
+## 3.2 HTML标签属性
 
 HTML标签属性格式：**name="value"** ；
 
@@ -156,7 +136,7 @@ HTML标签属性格式：**name="value"** ；
 
 > 详细参考[《HTML标准属性参考手册》](http://www.w3school.com.cn/tags/html_ref_standardattributes.asp)
 
-## 排版标签
+## 3.3 排版标签
 
 | 排版标签   |                                         |
 | ---------- | --------------------------------------- |
@@ -167,7 +147,7 @@ HTML标签属性格式：**name="value"** ；
 | 块标签     | `<div></div>`                           |
 | 行标签     | `<span></span>`                         |
 
-## 文本格式化标签
+## 3.4 文本格式化标签
 
 | 文本格式 | HTML4               | HTML5               |
 | -------- | ------------------- | ------------------- |
@@ -176,7 +156,7 @@ HTML标签属性格式：**name="value"** ；
 | 下划线   | `<u></u>`不推荐使用 | `<ins></ins>`       |
 | 删除线   | `<s></s>`不推荐使用 | `<del></del>`       |
 
-## 图片标签-img★
+## 3.5 图片标签-img★
 
 ```html
 <img src="url" alt="替代文本" />
@@ -192,7 +172,7 @@ HTML标签属性格式：**name="value"** ；
 
 > 避免图片失真：推荐width&height只设置一个值；
 
-## 链接标签-a★
+## 3.6 链接标签-a★
 
 ```html
 <a herf="url" target="_blank"></a>
@@ -204,11 +184,15 @@ HTML标签属性格式：**name="value"** ；
 | target    | \_self<br>\_blank | 本标签页打开（默认）<br>新标签页打开 |
 | name      | text              | 锚点名称                             |
 
-> **锚点定位：`<a href="#id/name"></a>`**；
+**锚点定位**：
 
-## 列表标签
+```html
+<a href="#id/name"></a>
+```
 
-### 无序列表-ul
+## 3.7 列表标签
+
+### 3.7.1 无序列表-ul
 
 ```html
 <ul>
@@ -217,7 +201,7 @@ HTML标签属性格式：**name="value"** ；
 </ul>
 ```
 
-### 有序列表-ol
+### 3.7.2 有序列表-ol
 
 ```html
 <ol>
@@ -226,7 +210,7 @@ HTML标签属性格式：**name="value"** ；
 </ol>
 ```
 
-### 自定义列表-dl
+### 3.7.3 自定义列表-dl
 
 ```html
 <dl>
@@ -241,7 +225,7 @@ HTML标签属性格式：**name="value"** ；
 
 > 列表项计数问题：从1开始计数，dl从dt开始计数；
 
-## 表格标签-table
+## 3.8 表格标签-table
 
 ```html
 <table border="1px">
@@ -277,7 +261,7 @@ HTML标签属性格式：**name="value"** ；
 
 
 
-## 表单标签-form
+## 3.9 表单标签-form
 
 ```html
 <form action="" method="GET">
@@ -291,14 +275,15 @@ HTML标签属性格式：**name="value"** ；
 | method       | **GET**<br>**POST** | 规定提交表单使用的 HTTP 方法 |
 | target       | _self<br>\_blank    | 规定action的打开方式         |
 
-> > **HTTP 方法**：
+> **HTTP 方法**：
 > - **GET**：表单数据在地址栏可见，明文；（默认）
 > - **POST**：表单数据在地址栏不可见，密文；
 
+### 3.9.1 input标签★
 
-### input标签★
-
-`<input type="" name="" value="" />`
+```html
+<input type="" name="" value="" />
+```
 
 | `<input/>`属性 | 值                                                           | 描述                                                         |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -336,16 +321,18 @@ HTML标签属性格式：**name="value"** ；
 | month               | 月年         |
 | week                | 星期 年      |
 
-### label标签
+### 3.9.2 label标签
 label标签：为 input 元素定义标注
-- `<label for=""></label>`
+```html
+<label for=""></label>
+```
 
 | `<label>`属性 | 值      | 描述                                  |
 | ------------- | ------- | ------------------------------------- |
 | for           | id      | 规定 label 绑定到哪个表单元素。       |
 | form          | form_id | 规定 label 字段所属的一个或多个表单。 |
 
-### select标签-下拉列表
+### 3.9.3 select标签-下拉列表
 
 ```html
 <select name="" id="">
@@ -360,7 +347,7 @@ label标签：为 input 元素定义标注
 | **disabled**   | **disabled** | 禁用表单元素           |
 | value          | text         | 定义送往服务器的选项值 |
 
-### textarea标签-文本域
+### 3.9.4 textarea标签-文本域
 
 ```html
 <textarea name="" id="" cols="30" rows="10">
@@ -371,7 +358,7 @@ label标签：为 input 元素定义标注
 - `rows`&`cols`：定义文本的可见行&列；
 
 
-### fieldset标签-元素分组
+### 3.9.5 fieldset标签-元素分组
 
 ```html
 <fieldset>
@@ -381,7 +368,7 @@ label标签：为 input 元素定义标注
 </fieldset>
 ```
 
-### datalist标签-input可能值（H5）
+### 3.9.6 datalist标签-input可能值（H5）
 
 datalist标签：定义选项列表。与 input 连用，定义 input 可能的值。
 
@@ -396,9 +383,9 @@ datalist标签：定义选项列表。与 input 连用，定义 input 可能的�
 
 
 
-## 多媒体标签
+## 3.10 多媒体标签
 
-### embed标签-嵌入内容
+### 3.10.1 embed标签-嵌入内容
 
 ```html
 <embed src="" type=""/>
@@ -410,7 +397,7 @@ datalist标签：定义选项列表。与 input 连用，定义 input 可能的�
 | type           | type | 嵌入内容的类型  |
 | width&height   | px   | 嵌入内容的宽&高 |
 
-### audio标签-音频
+### 3.10.2 audio标签-音频
 
 ```html
 <audio src=""></audio>
@@ -423,7 +410,7 @@ datalist标签：定义选项列表。与 input 连用，定义 input 可能的�
 | control       | control  | 显示音频控件 |
 | loop          | loop     | 循环播放     |
 
-### video标签-视频
+### 3.10.3 video标签-视频
 
 ```html
 <video src=""></video>
@@ -437,7 +424,7 @@ datalist标签：定义选项列表。与 input 连用，定义 input 可能的�
 | loop          | loop     | 循环播放     |
 | width&height  | px       | 视频的宽&高  |
 
-## HTML代码约束
+# 4. HTML代码约束
 
 - 始终首行声明文档类型`<!DOCTYPE html>`；
 - 建议关闭所有 HTML 元素；**空元素**，推荐**在开始标签中关闭**；

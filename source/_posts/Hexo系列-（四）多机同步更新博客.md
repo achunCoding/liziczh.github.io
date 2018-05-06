@@ -57,12 +57,12 @@ git push origin hexo  # 将本地仓库推送至远程仓库
 
 ## 多机同步更新博客
 
-### 安装前提
+### 1.安装前提
 
-1.安装Git
-2.安装nodejs
+(1) 安装Git
+(2) 安装nodejs
 
-### 博客还原
+### 2.博客还原
 
 ```shell
 git clone -b hexo https://github.com/yourname/yourname.github.io.git  # 克隆hexo分支到本地
@@ -72,7 +72,7 @@ npm install hexo-cli -g   # 安装hexo命令行模式
 npm install    # 安装所有依赖，根据package.json自动安装之前安装过的插件
 ```
 
-### 正常使用
+### 3.正常使用
 
 重新部署：
 

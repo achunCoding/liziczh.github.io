@@ -9,16 +9,16 @@ date: 2018-04-05 17:21:22
 
 ---
 
-# CSS
+<!--# CSS-->
 
 CSS 层叠样式表（Cascading Style Sheets），主要通过为HTML元素增添样式的方式修饰静态页面，实现了内容与表现分离。
 目前主流网页布局由**div+CSS**实现；
 
 <!-- more -->
 
-# CSS基础
+# 1. CSS基础
 
-## CSS三大特性
+## 1.1 CSS三大特性
 
 1. **层叠**性：权重高的样式会覆盖权重低的样式；
 2. 继承性：子元素继承父元素的样式；
@@ -26,7 +26,7 @@ CSS 层叠样式表（Cascading Style Sheets），主要通过为HTML元素增�
   - 不同级别：行内样式>id选择器>类选择器>标签选择器>通配符>继承；
   - 同一级别：后写的会覆盖先写的样式；
 
-## CSS样式规则
+## 1.2 CSS样式规则
 
 CSS注释：`/* CSS注释内容 */`
 
@@ -38,7 +38,7 @@ CSS注释：`/* CSS注释内容 */`
 }
 ```
 
-## 引入CSS样式表
+## 1.3 引入CSS样式表
 
 1.行内样式表（内联表）：
 
@@ -75,9 +75,9 @@ CSS注释：`/* CSS注释内容 */`
 
 
 
-# CSS样式
+# 2. CSS样式
 
-## CSS字体-font★
+## 2.1 CSS字体-font★
 
 1.字体系列：
 
@@ -126,7 +126,7 @@ font : font-style font-weight font-size/line-height font-family
 - ！网页普遍是`14px`；尽量设偶数px，奇数px在IE6存在bug；
 ```
 
-## CSS文本-text★
+## 2.2 CSS文本-text★
 1.文本缩进：
 
 ```css
@@ -184,7 +184,7 @@ rgba(0~255, 0~255, 0~255, 0~1);
 /* 模糊度：0~1 */
 ```
 
-## CSS背景-background★
+## 2.3 CSS背景-background★
 1.背景色：
 
 ```css
@@ -247,7 +247,7 @@ background-size : contain/cover;
 */
 ```
 
-## *CSS列表-list-style
+## 2.4 *CSS列表-list-style
 
 1.列表项标志：
 
@@ -284,7 +284,7 @@ inside：列表项目标记放置在文本以内，且环绕文本根据标记�
 list-style : image type position;
 ```
 
-## *CSS表格
+## 2.5 *CSS表格
 
 1.折叠边框
 
@@ -316,7 +316,7 @@ empty-cells : show/hide;
 caption-side : top/bottom;
 ```
 
-## *CSS轮廓-outline
+## 2.6 *CSS轮廓-outline
 
 1.轮廓颜色：
 
@@ -353,7 +353,7 @@ outline-width : thick/medium/thin/px;
 outline : color style width;
 ```
 
-## 标签显示模式★
+## 2.7 标签显示模式★
 
 | display        | 描述       |
 | -------------- | ---------- |
@@ -362,7 +362,7 @@ outline : color style width;
 | `inline`       | 行内元素   |
 | `inline-block` | 行内块元素 |
 
-## 内容溢出盒子★
+## 2.8 内容溢出盒子★
 
 | overflow  | 描述                                                         |
 | --------- | ------------------------------------------------------------ |
@@ -373,9 +373,9 @@ outline : color style width;
 
 
 
-# CSS选择器
+# 3. CSS选择器
 
-## 元素选择器
+## 3.1 元素选择器
 
 ```css
 标签{ 
@@ -383,7 +383,7 @@ outline : color style width;
 }
 ```
 
-## 类选择器
+## 3.2 类选择器
 
 ```css
 .类名{
@@ -394,7 +394,7 @@ outline : color style width;
 单类名调用：`class="类名"`；
 多类名调用：`class="类名1 类名2 ..."`；
 
-## id选择器
+## 3.3 id选择器
 
 ```css
 #id{
@@ -402,7 +402,7 @@ outline : color style width;
 }
 ```
 
-## 通配符选择器
+## 3.4 通配符选择器
 
 ```css
 *{                
@@ -413,7 +413,7 @@ outline : color style width;
 > 作用域：整个HTML页面
 >
 
-## 交集选择器
+## 3.5 交集选择器
 
 ```css
 选择器1选择器2{
@@ -421,7 +421,7 @@ outline : color style width;
 }
 ```
 
-## 并集选择器
+## 3.6 并集选择器
 
 ```css
 选择器1,选择器2{
@@ -429,7 +429,7 @@ outline : color style width;
 }
 ```
 
-## 后代选择器★
+## 3.7 后代选择器★
 
 ```css
 先代选择器 后代选择器{
@@ -439,7 +439,7 @@ outline : color style width;
 
 > 作用于先代元素内的[所有的后代元素]；
 
-## 子元素选择器★
+## 3.8 子元素选择器★
 
 ```css
 父选择器 > 子选择器{
@@ -449,7 +449,7 @@ outline : color style width;
 
 > 只作用于父元素内的[直接子元素]；
 
-## 相邻兄弟选择器
+## 3.9 相邻兄弟选择器
 
 ```
 伯选择器 + 仲选择器{
@@ -459,7 +459,7 @@ outline : color style width;
 
 > 作用于**紧接在**伯元素后的[仲元素]；
 
-## 属性选择器
+## 3.10 属性选择器
 
 ```css
 [属性]{
@@ -473,7 +473,7 @@ outline : color style width;
 }
 ```
 
-## 伪类选择器
+## 3.11 伪类选择器
 
 ```css
 选择器:伪类{
@@ -508,7 +508,7 @@ outline : color style width;
     属性:值;
 }
 ```
-## 伪元素选择器
+## 3.12 伪元素选择器
 
 ```css
 标签::伪元素{
@@ -543,11 +543,11 @@ outline : color style width;
 
 
 
-# CSS框模型（Box Model）★
+# 4. CSS框模型（Box Model）★
 
 ![BoxModel](http://p6uturdzt.bkt.clouddn.com/css-boxmodel.gif)
 
-## 边框-border
+## 4.1 边框-border
 
 1.边框宽度：
 
@@ -592,7 +592,7 @@ border-top/right/bottom/left-属性:值;
 border-radius : 左上角半径px 右上角半径px 右下角半径px 左下角半径px;
 ```
 
-## 内边距-padding
+## 4.2 内边距-padding
 
 1.内边距：
 
@@ -606,7 +606,7 @@ padding : top-px right-px bottom-px left-px
 padding-top/right/bottom/left : px
 ```
 
-## 外边距-margin
+## 4.3 外边距-margin
 
 1.外边距：
 
@@ -630,16 +630,20 @@ border/padding/margin综合设置提示：
 ```
 
 
-## 垂直外边距合并现象★
+## 4.4 垂直外边距合并现象★
 1.**相邻盒子**垂直外边距合并，margin合并取最大值；
 &nbsp;&nbsp;&nbsp;解决方案：只设置一个margin；
 
 2.**嵌套盒子**垂直外边距合并。
 &nbsp;&nbsp;&nbsp;解决方案①：**`overflow:hidden`**；
-&nbsp;&nbsp;&nbsp;解决方案②：`border`，`padding`；
+&nbsp;&nbsp;&nbsp;解决方案②：使用`border`，`padding`；
 
-## CSS3盒子&IE6盒子
-- IE6框模型：`box-sizing:content-box`；
+## 4.5 CSS3盒子&IE6盒子
+- IE6框模型：
+
+```css
+box-sizing:content-box
+```
 
 ```css
 IE6框的大小：【width+左右padding+左右border+左右margin】
@@ -655,19 +659,23 @@ CSS3框的大小：【width+左右margin】×【height+上下margin】
 
 
 
-# 浮动
+# 5. 浮动
 
-## 浮动-float（难点）
+## 5.1 浮动-float（难点）
 **浮动：浮动块不在文档流中，不占文档流位置；但占浮动位置**。
 
-- **浮动：`float:left/right`**；
+```css
+float:left/right;
+```
 
 （未完待详细解释）
 
-## 清除浮动-clear★
+## 5.2 清除浮动-clear★
 clear 属性规定元素的哪一侧不允许其他浮动元素。
 
-- 清除浮动：`clear:left/right/both`；
+```css
+clear:left/right/both
+```
 
 **清除浮动的方式：**
 
@@ -692,9 +700,9 @@ overflow:hidden
 
 
 
-# 定位
+# 6. 定位
 
-## 定位简介（难点）
+## 6.1 定位简介（难点）
 
 | position             | 是否占文档流   | 定位策略                   |
 | -------------------- | -------------- | -------------------------- |
@@ -703,20 +711,24 @@ overflow:hidden
 | `relative`：相对定位 | 占文档流原位置 | 相对于原位置进行边偏移     |
 | `absolute`：绝对定位 | 不占文档流     | 相对于其已定位的包含块定位 |
 
-## 边偏移
+## 6.2 边偏移
 1. 前提：float || position || 不占文档流；
 2. 边偏移：`top`，`bottom`，`left`，`right`；
 
-## 相对定位★
-- `position:relative`；
+## 6.3 相对定位★
+```css
+position:relative
+```
 
 1.相对于在文档流中的原位置进行边偏移；
 2.仍占据文档流中的原位置；
 
 ![relative](http://p6uturdzt.bkt.clouddn.com/css-relative.gif)
 
-## 绝对定位★
-- `position:absolute`；
+## 6.4 绝对定位★
+```css
+position:absolute
+```
 
 1.相对于[**其已定位的包含块**]进行边偏移；
 2.已从**文档流**中**完全删除**，就好像该元素原来不存在一样；
@@ -726,7 +738,7 @@ overflow:hidden
 6.一般采取[子绝父相]策略；
 
 
-# 页面日常开发习惯
+# 7. 页面日常开发习惯
 
 页面布局：div+CSS；
 
@@ -734,7 +746,7 @@ overflow:hidden
 
 例行设置：
 
-```
+```css
 1.清除盒子内外边距：*{padding:0;margin:0;}；
 2.链接取消下划线：a{text-decoration:none}；
 3.列表取消列表项标志：ul{list-style:none}；
@@ -742,7 +754,7 @@ overflow:hidden
 
 功能型样式：
 
-```
+```html
 -外边距实现盒子水平居中：margin:0 auto；
 -垂直居中：line-height:盒高；
 -清除浮动：<div style="clear:both;"></div>；
