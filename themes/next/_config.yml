@@ -10,7 +10,7 @@ override: false
 
 # Allow to cache content generation. Introduced in NexT v6.0.0.
 cache:
-  enable: true
+  enable: false
 
 # Redefine custom file paths. Introduced in NexT v6.0.2.
 # If commented, will be used default custom file paths.
@@ -77,13 +77,13 @@ footer:
   # -------------------------------------------------------------
   powered:
     # Hexo link (Powered by Hexo).
-    enable: false
+    enable: true
     # Version info of Hexo after Hexo link (vX.X.X).
     version: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: false
+    enable: true
     # Version info of NexT after scheme info (vX.X.X).
     version: false
   # -------------------------------------------------------------
