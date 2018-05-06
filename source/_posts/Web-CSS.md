@@ -639,18 +639,14 @@ border/padding/margin综合设置提示：
 &nbsp;&nbsp;&nbsp;解决方案②：使用`border`，`padding`；
 
 ## 4.5 CSS3盒子&IE6盒子
-- IE6框模型：
-
-```css
-box-sizing:content-box
-```
+- IE6框模型：`box-sizing:content-box`
 
 ```css
 IE6框的大小：【width+左右padding+左右border+左右margin】
 		×【height+上下padding+上下border+上下margin】
 ```
 
-- CSS3框模型：`box-sizing:border-box`；
+- CSS3框模型：`box-sizing:border-box`
 
 ```css
 CSS3框的大小：【width+左右margin】×【height+上下margin】
