@@ -178,9 +178,8 @@ blog\themes\你的主题\layout\_partial\head.ejs
 
 
 
+emmmmmm.....
 推送之后，大概一个礼拜左右，你就可以在百度搜索到你的博客了。
 
 
 
-emmmmmm......
-Coding在Pages服务页面添加了广告，所以现在配置完还是无法搜索到自己的博客。

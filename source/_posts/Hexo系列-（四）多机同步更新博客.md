@@ -72,7 +72,11 @@ npm install hexo-cli -g   # 安装hexo命令行模式
 npm install    # 安装所有依赖，根据package.json自动安装之前安装过的插件
 ```
 
-### 3.正常使用
+### 3.配置网络协议
+
+
+
+### 4.正常使用
 
 重新部署：
 
