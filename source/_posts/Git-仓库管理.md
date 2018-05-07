@@ -77,7 +77,7 @@ $ git commit  -m "提交说明"
 ```
 
 ```shell
-git commit -a  # git add + git commit
+$ git commit -a  # git add + git commit
 ```
 
 
