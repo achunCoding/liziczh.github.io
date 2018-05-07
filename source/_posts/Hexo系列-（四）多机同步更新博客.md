@@ -48,11 +48,12 @@ public/
 2.在Hexo博客站点根目录（即blog文件夹）中GitBash：
 
 ```shell
-git init  # 将blog作为一个git仓库进行初始化
-git checkout -b hexo  # 创建/切换hexo分支
-git add .  # 将文件添加到暂存区
-git commit -m "提交说明"  # 将暂存区文件提交到本地仓库
-git push origin hexo  # 将本地仓库推送至远程仓库
+$ git init  # 将blog作为一个git仓库进行初始化
+$ git checkout -b hexo  # 创建/切换hexo分支
+$ git add .  # 将文件添加到暂存区
+$ git commit -m "提交说明"  # 将暂存区文件提交到本地仓库
+$ git remote add origin https://github.com/yourname/yourname.github.io.git
+$ git push origin hexo  # 将本地仓库推送至远程仓库
 ```
 
 ## 多机同步更新博客
@@ -65,30 +66,85 @@ git push origin hexo  # 将本地仓库推送至远程仓库
 ### 2.博客还原
 
 ```shell
-git clone -b hexo https://github.com/yourname/yourname.github.io.git  # 克隆hexo分支到本地
-cd yourname.github.io    # 进入yourname.github.io文件夹
-npm install hexo --save   # 安装hexo
-npm install hexo-cli -g   # 安装hexo命令行模式
-npm install    # 安装所有依赖，根据package.json自动安装之前安装过的插件
+$ git clone -b hexo https://github.com/yourname/yourname.github.io.git  # 克隆hexo分支到本地
+$ cd yourname.github.io    # 进入yourname.github.io文件夹
+$ npm install hexo --save   # 安装hexo
+$ npm install hexo-cli -g   # 安装hexo命令行模式
+$ npm install    # 安装所有依赖，根据package.json自动安装之前安装过的插件
 ```
 
 ### 3.配置网络协议
 
+(1) SSH协议，长期部署选用，一劳永逸。
 
+①SSH秘钥：
+
+```shell
+$ ssh-keygen -t rsa -C "youremail@example.com"  # 生成rsa秘钥
+$ cd ~/.ssh         # 进入虚拟目录ssh文件中
+$ cat id_rsa.pub    # 显示id_rsa.pub文件内容
+```
+
+②复制秘钥至github/coding->用户setting->SSH keys，New SSH Key；
+
+③验证是否添加成功
+
+```shell
+ssh -T git@github.com  # 验证github是否添加成功
+ssh -T git@coding.net  # 验证coding是否添加成功
+```
+
+④编辑**站点配置文件**`_config.yml`：
+
+```yaml
+deploy:
+	type: git
+	repo: 
+		github: git@github.com:yourname/yourname.github.io.git 
+		coding: git@git.coding.net:yourname/yourname.coding.me.git 
+	branch: master
+```
+
+⑤添加远程仓库
+
+```shell
+$ git remote add origin git@github.com:yourname/yourname.github.io.git
+```
+
+(2) HTTPS协议，仅是临时部署时使用。
+
+①直接编辑**站点配置文件**`_config.yml`：
+
+```yaml
+deploy:
+	type: git
+	repo: 
+		github: https://github.com/yourname/yourname.github.io.git
+    	coding: https://git.coding.net/yourname/yourname.coding.me.git
+	branch: master
+```
+
+②验证github/coding用户名和密码。
+
+③添加远程仓库
+
+```shell
+$ git remote add origin https://github.com/yourname/yourname.github.io.git
+```
 
 ### 4.正常使用
 
 重新部署：
 
 ```shell
-hexo clean
-hexo g -d
+$ hexo clean
+$ hexo g -d
 ```
 
 上传至hexo分支：
 
 ```shell
-git add .
-git commit -m "提交说明"
-git push origin hexo
+$ git add .
+$ git commit -m "提交说明"
+$ git push origin hexo
 ```

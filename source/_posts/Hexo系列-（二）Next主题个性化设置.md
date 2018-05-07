@@ -29,10 +29,12 @@ $ git clone https://github.com/theme-next/hexo-theme-next themes/next
 
 区分配置文件：
 
-| 配置文件         | 路径                                      |
-| ---------------- | ----------------------------------------- |
-| **站点配置文件** | `D://blog//_config.yml`                   |
-| **主题配置文件** | `D://blog//themes//你的主题//_config.yml` |
+| 配置文件         | 路径                              |
+| ---------------- | --------------------------------- |
+| **站点配置文件** | `D:/blog/_config.yml`             |
+| **主题配置文件** | `D:/blog/themes/next/_config.yml` |
+
+
 
 ## 设置RSS
 
@@ -184,7 +186,7 @@ post_meta:
 
 ## 设置favicon图标
 
-1.将favicon.png放到`themes//next//image`文件夹下
+1.将favicon.png放到`themes\next\image`文件夹下
 2.**主题配置文件**更改图片路径：
 
 ```yaml
@@ -197,7 +199,7 @@ favicon:
 
 ## 设置头像
 
-1.将头像图片avatar.png放到`themes//next//image`文件夹下
+1.将头像图片avatar.png放到`themes\next\image`文件夹下
 2.**主题配置文件**更改图片路径：
 
 ```yaml
@@ -358,13 +360,13 @@ local_search:
 
 ## 修改文章底部标签[#]#
 
-1.打开编辑`themes//next//layout//_macro//post.swig`
+1.打开编辑`themes\next\layout\_macro\post.swig`
 2.`Ctrl+F`找到`rel="tag">#`
 3.将`#`替换为`<i class="fa fa-tag"></i>`
 
 ## 文章底部添加"本文结束"
 
-打开编辑`themes//next//layout//_macro//post.swig`，在文章结束的地方添加如下代码：
+打开编辑`themes\next\layout\_macro\post.swig`，在文章结束的地方添加如下代码：
 
 ```html
 {% if not is_index %}
@@ -385,7 +387,7 @@ local_search:
 ## 添加Host-by描述
 
 最近，银牌会员的Coding Pages在访问时会加载广告，需要在网站首页任意位置放置「Hosted by Coding Pages」，通过审核将取消广告。
-打开编辑`themes//next//layout//_partials//footer.swig`，在末尾添加如下代码，将「Hosted by Coding Pages」置于页面底部。
+打开编辑`themes/next/layout/_partials/footer.swig`，在末尾添加如下代码，将「Hosted by Coding Pages」置于页面底部。
 
 ```html
 {% if theme.footer.powered.enable and theme.footer.theme.enable %}
@@ -395,6 +397,38 @@ local_search:
   </div>
 {% endif %}
 ```
+
+## DaoVoice实现在线联系
+
+1.首先在[DaoVoice](http://dashboard.daovoice.io/get-started?invite_code=bcc0de9a)注册一个账号，注册完成后在[应用设置]-[安装到网站]中找到app_id。
+
+2.打开编辑`themes/next/layout/_partials/head/head.swig `，添加如下代码：
+
+```html
+{% if theme.daovoice %}
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "{{theme.daovoice_app_id}}"
+    });
+  daovoice('update');
+  </script>
+{% endif %}
+```
+
+3.编辑**主题配置文件**，添加如下代码：
+
+```yaml
+# DaoVoice
+daovoice: true
+daovoice_app_id: yourapp_id
+```
+
+4.设置DaoVoice页面样式
+
+![daovoice](http://p6uturdzt.bkt.clouddn.com/next-daovoice.png)
+
+5.在[应用设置]-[添加微信]中绑定微信，关注小程序，即可实时收发消息。
 
 
 
