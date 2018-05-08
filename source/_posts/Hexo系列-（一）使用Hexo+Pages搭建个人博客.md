@@ -10,9 +10,10 @@ date: 2018-04-11 10:57:46
 
 <!--# Hexo系列 | （一）使用Hexo+Pages搭建个人博客-->
 
-清明四月飞雪，深居简出，百无聊赖，建站。
-本篇主要记录使用hexo+pages搭建个人博客的流程。
-其中[Hexo](https://hexo.io/zh-cn/) 是一个博客框架，可解析markdown文章，生成静态页面。在代码托管平台[github](https://github.com)（国外）、[coding](https://coding.net)（国内）上都有pages服务，提供免费的静态网页托管和演示服务。
+时至清明，四月飞雪，深居简出，百无聊赖，建站。
+本篇主要介绍使用hexo+pages搭建个人博客的流程。
+其中[Hexo](https://hexo.io/zh-cn/) 是一个博客框架，可解析markdown文章，生成静态页面。
+在代码托管平台[github](https://github.com)（国外）、[coding](https://coding.net)（国内）上都有pages服务，提供免费的静态网页托管和演示服务。
 
 <!-- more -->
 
