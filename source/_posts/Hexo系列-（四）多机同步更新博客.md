@@ -75,7 +75,7 @@ $ npm install    # 安装所有依赖，根据package.json自动安装之前安�
 
 ### 3.配置网络协议
 
-(1) SSH协议，长期部署选用，一劳永逸。
+(1) SSH协议，长期部署推荐SSH，一劳永逸。
 
 ①SSH秘钥：
 
@@ -111,7 +111,7 @@ deploy:
 $ git remote add origin git@github.com:yourname/yourname.github.io.git
 ```
 
-(2) HTTPS协议，仅是临时部署时使用。
+(2) HTTPS协议，临时部署推荐HTTPS。
 
 ①直接编辑**站点配置文件**`_config.yml`：
 

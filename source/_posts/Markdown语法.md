@@ -60,6 +60,16 @@ _italic_
 
 
 
+## 删除线
+
+```markdown
+~~delete~~
+```
+
+~~delete~~
+
+
+
 ## 引用
 
 ```markdown
@@ -90,6 +100,7 @@ code
 ```
 code
 ```
+
 
 
 ## 图片
@@ -150,6 +161,8 @@ code
 - Green
 - Blue
 
+
+
 ## 有序列表
 
 ```markdown
@@ -161,6 +174,8 @@ code
 1. Red
 2. Green
 3. Blue
+
+
 
 ## 表格
 
