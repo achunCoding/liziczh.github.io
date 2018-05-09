@@ -8,7 +8,9 @@ tags:
 categories: Markdown
 ---
 
-# Markdown 语法
+<!--# Markdown 语法-->
+
+Markdown是一种简单的、进行文本编辑的标记语言，目标是实现「易读易写」；并且兼容HTML，适用于网络书写。
 
 <!--more-->
 
