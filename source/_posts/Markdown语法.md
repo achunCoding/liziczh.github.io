@@ -49,8 +49,6 @@ __Blod__
 
 **Blod**
 
-
-
 ## 斜体
 
 ```markdown
@@ -65,8 +63,6 @@ _italic_
 
 *italic*
 
-
-
 ## 删除线
 
 ```markdown
@@ -76,8 +72,6 @@ _italic_
 **效果**：
 
 ~~delete~~
-
-
 
 ## 分割线
 
@@ -92,8 +86,6 @@ _italic_
 **效果**：
 
 ---
-
-
 
 
 ## 引用
@@ -118,8 +110,6 @@ _italic_
 > 此夜曲中闻折柳，
 > 何人不起故园情。 
 
-
-
 ## 代码
 
 ```
@@ -135,8 +125,6 @@ _italic_
 **效果**：
 
 `<br/>`
-
-
 
 ## 代码块
 
@@ -154,9 +142,9 @@ codeblock
 
 \`\`\`java
 public class HelloWorld {
-	public static void main(String[] args) {
-		System.out.println("HelloWorld");
-	}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("HelloWorld");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 }
 \`\`\`
 
@@ -171,8 +159,6 @@ public class HelloWorld {
 	}
 }
 ```
-
-
 
 ## 图片
 
@@ -190,8 +176,6 @@ public class HelloWorld {
 
 ![示例图片](http://p6uturdzt.bkt.clouddn.com/markdown-logo.jpg)
 
-
-
 ## 链接
 
 ```markdown
@@ -207,8 +191,6 @@ public class HelloWorld {
 **效果**：
 
 [百度](http://www.baidu.com)
-
-
 
 ## 无序列表
 
@@ -236,8 +218,6 @@ public class HelloWorld {
 - Green
 - Blue
 
-
-
 ## 有序列表
 
 ```markdown
@@ -252,8 +232,6 @@ public class HelloWorld {
 2. Green
 3. Blue
 
-
-
 ## 表格
 
 ```markdown
@@ -263,8 +241,6 @@ public class HelloWorld {
 | 表项 | 表项 |
 ```
 
-单元格内换行：使用`<br/>`标签。
-
 **效果**：
 
 | 列名 | 列名 |
@@ -272,23 +248,31 @@ public class HelloWorld {
 | 表项 | 表项 |
 | 表项 | 表项 |
 
-
-
-## 特殊字符
+## 空格
 
 ```html
 &nbsp; //半角空格（英文）
 &emsp; //全角空格（中文）
 ```
 
+## 居中
 
+```html
+<center>居中文本</center>
+```
+
+## 换行
+
+```html
+<br/>
+```
 
 ## 锚-页内跳转
 
 ```html
-[跳转到锚点](#2)
+[跳转到锚点](#jump)
 ......
-<span id = 2>锚点</span>
+<span id = "jump">锚点</span>
 ```
 
 **示例**：
