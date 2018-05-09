@@ -2,7 +2,7 @@
 title: Markdown语法
 comments: true
 date: 2018-05-07 15:46:55
-id: markdown
+id: markdown-grammer
 tags: 
 - markdown
 categories: Markdown
@@ -93,35 +93,40 @@ _italic_
 
 ## 代码块
 
-```markdown
-​```type
-code
-​```
-```
+<p>
 
-```
-code
+\```type
+
+codeblock
+
+\```
+
+
+</p>
+
+```markdown
+codeblock
 ```
 
 
 
 ## 图片
 
-```markdown
-![Alt](url)
+​```markdown
+![Alt](http://)
 ```
 
-
+![Alt](http://)
 
 
 
 ## 链接
 
-```markdown
-[Alt](url)
+​```markdown
+[Link](http://)
 ```
 
-
+[Link](http://)
 
 
 
