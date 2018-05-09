@@ -46,6 +46,8 @@ npm install hexo-cli -g   # 安装hexo命令行模式
 hexo -v  # 查看hexo版本，验证是否安装成功
 ```
 
+->[hexo命令](#hexocommand)
+
 ## 2. hexo建站
 
 1.新建一个blog文件夹，打开blog文件夹，Git Bash。
@@ -87,7 +89,7 @@ github和coding可以双线配置，也可以选择其中一个配置。推荐�
 2.登录coding，新建仓库：`yourname.coding.me`。打开静态pages服务。
 &nbsp;&nbsp;&nbsp;其中`yourname`是你的coding用户名，coding不强制后缀为`coding.me`。
 
-3.Git Bash配置git信息：
+3.Git Bash配置git用户信息：
 
 ```shell
 git config --global user.name "YourName"
@@ -184,12 +186,12 @@ hexo deploy    # 部署到github/coding；
 
 区分配置文件：
 
-| 配置文件     | 路径                                      |
-| ------------ | ----------------------------------------- |
-| 站点配置文件 | `D://blog//_config.yml`                   |
-| 主题配置文件 | `D://blog//themes//你的主题//_config.yml` |
+| 配置文件     | 路径                                  |
+| ------------ | ------------------------------------- |
+| 站点配置文件 | `D:/blog/_config.yml`                 |
+| 主题配置文件 | `D:/blog/themes/你的主题/_config.yml` |
 
-打开**站点配置文件**`blog//_config.yml`，自行发挥，配置完毕，重新部署 `hexo g -d`；
+打开**站点配置文件**`blog/_config.yml`，自行发挥，配置完毕，重新部署 `hexo g -d`；
 
 ```yaml
 # 注意：yaml语言使用缩进表示层级关系。
@@ -258,7 +260,7 @@ hexo g -d   # 生成静态页面后直接部署；
 hexo new post "title"
 ```
 
-2.编辑：在`source//_post`下可以编辑你新建的文章。
+2.编辑：在`source/_post`下可以编辑你新建的文章。
 3.编辑完毕，重新部署：
 
 ```shell
@@ -373,7 +375,7 @@ categories:
 
 
 
-## 附：hexo常用命令
+## <span id = "hexocommand">附：hexo常用命令</span>
 
 | 命令                        | 描述                                                       |
 | --------------------------- | ---------------------------------------------------------- |

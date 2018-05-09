@@ -10,18 +10,17 @@ date: 2018-04-09 16:34:00
 
 <!--# jQuery-->
 
-jQuery是一个JavaScript函数库，将JS的一些功能实现封装成了函数，极大地简化了JavaScript编程。
+jQuery 是一个 JavaScript 函数库，将 JS 的一些功能实现封装成了函数，极大地简化了 JavaScript 编程。
 
-jQuery库特性：
-
-- HTML 元素选取
-- HTML 元素操作
-- CSS 操作
-- HTML 事件函数
-- JavaScript 特效和动画
-- HTML DOM 遍历和修改
-- AJAX
-- Utilities
+jQuery 库特性：
+① HTML 元素选取
+② HTML 元素操作
+③ CSS 操作
+④ HTML 事件函数
+⑤ JavaScript 特效和动画
+⑥ HTML DOM 遍历和修改
+⑦ AJAX
+⑧ Utilities
 
 <!--more-->
 
