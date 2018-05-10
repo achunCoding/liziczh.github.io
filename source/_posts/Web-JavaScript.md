@@ -291,7 +291,6 @@ var f = new Function(arg1, arg2, ..., argN, function_body) // 函数对象
 6.条件运算符：`a?b:c `
 
 **双等与三等★**：
-
 `==`&`!=`：只比较值，不比较类型。
 `===`&`!==`：既比较值，也比较类型。
 
@@ -421,8 +420,7 @@ var str = "abc"+"def";  // 使用“+”拼接字符串
 
 ## 2.2 JS数组
 
-JS数组是动态数组，无需指定长度。
-JS是弱类型的，数组中可以有不同的变量类型。
+JS数组是动态数组，无需指定长度。JS又是弱类型的，数组中可以有不同的变量类型。
 
 ### 2.2.1 创建数组
 
@@ -511,10 +509,10 @@ var function_name = new Function(arg1, arg2, ..., argN, function_body)
 ### 2.3.2 函数提升★
 
 **一等公民**：JS函数与JS变量处于同等地位，可作为一个值使用。
-①将函数赋值给变量
-②将函数赋值给对象的属性
-③将函数作为参数出入其他函数
-④将函数作为返回结果
+①可将函数赋值给变量
+②可将函数赋值给对象的属性
+③可将函数作为参数出入其他函数
+④可将函数作为返回结果
 
 **函数提升（Hoisting）**：JS函数及变量的声明都将被提升到函数的最顶部。
 
@@ -553,8 +551,7 @@ JS函数内置对象：arguments对象，表示函数调用的参数数组。
 arguments.length  // 参数数组长度，参数个数
 ```
 
-2.模拟函数重载：
-使用`arguments.length`判断传递给函数的参数个数，即可模拟重载。
+2.模拟函数重载：使用`arguments.length`判断传递给函数的参数个数，即可模拟重载。
 
 ```js
 function doAdd() {
@@ -608,6 +605,7 @@ prop in obj  // 判断prop是否属于obj
 ### 2.4.2 内置对象
 
 JS内置对象（本地对象/全局对象）：由 ECMAScript 实现提供的、独立于宿主环境的所有对象，在 ECMAScript 程序开始执行时出现。
+
 JS内置对象：Object，String，Array，Function，Boolean，Number，Math，Date，RegExp，Error等。
 
 其中**Object**，**String**，**Array**，**Function**请参考上文。
@@ -713,8 +711,7 @@ obj instanceof Object;  // true  判断obj是否为Object的一个实例。
 
 ### 2.5.1 构造函数
 
-JavaScript是一门面向对象的编程语言，所有数据类型都是对象。
-Brendan Eich为JavaScript设计了**继承**机制，但并未引入“类”的概念，而是采用**构造函数**直接生成实例。
+JavaScript是一门面向对象的编程语言。Brendan Eich为JavaScript设计了**继承**机制，但并未引入“类”的概念，而是采用**构造函数**直接生成实例。
 
 ```js
 // 构造函数
@@ -764,6 +761,7 @@ Obj.prototype.constructor = Obj
 ### 2.5.4 原型继承
 
 原型继承：当查找一个对象的属性时，JavaScript会向上遍历原型链，直到找到相应的属性为止。
+
 原型继承的本质：由于所有的实例对象共享同一个prototype对象，那么从外界看起来，prototype对象就好像是实例对象的原型，而实例对象则好像"继承"了prototype对象一样。
 
 原型继承：设置[子类的原型]是[父类的实例]。
@@ -990,8 +988,7 @@ DOM节点：文档Document->元素Element->属性Attribute->文本Text；
 
 # 4. JS BOM
 
-BOM浏览器对象模型
-其中window对象是BOM顶级对象，document，location，history，navigator都是其子对象。
+BOM浏览器对象模型，其中window对象是BOM顶级对象，document，location，history，navigator都是windows的子对象。
 
 ## 4.1 window-浏览器窗口
 
@@ -1080,14 +1077,16 @@ location对象：浏览器地址
 | location.assign() | 加载页面                                     |
 | location.reload() | 重新加载                                     |
 
-> url统一资源定位符
-> url格式：scheme://host:port/path?query#fragment
-> scheme：通信协议；如http，ftp，maito，https等；
-> host：主机；服务器域名系统主机名、IP地址；
-> port：端口；http默认端口80；
-> path：路径；
-> query：查询；可选，用于给动态网页传递参数，参数名1=值1&参数名2=值2；
-> fragment：信息片段；字符串，锚点；
+> url统一资源定位符：scheme://host:port/path?query#fragment
+>
+> | url元素  | 描述                                                         |
+> | -------- | ------------------------------------------------------------ |
+> | scheme   | 通信协议；如http，ftp，maito，https等                        |
+> | host     | 主机；服务器域名系统主机名、IP地址；                         |
+> | port     | 端口；http默认端口80；                                       |
+> | path     | 路径；                                                       |
+> | query    | 查询；可选，用于给动态网页传递参数；<br>参数名1=值1&参数名2=值2； |
+> | fragment | 信息片段；字符串，锚点；                                     |
 
 ## 4.3 history-会话历史
 
