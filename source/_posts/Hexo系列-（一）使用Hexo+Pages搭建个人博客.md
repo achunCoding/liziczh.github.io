@@ -11,9 +11,7 @@ date: 2018-04-11 10:57:46
 <!--# Hexo系列 | （一）使用Hexo+Pages搭建个人博客-->
 
 时至清明，四月飞雪，深居简出，百无聊赖，建站。
-本篇主要介绍使用hexo+pages搭建个人博客的流程。
-其中[Hexo](https://hexo.io/zh-cn/) 是一个博客框架，可解析markdown文章，生成静态页面。
-在代码托管平台[github](https://github.com)（国外）、[coding](https://coding.net)（国内）上都有pages服务，提供免费的静态网页托管和演示服务。
+本篇主要介绍为使用hexo+pages搭建个人博客的流程。其中[Hexo](https://hexo.io/zh-cn/) 是一个博客框架，可解析markdown文章，生成静态页面。在代码托管平台[github](https://github.com)（国外）、[coding](https://coding.net)（国内）上都有pages服务，提供免费的静态网页托管和演示服务。
 
 <!-- more -->
 
@@ -51,8 +49,11 @@ hexo -v  # 查看hexo版本，验证是否安装成功
 ## 2. hexo建站
 
 1.新建一个blog文件夹，打开blog文件夹，Git Bash。
+
 2.hexo初始化：`hexo init`
+
 3.安装依赖包：`npm install`
+
 4.初始化完成，在blog下就会生成以下文件目录：
 
 ```yaml
@@ -83,11 +84,10 @@ hexo server    # 启用hexo本地服务器；
 
 github和coding可以双线配置，也可以选择其中一个配置。推荐双线配置，coding用于国内访问速度较快，github用于境外访问。
 
-1.登录github，New repository：`yourname.github.io`。
-&nbsp;&nbsp;&nbsp;其中`yourname`是你的github用户名，github强制后缀为`github.io`才能启用github pages服务。
+1.登录github，New repository：`yourname.github.io`。其中`yourname`是你的github用户名，github强制后缀为`github.io`才能启用github pages服务。
 
-2.登录coding，新建仓库：`yourname.coding.me`。打开静态pages服务。
-&nbsp;&nbsp;&nbsp;其中`yourname`是你的coding用户名，coding不强制后缀为`coding.me`。
+2.登录coding，新建仓库：`yourname.coding.me`，打开静态pages服务。其中yourname是你的coding用户名，coding不强制后缀为coding.me。
+&nbsp;其中`yourname`是你的coding用户名，coding不强制后缀为`coding.me`。
 
 3.Git Bash配置git用户信息：
 
@@ -261,6 +261,7 @@ hexo new post "title"
 ```
 
 2.编辑：在`source/_post`下可以编辑你新建的文章。
+
 3.编辑完毕，重新部署：
 
 ```shell
@@ -308,10 +309,11 @@ hexo new page "about"
 ```
 
 2.在source文件夹中找到新建页面：
-&nbsp;&nbsp;&nbsp;编辑tags.md：添加`layout:"tags"`
-&nbsp;&nbsp;&nbsp;编辑categories.md：添加`layout:"categories"`
-&nbsp;&nbsp;&nbsp;编辑about.md，自行发挥。
-6.匹配**站点配置文件**：
+①编辑tags.md：添加`layout:"tags"`；
+②编辑categories.md：添加`layout:"categories"`；
+③编辑about.md，自行发挥。
+
+3.匹配**站点配置文件**：
 
 ```yaml
 # Directory
@@ -322,7 +324,7 @@ archive_dir: archives
 category_dir: categories
 ```
 
-7.匹配**主题配置文件**中`menu`：
+4.匹配**主题配置文件**中`menu`：
 
 ```yaml
 menu:
@@ -333,7 +335,7 @@ menu:
   about: /about
 ```
 
-8.Front-matter中的[tags]写法：
+5.Front-matter中的[tags]写法：
 
 ```yaml
 tags:
@@ -342,7 +344,7 @@ tags:
 # 标签之间相互独立
 ```
 
-9.Front-matter中的[categories]写法：
+6.Front-matter中的[categories]写法：
 
 ```yaml
 categories: 

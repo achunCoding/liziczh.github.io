@@ -98,9 +98,10 @@ hexo new page "about"
 ```
 
 2.在source文件夹中找到新建页面：
-&nbsp;&nbsp;&nbsp;编辑tags.md：添加`layout:"tags"`
-&nbsp;&nbsp;&nbsp;编辑categories.md：添加`layout:"categories"`
-&nbsp;&nbsp;&nbsp;编辑about.md，自行发挥。
+①编辑tags.md：添加`layout:"tags"`
+②编辑categories.md：添加`layout:"categories"`
+③编辑about.md，自行发挥。
+
 3.匹配**站点配置文件**：
 
 ```yaml
@@ -187,6 +188,7 @@ post_meta:
 ## 设置favicon图标
 
 1.将favicon.png放到`themes\next\image`文件夹下
+
 2.**主题配置文件**更改图片路径：
 
 ```yaml
@@ -200,6 +202,7 @@ favicon:
 ## 设置头像
 
 1.将头像图片avatar.png放到`themes\next\image`文件夹下
+
 2.**主题配置文件**更改图片路径：
 
 ```yaml
@@ -270,8 +273,10 @@ busuanzi_count:
 ## 百度统计
 
 1.登录百度统计，添加域名。若更换域名，需重新绑定。
+
 2.复制 `hm.js?` 后面那串统计脚本 id：
 ![百度统计](http://p6uturdzt.bkt.clouddn.com/next-baidu_analytics.PNG)
+
 3.编辑**主题配置文件**，添加**脚本id**：
 
 ```yaml
@@ -303,6 +308,7 @@ symbols_count_time:
 ### 来必力
 
 1.登陆 [来必力](https://livere.com/) 获取你的 LiveRe UID。
+
 2.编辑**主题配置文件**，添加LiveRe UID：
 
 ```yaml
@@ -361,7 +367,9 @@ local_search:
 ## 修改文章底部标签[#]#
 
 1.打开编辑`themes\next\layout\_macro\post.swig`
+
 2.`Ctrl+F`找到`rel="tag">#`
+
 3.将`#`替换为`<i class="fa fa-tag"></i>`
 
 ## 文章底部添加"本文结束"
@@ -387,7 +395,8 @@ local_search:
 ## 添加Host-by描述
 
 最近，银牌会员的Coding Pages在访问时会加载广告，需要在网站首页任意位置放置「Hosted by Coding Pages」，通过审核将取消广告。
-打开编辑`themes/next/layout/_partials/footer.swig`，在末尾添加如下代码，将「Hosted by Coding Pages」置于页面底部。
+
+打开编辑`themes/next/layout/_partials/footer.swig`，在**文件末尾**添加如下代码，将「Hosted by Coding Pages」置于页面底部。
 
 ```html
 {% if theme.footer.powered.enable and theme.footer.theme.enable %}
