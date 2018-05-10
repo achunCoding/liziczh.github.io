@@ -11,6 +11,7 @@ categories: Markdown
 <!--# Markdown 语法-->
 
 Markdown是一种简单的、用于文本排版的轻量级标记语言。
+
 Markdown使用简洁的语法代替排版，让作者更专注于作品的内容。允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档，适用于网络书写。
 
 <!--more-->
@@ -131,7 +132,9 @@ _italic_
 ---
 
 \`\`\`type
+
 codeblock
+
 \`\`\`
 
 ---
@@ -141,11 +144,17 @@ codeblock
 ---
 
 \`\`\`java
+
 public class HelloWorld {
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("HelloWorld");
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+
 }
+
 \`\`\`
 
 ---
@@ -291,12 +300,19 @@ some_text......
 **效果**：
 
 目录
+
 [1.Java入门](#1)
+
 [2.Java基础](#2)
+
 正文
+
 <span id = 1>1.Java入门</span>
+
 some_text......
+
 <span id = 2>2.Java基础</span>
+
 some_text......
 
 
