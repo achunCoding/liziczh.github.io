@@ -41,7 +41,7 @@ $ git clone https://github.com/theme-next/hexo-theme-next themes/next
 1.安装RSS插件
 
 ```shell
-npm install hexo-generator-feed --save
+$ npm install hexo-generator-feed --save
 ```
 
 2.编辑**站点配置文件**，添加以下内容：
@@ -92,9 +92,9 @@ menu:
 1.添加[tags]、[categoies]、[about]页面：
 
 ```shell
-hexo new page "tags"
-hexo new page "categories"
-hexo new page "about"
+$ hexo new page "tags"
+$ hexo new page "categories"
+$ hexo new page "about"
 ```
 
 2.在source文件夹中找到新建页面：
@@ -148,7 +148,7 @@ categories:
 1.添加自定义页面：
 
 ```shell
-hexo new page "customPage"
+$ hexo new page "customPage"
 ```
 
 2.匹配**主题配置文件**中的`menu`：
@@ -289,7 +289,7 @@ baidu_analytics: 脚本id
 1.安装字数统计插件：
 
 ```shell
-npm install hexo-symbols-count-time --save
+$ npm install hexo-symbols-count-time --save
 ```
 
 2.编辑**主题配置文件**：
@@ -344,7 +344,7 @@ baidushare:
 1.安装local search插件：
 
 ```shell
-npm install hexo-generator-searchdb --save
+$ npm install hexo-generator-searchdb --save
 ```
 
 2.编辑站点配置文件，新增以下内容：

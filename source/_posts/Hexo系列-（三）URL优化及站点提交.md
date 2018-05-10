@@ -39,7 +39,7 @@ permalink: :id.html # 尽量短，层次少，全小写，中划线连字，具�
 1.安装abbrlink插件：
 
 ```shell
-npm install hexo-abbrlink --save  
+$ npm install hexo-abbrlink --save  
 ```
 
 2.编辑**站点配置文件**：
@@ -118,9 +118,9 @@ url: https://<你的域名>
 安装sitemap插件：
 
 ```shell
-npm install hexo-generator-sitemap --save   # 安装谷歌站点地图插件
-npm install hexo-generator-baidu-sitemap --save  # 安装百度站点地图插件
-hexo g  # 生成sitemap.xml和baidusitemap.xml
+$ npm install hexo-generator-sitemap --save   # 安装谷歌站点地图插件
+$ npm install hexo-generator-baidu-sitemap --save  # 安装百度站点地图插件
+$ hexo g  # 生成sitemap.xml和baidusitemap.xml
 ```
 
 ### 5.链接提交
@@ -138,7 +138,7 @@ hexo g  # 生成sitemap.xml和baidusitemap.xml
 1.安装百度提交插件：
 
 ```shell
-npm install hexo-baidu-url-submit --save
+$ npm install hexo-baidu-url-submit --save
 ```
 
 2.编辑**站点配置文件**，配置以下信息：

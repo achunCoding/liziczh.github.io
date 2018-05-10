@@ -27,21 +27,21 @@ date: 2018-04-11 10:57:46
 1.安装Git 。安装完毕后，在任意文件夹下**鼠标右击**即可打开 Git Bash，输入命令，进行Git操作。
 
 ```shell
-git version  # 查看Git版本，验证是否安装成功
+$ git version  # 查看Git版本，验证是否安装成功
 ```
 
 2.安装Node.js。Hexo是基于nodejs的博客框架，而且nodejs还集成了npm包管理工具。
 
 ```shell
-node -v    # 查看nodejs版本，验证是否安装成功
+$ node -v    # 查看nodejs版本，验证是否安装成功
 ```
 
 3.安装hexo：
 
 ```shell
-npm install hexo --save   # 安装hexo
-npm install hexo-cli -g   # 安装hexo命令行模式
-hexo -v  # 查看hexo版本，验证是否安装成功
+$ npm install hexo --save   # 安装hexo
+$ npm install hexo-cli -g   # 安装hexo命令行模式
+$ hexo -v  # 查看hexo版本，验证是否安装成功
 ```
 
 ->[hexo命令](#hexocommand)
@@ -71,9 +71,9 @@ hexo -v  # 查看hexo版本，验证是否安装成功
 5.hexo本地生成静态页面
 
 ```shell
-hexo clean     # 清理本地静态文件；
-hexo generate  # 生成静态页面，即public文件夹；
-hexo server    # 启用hexo本地服务器；
+$ hexo clean     # 清理本地静态文件；
+$ hexo generate  # 生成静态页面，即public文件夹；
+$ hexo server    # 启用hexo本地服务器；
 # 注：Hexo 3.0 把服务器独立成了个别模块，您必须先安装 hexo-server 才能使用。
 # hexo-server安装命令：npm install hexo-server --save
 ```
@@ -92,8 +92,8 @@ github和coding可以双线配置，也可以选择其中一个配置。推荐�
 3.Git Bash配置git用户信息：
 
 ```shell
-git config --global user.name "YourName"
-git config --global user.email "YourEmail"
+$ git config --global user.name "YourName"
+$ git config --global user.email "YourEmail"
 ```
 
 4.配置网络传输协议
@@ -105,9 +105,9 @@ git config --global user.email "YourEmail"
 ①SSH秘钥：
 
 ```shell
-ssh-keygen -t rsa -C "youremail@example.com"  # 生成rsa秘钥
-cd ~/.ssh         # 进入虚拟目录ssh文件中
-cat id_rsa.pub    # 显示id_rsa.pub文件内容
+$ ssh-keygen -t rsa -C "youremail@example.com"  # 生成rsa秘钥
+$ cd ~/.ssh         # 进入虚拟目录ssh文件中
+$ cat id_rsa.pub    # 显示id_rsa.pub文件内容
 ```
 
 ②复制秘钥至github/coding->用户setting->SSH keys，New SSH Key；
@@ -115,8 +115,8 @@ cat id_rsa.pub    # 显示id_rsa.pub文件内容
 ③验证是否添加成功
 
 ```shell
-ssh -T git@github.com  # 验证github是否添加成功
-ssh -T git@coding.net  # 验证coding是否添加成功
+$ ssh -T git@github.com  # 验证github是否添加成功
+$ ssh -T git@coding.net  # 验证coding是否添加成功
 ```
 
 ④编辑**站点配置文件**`_config.yml`：
@@ -149,15 +149,15 @@ deploy:
 1.安装Git部署插件：
 
 ```shell
-npm install hexo-deployer-git --save
+$ npm install hexo-deployer-git --save
 ```
 
 2.部署：
 
 ```shell
-hexo clean     # 清理本地静态文件；
-hexo generate  # 生成静态页面，即public文件夹；
-hexo deploy    # 部署到github/coding；
+$ hexo clean     # 清理本地静态文件；
+$ hexo generate  # 生成静态页面，即public文件夹；
+$ hexo deploy    # 部署到github/coding；
 ```
 
 3.部署完毕，站点文件目录如下：
@@ -230,7 +230,7 @@ deploy:
 2.在themes文件夹下，打开GitBash，克隆主题至themes文件夹中。
 
 ```shell
-git clone https://github.com/theme-next/hexo-theme-next.git
+$ git clone https://github.com/theme-next/hexo-theme-next.git
 ```
 
 克隆之后，记住删除`themes\你的主题名`中的`.git`，`.github`，`.gitignore`等Git仓库文件。
@@ -244,8 +244,8 @@ theme: 主题文件名
 4.编辑结束，重新部署：
 
 ```shell
-hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
-hexo g -d   # 生成静态页面后直接部署；
+$ hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
+$ hexo g -d   # 生成静态页面后直接部署；
 ```
 
 部署完毕之后，进入以下链接刷新就可以看到你的新主题了。
@@ -257,7 +257,7 @@ hexo g -d   # 生成静态页面后直接部署；
 1.新建：在blog文件夹下，打开Git Bash，新建文章：
 
 ```shell
-hexo new post "title"
+$ hexo new post "title"
 ```
 
 2.编辑：在`source/_post`下可以编辑你新建的文章。
@@ -265,8 +265,8 @@ hexo new post "title"
 3.编辑完毕，重新部署：
 
 ```shell
-hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
-hexo g -d   # 生成静态页面后直接部署；
+$ hexo clean  # 清理缓存文件；（不清理也可以部署，推荐先清理）
+$ hexo g -d   # 生成静态页面后直接部署；
 ```
 ## 8. 文档的Front-matter
 
@@ -303,9 +303,9 @@ comments: true
 1.添加[tags]、[categoies]、[about]页面：
 
 ```shell
-hexo new page "tags"
-hexo new page "categories"
-hexo new page "about"
+$ hexo new page "tags"
+$ hexo new page "categories"
+$ hexo new page "about"
 ```
 
 2.在source文件夹中找到新建页面：

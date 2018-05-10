@@ -90,8 +90,8 @@ $ cat id_rsa.pub    # 显示id_rsa.pub文件内容
 ③验证是否添加成功
 
 ```shell
-ssh -T git@github.com  # 验证github是否添加成功
-ssh -T git@coding.net  # 验证coding是否添加成功
+$ ssh -T git@github.com  # 验证github是否添加成功
+$ ssh -T git@coding.net  # 验证coding是否添加成功
 ```
 
 ④编辑**站点配置文件**`_config.yml`：
@@ -145,6 +145,6 @@ $ hexo g -d
 
 ```shell
 $ git add .
-$ git commit -m "提交说明"
+$ git commit -m "commit-message"
 $ git push origin hexo
 ```
