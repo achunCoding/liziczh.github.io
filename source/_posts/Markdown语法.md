@@ -130,11 +130,8 @@ _italic_
 ## 代码块
 
 ---
-
-\`\`\`type
-
-codeblock
-
+\`\`\`type<br>
+codeblock<br>
 \`\`\`
 
 ---
@@ -143,19 +140,13 @@ codeblock
 
 ---
 
-\`\`\`java
-
-public class HelloWorld {
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("HelloWorld");
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-
-}
-
-\`\`\`
+\`\`\`java<br>
+public class HelloWorld {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("HelloWorld");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+\`\`\`<br>
 
 ---
 
