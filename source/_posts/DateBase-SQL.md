@@ -1,8 +1,8 @@
 ---
-title: DateBase | SQL
+title: DateBase | Oracle
 comments: true
 date: 2018-04-27 19:32:29
-id: notes-sql
+id: db-oracle
 tags:
 - datebase
 categories: DateBase
@@ -10,13 +10,11 @@ categories: DateBase
 
 # Oracle数据库
 
-# SQL
-
-SQL结构化查询语言，用于访问和处理关系数据库的标准语言。
-
 <!--more-->
 
 # SQL DML
+
+SQL结构化查询语言，用于访问和处理关系数据库的标准语言。
 
 DML数据操作语言
 
@@ -198,7 +196,7 @@ FROM <表1>, <表2>
 WHERE <表1>.<关联属性> <比较运算符> <表2>.<关联属性>
 ```
 
-②使用 `JOIN...ON` 连接：
+②使用 `JOIN` 连接：
 
 ```mysql
 SELECT <目标列>
@@ -206,7 +204,7 @@ FROM <表1> [INNER] JOIN <表2>
 ON <表1>.<关联属性> <比较运算符> <表2>.<关联属性> 
 ```
 
-##### 1.等值连接
+##### **1.等值连接**
 
 等值连接：当比较运算符为`=`时的内连接，不去除重复属性列。
 
@@ -226,7 +224,7 @@ FROM <表1> [INNER] JOIN <表2>
 ON <表1>.<关联属性> = <表2>.<关联属性>
 ```
 
-##### 2.非等值连接
+##### **2.非等值连接**
 
 非等值连接：当比较运算符**不为**`=`时的内连接，不去除重复属性列。
 
@@ -328,7 +326,7 @@ ON <表1>.<关联属性> = <表2>.<关联属性>
 
 #### 指定关联字段
 
-①使用WHERE子句指定关联字段：
+①隐式连接-使用WHERE子句指定关联字段：
 
 ```sql
 SELECT <目标列>
@@ -336,7 +334,7 @@ FROM <表1>, <表2>
 WHERE <表1>.<关联属性> <比较运算符> <表2>.<关联属性>
 ```
 
-②使用`JOIN...ON...`指定关联字段：
+②JOIN连接-使用`ON`指定关联字段：
 
 ```sql
 SELECT <目标列>
@@ -344,7 +342,7 @@ FROM <表1> JOIN <表2>
 ON <表1>.<关联属性> <比较运算符> <表2>.<关联属性>
 ```
 
-③使用`JOIN...USING...`指定关联字段：
+③JOIN连接-使用`USING`指定关联字段：
 
 ```mysql
 SELECT <目标列>
@@ -352,9 +350,17 @@ FROM <表1> JOIN <表2>
 USING (<关联属性>)
 ```
 
->USING等价于JOIN...ON连接相等同名的关联字段。
+>USING等价于ON指定**等值同名**的关联字段。
 
 ### 子查询
+
+查询块：临时表
+
+```sql
+SELECT <目标列>
+FROM <表>
+WHERE <查询条件>
+```
 
 #### 嵌套查询
 
@@ -480,48 +486,269 @@ DELETE FROM <表>
 
 DDL数据定义语言
 
+## Oracle数据类型
+
+- NUMBER：整数
+- DATE：日期
+- CLOB：大文本数据，可存4G文本数据
+- BLOB：二进制数据，可存图片、音频、视频、文字，最大4G。
+- VARCHAR：固定长度字符串，标准sql数据类型
+- VARCHAR2：可变长度字符串，oracle特有。
+  - 字符串：`'abc'`
+  - 字符串连接符：`||`
+
+
+
 ## 表：TABLE
 
 ### 创建表
 
 ```mysql
 CREATE TABLE <表名>(
-	<列名> <数据类型> [<DEFAULT 默认值>] [<列级约束>],
-	<列名> <数据类型> [<DEFAULT 默认值>] [<列级约束>],
+    <列名> <数据类型> [<DEFAULT 默认值>] [<约束>],
+    <列名> <数据类型> [<DEFAULT 默认值>] [<约束>],
     ...
-    <表级约束>
+    [CONSTRAINT <约束名> <约束类型>(约束列)]
 )
 ```
 
 ### 修改表
 
+修改表中列
+
+1.增加列：
+
 ```mysql
-ALTER TABLE <表名>
-[ADD [COLUMN] <列名> <数据类型> [<DEFAULT 默认值>] [<列级约束>]]
-[ALTER COLUMN <列名> <数据类型>]
+ALTER TABLE <表名> ADD （
+    <列名> <数据类型> [<DEFAULT 默认值>] [<列级约束>],
+    <列名> <数据类型> [<DEFAULT 默认值>] [<列级约束>],
+    ...
+)
 ```
+
+2.修改列：
+
+```mysql
+ALTER TABLE <表名> MODIFY （
+    <列名> <数据类型> [<DEFAULT 默认值>] [<列级约束>],
+    <列名> <数据类型> [<DEFAULT 默认值>] [<列级约束>],
+    ...
+)
+```
+
+3.删除列：
+
+```mysql
+ALTER TABLE <表名> DROP COLUMN <列名>
+```
+
+4.重命名列：
+
+```mysql
+ALTER TABLE <表名> RENAME <旧名> TO <新名>
+```
+
+修改表中属性：
+
+1.添加约束：
+
+```mysql
+ALTER TABLE <表名> ADD CONSTRAINT <约束名> <约束类型>(约束列);
+```
+
+2.删除约束：
+
+```mysql
+ALTER TABLE <表名> DROP CONSTRAINT <约束名>;
+```
+
+### 删除表
+
+1.删除表：
+
+```sql
+DROP TABLE <表名>
+```
+
+2.截断表：
+
+```mysql
+TRUNCATE TABLE <表名> ADD 
+```
+
+### 复制表
+
+1.复制表的结构与数据：
+
+```mysql
+CREATE TABLE <表名> AS 
+	SELECT <目标列表达式>
+	FROM <表>
+	WHERE <查询条件>
+```
+
+2.仅复制表的结构：`WHERE 1 = 2`
+
+```mysql
+CREATE TABLE <表名> AS 
+	SELECT <目标列表达式>
+	FROM <表>
+	WHERE 1 = 2;
+```
+
+### 重命名
+
+```mysql
+RENAME <旧名称> TO <新名称>
+```
+
+### 数据伪列
 
 
 
 ## 视图：VIEW
 
+视图 (VIEW)：虚拟表，不占物理空间。
 
+### 创建视图
+
+```mysql
+CREATE [OR REPLACE] [FORCE] VIEW <视图名>
+[(列名1, 列2,...)]
+AS 
+SELECT...
+[WITH CHECK OPTION]
+[WITH READ ONLY];
+```
+
+> FORCE：强制创建视图
+> WITH CHECK OPTION：检查约束视图
+> WITH READ ONLY：只读视图
+
+### 删除视图
+
+```mysql
+DROP VIEW <视图名>
+```
 
 ## 索引：INDEX
 
+索引：加快查询速度
+
+### 创建索引
+
+```mysql
+CREATE [UNIQUE] INDEX <索引名>
+ON <表名> (<列名> [ASC | DESC], ... )
+[INITRANS n]
+[MAXTRANS n]
+[PCTFREE n]
+[TABLESPACE <表空间名>]
+[STORAGE storage]
+[NOSORT]
+```
+
+> UNIQUE：唯一索引
+> INITRANS：初始事务入口数
+> MAXTRANS：最大事务入口数
+> PCTFREE：索引数据块空闲空间的百分比 
+> NOSORT：不排序
+
+###修改索引
+
+重建索引
+
+```mysql
+ALTER INDEX <索引名> REBUILD;
+```
+
+合并索引
+
+```mysql
+ALTER INDEX <索引名> COALESCE;
+```
+
+### 删除索引
+
+```mysql
+DROP INDEX <索引名>
+```
 
 
-## 同义词：
 
+## 同义词：SYNONYM 
 
+同义词：数据库对象的一个别名，操作权限不变，简化对象访问。
 
-## 序列：
+### 创建同义词
 
+```mysql
+CREATE [PUBLIC] SYNONYM <表名同义词>
+FOR <用户>.<表名>
+```
 
+### 删除同义词
+
+```mysql
+DROP [PUBLIC] SYNONYM <同义词>
+```
+
+## 序列：SEQUENCE 
+
+序列 (SEQUENCE)： 序列号生成器，为表中的行自动生成序列号，产生一组等间隔的数值(类型为数字)。不占用磁盘空间，占用内存。 
+
+其主要用途是生成表的主键值，可以在插入语句中引用，也可以通过查询检查当前值，或使序列增至下一个值。
+
+### 创建序列 
+
+```mysql
+CREATE SEQUENCE <序列名>
+[INCREMENT BY n]
+[START WITH n]
+[MAXVALUE n | NOMAXVALUE]
+[MINVALUE n | NOMINVALUE]
+[CYCLE | NOCYCLE]
+[CACHE n | NOCACHE];
+```
+
+> INCREMENT BY：定义步长
+> START WITH：定义序列初始值
+> MAXVALUE / MINVALUE：定义序列最大值/最小值
+> NOMAXVALUE：默认最值
+> CYCLE / NOCYCLE：表示序列达到限定值后是否循环
+> CACHE n：对序列进行内存缓冲，提前生成n个序号存入缓存，默认n=20
+> NOCACHE：不对序列进行内存缓冲
+
+### **序列的两个伪列**
+
+- NEXTVAL：序列中的下一个有效值
+- CURRVAL：序列当前值
+
+### 修改序列
+
+```mysql
+ALTER SEQUENCE [<用户>.]<序列名>
+[INCREMENT BY n]
+[START WITH n]
+[MAXVALUE n | NOMAXVALUE]
+[MINVALUE n | NOMINVALUE]
+[CYCLE | NOCYCLE]
+[CACHE n | NOCACHE];
+```
+
+### 删除序列
+
+```mysql
+DROP SEQUENCE <序列名>
+```
 
 
 
 # 约束
+
+```mysql
+CONSTRAINT <约束名> <约束类型>(约束列)
+```
 
 ## 非空约束：NOT NULL
 
@@ -540,27 +767,37 @@ ALTER TABLE <表名>
 ```
 
 ```mysql
-CONSTRAINT UK_属性 UNIQUE(属性);
+CONSTRAINT uk_属性 UNIQUE(属性);
 ```
 
 ## 主键约束：PRIMARY KEY
 
 主键约束：PRIMARY KEY，非空+唯一
 
+```mysql
+CONSTRAINT pk_属性 PRIMARY KEY(属性);
 ```
 
+联合主键：
+
+```mysql
+CONSTRAINT pk_属性 PRIMARY KEY(属性1,属性2,...);
 ```
 
 ## 检查约束：CHECK
 
+```mysql
+CONSTRAINT ck_属性 CHECK(属性 IN (值1,值2...))
 ```
 
+```mysql
+CONSTRAINT ck_属性 CHECK(属性 BETWEEN 值1 AND 值2)
 ```
 
 ## 外键约束：FOREIGN KEY
 
-```
-
+```mysql
+CONSTRAINT fk_属性 FOREIGN KEY REFERENCES ON DELETE <CASCADE|SET NULL> 
 ```
 
 # 授权
@@ -587,7 +824,28 @@ FROM <用户> [CASCADE|RESTRICT]
 >CASCADE：级联
 >RESTRICT：限定
 
-## 用户
+## 角色：ROLE
 
+角色(ROLE)：一组数据库操作权限的集合。
 
+**1.创建角色**：
 
+```mysql
+CREATE ROLE <角色名>
+```
+
+**2.为角色授权**：
+
+```mysql
+GRANT <权限>
+ON <对象类型> <对象名>
+TO <角色>
+```
+
+**3.将角色授权给其他角色或用户**：
+
+```mysql
+GRANT <角色1>
+ON <对象类型> <对象名>
+TO <角色2>,<用户>
+```
