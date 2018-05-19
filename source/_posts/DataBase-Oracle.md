@@ -1,14 +1,14 @@
 ---
-title: DateBase | Oracle
+title: DataBase | Oracle
 comments: true
-date: 2018-04-27 19:32:29
+date: 2018-05-14 17:32:29
 id: db-oracle
 tags:
-- datebase
-categories: DateBase
+- database
+categories: DataBase
 ---
 
-# Oracle数据库
+<!--# Oracle数据库-->
 
 <!--more-->
 
