@@ -46,21 +46,21 @@ GitHub：[https://github.com/liziczh/Tetris](https://github.com/liziczh/Tetris)
 **方块翻转**：通过改变方块的state属性实现翻转
 
 ```java
-  public void turn() {
+public void turn() {
   	int temp = state;
   	state = (state + 1) % 4;
   	// 如果旋转后不合法，还原上一状态
   	if (!check(type, state, x, y)) {
   		state = temp;
   	}
-  }
+}
 ```
 
 **方块下落**：通过改变方块纵坐标实现下落
 
 ```java
-  public void down() {
-      // 如果下一个下落状态合法，则下落；不合法，则固定，清行，新建块。
+public void down() {
+    // 如果下一个下落状态合法，则下落；不合法，则固定，清行，新建块。
   	if (check(type, state, x, y + 1)) {
   		y++;
   	} else {
@@ -69,27 +69,27 @@ GitHub：[https://github.com/liziczh/Tetris](https://github.com/liziczh/Tetris)
   		createShape();
   	}
   	this.repaint();
-  }
+}
 ```
 
 **方块左移**：通过改变方块横坐标实现左移
 
 ```java
-  public void left() {
+public void left() {
   	if (check(type, state, x - 1, y)) {
   		x--;
   	}
-  }
+}
 ```
 
 **方块右移**：通过改变方块横坐标实现右移
 
 ```java
-  public void right() {
-  	if (check(type, state, x + 1, y)) {
+public void right() {
+	if (check(type, state, x + 1, y)) {
   		x++;
   	}
-  }
+}
 ```
 
 ### 核心方法实现
@@ -98,64 +98,64 @@ GitHub：[https://github.com/liziczh/Tetris](https://github.com/liziczh/Tetris)
 
 ```java
 private boolean check(int type, int state, int x, int y) {
-		for (int i = 0; i < SHAPE[type][state].length; i++) {
-			for (int j = 0; j < SHAPE[type][state][0].length; j++) {
-				if (SHAPE[type][state][i][j] == 1) {
-					// 在坐标系中小方块坐标(x+j,y+i);在背景矩阵中小方块位置map[y+i][x+j];
-					if ((x + j >= COL) || (x + j < 0) || (y + i >= ROW) || (map[y + i][x + j] == 1)) {
-						return false;
-					}
+	for (int i = 0; i < SHAPE[type][state].length; i++) {
+		for (int j = 0; j < SHAPE[type][state][0].length; j++) {
+			if (SHAPE[type][state][i][j] == 1) {
+				// 在坐标系中小方块坐标(x+j,y+i);在背景矩阵中小方块位置map[y+i][x+j];
+				if ((x + j >= COL) || (x + j < 0) || (y + i >= ROW) || (map[y + i][x + j] == 1)) {
+					return false;
 				}
 			}
 		}
-		return true;
 	}
+	return true;
+}
 ```
 
 **固定当前方块到背景中**：
 
 ```java
 private void fix(int type, int state, int x, int y) {
-		for (int i = 0; i < SHAPE[type][state].length; i++) {
-			for (int j = 0; j < SHAPE[type][state][0].length; j++) {
-				// 在坐标系中小方块坐标(x+j,y+i);在背景矩阵中小方块位置map[y+i][x+j];
-				if ((y + i < ROW) && (x + j >= 0) && (x + j < COL) && (map[y + i][x + j] == 0)) {
-					map[y + i][x + j] = SHAPE[type][state][i][j];
-					mapColor[y + i][x + j] = color[type];
-				}
+	for (int i = 0; i < SHAPE[type][state].length; i++) {
+		for (int j = 0; j < SHAPE[type][state][0].length; j++) {
+			// 在坐标系中小方块坐标(x+j,y+i);在背景矩阵中小方块位置map[y+i][x+j];
+			if ((y + i < ROW) && (x + j >= 0) && (x + j < COL) && (map[y + i][x + j] == 0)) {
+				map[y + i][x + j] = SHAPE[type][state][i][j];
+				mapColor[y + i][x + j] = color[type];
 			}
 		}
 	}
+}
 ```
 
 **清行加分**：
 
 ```java
 private void clearLines() {
-		int lines = 0;
-		boolean isFull = true;
-		for (int i = 0; i < map.length; i++) {
-			isFull = true;
-			for (int j = 0; j < map[0].length; j++) {
-				if (map[i][j] == 0) {
-					isFull = false;
-					break;
-				}
-			}
-			if (isFull) {
-				lines++;
-				for (int m = i; m > 0; m--) {
-					for (int n = 0; n < map[0].length; n++) {
-						map[m][n] = map[m - 1][n];
-					}
-				}
+	int lines = 0;
+	boolean isFull = true;
+	for (int i = 0; i < map.length; i++) {
+		isFull = true;
+		for (int j = 0; j < map[0].length; j++) {
+			if (map[i][j] == 0) {
+				isFull = false;
+				break;
 			}
 		}
-		score += lines * lines * 10;
-		if (isAccelMode) {
-			up();
+		if (isFull) {
+			lines++;
+			for (int m = i; m > 0; m--) {
+				for (int n = 0; n < map[0].length; n++) {
+					map[m][n] = map[m - 1][n];
+				}
+			}
 		}
 	}
+	score += lines * lines * 10;
+	if (isAccelMode) {
+		up();
+	}
+}
 ```
 
 ### GUI
