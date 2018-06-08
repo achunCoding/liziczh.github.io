@@ -1,5 +1,5 @@
 ---
-title: Java调用阿里ORC接口识别印刷文字的简单实现
+title: Java调用阿里ORC接口实现印刷文字识别
 comments: true
 date: 2018-06-08 15:17:29
 id: java-aliorc-impl
@@ -8,7 +8,7 @@ tags:
 categories: Java
 ---
 
-<!--# Java调用阿里ORC接口识别印刷文字的简单实现-->
+<!--# Java调用阿里ORC接口实现印刷文字识别-->
 
 **印刷文字识别(ORC)**：通俗来讲就是将图片中的印刷文字识别出来 。
 
@@ -16,7 +16,9 @@ categories: Java
 
 <!--more-->
 
-## 文档图片文字识别的代码实现
+## 文档小说图片文字识别
+
+### 代码实现
 
 ```java
 package com.lizi.orc;
@@ -123,7 +125,7 @@ public class ORCDemo {
                     b[i] += 256;
                 }
             }
-            // 生成图片
+            // 生成图片文件
             out = new FileOutputStream(new File(imgPath));
             out.write(b);
             out.flush();

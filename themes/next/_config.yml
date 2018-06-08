@@ -157,9 +157,10 @@ site_state: true
 social:
   GitHub: https://github.com/liziczh || github
   E-Mail: mailto:liziczh@foxmail.com || envelope
-  Weibo: https://weibo.com/p/1005055521704376/home || weibo
-  FB Page: https://www.facebook.com/jehaw.chen.3 || facebook
+  Linkedin: https://www.linkedin.com/feed/ ||linkedin
+  FaceBook: https://www.facebook.com/jehaw.chen.3 || facebook
   Instagram: https://www.instagram.com/jehawchen/ || instagram
+  Weibo: https://weibo.com/p/1005055521704376/home || weibo
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
   #Google: https://plus.google.com/yourname || google
@@ -192,7 +193,6 @@ links:
   博客园: https://www.cnblogs.com
   知乎: https://www.zhihu.com
   掘金: https://juejin.im
-  Linkedin: https://www.linkedin.com
   segmentfault: https://segmentfault.com
   V2EX: https://www.v2ex.com
   
