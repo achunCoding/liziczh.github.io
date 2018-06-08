@@ -17,7 +17,7 @@ categories: Java
 
 <!--more-->
 
-## Java使用POI实现Excel文件的读写操作
+## Java使用POI实现对Excel文件的读写操作
 
 本篇的ExcelUtils可作为一个工具类直接使用，主要针对于**一行数据(row)作为一个实例(t)**的情况使用。
 
