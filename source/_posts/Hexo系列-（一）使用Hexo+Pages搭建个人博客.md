@@ -362,16 +362,18 @@ categories:
 
 1.域名注册：在[阿里云](https://wanwang.aliyun.com/?utm_content=se_1101810)/[腾讯云](https://dnspod.cloud.tencent.com/?fromSource=gwzcw.185882.185882.185882)等注册一个域名。
 
-2.Github Pages域名解析：
-①添加两个`A记录`：主机记录为`@`，记录值为`192.30.252.153`和`192.30.252.154`，指向github的两台主机。
+2.添加CNAME文件：在`blog\source`下，添加一个CNAME文件 (无文件后缀)，内容为你的域名。
+
+3.Github Pages域名解析：
+①添加四个`A记录`：主机记录为`@`，记录值为`185.199.108.153`、`185.199.109.153`、`185.199.110.153`、`185.199.111.153`。
 ②添加一个`CNAME记录`：主机记录为`www`，记录值为`yourname.github.io`。
 
-3.Coding Pages域名解析：
+4.Coding Pages域名解析：
 ①打开控制台`ping pages.coding.me`，获取IP。
 ②添加一个`A记录`：主机记录为`@`，记录值为ping得的IP。
 ③添加一个`CNAME记录`：主机记录为`www`，记录值为`pages.coding.me`。
 
-![dns](http://p6uturdzt.bkt.clouddn.com/hexo-dns.PNG)
+![dns](http://p6uturdzt.bkt.clouddn.com/hexo-dns.png)
 
 由于国内访问Github Pages速度较慢，所以我将Coding Pages解析线路设为默认，供国内访问；将Github Pages解析线路设为境外，供国外访问。
 
