@@ -8,7 +8,7 @@ tags:
 categories: Java
 ---
 
-# Tetris
+<!--# Tetris-->
 
 基于 Java-swing 实现俄罗斯方块
 
