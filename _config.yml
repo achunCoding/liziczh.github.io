@@ -92,7 +92,7 @@ feed:
 
 
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-yilia
+theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

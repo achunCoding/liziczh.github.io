@@ -10,14 +10,14 @@ menu:
 subnav:
   github: "https://github.com/liziczh"
   mail: "mailto:liziczh@foxmail.com"
-  linkedin: "https://www.linkedin.com/feed/"
   facebook: "https://www.facebook.com/jehaw.chen.3"
-  # instagram: "https://www.instagram.com/jehawchen/"
+  instagram: "https://www.instagram.com/jehawchen/"
+  linkedin: "https://www.linkedin.com/feed/"
   weibo: "https://weibo.com/p/1005055521704376/home"
-  #rss: "#"
+  rss: "/atom.xml"
   #zhihu: "#"
-  #qq: "1779457645"
-  #weixin: "czh1779457645"
+  #qq: "#"
+  #weixin: "#"
   #jianshu: "#"
   #douban: "#"
   #segmentfault: "#"
@@ -110,23 +110,24 @@ style:
 # slider的设置
 slider:
   # 是否默认展开tags板块
-  showTags: true
+  showTags: false
 
 # 智能菜单
 # 如不需要，将该对应项置为false
 # 比如
 smart_menu:
- friends: true
+ friends: false
 smart_menu:
   innerArchive: '所有文章'
-  friends: '友链'
+  friends: '我的'
   aboutme: '关于我'
 
 friends:
-  # 博客园: https://www.cnblogs.com
-  # 知乎: https://www.zhihu.com
-  # 掘金: https://juejin.im
-  # segmentfault: https://segmentfault.com
-  # V2EX: https://www.v2ex.com
+  GitHub: https://github.com/liziczh
+  E-Mail: mailto:liziczh@foxmail.com
+  FaceBook: https://www.facebook.com/jehaw.chen.3
+  Instagram: https://www.instagram.com/jehawchen/
+  Linkedin: https://www.linkedin.com/feed/
+  Weibo: https://weibo.com/p/1005055521704376/home
 
 aboutme: 后海有树的房子<br>夏代有工的玉<br>此时此刻的云<br>二十来岁的你
