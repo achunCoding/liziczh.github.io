@@ -92,8 +92,8 @@ feed:
 
 
 ## Themes: https://hexo.io/themes/
-# theme: yilia
-theme: next
+theme: yilia
+# theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
