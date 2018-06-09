@@ -2,7 +2,7 @@
 
 menu:
   主页: /
-  归档: /archives
+  相册: /photo
   分类: /categories
   标签: /tags
 
@@ -23,7 +23,7 @@ subnav:
   #facebook: "https://www.facebook.com/jehaw.chen.3"
   #google: "#"
   #twitter: "#"
-  #linkedin: "https://www.linkedin.com/feed/"
+  #linkedin: "https://www.linkedin.com/in/%E5%93%B2%E6%98%8A-%E9%99%88-604536161/"
 
 rss: /atom.xml
 
@@ -113,20 +113,17 @@ slider:
 
 # 智能菜单
 # 如不需要，将该对应项置为false
-# 比如
-# smart_menu:
-#  friends: false
 smart_menu:
-  innerArchive: '所有文章'
-  friends: '我的嗯'
-  aboutme: '关于我'
+  innerArchive: '归档'
+  friends: '我的'
+  aboutme: '关于'
 
 friends:
   GitHub: https://github.com/liziczh
   E-Mail: mailto:liziczh@foxmail.com
-  Linkedin: https://www.linkedin.com/feed
+  Linkedin: https://www.linkedin.com/in/%E5%93%B2%E6%98%8A-%E9%99%88-604536161/
   FaceBook: https://www.facebook.com/jehaw.chen.3
   Instagram: https://www.instagram.com/jehawchen
   Weibo: https://weibo.com/p/1005055521704376/home
 
-aboutme: 后海有树的房子<br>夏代有工的玉<br>此时此刻的云<br>
+aboutme: 夏代有工的玉<br/>后海有树的院子<br/>此时此刻的云<br/>二十来岁的你
