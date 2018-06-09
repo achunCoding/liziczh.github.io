@@ -6,6 +6,7 @@ id: db-sql-dml
 tags:
 - database
 categories: DataBase
+toc: true
 ---
 
 <!--# SQL DML-->

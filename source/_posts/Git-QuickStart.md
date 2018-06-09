@@ -6,6 +6,7 @@ id: git-quickstart
 tags: 
 - git
 categories: Git
+toc: true
 ---
 
 <!--# Git QuickStart-->

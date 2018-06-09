@@ -6,6 +6,7 @@ id: hexo-multimachine
 tags:
 - hexo
 categories: Hexo
+toc: true
 ---
 
 <!--# Hexo系列 | （四）多机同步更新博客-->

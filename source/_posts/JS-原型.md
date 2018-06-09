@@ -6,6 +6,7 @@ id: js-prototype
 tags:
 - js
 categories: Web
+toc: true
 ---
 
 <!--# JS | 原型-->

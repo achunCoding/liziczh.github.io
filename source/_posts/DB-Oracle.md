@@ -1,6 +1,7 @@
 ---
 title: DB | Oracle
 comments: true
+toc: true
 date: 2018-05-14 17:32:29
 id: db-oracle
 tags:
