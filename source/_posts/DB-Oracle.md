@@ -289,7 +289,7 @@ FROM <表1> LEFT [OUTER] JOIN <表2>
 ON <表1>.<关联属性> = <表2>.<关联属性>
 ```
 
-**Oracle特有写法**：从表以 `(+)` 表示。
+**Oracle 特有写法**：从表以 `(+)` 表示。
 
 ```mysql
 SELECT <目标列>
@@ -307,7 +307,7 @@ FROM <表1> RIGHT [OUTER] JOIN <表2>
 ON <表1>.<关联属性> = <表2>.<关联属性>
 ```
 
-**Oracle特有写法**：从表以 `(+)` 表示。
+**Oracle 特有写法**：从表以 `(+)` 表示。
 
 ```plsql
 SELECT <目标列>
@@ -485,9 +485,9 @@ DELETE FROM <表>
 
 # SQL DDL
 
-DDL数据定义语言
+DDL 数据定义语言
 
-## Oracle数据类型
+## Oracle 数据类型
 
 - NUMBER：整数
 - DATE：日期
@@ -768,7 +768,7 @@ CONSTRAINT <约束名> <约束类型>(约束列)
 ```
 
 ```mysql
-CONSTRAINT uk_属性 UNIQUE(属性);
+CONSTRAINT uk_cloumn UNIQUE(<列名>);
 ```
 
 ## 主键约束：PRIMARY KEY
@@ -776,32 +776,32 @@ CONSTRAINT uk_属性 UNIQUE(属性);
 主键约束：PRIMARY KEY，非空+唯一
 
 ```mysql
-CONSTRAINT pk_属性 PRIMARY KEY(属性);
+CONSTRAINT pk_cloumn PRIMARY KEY(<列名>);
 ```
 
 联合主键：
 
 ```mysql
-CONSTRAINT pk_属性 PRIMARY KEY(属性1,属性2,...);
+CONSTRAINT pk_cloumn PRIMARY KEY(<列名1>,<列名2>,...);
 ```
 
 ## 检查约束：CHECK
 
 ```mysql
-CONSTRAINT ck_属性 CHECK(属性 IN (值1,值2...))
+CONSTRAINT ck_cloumn CHECK(<列名> IN (值1,值2...))
 ```
 
 ```mysql
-CONSTRAINT ck_属性 CHECK(属性 BETWEEN 值1 AND 值2)
+CONSTRAINT ck_cloumn CHECK(<列名> BETWEEN 值1 AND 值2)
 ```
 
 ## 外键约束：FOREIGN KEY
 
 ```mysql
-CONSTRAINT fk_属性 FOREIGN KEY REFERENCES ON DELETE <CASCADE|SET NULL> 
+CONSTRAINT fk_cloumn FOREIGN KEY (<列名1>,<列名2>...) REFERENCES <表名>(<列名1>,<列名2>...) ON DELETE <CASCADE|SET NULL> 
 ```
 
-# 授权
+# 数据库安全
 
 ## 授予权限：GRANT
 
@@ -850,3 +850,53 @@ GRANT <角色1>
 ON <对象类型> <对象名>
 TO <角色2>,<用户>
 ```
+# 事务
+
+**事务**：用于**保证数据完整性**。由一组DML语句组成，这组DML语句要么全部成功，要么全部失败。
+
+## 事务特性：ACID
+
+- **原子性（atomicity）**：一个事务是一个不可分割的工作单位，事务中包括的诸操作要么都做，要么都不做。
+- **一致性（consistency）**：事务必须是使数据库从一个一致性状态变到另一个一致性状态。一致性与原子性是密切相关的。
+- **隔离性（isolation）**：一个事务的执行不能被其他事务干扰。即一个事务内部的操作及使用的数据对并发的其他事务是隔离的，并发执行的各个事务之间不能互相干扰。
+- **持久性（durability）**：指一个事务一旦提交，它对数据库中数据的改变就应该是永久性的。接下来的其他操作或故障不应该对其有任何影响。
+
+## 事务锁
+
+**事务并发不一致性**导致的问题：
+
+- **幻读**：事务T1读取一条指定where条件的语句，返回结果集。此时事务T2插入一行新记录并commit，恰好满足T1的where条件。然后T1使用相同的条件再次查询，结果集中可以看到T2插入的记录，这条新纪录就是幻想。
+- **不可重复读取**：事务T1读取一行记录，紧接着事务T2修改了T1刚刚读取的记录并commit，然后T1再次查询，发现与第一次读取的记录不同，这称为不可重复读。 
+- **脏读**：事务T1更新了一行记录，还未提交所做的修改，这个T2读取了更新后的数据，然后T1执行回滚操作，取消刚才的修改，所以T2所读取的行就无效，也就是脏数据。
+
+所以引入事务锁，保证数据完整性。
+
+## 事务处理
+
+**COMMIT**：提交
+
+**ROLLBACK**：回滚
+
+# 数据库设计范式
+
+实际设计原则：根据业务尽可能的**减少多表查询**，不必完全遵循设计范式。
+
+**第一范式**：确保表中每个字段都不可拆分。
+
+**第二范式**：消除了部分函数依赖；确保表中每列都与主键相关（主要针对联合主键）。
+
+**第三范式**：消除了传递函数依赖；确保每列与主键直接相关，而不是间接相关。
+
+
+
+# Oracle分页语句 
+
+```sql
+select * 
+from ( 
+  select "temp".*, ROWNUM "rn" 
+  from  "查询块" "temp" 
+  where ROWNUM <= currengPage * pageSize ) 
+where "rn" > (currentPage-1) * pageSize
+```
+
