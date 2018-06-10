@@ -121,7 +121,7 @@ menu:
   archives: /archives/ || archive
   tags: /tags/ || tags
   categories: /categories/ || th
-  photos: /photos/ || image
+  photos: /photos/ || instagram
   #about: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
@@ -158,9 +158,9 @@ site_state: true
 social:
   GitHub: https://github.com/liziczh || github
   E-Mail: mailto:liziczh@foxmail.com || envelope
-  Linkedin: https://www.linkedin.com/in/%E5%93%B2%E6%98%8A-%E9%99%88-604536161/ ||linkedin
   FaceBook: https://www.facebook.com/jehaw.chen.3 || facebook
   Instagram: https://www.instagram.com/jehawchen/ || instagram
+  Linkedin: https://www.linkedin.com/in/%E5%93%B2%E6%98%8A-%E9%99%88-604536161/ ||linkedin
   Weibo: https://weibo.com/p/1005055521704376/home || weibo
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
@@ -186,16 +186,16 @@ social_icons:
 #github_banner: https://github.com/yourname || Follow me on GitHub
 
 # Blog rolls
-links_icon: link
-links_title: 友情链接
-#links_layout: block
-links_layout: inline
-links:
-  博客园: https://www.cnblogs.com
-  知乎: https://www.zhihu.com
-  掘金: https://juejin.im
-  segmentfault: https://segmentfault.com
-  V2EX: https://www.v2ex.com
+# links_icon: link
+# links_title: 友情链接
+# links_layout: block
+# links_layout: inline
+# links:
+#   博客园: https://www.cnblogs.com
+#   知乎: https://www.zhihu.com
+#   掘金: https://juejin.im
+#   segmentfault: https://segmentfault.com
+#   V2EX: https://www.v2ex.com
   
 
 # Sidebar Avatar
@@ -235,10 +235,10 @@ sidebar:
   #display: remove
 
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
-  offset: 12
+  offset: 0
 
   # Back to top in sidebar (only for Pisces | Gemini).
-  b2t: false
+  b2t: true
 
   # Scroll percent label in b2t button.
   scrollpercent: false
@@ -334,7 +334,7 @@ post_edit:
 # ---------------------------------------------------------------
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"

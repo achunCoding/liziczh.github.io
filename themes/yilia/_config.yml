@@ -3,8 +3,8 @@
 menu:
   主页: /
   相册: /photo
-  分类: /categories
-  标签: /tags
+  # 分类: /categories
+  # 标签: /tags
 
 # SubNav
 subnav:
