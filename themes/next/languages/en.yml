@@ -2,6 +2,7 @@ title:
   archive: Archive
   category: Category
   tag: Tag
+  photos: Photos
   schedule: Schedule
 
 author: Author
@@ -11,6 +12,7 @@ menu:
   archives: Archives
   categories: Categories
   tags: Tags
+  photos: Photos
   about: About
   search: Search
   schedule: Schedule

@@ -442,6 +442,47 @@ daovoice_app_id: yourapp_id
 
 
 
+## 修改Pisces主题宽度
+
+打开编辑`themes\next\source\css\_schemes\Pisces\_layout.styl`，在底部添加如下代码：
+
+```
+// 以下为新增代码！！
+header{ width: 90% !important; }
+header.post-header {
+  width: auto !important;
+}
+.container .main-inner { width: 90%; }
+.content-wrap { width: calc(100% - 260px); }
+
+.header {
+  +tablet() {
+    width: auto !important;
+  }
+  +mobile() {
+    width: auto !important;
+  }
+}
+
+.container .main-inner {
+  +tablet() {
+    width: auto !important;
+  }
+  +mobile() {
+    width: auto !important;
+  }
+}
+
+.content-wrap {
+  +tablet() {
+    width: 100% !important;
+  }
+  +mobile() {
+    width: 100% !important;
+  }
+}
+```
+
 
 
 > 参考资料：[next主题|使用文档](http://theme-next.iissnan.com/)

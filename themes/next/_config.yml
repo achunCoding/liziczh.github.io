@@ -45,10 +45,10 @@ cache:
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-  small: /images/L.png
-  medium: /images/L.png
-  apple_touch_icon: /images/L.png
-  safari_pinned_tab: /images/logo.svg
+  small: /assets/userImg/L.png
+  medium: /assets/userImg/L.png
+  apple_touch_icon: /assets/userImg/L.png
+  safari_pinned_tab: /assets/userImg/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -117,11 +117,12 @@ index_with_subtitle: true
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
+  #home: / || home
+  archives: /archives/ || archive
   tags: /tags/ || tags
   categories: /categories/ || th
-  archives: /archives/ || archive
-  about: /about/ || user
+  photos: /photos/ || image
+  #about: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -200,7 +201,7 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.png
 # in site  directory(source/uploads): /uploads/avatar.png
-avatar: /images/avatar.png
+avatar: /assets/userImg/avatar.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -298,8 +299,8 @@ codeblock:
 
 # Reward
 reward_comment: 如果你喜欢，欢迎丢月饼丢香蕉哦！
-wechatpay: /images/wechatpay.png
-alipay: /images/alipay.png
+wechatpay: /assets/userImg/wechatpay.png
+alipay: /assets/userImg/alipay.png
 #bitcoin: /images/bitcoin.png
 
 # Related popular posts

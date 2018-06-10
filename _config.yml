@@ -8,6 +8,7 @@ subtitle: 心无滞碍，自然生长
 description: 心无滞碍，自然生长
 keywords: liziczh,栗子,java,web,html,css,javascript,hexo,git
 author: 栗多多
+email: liziczh@qq.com
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -92,8 +93,8 @@ feed:
 
 
 ## Themes: https://hexo.io/themes/
-theme: yilia
-# theme: next
+# theme: yilia
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
