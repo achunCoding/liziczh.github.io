@@ -121,7 +121,7 @@ menu:
   archives: /archives/ || archive
   tags: /tags/ || tags
   categories: /categories/ || th
-  photos: /photos/ || instagram
+  # photos: /photos/ || instagram
   #about: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
@@ -138,8 +138,8 @@ menu_settings:
 
 # Schemes
 #scheme: Muse
-#scheme: Mist
-scheme: Pisces
+scheme: Mist
+# scheme: Pisces
 #scheme: Gemini
 
 
