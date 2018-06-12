@@ -2,7 +2,7 @@ title:
   archive: Archive
   category: Category
   tag: Tag
-  photos: Photos
+  album: Album
   schedule: Schedule
 
 author: Author
@@ -12,7 +12,7 @@ menu:
   archives: Archives
   categories: Categories
   tags: Tags
-  photos: Photos
+  albums: Albums
   about: About
   search: Search
   schedule: Schedule

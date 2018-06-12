@@ -1,6 +1,6 @@
 ---
 title: Web | JavaScript
-id: web-js
+id: web-javascript
 comments: true
 tags:
   - js

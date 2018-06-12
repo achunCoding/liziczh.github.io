@@ -2,8 +2,9 @@
 
 menu:
   主页: /
-  # 相册: /photo
-  # 分类: /categories
+  分类: /categories
+  相册: /albums
+  归档: /archives
   # 标签: /tags
 
 # SubNav
@@ -19,7 +20,7 @@ subnav:
   #segmentfault: "#"
   #bilibili: "#"
   #acfun: "#"
-  #mail: "mailto:litten225@qq.com"
+  mail: "mailto:liziczh@foxmail.com"
   #facebook: "https://www.facebook.com/jehaw.chen.3"
   #google: "#"
   #twitter: "#"
@@ -117,7 +118,7 @@ slider:
 # 智能菜单
 # 如不需要，将该对应项置为false
 smart_menu:
-  innerArchive: '归档'
+  innerArchive: '全部'
   friends: '我的'
   aboutme: '关于'
 
