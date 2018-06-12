@@ -6,6 +6,8 @@ id: java-aliorc-impl
 tags:
 - java
 categories: Java
+toc: true
+reward: true
 ---
 
 <!--# Java调用阿里ORC接口实现印刷文字识别-->

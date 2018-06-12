@@ -5,7 +5,9 @@ comments: true
 date: 2018-04-10 12:09:34
 tags:
 - reOS
-categories: 
+categories: Windows
+toc: true
+reward: true
 ---
 
 <!--# Windows | 系统重装-->

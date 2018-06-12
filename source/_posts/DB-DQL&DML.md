@@ -7,6 +7,7 @@ tags:
 - database
 categories: DataBase
 toc: true
+reward: true
 ---
 
 <!--# DB | DQL&DML-->

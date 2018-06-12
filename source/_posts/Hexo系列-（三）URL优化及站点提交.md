@@ -7,6 +7,7 @@ tags:
 - hexo
 categories: Hexo
 toc: true
+reward: true
 ---
 
 <!--# Hexo系列 | （三）URL优化及站点提交-->

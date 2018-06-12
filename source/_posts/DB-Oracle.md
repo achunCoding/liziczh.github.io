@@ -7,6 +7,8 @@ id: db-oracle
 tags:
 - database
 categories: DataBase
+toc: true
+reward: true
 ---
 
 <!--# Oracle数据库-->

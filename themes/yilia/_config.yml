@@ -2,7 +2,7 @@
 
 menu:
   主页: /
-  归档: /archives
+  # 归档: /archives
   分类: /categories
   相册: /albums
   积雨: /ones
@@ -47,7 +47,7 @@ open_in_new: false
 
 # 打赏
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
-reward_type: 2
+reward_type: 1
 # 打赏wording
 reward_wording: '欢迎丢月饼丢香蕉哦'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
@@ -57,7 +57,7 @@ weixin: /assets/userImg/wechatpay.png
 
 # 目录
 # 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
-toc: 2
+toc: 1
 # 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
 toc_hide_index: true
 # 目录为空时的提示
@@ -119,7 +119,7 @@ slider:
 # 智能菜单
 # 如不需要，将该对应项置为false
 smart_menu:
-  innerArchive: '所有文章'
+  innerArchive: '归档'
   friends: '我的'
   aboutme: '关于'
 

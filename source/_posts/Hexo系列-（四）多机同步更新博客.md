@@ -7,6 +7,7 @@ tags:
 - hexo
 categories: Hexo
 toc: true
+reward: true
 ---
 
 <!--# Hexo系列 | （四）多机同步更新博客-->

@@ -6,6 +6,8 @@ id: java-tetris
 tags: 
 - java
 categories: Java
+toc: true
+reward: true
 ---
 
 <!--# Tetris-->

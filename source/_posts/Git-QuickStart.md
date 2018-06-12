@@ -7,6 +7,7 @@ tags:
 - git
 categories: Git
 toc: true
+reward: true
 ---
 
 <!--# Git QuickStart-->

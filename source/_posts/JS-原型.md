@@ -7,6 +7,7 @@ tags:
 - js
 categories: Web
 toc: true
+reward: true
 ---
 
 <!--# JS | 原型-->

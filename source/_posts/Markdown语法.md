@@ -7,6 +7,7 @@ tags:
 - markdown
 categories: Markdown
 toc: true
+reward: true
 ---
 
 <!--# Markdown 语法-->

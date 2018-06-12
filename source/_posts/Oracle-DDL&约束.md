@@ -7,6 +7,8 @@ id: db-oracle-ddl
 tags:
 - database
 categories: DataBase
+toc: true
+reward: true
 ---
 
 <!--# Oracle | DDL&约束-->

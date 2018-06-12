@@ -6,6 +6,8 @@ id: oracle-newdb
 tags:
 - oracle
 categories: DataBase
+toc: true
+reward: true
 ---
 
 <!--# Oracle新建数据库-->

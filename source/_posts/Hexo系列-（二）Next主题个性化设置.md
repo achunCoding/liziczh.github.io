@@ -7,6 +7,7 @@ tags:
 categories: Hexo
 date: 2018-04-12 08:34:58
 toc: true
+reward: true
 ---
 
 <!--# Hexo系列 | （二）Next主题个性化设置-->
