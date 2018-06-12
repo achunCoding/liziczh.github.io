@@ -4,6 +4,7 @@ id:
 date: {{ date }}
 tags: {{tags}}
 categories: {{categories}}
-comments: false
+comments: true
 toc: true
+reward: true
 ---
