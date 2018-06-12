@@ -13,7 +13,7 @@ reward: false
 
 ![20180612](/albums/imgs/20180612.jpg)
 
-<center>The elves are coming at once.</center>
+<center> ↑ The elves are coming at once.</center>
 
 
 
@@ -21,10 +21,10 @@ reward: false
 
 ![20180610-1](/albums/imgs/20180610-1.jpg)
 
-<center>蓝天白云，晴空万里。</center>
+<center> ↑ 蓝天白云，晴空万里。</center>
 
 ![20180610-2](/albums/imgs/20180610-2.jpg)
 
-<center>忽然暴风雨。</center>
+<center> ↑ 忽然暴风雨。</center>
 
 
