@@ -122,6 +122,7 @@ menu:
   tags: /tags/ || tags
   categories: /categories/ || th
   albums: /albums/ || instagram
+  ones: /ones/ || heartbeat
   #about: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
