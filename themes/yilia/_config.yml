@@ -2,9 +2,9 @@
 
 menu:
   主页: /
+  归档: /archives
   分类: /categories
   相册: /albums
-  归档: /archives
   # 标签: /tags
 
 # SubNav
@@ -118,7 +118,7 @@ slider:
 # 智能菜单
 # 如不需要，将该对应项置为false
 smart_menu:
-  innerArchive: '全部'
+  innerArchive: '所有文章'
   friends: '我的'
   aboutme: '关于'
 
@@ -130,4 +130,4 @@ friends:
   Instagram: https://www.instagram.com/jehawchen
   Weibo: https://weibo.com/p/1005055521704376/home
 
-aboutme: 后海有树的院子<br/>夏代有工的玉<br/>此时此刻的云<br/>二十来岁的你
+aboutme: 乡村魔幻小学生<br/><br/>和<br/><br/>她要守护的云和天使。
