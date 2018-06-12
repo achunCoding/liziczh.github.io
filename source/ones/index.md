@@ -3,6 +3,8 @@ title: One
 type: "ones"
 layout: "ones"
 comments: false
+toc: false
+reward: false
 ---
 
 
@@ -11,6 +13,6 @@ comments: false
 
 
 
----
 
-#### <center>End</center>
+
+<center>**Something is here**</center>
