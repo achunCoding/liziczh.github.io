@@ -11,19 +11,23 @@ reward: false
 
 ### 2018-06-12
 
-![20180612](/albums/imgs/20180612.jpg)
+![The elves are coming at once](/albums/imgs/20180612-1.jpg)
 
 <center> ↑ The elves are coming at once.</center>
+
+![Double Rainbow](/albums/imgs/20180612-2.jpg)
+
+<center> ↑ Double Rainbow.</center>
 
 
 
 ### 2018-06-10
 
-![20180610-1](/albums/imgs/20180610-1.jpg)
+![蓝天白云，晴空万里](/albums/imgs/20180610-1.jpg)
 
 <center> ↑ 蓝天白云，晴空万里。</center>
 
-![20180610-2](/albums/imgs/20180610-2.jpg)
+![忽然暴风雨](/albums/imgs/20180610-2.jpg)
 
 <center> ↑ 忽然暴风雨。</center>
 
