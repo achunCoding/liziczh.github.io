@@ -7,28 +7,12 @@ toc: false
 reward: false
 ---
 
-
+<style>.img{width:240px;display:inline-block;margin:0 10px 10px 0;}.img-last{width:240px;display:inline-block;margin:0 0 10px 0;}</style>
 
 ### 2018-06-12
 
-![The elves are coming at once](/albums/imgs/20180612-1.jpg)
-
-<center> ↑ The elves are coming at once.</center>
-
-![Double Rainbow](/albums/imgs/20180612-2.jpg)
-
-<center> ↑ Double Rainbow.</center>
-
-
+<img src="/albums/imgs/20180612-1.jpg" alt="The elves are coming at once" class="img" /><img src="/albums/imgs/20180612-2.jpg" alt="Double Rainbow" class="img-last" />
 
 ### 2018-06-10
 
-![蓝天白云，晴空万里](/albums/imgs/20180610-1.jpg)
-
-<center> ↑ 蓝天白云，晴空万里。</center>
-
-![忽然暴风雨](/albums/imgs/20180610-2.jpg)
-
-<center> ↑ 忽然暴风雨。</center>
-
-
+<img src="/albums/imgs/20180610-1.jpg" alt="蓝天白云，晴空万里" class="img" /><img src="/albums/imgs/20180610-2.jpg" alt="忽然暴风雨" class="img-last" />

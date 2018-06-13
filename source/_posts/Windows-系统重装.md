@@ -12,6 +12,10 @@ reward: true
 
 <!--# Windows | 系统重装-->
 
+
+
+<!-- more -->
+
 - 传统：LegacyBIOS+MBR
 - 新型：UEFI+GPT
 
@@ -21,8 +25,6 @@ reward: true
 - UEFI：统一可扩展固件接口，[新型]
 - MBR：主引导记录磁盘分区格式，[Legacy]
 - GPT：GUID全局唯一标识磁盘分区表，[UEFI]
-
-<!-- more -->
 
 # Win7 系统重装
 
