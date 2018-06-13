@@ -8,7 +8,7 @@ reward: false
 ---
 
 <style>.img{width:240px;display:inline-block;margin:0 10px 10px 0;}.img-last{width:240px;display:inline-block;margin:0 0 10px 0;}</style>
-<script>window.onload = function(){var img = document.getElementsByTagName("img");if(window.screen.width < 500){for(var i = 0 ; i < img.length;i++){var len = (window.screen.width-40) / 2;img[i].style.width = len.toString()+"px";}}}</script>
+<script>var img = document.getElementsByTagName("img");if(window.screen.width < 500){for(var i = 0 ; i < img.length;i++){var len = (window.screen.width-40) / 2;img[i].style.width = len.toString()+"px";}}</script>
 
 ### 2018-06-12
 
