@@ -1,7 +1,6 @@
 ---
 title: Oracle | DDL&约束
 comments: true
-toc: true
 date: 2018-05-13 17:32:29
 id: db-oracle-ddl
 tags:
