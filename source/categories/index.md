@@ -5,6 +5,7 @@ layout: "categories"
 comments: false
 toc: true
 reward: false
+copyright: false
 ---
 
 ### Java小程序

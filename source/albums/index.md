@@ -5,6 +5,7 @@ layout: "albums"
 comments: false
 toc: false
 reward: false
+copyright: false
 ---
 
 <style>.img{width:240px;display:inline-block;margin:0 10px 10px 0;}.img-last{width:240px;display:inline-block;margin:0 0 10px 0;}</style>

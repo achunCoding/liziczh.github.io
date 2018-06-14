@@ -49,8 +49,9 @@
           </div>
           </a>
         </div>
-      <% } %>
 
+      <% } %>
+      <% if (post.copyright || !index){ %>
       <div> 
         <ul class="post-copyright">
           <li>
@@ -59,7 +60,7 @@
           </li>
           <li>
             <strong>本文链接：</strong>
-            <a href="<%- url_for(post.path) %>" title="<%= config.title %>"><%= config.site %><%- url_for(post.path) %></a>
+            <a href="<%= config.url %><%- url_for(post.path) %>" title="<%= config.title %>"><%= config.url %><%- url_for(post.path) %></a>
           </li>
           <li>
             <strong>版权声明： </strong>
@@ -68,6 +69,7 @@
         </ul>
       </div>
     </div>
+    <% } %>
 
     <div class="article-info article-info-index">
       <%if(post.top){%>

@@ -5,6 +5,7 @@ layout: "ones"
 comments: false
 toc: false
 reward: false
+copyright: false
 ---
 
 
