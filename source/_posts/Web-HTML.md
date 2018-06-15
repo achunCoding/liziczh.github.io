@@ -2,8 +2,8 @@
 title: Web | HTML
 id: web-html
 tags:
-  - html
-categories: Web
+  - Web前端
+categories: Web前端
 comments: true
 date: 2018-04-03 22:36:54
 toc: true
@@ -12,8 +12,8 @@ reward: true
 
 <!--# HTML-->
 
-HTML超文本标记语言。其中“超文本“指页面内可以包含图片、链接、程序、音频、视频等非文字元素，即一个页面（page）可以包含：文本、图片、链接、程序、音频、视频等元素。
-HTML常用于编写页面主体结构，CSS用于对页面进行静态修饰，JavaScript用于对网页增加动态功能。
+HTML 超文本标记语言，一种使用标记标签 (tag) 描述网页的语言，其中的“超文本“是指页面内除文本之外还可以包含图片、链接、程序、音频、视频等非文字元素。
+HTML 常用于编写页面主体结构，CSS 常用于对页面进行静态修饰，JavaScript 常用于对网页增加动态功能。
 
 <!-- more -->
 
@@ -46,7 +46,7 @@ HTML注释：`<!-- HTML注释格式 -->`
     <title>Document</title>
 </head>
 <body>
-    文档主体
+    文档主体内容
 </body>
 </html>
 ```
@@ -55,7 +55,7 @@ HTML注释：`<!-- HTML注释格式 -->`
 
 ## 2.1 meta标签-元信息
 
-(1) meta标签：提供页面元信息，位于`<head></head>`中。
+(1) meta标签：页面元信息，位于`<head></head>`中。
 
 ```html
 <meta name="" content=""/>
@@ -128,6 +128,8 @@ HTML元素：从开始标签（start tag）到结束标签（end tag）的所有
 ## 3.2 HTML标签属性
 
 HTML标签属性格式：**name="value"** ；
+
+例如：
 
 | 属性  | 值               | 描述                                     |
 | ----- | ---------------- | ---------------------------------------- |

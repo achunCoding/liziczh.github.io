@@ -3,8 +3,8 @@ title: Web | CSS
 id: web-css
 comments: true
 tags:
-  - css
-categories: Web
+  - Web前端
+categories: Web前端
 date: 2018-04-05 17:21:22
 toc: true
 reward: true
@@ -12,7 +12,7 @@ reward: true
 
 <!--# CSS-->
 
-CSS 层叠样式表（Cascading Style Sheets），主要通过为HTML元素增添样式的方式修饰静态页面，实现了内容与表现分离。目前主流网页布局均由**div+CSS**实现。
+CSS 层叠样式表 (Cascading Style Sheets) ，主要通过为HTML元素增添样式的方式修饰静态页面，实现了页面内容与样式分离。目前主流网页布局均采用 **div+CSS** 方式实现。
 
 <!-- more -->
 
@@ -26,7 +26,7 @@ CSS 层叠样式表（Cascading Style Sheets），主要通过为HTML元素增�
   - 不同级别：行内样式>id选择器>类选择器>标签选择器>通配符>继承；
   - 同一级别：后写的会覆盖先写的样式；
 
-## 1.2 CSS样式规则
+## 1.2 CSS语法规则
 
 CSS注释：`/* CSS注释内容 */`
 

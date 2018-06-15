@@ -13,11 +13,11 @@ copyright: false
 
 ### 2018-06-12
 
-<img src="/albums/imgs/20180612-1.jpg" alt="The elves are coming at once" class="img" /><img src="/albums/imgs/20180612-2.jpg" alt="Double Rainbow" class="img-last" />
+<img src="http://p6uturdzt.bkt.clouddn.com/20180612-1.jpg" alt="The elves are coming at once" class="img" /><img src="http://p6uturdzt.bkt.clouddn.com/20180612-2.jpg" alt="Double Rainbow" class="img-last" />
 
 ### 2018-06-10
 
-<img src="/albums/imgs/20180610-1.jpg" alt="蓝天白云，晴空万里" class="img" /><img src="/albums/imgs/20180610-2.jpg" alt="忽然暴风雨" class="img-last" />
+<img src="http://p6uturdzt.bkt.clouddn.com/20180610-1.jpg" alt="蓝天白云，晴空万里" class="img" /><img src="http://p6uturdzt.bkt.clouddn.com/20180610-2.jpg" alt="忽然暴风雨" class="img-last" />
 
 
 

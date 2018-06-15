@@ -3,8 +3,8 @@ title: Web | jQuery
 id: web-jquery
 comments: true
 tags:
-  - jquery
-categories: Web
+  - Web前端
+categories: Web前端
 date: 2018-04-09 16:34:00
 toc: true
 reward: true
@@ -13,16 +13,7 @@ reward: true
 <!--# jQuery-->
 
 jQuery 是一个 JavaScript 函数库，将 JS 的一些功能实现封装成了函数，极大地简化了 JavaScript 编程。
-
-jQuery 库特性：
-① HTML 元素选取
-② HTML 元素操作
-③ CSS 操作
-④ HTML 事件函数
-⑤ JavaScript 特效和动画
-⑥ HTML DOM 遍历和修改
-⑦ AJAX
-⑧ Utilities
+jQuery是 John Resig 于2006年创建的一个开源项目，jQuery集成了 JavaScript、CSS、 DOM 和 Ajax 于一体的强大功能。它可以用最少的代码， 完成更多复杂而困难的功能。
 
 <!--more-->
 
@@ -31,9 +22,9 @@ jQuery 库特性：
 ## 1.1 jQuery版本
 
 jQuery版本：
-- jQuery1.x.x：兼容IE6/7/8低级浏览器。
-- jQuery2.x.x：不兼容IE6/7/8。
-- jQuery3.x.x：全面支持HTML5和CSS3。
+- jQuery-1.x.x：兼容IE6/7/8低级浏览器。
+- jQuery-2.x.x：不兼容IE6/7/8。
+- jQuery-3.x.x：全面支持HTML5和CSS3。
 
 jQuery版本分类：
 - Development version：[jquery.js] 开发版，未压缩，用于测试和开发。
@@ -47,7 +38,7 @@ jQuery版本分类：
 </head>
 ```
 
-# 2. jQuery起步
+# 2. jQuery入门
 
 ## 2.1 jQuery对象与DOM对象
 

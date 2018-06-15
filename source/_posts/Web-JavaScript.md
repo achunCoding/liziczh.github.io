@@ -3,8 +3,8 @@ title: Web | JavaScript
 id: web-javascript
 comments: true
 tags:
-  - js
-categories: Web
+  - Web前端
+categories: Web前端
 date: 2018-04-07 14:27:12
 toc: true
 reward: true
@@ -12,8 +12,8 @@ reward: true
 
 <!--# JavaScript-->
 
-JavaScript网络脚本语言，常用来为网页添加动态功能，与用户交互。
-JavaScript是一门轻量级，解释型，基于原型，面向对象，弱类型的网络脚本语言。
+JavaScript 是一种通用的网络脚本语言，常用来为网页改进设计、验证表单、添加动态功能等，实现用户交互。
+JavaScript 是一门轻量级，解释型，基于原型，面向对象，弱类型的网络脚本语言。
 -解释型：无需编译，在程序运行中逐行进行解释执行。
 -弱类型：对使用的数据类型不严格要求。
 -面向对象：JS基本对象，DOM对象，BOM对象。
