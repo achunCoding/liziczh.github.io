@@ -22,7 +22,7 @@ copyright: false
 
 - [Markdown语法](http://liziczh.com/markdown-grammer.html)
 
-### 电脑维修工程师
+### 电脑维修
 
 - [Windows重装系统](http://liziczh.com/windows-reos.html)
 

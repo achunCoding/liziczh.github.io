@@ -12,8 +12,8 @@ reward: true
 
 <!--# Hexo系列 | （一）使用Hexo+Pages搭建个人博客-->
 
-时至清明，四月飞雪，深居简出，百无聊赖，建站。
-本篇主要介绍为使用hexo+pages搭建个人博客的流程。其中[Hexo](https://hexo.io/zh-cn/) 是一个博客框架，可解析markdown文章，生成静态页面。在代码托管平台[github](https://github.com)（国外）、[coding](https://coding.net)（国内）上都有pages服务，提供免费的静态网页托管和演示服务。
+
+本篇主要介绍使用Hexo+Pages搭建个人博客的流程。使用 [Hexo](https://hexo.io/zh-cn/) 博客框架搭建，解析markdown文章，生成静态页面，将页面托管到 [github](https://github.com)  / [coding](https://coding.net) 服务器上。[github](https://github.com)  / [coding](https://coding.net) 都有pages 服务，提供免费的静态网页托管和演示服务。
 
 <!-- more -->
 

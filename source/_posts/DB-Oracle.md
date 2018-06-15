@@ -8,6 +8,7 @@ tags:
 categories: DataBase
 toc: true
 reward: true
+layout: false
 ---
 
 <!--# Oracle数据库-->

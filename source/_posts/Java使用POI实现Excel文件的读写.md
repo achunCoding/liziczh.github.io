@@ -4,7 +4,7 @@ comments: true
 date: 2018-06-03 11:42:30
 id: java-poi-impl
 tags:
-- javadots
+- JavaDots
 categories: JavaDots
 toc: true
 reward: true
@@ -14,9 +14,11 @@ reward: true
 
 **Apache POI**：使用Java读取和写入MS Office文件。 
 -**HSSF :** 它被用来读取和写入MS Excel文件的xls格式。
--**XSSF :** 它是用于MS Excel中xlsx文件格式。<!--more-->
+-**XSSF :** 它是用于MS Excel中xlsx文件格式。
 
-## Java使用POI实现对Excel文件的读写操作
+<!--more-->
+
+### Java使用POI实现对Excel文件的读写操作
 
 本篇的ExcelUtils可作为一个工具类直接使用，主要针对于**一行数据(row)作为一个实例(t)**的情况使用。
 
@@ -25,8 +27,6 @@ reward: true
 | 表格（sheet）  | `List<T>`         |
 | 行（row）      | T 的一个实例 (t)  |
 | 单元格（cell） | 对象 t 的某个属性 |
-
-### 代码实现
 
 ```java
 package com.liziczh.ims.tools;

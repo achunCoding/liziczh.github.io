@@ -4,7 +4,7 @@ comments: true
 date: 2018-05-13 17:32:29
 id: db-oracle-ddl
 tags:
-- database
+- oracle
 categories: DataBase
 toc: true
 reward: true
