@@ -3,8 +3,8 @@ title: Hexo系列 | （一）使用Hexo+Pages搭建个人博客
 id: hexo-blog-build
 comments: true
 tags:
-  - hexo
-categories: Hexo
+  - Hexo博客
+categories: Hexo博客
 date: 2018-04-11 10:57:46
 toc: true
 reward: true

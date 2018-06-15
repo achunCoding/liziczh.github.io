@@ -1,11 +1,11 @@
 ---
 title: Tetris
 comments: true
-date: 2018-05-19 23:00:00
+date: 2018-05-19 23:01:34
 id: java-tetris
 tags: 
-- java
-categories: Java
+- javadots
+categories: JavaDots
 toc: true
 reward: true
 ---
@@ -13,7 +13,6 @@ reward: true
 <!--# Tetris-->
 
 基于 Java-swing 实现俄罗斯方块
-
 GitHub：[https://github.com/liziczh/Tetris](https://github.com/liziczh/Tetris)
 
 <!--more-->

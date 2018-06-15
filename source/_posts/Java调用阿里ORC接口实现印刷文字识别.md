@@ -4,8 +4,8 @@ comments: true
 date: 2018-06-08 15:17:29
 id: java-aliorc-impl
 tags:
-- java
-categories: Java
+- javadots
+categories: JavaDots
 toc: true
 reward: true
 ---

@@ -3,8 +3,8 @@ title: Hexo系列 | （二）Next主题个性化设置
 id: hexo-next-settings
 comments: true
 tags:
-  - hexo
-categories: Hexo
+  - Hexo博客
+categories: Hexo博客
 date: 2018-04-12 08:34:58
 toc: true
 reward: true

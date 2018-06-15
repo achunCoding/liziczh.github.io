@@ -4,8 +4,8 @@ id: hexo-submit
 comments: true
 date: 2018-04-21 19:01:32
 tags:
-- hexo
-categories: Hexo
+- Hexo博客
+categories: Hexo博客
 toc: true
 reward: true
 ---

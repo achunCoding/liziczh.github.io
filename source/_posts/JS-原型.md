@@ -4,8 +4,8 @@ comments: true
 date: 2018-04-09 17:45:07
 id: js-prototype
 tags:
-- js
-categories: Web
+- Web前端
+categories: Web前端
 toc: true
 reward: true
 ---

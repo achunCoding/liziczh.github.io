@@ -4,8 +4,8 @@ comments: true
 date: 2018-04-21 22:00:07
 id: hexo-multimachine
 tags:
-- hexo
-categories: Hexo
+- Hexo博客
+categories: Hexo博客
 toc: true
 reward: true
 ---
