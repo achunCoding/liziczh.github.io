@@ -66,9 +66,12 @@ toc_empty_wording: '目录是什么？'
 # 是否有快速回到顶部的按钮
 top: true
 
+# 百度推送
+baidu_push: true
+
 # Miscellaneous
 baidu_analytics: 'fad26e690685f3b9d5d9e96cda8b1f71'
-google_analytics: ''
+google_analytics: 'UA-120960442-1'
 favicon: /assets/userImg/L.png
 
 #你的头像url
