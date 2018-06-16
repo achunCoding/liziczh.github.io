@@ -16,8 +16,7 @@ Git是目前世界上最流行的分布式版本控制系统。它速度快，�
 
 <!--more-->
 
-Git诞生于一个极富纷争的年代。起因是Linus创建了开源的Linux，在2002年以前，Linux的内核维护工作主要是由世界各地的志愿者将源码文件通过diff方式发给Linus，然后由Linus本人手工合并代码。到了2002年，Linux代码库之大已经很难通过手工方式管理，于是Linus选择了分布式版本控制系统BitKeeper管理和维护代码。2005年，BitKeeper与Linux开源社区的合作关系结束，迫使Linux开源社区不得不开发一套属于自己的版本控制系统。
-于是，Linus花了两周时间用C写了一个分布式版本控制系统Git，一个月之内Linux源码已经由Git进行管理了。
+Git诞生于一个极富纷争的年代。起因是Linus创建了开源的Linux，在2002年以前，Linux的内核维护工作主要是由世界各地的志愿者将源码文件通过diff方式发给Linus，然后由Linus本人手工合并代码。到了2002年，Linux代码库之大已经很难通过手工方式管理，于是Linus选择了分布式版本控制系统BitKeeper管理和维护代码。2005年，BitKeeper与Linux开源社区的合作关系结束，迫使Linux开源社区不得不开发一套属于自己的版本控制系统。于是，Linus花了两周时间用C写了一个分布式版本控制系统Git，一个月之内Linux源码已经由Git进行管理了。
 
 ## 1. Git 配置
 
@@ -76,7 +75,9 @@ $ git status
 ### 3.2 暂存更新
 
 ```shell
-# 暂存更新
+# 暂存所有更新
+$ git add .
+# 暂存某个文件更新
 $ git add <file-name>
 ```
 
@@ -106,8 +107,8 @@ $ git log
 ### 3.6 版本回退
 
 ```shell
-# 回退至上一版本
-$ git reset --hard HEAD^  # ^指上一版本，^^指上上个版本
+# 回退至上一版本，^指上一版本，^^指上上个版本
+$ git reset --hard HEAD^
 # 回退至上n个版本
 $ git reset --hard HEAD~n
 # 跳转到某一版本
@@ -205,7 +206,7 @@ $ git branch -v
 
 Fork即派生项目。在GitHub社区中可以Fork任意开源仓库。Fork之后，GitHub 将在你的空间中创建一个项目副本，你对项目副本拥有读写权限。并且可以推送pull request给官方仓库贡献代码。
 
-Fork 流程：
+**Fork 流程**：
 
 1. 从 master 分支中创建一个新分支
 2. 提交一些修改来改进项目
