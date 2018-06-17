@@ -12,17 +12,18 @@ reward: true
 
 <!--# Java使用POI实现对Excel文件的读写-->
 
-**Apache POI**：使用Java读取和写入MS Office文件。 
--**HSSF :** 它被用来读取和写入MS Excel文件的xls格式。
--**XSSF :** 它是用于MS Excel中xlsx文件格式。
+Apache POI提供了Java程序读取和写入MS Office文档的接口。
+对于Excel文档读写：
+-HSSF：提供读写MS Excel的xls文件的功能。
+-XSSF：提供读写MS Excel的xlsx文件的功能。
 
 <!--more-->
 
 ### Java使用POI实现对Excel文件的读写操作
 
-本篇的ExcelUtils可作为一个工具类直接使用，主要针对于**一行数据(row)作为一个实例(t)**的情况使用。
+本篇的ExcelUtils工具类，主要针对于**一行数据(row)作为一个实例(t)**的情况使用。
 
-| Excel          | Java              |
+| Excel对象      | Java对象          |
 | -------------- | ----------------- |
 | 表格（sheet）  | `List<T>`         |
 | 行（row）      | T 的一个实例 (t)  |

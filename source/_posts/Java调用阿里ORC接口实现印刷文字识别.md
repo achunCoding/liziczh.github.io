@@ -13,11 +13,13 @@ reward: true
 <!--# Java调用阿里ORC接口实现印刷文字识别-->
 
 **印刷文字识别(ORC)**：通俗来讲就是将图片中的印刷文字识别出来。
-阿里云提供了多种[ORC服务](https://market.tianchi.aliyun.com/outsource/api/products/56956004/?spm=a2c22.11465550.1067954.btn1.2cb43d0fwS0C9j#ymk=%7B%22categoryId%22%3A56956004%2C%22pageIndex%22%3A1%2C%22pageSize%22%3A10%2C%22saleMode%22%3A0%2C%22tag%22%3A%22%E9%98%BF%E9%87%8C%E4%BA%91%E5%AE%98%E6%96%B9%22%2C%22keywords%22%3A%22%22%7D)，在此使用的是**印刷文字识别－文档小说图片文字识别**。主要用于企业文档，法律法务文档，信件等，以及小说，文学类书籍等场景的文字识别。
+阿里云提供了多种[ORC服务](https://market.tianchi.aliyun.com/outsource/api/products/56956004/?spm=a2c22.11465550.1067954.btn1.2cb43d0fwS0C9j#ymk=%7B%22categoryId%22%3A56956004%2C%22pageIndex%22%3A1%2C%22pageSize%22%3A10%2C%22saleMode%22%3A0%2C%22tag%22%3A%22%E9%98%BF%E9%87%8C%E4%BA%91%E5%AE%98%E6%96%B9%22%2C%22keywords%22%3A%22%22%7D)，在此使用的是**印刷文字识别－文档小说图片文字识别**，主要用于企业文档，法律法务文档，信件等，以及小说，文学类书籍等场景的文字识别。
 
 <!--more-->
 
 ### 文档小说图片文字识别
+
+思路：将图片转化为base64编码，借助阿里ORC接口分析，返回印刷文字的json文件。
 
 ```java
 package com.lizi.orc;

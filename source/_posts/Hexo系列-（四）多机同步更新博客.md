@@ -68,11 +68,16 @@ $ git push origin hexo  # 将本地仓库推送至远程仓库
 ### 2.博客还原
 
 ```shell
-$ git clone -b hexo https://github.com/yourname/yourname.github.io.git  # 克隆hexo分支到本地
-$ cd yourname.github.io    # 进入yourname.github.io文件夹
-$ npm install hexo --save   # 安装hexo
-$ npm install hexo-cli -g   # 安装hexo命令行模式
-$ npm install    # 安装所有依赖，根据package.json自动安装之前安装过的插件
+# 克隆hexo分支到本地
+$ git clone -b hexo https://github.com/yourname/yourname.github.io.git
+# 进入yourname.github.io文件夹
+$ cd yourname.github.io
+# 安装hexo
+$ npm install hexo --save
+# 安装hexo命令行模式
+$ npm install hexo-cli -g
+# 安装所有依赖，根据package.json自动安装之前安装过的插件
+$ npm install
 ```
 
 ### 3.配置网络协议
@@ -82,9 +87,12 @@ $ npm install    # 安装所有依赖，根据package.json自动安装之前安�
 ①SSH秘钥：
 
 ```shell
-$ ssh-keygen -t rsa -C "youremail@example.com"  # 生成rsa秘钥
-$ cd ~/.ssh         # 进入虚拟目录ssh文件中
-$ cat id_rsa.pub    # 显示id_rsa.pub文件内容
+# 生成rsa秘钥
+$ ssh-keygen -t rsa -C "youremail@example.com"
+# 进入虚拟目录ssh文件中
+$ cd ~/.ssh
+# 显示id_rsa.pub文件内容
+$ cat id_rsa.pub
 ```
 
 ②复制秘钥至github/coding->用户setting->SSH keys，New SSH Key；
