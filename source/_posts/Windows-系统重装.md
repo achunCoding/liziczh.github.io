@@ -13,7 +13,7 @@ copyright: true
 
 <!--# Windows | 系统重装-->
 
-使用微软官方工具制作系统启动U盘，安装微软原版 Windows 系统。了解Windows系统的启动模式。
+使用微软官方工具制作系统启动U盘，安装微软原版 Windows 系统，了解Windows系统的启动模式。
 
 <!-- more -->
 

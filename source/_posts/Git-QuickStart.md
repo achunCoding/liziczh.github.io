@@ -210,9 +210,9 @@ Fork即派生项目。在GitHub社区中可以Fork任意开源仓库。Fork之�
 **Fork 流程**：
 
 1. 从 master 分支中创建一个新分支
-2. 提交一些修改来改进项目
+2. 提交一些修改到新分支来改进项目
 3. 将这个分支推送到 GitHub 上
-4. 创建一个合并请求(pull request)
+4. 创建一个合并请求(Pull Request)
 5. 项目的拥有者合并或关闭你的合并请求
 
 ## 7. gitignore
