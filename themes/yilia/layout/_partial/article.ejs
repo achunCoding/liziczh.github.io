@@ -18,7 +18,7 @@
         <%- post.content %>
       <% } %>
 
-      <% if (((theme.reward_type === 2 && !post.reward) || (theme.reward_type === 1 && post.reward)) && !index){ %>
+      <% if ((theme.reward_type === 2 || (theme.reward_type === 1 && post.reward)) && !index){ %>
         <div class="page-reward">
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
@@ -50,7 +50,7 @@
           </a>
         </div>
       <% } %>
-
+      
       <% if (((theme.copyright_type === 2 && !post.copyright) || (theme.copyright_type === 1 && post.copyright)) && !index){ %>
         <div> 
           <ul class="post-copyright">
@@ -108,7 +108,7 @@
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
-
+  
   <% if (theme.duoshuo){ %>
   <%- partial('post/duoshuo', {
       key: post.slug,
