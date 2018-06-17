@@ -3,7 +3,7 @@ title: Album
 type: "albums"
 layout: "albums"
 comments: false
-toc: false
+toc: true
 reward: false
 copyright: false
 ---

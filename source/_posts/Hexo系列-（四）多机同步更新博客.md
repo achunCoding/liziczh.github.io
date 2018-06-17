@@ -8,6 +8,7 @@ tags:
 categories: Hexo博客
 toc: true
 reward: true
+copyright: true
 ---
 
 <!--# Hexo系列 | （四）多机同步更新博客-->

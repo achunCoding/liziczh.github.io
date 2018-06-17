@@ -2,6 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 comments: false
-toc: false
+toc: true
 reward: false
+copyright: false
 ---

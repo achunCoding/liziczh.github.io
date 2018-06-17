@@ -8,6 +8,7 @@ tags:
 categories: DataBase
 toc: true
 reward: true
+copyright: true
 ---
 
 <!--# Oracle | DDL&约束-->

@@ -8,6 +8,7 @@ tags:
 categories: Hexo博客
 toc: true
 reward: true
+copyright: true
 ---
 
 <!--# Hexo系列 | （三）URL优化&站点提交-->

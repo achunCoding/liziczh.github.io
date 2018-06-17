@@ -8,6 +8,7 @@ tags:
 categories: JavaDots
 toc: true
 reward: true
+copyright: true
 ---
 
 <!--# Tetris-->

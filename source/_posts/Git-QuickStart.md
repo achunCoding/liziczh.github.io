@@ -8,6 +8,7 @@ tags:
 categories: Git
 toc: true
 reward: true
+copyright: true
 ---
 
 <!--# Git QuickStart-->

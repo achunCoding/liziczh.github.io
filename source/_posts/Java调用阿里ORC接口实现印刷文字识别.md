@@ -8,6 +8,7 @@ tags:
 categories: JavaDots
 toc: true
 reward: true
+copyright: true
 ---
 
 <!--# Java调用阿里ORC接口实现印刷文字识别-->

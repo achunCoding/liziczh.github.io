@@ -8,6 +8,7 @@ tags:
 categories: Markdown
 toc: true
 reward: true
+copyright: true
 ---
 
 <!--# Markdown 语法-->

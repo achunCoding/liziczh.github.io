@@ -8,6 +8,7 @@ tags:
 categories: 电脑维修
 toc: true
 reward: true
+copyright: true
 ---
 
 <!--# Windows | 系统重装-->

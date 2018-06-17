@@ -51,7 +51,7 @@
         </div>
       <% } %>
       
-      <% if (((theme.copyright_type === 2 && !post.copyright) || (theme.copyright_type === 1 && post.copyright)) && !index){ %>
+      <% if ((theme.copyright_type === 2  || (theme.copyright_type === 1 && post.copyright)) && !index){ %>
         <div> 
           <ul class="post-copyright">
             <li>
