@@ -13,10 +13,9 @@ copyright: true
 
 <!--# Oracle | DQL&DML-->
 
-SQL结构化查询语言，用于访问和处理关系数据库的标准语言。
-DML数据操作语言，主要分为数据查询与数据更新。
-数据查询指 SELECT 查询。
-数据更新指 INSERT 插入，UPDATE 更新，DELETE 删除。
+SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。
+数据查询语言DQL，SELECT 查询块，用于SQL查询。
+数据操作语言DML，INSERT 插入，UPDATE 更新，DELETE 删除，用于SQL更新。
 
 <!--more-->
 

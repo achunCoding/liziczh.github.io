@@ -1,5 +1,5 @@
 ---
-title: Oracle | DDL&约束
+title: Oracle | DDL&约束&DCL&TCL
 comments: true
 date: 2018-05-13 17:32:29
 id: db-oracle-ddl
@@ -13,9 +13,14 @@ copyright: true
 
 <!--# Oracle | DDL&约束-->
 
-DDL数据定义语言
+数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，即 CREATE 创建、ALTER 修改、DROP 删除。
+约束CONSTRAINT。
+数据控制语言DCL，用于授予/回收访问数据库的权限，即 GRANT 授予、REVOKE 回收。
+事务控制语言TCL，用于事务的提交/回滚，即 COMMIT 提交、ROLLBACK 回滚。
 
 <!--more-->
+
+# DDL
 
 ## Oracle 数据类型
 
@@ -275,7 +280,7 @@ DROP SEQUENCE <序列名>
 
 
 
-# 约束
+# 约束-CONSTRAINT
 
 ```mysql
 CONSTRAINT <约束名> <约束类型>(约束列)
@@ -331,7 +336,7 @@ CONSTRAINT ck_cloumn CHECK(<列名> BETWEEN 值1 AND 值2)
 CONSTRAINT fk_cloumn FOREIGN KEY (<列名1>,<列名2>...) REFERENCES <表名>(<列名1>,<列名2>...) ON DELETE <CASCADE|SET NULL> 
 ```
 
-# 数据库安全
+# 数据库安全-DCL
 
 ## 授予权限：GRANT
 
@@ -380,7 +385,7 @@ GRANT <角色1>
 ON <对象类型> <对象名>
 TO <角色2>,<用户>
 ```
-# 事务
+# 事务-TCL
 
 **事务**：用于**保证数据完整性**。由一组DML语句组成，这组DML语句要么全部成功，要么全部失败。
 
@@ -403,9 +408,15 @@ TO <角色2>,<用户>
 
 ## 事务处理
 
-**COMMIT**：提交
+### 提交：COMMIT
 
-**ROLLBACK**：回滚
+事务提交：
+
+显式提交：
+
+隐式提交：DDL，DCL
+
+### 回滚：ROLLBACK
 
 # 数据库设计范式
 
