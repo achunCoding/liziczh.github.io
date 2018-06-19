@@ -1,5 +1,5 @@
 ---
-title: JS | 原型
+title: JavaScript 原型
 comments: true
 date: 2018-04-09 17:45:07
 id: js-prototype
@@ -11,7 +11,7 @@ reward: true
 copyright: true
 ---
 
-<!--# JS | 原型-->
+<!--# JavaScript 原型-->
 
 JavaScript是一门面向对象的编程语言，Brendan Eich为JavaScript设计了**继承**机制，但为了简化继承，并未引入“类”的概念，而是采用**构造函数**直接生成实例，采用**原型 (prototype) **共享通用数据。
 
