@@ -299,7 +299,7 @@ var f = new Function(arg1, arg2, ..., argN, function_body) // 函数对象
 
 ## 1.8 JS语句
 
-### 1.8.1 判断语句
+### 1.8.1 选择语句
 
 **if语句**：
 
@@ -708,13 +708,15 @@ obj instanceof Object;  // true  判断obj是否为Object的一个实例。
 
 
 
-## 2.5 JS原型（难点）
+## 2.5 JS原型
 
-原型(prototype)简化了继承。
+JavaScript是一门面向对象的编程语言，Brendan Eich为JavaScript设计了**继承**机制，但为了简化继承，并未引入“类”的概念，而是采用**构造函数**直接生成实例，采用**原型 (prototype) **共享通用数据。
+
+<!-- more -->
 
 ### 2.5.1 构造函数
 
-JavaScript是一门面向对象的编程语言。Brendan Eich为JavaScript设计了**继承**机制，但并未引入“类”的概念，而是采用**构造函数**直接生成实例。
+Brendan Eich为JavaScript设计了**继承**机制，采用**构造函数**直接生成实例。
 
 ```js
 // 构造函数
@@ -764,7 +766,6 @@ Obj.prototype.constructor = Obj
 ### 2.5.4 原型继承
 
 原型继承：当查找一个对象的属性时，JavaScript会向上遍历原型链，直到找到相应的属性为止。
-
 原型继承的本质：由于所有的实例对象共享同一个prototype对象，那么从外界看起来，prototype对象就好像是实例对象的原型，而实例对象则好像"继承"了prototype对象一样。
 
 原型继承：设置[子类的原型]是[父类的实例]。
@@ -772,6 +773,7 @@ Obj.prototype.constructor = Obj
 ```js
 son.prototype = new Father()
 ```
+
 ## 2.6 JS事件机制
 
 事件一般与函数配合使用，这样就可以使事件驱动函数执行。
