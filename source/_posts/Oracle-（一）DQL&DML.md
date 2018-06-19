@@ -1,5 +1,5 @@
 ---
-title: Oracle | DQL&DML
+title: Oracle | （一）DQL&DML
 comments: true
 date: 2018-05-12 19:32:29
 id: db-oracle-dml
@@ -14,8 +14,8 @@ copyright: true
 <!--# Oracle | DQL&DML-->
 
 SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。
-数据查询语言DQL，SELECT 查询块，用于SQL查询。
-数据操作语言DML，INSERT 插入，UPDATE 更新，DELETE 删除，用于SQL更新。
+数据查询语言DQL，用于SQL查询，DQL语句即 SELECT 查询块，
+数据操作语言DML，用于SQL更新，DML语句即 INSERT 插入，UPDATE 更新，DELETE 删除。
 
 <!--more-->
 

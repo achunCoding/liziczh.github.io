@@ -1,5 +1,5 @@
 ---
-title: Oracle | DDL&约束&DCL&TCL
+title: Oracle | （二）DDL&约束&DCL&TCL
 comments: true
 date: 2018-05-13 17:32:29
 id: db-oracle-ddl
@@ -11,18 +11,18 @@ reward: true
 copyright: true
 ---
 
-<!--# Oracle | DDL&约束-->
+<!--# Oracle | DDL&约束&DCL&TCL-->
 
-数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语法主要包括 CREATE 创建、ALTER 修改、DROP 删除。
+数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`DROP` 删除。
 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束、唯一约束、主键约束、检查约束、外键约束。
-数据控制语言DCL，用于授予/回收访问数据库的权限，即 GRANT 授予、REVOKE 回收。
-事务控制语言TCL，用于事务的提交/回滚，即 COMMIT 提交、ROLLBACK 回滚。
+数据控制语言DCL，用于授予/回收访问数据库的权限，即 `GRANT` 授予、`REVOKE` 回收。
+事务控制语言TCL，用于事务的提交/回滚，即 `COMMIT` 提交、`ROLLBACK` 回滚。
 
 <!--more-->
 
 # DDL
 
-数据定义语言DDL，主要用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语法主要包括 CREATE 创建、ALTER 修改、DROP 删除。
+数据定义语言DDL，主要用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`DROP` 删除。
 
 ## Oracle 数据类型
 
@@ -342,7 +342,7 @@ CONSTRAINT fk_cloumn FOREIGN KEY (<列名1>,<列名2>...) REFERENCES <表名>(<�
 
 # 数据库安全-DCL
 
-数据控制语言DCL，用于授予/回收用户/角色访问数据库的权限，DCL语句包括 GRANT 授予、REVOKE 回收。
+数据控制语言DCL，用于授予/回收用户/角色访问数据库的权限，DCL语句即 `GRANT` 授予、`REVOKE` 回收。
 
 ## 授予权限：GRANT
 
@@ -413,6 +413,8 @@ TO <角色2>,<用户>
 --于是引入事务锁，以保证数据的完整性。
 
 ## 事务处理
+
+事务控制语言TCL，用于事务的提交/回滚。TCL语句即 `COMMIT` 提交、`ROLLBACK` 回滚。
 
 ### 提交：COMMIT
 

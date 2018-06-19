@@ -1,5 +1,5 @@
 ---
-title: Hexo系列 | （五）Yilia主题优化
+title: Hexo系列 | Yilia主题优化
 comments: true
 date: 2018-06-17 19:13:57
 id: hexo-yilia-optimization
@@ -11,7 +11,7 @@ reward: true
 copyright: true
 ---
 
-<!--# Hexo系列 | （五）Yilia主题优化-->
+<!--# Hexo系列 | Yilia主题优化-->
 
 yilia主题简单优雅，但是缺少一些我想要的功能，所以我自己稍微扩展了一些功能，比如添加了之前使用的LiveRe评论系统，添加了百度主动推送，在文章底部添加了版权声明，勉强实现了相册功能。
 优化之后的yilia：[https://github.com/liziczh/hexo-theme-yilia](https://github.com/liziczh/hexo-theme-yilia)
