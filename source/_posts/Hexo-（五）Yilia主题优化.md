@@ -1,5 +1,5 @@
 ---
-title: Hexo | Yilia主题优化
+title: Hexo | （五）Yilia主题优化
 comments: true
 date: 2018-06-17 19:13:57
 id: hexo-yilia-optimization
@@ -11,10 +11,10 @@ reward: true
 copyright: true
 ---
 
-<!--# Hexo | Yilia主题优化-->
+<!--# Hexo | （五）Yilia主题优化-->
 
-yilia主题简单优雅，但是缺少一些我想要的功能，所以我自己稍微扩展了一些功能，比如添加了之前使用的LiveRe评论系统，添加了百度主动推送，在文章底部添加了版权声明，勉强实现了相册功能。
-yilia主题优化：[https://github.com/liziczh/hexo-theme-yilia](https://github.com/liziczh/hexo-theme-yilia)
+yilia主题简单优雅，但是缺少一些我想要的功能，所以我自己稍微扩展了一些功能，比如添加了之前使用的LiveRe评论系统，新增了百度自动推送功能，在文章底部追加了版权声明，勉强实现了相册功能。
+优化后的yilia主题：[https://github.com/liziczh/hexo-theme-yilia](https://github.com/liziczh/hexo-theme-yilia)
 
 <!--more-->
 
@@ -141,7 +141,7 @@ copyright_type: 0
 
 ### new:相册页面（未完成）
 
-暂时是直接将以下代码嵌入index.md文档中，勉强实现相册功能。但这样写我看着都难受，之后再改。
+暂时是直接将以下代码嵌入index.md文档中，勉强实现相册功能。但这样写我自己看着都难受，之后有时间再改。
 
 1.相册图片CSS
 
@@ -187,15 +187,6 @@ ready(function(){
 ### new:Ones页面（未完成）
 
 单独写一个Ones的静态界面，暂未完成，之后再说。
-
-### Chrome无法访问链接的问题
-
-**问题描述**：部署页面之后，Chrome浏览器无法访问链接，提示你的连接不是私密连接......
-**解决方案**：前往[chrome://net-internals/#hsts](chrome://net-internals/#hsts)，在Delete domain中输入无法访问的网页。
-
-### 七牛云插件
-
-添加七牛云插件，简单方便上传图片。
 
 
 

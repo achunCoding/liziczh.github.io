@@ -47,8 +47,6 @@ $ npm install hexo-cli -g   # 安装hexo命令行模式
 $ hexo -v  # 查看hexo版本，验证是否安装成功
 ```
 
-->[hexo命令](#hexocommand)
-
 ## 2. hexo建站
 
 1.新建一个blog文件夹，打开blog文件夹，Git Bash。
@@ -380,7 +378,12 @@ categories:
 
 由于国内访问Github Pages速度较慢，所以我将Coding Pages解析线路设为默认，供国内访问；将Github Pages解析线路设为境外，供国外访问。
 
-## <span id = "hexocommand">附：hexo常用命令</span>
+## Chrome无法访问链接问题
+
+**问题描述**：部署页面之后，Chrome无法访问链接，提示你的连接不是私密连接......
+**解决方案**：前往[chrome://net-internals/#hsts](chrome://net-internals/#hsts)，在Delete domain中输入无法访问的网页地址。
+
+## 附：hexo常用命令
 
 | 命令                        | 描述                                                       |
 | --------------------------- | ---------------------------------------------------------- |

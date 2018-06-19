@@ -38,7 +38,6 @@ copyright: false
 - [Web-CSS](http://liziczh.com/web-css.html)
 - [Web-JavaScript](http://liziczh.com/web-javascript.html)
 - [Web-jQuery](http://liziczh.com/web-jquery.html)
-- [JavaScript原型](http://liziczh.com/js-prototype.html)
 
 ### Hexo 博客系列
 

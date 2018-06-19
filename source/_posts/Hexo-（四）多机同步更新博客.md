@@ -15,11 +15,11 @@ copyright: true
 
 Hexo博客存在一个问题：我们仅仅将博客的静态页面文件部署到了github远程仓库中，而我们的站点源文件仍在本地存储。如果存储站点源文件的电脑系统崩溃了，或者我们换了其他电脑，我们便无法实时更新博客了。
 如果选择重新搭建站点，不仅过程繁琐，而且还需要大量时间安装依赖、主题配置、博客优化，极其麻烦。所以我们需要将站点必要文件也部署到github远程仓库中。
-我们采取的远程仓库部署策略是：一个仓库两个分支。仓库即[yourname.github.io]，一个分支[master]用于托管演示页面，一个分支[hexo]用于保存Hexo博客站点的必要文件。
+我们采取的远程仓库部署策略是：一个仓库两个分支。仓库即[yourname.github.io]，一个分支[master]用于托管演示页面，一个分支[backup]用于备份Hexo博客站点的必要文件。
 
 <!-- more -->
 
-## 多机同步更新的前提：hexo分支
+## 多机同步更新的前提：backup分支
 
 Hexo博客站点的必要文件：
 
@@ -51,12 +51,18 @@ public/
 2.在Hexo博客站点根目录（即blog文件夹）中GitBash：
 
 ```shell
-$ git init  # 将blog作为一个git仓库进行初始化
-$ git checkout -b hexo  # 创建/切换hexo分支
-$ git add .  # 将文件添加到暂存区
-$ git commit -m "提交说明"  # 将暂存区文件提交到本地仓库
+# 将blog作为一个git仓库进行初始化
+$ git init  
+# 创建/切换hexo分支
+$ git checkout -b backup  
+# 将文件添加到暂存区
+$ git add .  
+# 将暂存区文件提交到本地仓库
+$ git commit -m "提交说明"  
+# 添加远程仓库
 $ git remote add origin https://github.com/yourname/yourname.github.io.git
-$ git push origin hexo  # 将本地仓库推送至远程仓库
+# 将本地仓库推送至远程仓库
+$ git push origin backup  
 ```
 
 ## 多机同步更新博客
@@ -70,7 +76,7 @@ $ git push origin hexo  # 将本地仓库推送至远程仓库
 
 ```shell
 # 克隆hexo分支到本地
-$ git clone -b hexo https://github.com/yourname/yourname.github.io.git
+$ git clone -b backup https://github.com/yourname/yourname.github.io.git
 # 进入yourname.github.io文件夹
 $ cd yourname.github.io
 # 安装hexo
@@ -157,5 +163,5 @@ $ hexo g -d
 ```shell
 $ git add .
 $ git commit -m "commit-message"
-$ git push origin hexo
+$ git push origin backup
 ```
