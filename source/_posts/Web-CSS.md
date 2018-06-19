@@ -796,5 +796,3 @@ position:absolute
 | `#rrggbb`                | 十六进制数（如#c3c3c3）          |
 
 
-
-> 参考资料W3school：http://www.w3school.com.cn/css/index.asp

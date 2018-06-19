@@ -713,10 +713,3 @@ var a = $.noConflict();  // 释放$的控制权，将$的能力赋予a。
 未完待续...
 
 
-
-
-
-
-
-> 参考资料：
-> W3shool：[jQuery 教程](http://www.w3school.com.cn/jquery/index.asp)

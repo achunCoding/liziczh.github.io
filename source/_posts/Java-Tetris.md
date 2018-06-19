@@ -4,8 +4,8 @@ comments: true
 date: 2018-05-19 23:01:34
 id: java-tetris
 tags: 
-- JavaDots
-categories: JavaDots
+- Java小程序
+categories: Java小程序
 toc: true
 reward: true
 copyright: true

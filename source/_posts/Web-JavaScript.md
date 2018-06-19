@@ -1118,10 +1118,3 @@ navigator对象：浏览器信息
 
 
 
-
-> 参考资料：
-> W3school：[JavaScript教程](ECMAScript)，[ECMAScript](http://www.w3school.com.cn/js/pro_js_history.asp)；
-> 菜鸟教程：[JavaScript教程](http://www.runoob.com/js/js-tutorial.html)；
-> 阮一峰老师：[Javascript继承机制的设计思想](http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html)
-
-

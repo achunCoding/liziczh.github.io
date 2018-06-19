@@ -394,3 +394,4 @@ categories:
 | `hexo g -d`<br>`hexo d -g`  | 生成静态文件后直接部署<br>部署之前先生成静态文件           |
 
 > 若想了解更多关于hexo命令的介绍，请参考[指令 | hexo](https://hexo.io/zh-cn/docs/commands.html)
+

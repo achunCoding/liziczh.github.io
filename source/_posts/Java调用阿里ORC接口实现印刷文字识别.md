@@ -4,8 +4,8 @@ comments: true
 date: 2018-06-08 15:17:29
 id: java-aliorc-impl
 tags:
-- JavaDots
-categories: JavaDots
+- Java小程序
+categories: Java小程序
 toc: true
 reward: true
 copyright: true
