@@ -435,14 +435,5 @@ TO <角色2>,<用户>
 
 
 
-# Oracle分页语句 
 
-```sql
-select * 
-from ( 
-  select "temp".*, ROWNUM "rn" 
-  from  "查询块" "temp" 
-  where ROWNUM <= currengPage * pageSize ) 
-where "rn" > (currentPage-1) * pageSize
-```
 
