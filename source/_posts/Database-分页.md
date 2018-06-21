@@ -17,14 +17,6 @@ copyright: true
 
 <!--more-->
 
-## List分页
-
-### subList()分页
-
-直接使用方法`subList(int begin,int end)`实现分页。
-
-## SQL语句分页
-
 ### Oracle分页语句
 
 Oracle使用`ROWNUM`伪列实现分页：
@@ -39,9 +31,9 @@ where "rn" > (currentPage-1) * pageSize
 ```
 
 > currentPage：当前页数。
-> pageSize：每页展示的数据行数。
+> pageSize：每页显示的数据条数。
 
-### 分页语句
+### MySql分页语句
 
 MySql使用`LIMIT`关键字实现分页：
 
@@ -51,7 +43,7 @@ from <表/查询块>
 limit [offset,] pageSize
 ```
 
-> offset：当前页数。
-> pageSize：每页展示的数据条数。
+> offset：开始的行数。
+> pageSize：每页显示的数据条数。
 
 
