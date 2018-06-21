@@ -5,6 +5,7 @@ date: 2018-05-12 19:32:29
 id: db-oracle-dml
 tags:
 - oracle
+- database
 categories: DataBase
 toc: true
 reward: true
