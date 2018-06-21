@@ -1,5 +1,5 @@
 ---
-title: 分页
+title: 分页SQL语句
 comments: true
 date: 2018-06-21 12:50:55
 id: db-pagination
@@ -11,11 +11,9 @@ reward: true
 copyright: true
 ---
 
-<!--# 分页-->
+<!--# 分页SQL语句-->
 
-List分页
-
-SQL语句分页
+使用数据库SQL语句实现分页功能。
 
 <!--more-->
 
@@ -50,10 +48,10 @@ MySql使用`LIMIT`关键字实现分页：
 ```sql
 select *
 from <表/查询块>
-limit [offset,] rows
+limit [offset,] pageSize
 ```
 
-> currentPage：当前页数。
+> offset：当前页数。
 > pageSize：每页展示的数据条数。
 
 
