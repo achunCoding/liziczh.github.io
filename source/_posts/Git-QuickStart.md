@@ -56,15 +56,16 @@ $ git clone <url>
 $ git clone -b <branch-name> <url>
 ```
 
-git支持多种数据传输协议：
-
-- ssh协议：`user@server:/path.git`
-- https协议： `http(s)://` 
-- git协议： `git://` 
+> git支持多种数据传输协议：
+>
+> - ssh协议：`user@server:/path.git`
+> - https协议： `http(s)://` 
+> - git协议： `git://` 
+>
 
 ## 3. Git 版本控制
 
-git 工作流程：
+**git 工作流程**：
 
 ![git版本控制](http://p6uturdzt.bkt.clouddn.com/git-filestream.png)
 
@@ -75,24 +76,31 @@ git 工作流程：
 $ git status
 ```
 
-git 文件状态变化：
+**git 文件状态变化**：
 
 ![git文件状态](http://p6uturdzt.bkt.clouddn.com/git-filestatus.png)
 
-### 3.2 跟踪文件/暂存更新
+### 3.2 暂存修改
+
+`git add` ：①跟踪未跟踪文件，②将已跟踪文件放入暂存区。
 
 ```shell
-# 跟踪所有文件，暂存所有更新
+# 跟踪所有文件，暂存所有修改
 $ git add .
-# 跟踪某个文件，暂存某个文件更新
+# 跟踪某个文件，暂存某个文件修改
 $ git add <file-name>
 ```
 
-`git add` ：将目标文件快照放入暂存区， 同时跟踪未跟踪的文件。
-- 跟踪文件：跟踪新文件，并将新文件放入暂存区。
-- 暂存更新：将本次更新后的文件快照放入暂存区。
+### 3.3 撤销文件修改
 
-### 3.3 提交更新
+```shell
+# 撤销文件修改
+$ git checkout --<file>
+```
+
+### 3.4 提交更新
+
+`git commit` ：将本次更新全部提交到本地仓库。
 
 ```shell
 # 提交已暂存更新
@@ -101,12 +109,6 @@ $ git commit -m "提交说明"
 $ git commit -am "提交说明"
 ```
 
-### 3.4 撤销更新
-
-```shell
-# 撤销更新
-$ git checkout -- <file>
-```
 
 ### 3.5 查看提交日志
 
@@ -117,14 +119,29 @@ $ git log
 
 ### 3.6 版本回退
 
+**1. 软回退**：只回退commit信息。
+
 ```shell
-# 回退至上一版本，^指上一版本，^^指上上个版本
-$ git reset --hard HEAD^
-# 回退至上n个版本
-$ git reset --hard HEAD~n
-# 跳转到某一版本
-$ git reset --hard <版本号>
+$ git reset --soft HEAD^
 ```
+
+**2. 默认回退**：回退commit和index信息，只保留本地源码。
+
+```shell
+$ git reset --mixed HEAD^
+```
+
+**3. 硬回退**：commit、index信息、本地源码全部回退。
+
+```shell
+$ git reset --hard HEAD^
+```
+
+> 版本的表示方式：
+> - `HEAD^` 上一版本，`HEAD^^` 上上个版本 ...... 
+> - `HEAD~n`：上n个版本
+> - `<commit_id>`：某个指定版本
+>
 
 ## 4. Git 远程仓库
 
@@ -173,7 +190,6 @@ $ git push <remote-name> <branch-name>
 ## 5. Git 分支
 
 Git 分支原理：每一个分支存在一个分支指针，分支指针指向不同版本；
-
 Git 分支切换：HEAD 指针指向某个分支指针；
 
 ### 5.1 创建分支
@@ -183,10 +199,10 @@ Git 分支切换：HEAD 指针指向某个分支指针；
 $ git branch <branch-name>
 ```
 
-### 5.2 分支切换
+### 5.2 切换分支
 
 ```shell
-# 分支切换
+# 切换分支
 $ git checked <branch-name>
 #  创建并切换到该分支
 $ git checked -b <branch-name>
