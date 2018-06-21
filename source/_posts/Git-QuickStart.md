@@ -19,6 +19,26 @@ Git是目前世界上最流行的分布式版本控制系统。它速度快，�
 
 Git诞生于一个极富纷争的年代。起因是Linus创建了开源的Linux，在2002年以前，Linux的内核维护工作主要是由世界各地的志愿者将源码文件通过diff方式发给Linus，然后由Linus本人手工合并代码。到了2002年，Linux代码库之大已经很难通过手工方式管理，于是Linus选择了分布式版本控制系统BitKeeper管理和维护代码。2005年，BitKeeper与Linux开源社区的合作关系结束，迫使Linux开源社区不得不开发一套属于自己的版本控制系统。于是，Linus花了两周时间用C写了一个分布式版本控制系统Git，一个月之内Linux源码已经由Git进行管理了。
 
+## 0. Git 基本操作
+
+### 0.1 创建一个新的仓库 
+
+```shell
+$ git init
+$ git add .
+$ git commit -m "initial commit"
+$ git remote add origin <url>
+$ git push origin master
+```
+
+### 0.2 记录每次更新到远程仓库 
+
+```shell
+$ git add .
+$ git commit -m "initial commit"
+$ git push origin master
+```
+
 ## 1. Git 配置
 
 ### 1.1 配置用户信息
