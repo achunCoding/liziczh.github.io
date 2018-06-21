@@ -14,16 +14,20 @@ copyright: true
 
 <!--# Oracle | DDL&约束&DCL&TCL-->
 
-数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`DROP` 删除。
-约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束、唯一约束、主键约束、检查约束、外键约束。
+数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`TRUNCATE` 截断 、`DROP` 删除。
+约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 `NOT NULL`、唯一约束 `UNIQUE`、主键约束 `PRIMARY KEY`、检查约束 `CHECK`、外键约束 `FOREIGN KEY`。
 数据控制语言DCL，用于授予/回收访问数据库的权限，即 `GRANT` 授予、`REVOKE` 回收。
-事务控制语言TCL，用于事务的提交/回滚，即 `COMMIT` 提交、`ROLLBACK` 回滚。
+事务控制语言TCL，用于事务的提交/回滚，即 `COMMIT` 提交、`ROLLBACK` 回滚，`SAVEPOINT` 保存点。
 
 <!--more-->
 
-# DDL
+# Oracle数据库
 
-数据定义语言DDL，主要用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`DROP` 删除。
+## 解锁账户
+
+```sql
+alter user <账户名> account unlock;
+```
 
 ## Oracle 数据类型
 
@@ -36,7 +40,14 @@ copyright: true
   - 字符串：`'abc'`
   - 字符串连接符：`||`
 
+## 数据伪列
 
+- `ROWID`：数据库中每一行都有一个行地址，rowid伪列返回该行地址。rowId值可以唯一标识数据库中的一行。
+- `ROWNUM`，返回一个数值代表行的次序。通过使用rownum，用户可以限制查询返回的行数。
+
+# DDL
+
+数据定义语言DDL，主要用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`DROP` 删除。
 
 ## 表：TABLE
 
@@ -101,6 +112,12 @@ ALTER TABLE <表名> ADD CONSTRAINT <约束名> <约束类型>(约束列);
 ALTER TABLE <表名> DROP CONSTRAINT <约束名>;
 ```
 
+### 截断表
+
+```sql
+TRUNCATE TABLE <表名>
+```
+
 ### 删除表
 
 1.删除表：
@@ -110,10 +127,6 @@ DROP TABLE <表名>
 ```
 
 2.截断表：
-
-```mysql
-TRUNCATE TABLE <表名> ADD 
-```
 
 ### 复制表
 
@@ -140,10 +153,6 @@ CREATE TABLE <表名> AS
 ```mysql
 RENAME <旧名称> TO <新名称>
 ```
-
-### 数据伪列
-
-
 
 ## 视图：VIEW
 
@@ -413,16 +422,32 @@ TO <角色2>,<用户>
 
 --于是引入事务锁，以保证数据的完整性。
 
-## 事务处理
+## 事务处理-TCL
 
-事务控制语言TCL，用于事务的提交/回滚。TCL语句即 `COMMIT` 提交、`ROLLBACK` 回滚。
+事务控制语言TCL，用于事务的提交/回滚。TCL语句即 `COMMIT` 提交、`ROLLBACK` 回滚，`SAVEPOINT` 保存点。
 
 ### 提交：COMMIT
+
+事务提交 `COMMIT`：将事务中对数据库的修改进行永久保存。
 
 - 显式提交：需要主动提交SQL语句对于数据库的修改，未提交之前可以rollback。如DML操作。
 - 隐式提交：SQL语句执行结束自动提交，无法rollback。如DDL，DCL。
 
 ### 回滚：ROLLBACK
+
+回滚 `ROLLBACK`：取消事务中对数据库进行的修改。
+
+### 保存点：SAVEPOINT
+
+```sql
+savepoint <savepoint_name> 
+```
+
+### 回滚至保存点
+
+```sql
+rollback to savepoint <savepoint_name>
+```
 
 # 数据库设计范式
 
