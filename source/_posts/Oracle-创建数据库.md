@@ -6,7 +6,7 @@ id: oracle-newdb
 tags:
 - oracle
 - database
-categories: Database
+categories: DataBase
 toc: true
 reward: true
 copyright: true

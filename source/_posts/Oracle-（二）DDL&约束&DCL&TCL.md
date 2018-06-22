@@ -6,7 +6,7 @@ id: db-oracle-ddl
 tags:
 - oracle
 - database
-categories: Database
+categories: DataBase
 toc: true
 reward: true
 copyright: true

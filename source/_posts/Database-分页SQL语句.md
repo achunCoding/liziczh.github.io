@@ -5,7 +5,7 @@ date: 2018-06-21 12:50:55
 id: db-pagination
 tags: 
 - database
-categories: Database
+categories: DataBase
 toc: true
 reward: true
 copyright: true
