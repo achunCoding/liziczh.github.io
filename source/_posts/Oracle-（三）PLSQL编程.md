@@ -247,34 +247,100 @@ END LOOP;
 
 
 
-## PL/SQL 存储过程与函数
-存储过程：执行特定操作，无返回值；
-函数：执行复杂操作，有返回值；
+## 存储过程与函数
+存储过程用于执行特定操作，无返回值；函数用于执行复杂操作，有返回值；存储函数与函数统称为PL/SQL子程序。
 
-### 函数
+### 存储过程-PROCEDURE
 
+存储过程：执行特定操作，无返回值，多用于更新操作。
 
+#### 定义存储过程
 
+```plsql
+CREATE [OR REPLACE] PROCEDURE Procedure_name
+[ (argment [ { IN | IN OUT }] Type,
+      argment [ { IN | OUT | IN OUT } ] Type ]
+{ IS | AS }
+<类型.变量的说明> 
+BEGIN
+	<执行部分>
+EXCEPTION
+	<异常处理>
+END;
+```
 
+### 函数-FUNCTION
 
+函数：执行复杂操作，有返回值。
 
+#### 定义函数
 
+```plsql
+CREATE [OR REPLACE] FUNCTION <函数名>[(argument [ { IN | IN OUT }] type,argument [ { IN | OUT | IN OUT } ] type]RETURN <返回值类型>
+{ IS | AS }
+	<类型.变量的说明> 
+BEGIN
+	<执行部分>
+EXCEPTION
+	<异常处理>
+END;
+```
 
+#### 函数执行方式
 
+```plsql
+dbms_output.put_line(fun());
+```
 
+```plsql
+select fun() from dual;
+```
 
+#### 函数参数类型
 
+- 输入参数 `IN`；
+- 输出参数 `OUT`；
+- 输入输出参数 `IN OUT`；
 
+#### 参数传递类型
 
+**位置表示法**：根据参数位置依此传值
 
-## PL/SQL 触发器
+```plsql
+argument_value1[,argument_value2 …]
+```
 
-触发器：事件触发，执行相应操作；
+**名称表示法**：使用关系运算符`=>`为参数传值
 
+```plsql
+argument => parameter [,…]
+```
 
+## 触发器-TRIGGER
 
+触发器：用户定义的一类由事件触发而执行的特殊过程。
 
+### 定义触发器
 
+```plsql
+CREATE [OR REPLACE] TRIGGER <触发器名称>
+{BEFORE | AFTER | INSTEAD OF}
+{INSERT | DELETE | UPDATE [OF column [, column …]]}
+ON <表/视图>
+[REFERENCING {OLD [AS] old | NEW [AS] new| PARENT as parent}]
+[FOR EACH ROW | STATEMENT]
+[WHEN condition]
+trigger_body;
+```
 
+触发事件：INSERT | DELETE | UPDATE
 
+触发时机：BEFORE | AFTER
 
+触发频率：
+- ROW：行级触发；当某触发事件发生时，对受到该操作影响的每一行数据，触发器都单独执行一次。
+- STATEMENT：语句级触发；当某触发事件发生时，该触发器只执行一次。
+
+触发器的新值与旧值：
+- :new  事件触发后的新的数据行；
+- :old  事件触发前的旧的数据行；
