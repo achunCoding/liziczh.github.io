@@ -1,5 +1,5 @@
 ---
-title: 分页SQL语句
+title: Database | 分页SQL语句
 comments: true
 date: 2018-06-21 12:50:55
 id: db-pagination
@@ -11,7 +11,7 @@ reward: true
 copyright: true
 ---
 
-<!--# 分页SQL语句-->
+<!--# Database | 分页SQL语句-->
 
 使用数据库SQL语句实现分页功能。
 
