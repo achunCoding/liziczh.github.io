@@ -18,18 +18,17 @@ PL/SQL即过程化SQL语言，是一种高级数据库程序设计语言，专�
 
 <!--more-->
 
-## PL/SQL中可引用的SQL语句 
+## PL/SQL 中可引用的SQL语句 
 
 - 可用DML语句：SELECT INTO，INSERT，UPDATE，DELETE。
 - 可用TCL语句：COMMIT，ROLLBACK，SAVEPOINT。
 - 不能使用DDL语句。
 
-## PL/SQL块
+## PL/SQL 块
 PL/SQL块：声明部分+执行部分+异常处理部分
 
 ```plsql
--- 注释
-/* 注释 */
+-- 单行注释
 DECLARE
 	/* 声明部分：声明变量，类型、游标、局部存储过程和函数 */
 BEGIN
@@ -39,9 +38,9 @@ BEGIN
 END;
 ```
 
-## PL/SQL变量
+## PL/SQL 变量
 
-### PL/SQL变量命名
+### PL/SQL 变量命名
 
 | 标识符   | 命名规则        |
 | -------- | --------------- |
@@ -53,7 +52,7 @@ END;
 | 表       | Name_table      |
 | 记录类型 | Name_record     |
 
-### PL/SQL变量类型
+### PL/SQL 变量类型
 
 #### 基本数据类型
 
@@ -71,7 +70,7 @@ TYPE record_type IS RECORD(
    Fieldn typen  [NOT NULL]  [:= expn ] ) ;
 ```
 
-#### %TYPE类型
+#### %TYPE 类型
 
 %TYPE类型：指某个已定义变量的数据类型类型，或数据表中某列的数据类型。
 
@@ -80,7 +79,7 @@ TYPE record_type IS RECORD(
 - 所引用的数据库列的数据类型可以不必知道；
 - 所引用的数据库列的数据类型可以实时改变。
 
-#### %RowType类型
+#### %RowType 类型
 
 %RowType类型：返回一个与数据库表的数据结构一致的记录类型。
 
@@ -89,16 +88,17 @@ TYPE record_type IS RECORD(
 - 所引用的数据库中列的个数和数据类型可以不必知道；
 - 所引用的数据库中列的个数和数据类型可以实时改变。
 
-### PL/SQL特殊运算符
+### PL/SQL 特殊运算符
 
 赋值运算符：`:=`
 关系运算符：`=>`
+上下限运算符：`..`
 
-## PL/SQL流程控制
+## PL/SQL 流程控制
 
 ### 条件语句
 
-#### IF语句
+#### IF 语句
 
 ```plsql
 IF <条件语句1> THEN
@@ -112,7 +112,7 @@ END IF;
 
 > 注意是`ELSIF`不是<s>`ELSEIF`</s>；
 
-#### CASE语句
+#### CASE 语句
 
 ```plsql
 CASE <变量>
@@ -126,7 +126,7 @@ END;
 
 ### 循环语句
 
-#### do...while循环
+#### do...while 循环
 
 ```plsql
 LOOP
@@ -135,7 +135,7 @@ LOOP
 END LOOP;
 ```
 
-#### while循环
+#### while 循环
 
 ```plsql
 WHILE <条件语句> LOOP
@@ -143,7 +143,7 @@ WHILE <条件语句> LOOP
 END LOOP;
 ```
 
-#### for循环
+#### for 循环
 
 ```plsql
 FOR <循环计数器> IN [REVERSE] <下限> .. <上限> LOOP
@@ -151,66 +151,123 @@ FOR <循环计数器> IN [REVERSE] <下限> .. <上限> LOOP
 END LOOP;
 ```
 
-### GOTO语句
+### GOTO 语句
 
 定义标号：`<<标号名>>`；
 
 GOTO语句：`GOTO 标号名`；
 
-### NULL语句
+### NULL 语句
 
 NULL语句：不做任何事，增强代码可读性。
 
-## PL/SQL异常处理
+## PL/SQL 异常处理
 
-预定义异常
-非预定义异常
+### 异常错误类型
 
-```sql
-when ... then ...
+- 预定义错误：无需在程序中定义，由Oracle自动将其引发。
+- 非预定义错误：用户需在程序中定义，然后由Oracle自动将其引发。
+- 用户定义错误：用户在程序中定义，然后显式地在程序中将其引发。
+
+### 异常处理
+
+```plsql
+EXCEPTION
+   WHEN <异常1> THEN  <异常处理代码>
+   WHEN <异常2> THEN  <异常处理代码>
+   WHEN OTHERS THEN  <异常处理代码>
 ```
 
-SQLCODE：异常编号；
-SQLERRM：错误信息；
 
+## 游标-CURSOR
+为了处理 SQL 语句，Oracle 会分配一片叫上下文 (context area) 的区域来处理所必需的信息，即系统为用户开设的一个数据缓冲区，存放SQL语句的执行结果。游标就是一个指向上下文的句柄或指针。
 
-## 游标
-游标是系统为用户开设的一个数据缓冲区，存放SQL语句的执行结果。
+### 显式游标
 
-游标概念：句柄/指针。
+显式游标主要是用于对查询语句的处理，尤其是查询结果为多条记录的情况。
 
-显式游标：
-①定义游标：Cursor name (参数1 参数类型,参数2 参数类型) IS select查询
-②打开游标：OPEN cursor_name (参数1 => 值,参数2 => 值)
-③提取游标数据：FETCH
-④关闭游标：CLOSE cursor_name
-> 参数可省略。
+#### **显式游标处理**：
 
-游标属性：
-%FOUND：最近一次读取记录成功返回true
-%NOTFOUND：
-%ISOPEN：是否打开
-%ROW
+①定义游标：定义游标名及对应的 SELECT 查询
 
-```sql
-for 索引 IN 游标[参数] loop
+```plsql
+CURSOR cursor_name (参数1 参数类型,参数2 参数类型...) IS 
+SELECT查询块;
+```
+
+> 数据类型不能使用长度约束。
+
+②打开游标：执行游标的 SELECT 查询，将查询结果放入缓冲区，并指向缓冲区首部。
+
+```plsql
+OPEN cursor_name (参数1 => 值,参数2 => 值...);
+```
+
+③提取游标数据：检索结果集中的数据行，放入指定输出变量中。
+
+```plsql
+FETCH cursor_name INTO {variable_list | record_variable };
+```
+
+④关闭游标：释放游标占用的系统资源。
+
+```plsql
+CLOSE cursor_name;
+```
+
+#### 显式游标属性
+
+| 游标属性    | 描述                                          |
+| ----------- | --------------------------------------------- |
+| `%FOUND`    | 布尔型，当最近一次读记录时成功返回,则值为TRUE |
+| `%NOTFOUND` | 布尔型，当最近一次读记录时返回失败,则值为TRUE |
+| `%ISOPEN`   | 布尔型，当游标已打开时返回 TRUE               |
+| `%ROWCOUNT` | 数值型，返回已从游标中读取的记录数            |
+
+#### 游标的FOR循环：
+
+```plsql
+FOR 索引 IN 游标[值1,值2...] LOOP
     循环语句;
-end loop;
+END LOOP;
 ```
 
-隐式游标：主要用于数据更新。由Oracle系统提供，不需要用户定义游标，也不允许用户操作游标
+### 隐式游标
+
+隐式游标主要用于数据更新操作。隐式游标的名字为`SQL`，由Oracle系统提供，无需用户处理。
+
+#### 隐式游标属性
+
+| 游标属性       | 描述                                          |
+| -------------- | --------------------------------------------- |
+| `SQL%FOUND`    | 布尔型，当最近一次读记录时成功返回,则值为TRUE |
+| `SQL%NOTFOUND` | 布尔型，当最近一次读记录时返回失败,则值为TRUE |
+| `SQL%ISOPEN`   | 布尔型，当游标已打开时返回 TRUE               |
+| `SQL%ROWCOUNT` | 数值型，返回已从游标中读取的记录数            |
 
 
 
-## PL/SQL存储单元
-存储过程：执行特定操作，无返回值
-函数：执行复杂操作，有返回值
+## PL/SQL 存储过程与函数
+存储过程：执行特定操作，无返回值；
+函数：执行复杂操作，有返回值；
 
-函数的三种执行方式
-
-包：过程与函数的组合体
+### 函数
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+## PL/SQL 触发器
 
 触发器：事件触发，执行相应操作；
 

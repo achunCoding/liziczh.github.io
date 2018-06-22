@@ -2,7 +2,7 @@
 title: JavaWeb | Servlet
 comments: true
 date: 2018-06-22 12:35:34
-id: java-tetris
+id: javaweb-servlet
 tags: 
 - JavaWeb
 categories: JavaWeb
