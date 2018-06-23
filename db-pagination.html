@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="后海有树的院子">
 <meta property="og:description" content="使用数据库SQL语句实现分页功能。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-22T15:43:46.142Z">
+<meta property="og:updated_time" content="2018-06-23T08:24:34.788Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Database | 分页SQL语句">
 <meta name="twitter:description" content="使用数据库SQL语句实现分页功能。">
@@ -239,9 +239,9 @@ var _hmt = _hmt || [];
 <p>currentPage：当前页数。<br>pageSize：每页显示的数据条数。</p>
 </blockquote>
 <h3 id="MySql分页语句"><a href="#MySql分页语句" class="headerlink" title="MySql分页语句"></a>MySql分页语句</h3><p>MySql使用<code>LIMIT</code>关键字实现分页：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> *</span><br><span class="line"><span class="keyword">from</span> &lt;表/查询块&gt;</span><br><span class="line"><span class="keyword">limit</span> [<span class="keyword">offset</span>,] pageSize</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> *</span><br><span class="line"><span class="keyword">from</span> &lt;表/查询块&gt;</span><br><span class="line"><span class="keyword">limit</span> (currentPage<span class="number">-1</span>)*pageSize, pageSize</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>offset：开始的行数。<br>pageSize：每页显示的数据条数。</p>
+<p>currentPage：当前页数。<br>pageSize：每页显示的数据条数。</p>
 </blockquote>
 
       
@@ -560,11 +560,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Java小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
+                <a href="javascript:void(0)" class="js-tag color3">Java小程序</a>
               </li>
              
               <li class="article-tag-list-item">

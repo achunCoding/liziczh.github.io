@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/db-oracle-ddl.html</loc>
+    
+    <lastmod>2018-06-23T08:28:29.790Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/db-pagination.html</loc>
+    
+    <lastmod>2018-06-23T08:24:34.788Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/categories/index.html</loc>
     
     <lastmod>2018-06-23T03:32:50.009Z</lastmod>
@@ -9,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/tags/index.html</loc>
+    <loc>https://liziczh.com/ones/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://liziczh.com/ones/index.html</loc>
+    <loc>https://liziczh.com/tags/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
@@ -51,23 +65,9 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/db-pagination.html</loc>
-    
-    <lastmod>2018-06-22T15:43:46.142Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://liziczh.com/git-quickstart.html</loc>
     
     <lastmod>2018-06-22T15:38:32.541Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/db-oracle-ddl.html</loc>
-    
-    <lastmod>2018-06-22T15:37:30.788Z</lastmod>
     
   </url>
   
