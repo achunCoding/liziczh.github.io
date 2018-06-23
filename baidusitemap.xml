@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+    
+    
+    
+    
+    
+  <url>
+    <loc>https://liziczh.com/web-css.html</loc>
+    <lastmod>2018-06-23T03:50:26.560Z</lastmod>
+    <data>
+        <display>
+        <title>Web | CSS</title>
+        <pubTime>2018-04-05T09:21:22.000Z</pubTime>
+        
+        <tag>Web前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/windows-reos.html</loc>
+    <lastmod>2018-06-23T03:50:26.560Z</lastmod>
+    <data>
+        <display>
+        <title>Windows | 系统重装&系统启动模式</title>
+        <pubTime>2018-04-10T04:09:34.000Z</pubTime>
+        
+        <tag>Windows</tag>
+         
+         
+           
+             
+              <breadCrumb title="电脑维修" url="https://liziczh.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/web-javascript.html</loc>
+    <lastmod>2018-06-23T03:50:26.560Z</lastmod>
+    <data>
+        <display>
+        <title>Web | JavaScript</title>
+        <pubTime>2018-04-07T06:27:12.000Z</pubTime>
+        
+        <tag>Web前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/web-html.html</loc>
+    <lastmod>2018-06-23T03:50:26.560Z</lastmod>
+    <data>
+        <display>
+        <title>Web | HTML</title>
+        <pubTime>2018-04-03T14:36:54.000Z</pubTime>
+        
+        <tag>Web前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/web-jquery.html</loc>
+    <lastmod>2018-06-23T03:50:26.560Z</lastmod>
+    <data>
+        <display>
+        <title>Web | jQuery</title>
+        <pubTime>2018-04-09T08:34:00.000Z</pubTime>
+        
+        <tag>Web前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/markdown-grammer.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown语法</title>
+        <pubTime>2018-05-07T07:46:55.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="Markdown" url="https://liziczh.com/categories/Markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/java-aliorc-impl.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Java调用阿里ORC接口实现印刷文字识别</title>
+        <pubTime>2018-06-08T07:17:29.000Z</pubTime>
+        
+        <tag>Java小程序</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java小程序" url="https://liziczh.com/categories/Java%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/db-oracle-dml.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Oracle | （一）DQL&DML</title>
+        <pubTime>2018-05-12T11:32:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Oracle</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/jdbc.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>JDBC</title>
+        <pubTime>2018-05-18T15:33:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/oracle-plsql.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Oracle | （三）PL/SQL编程</title>
+        <pubTime>2018-05-15T09:19:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Oracle</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/db-oracle-ddl.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Oracle | （二）DDL&约束&DCL&TCL</title>
+        <pubTime>2018-05-13T09:32:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Oracle</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/hexo-yilia-optimization.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo | （五）Yilia主题优化</title>
+        <pubTime>2018-06-17T11:13:57.000Z</pubTime>
+        
+        <tag>Hexo博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo博客" url="https://liziczh.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/java-poi-impl.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Java使用POI实现对Excel文件的读写</title>
+        <pubTime>2018-06-03T03:42:30.000Z</pubTime>
+        
+        <tag>Java小程序</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java小程序" url="https://liziczh.com/categories/Java%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/oracle-newdb.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Oracle新建数据库</title>
+        <pubTime>2018-05-20T06:56:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Oracle</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/java-tetris.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Java | Tetris</title>
+        <pubTime>2018-05-19T15:01:34.000Z</pubTime>
+        
+        <tag>Java小程序</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java小程序" url="https://liziczh.com/categories/Java%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/javaweb-servlet.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>JavaWeb | Servlet</title>
+        <pubTime>2018-06-22T04:35:34.000Z</pubTime>
+        
+        <tag>JavaWeb</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="https://liziczh.com/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/hexo-multimachine.html</loc>
+    <lastmod>2018-06-23T03:50:26.544Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo | （四）多机同步更新博客</title>
+        <pubTime>2018-04-21T14:00:07.000Z</pubTime>
+        
+        <tag>Hexo博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo博客" url="https://liziczh.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/hexo-next-settings.html</loc>
+    <lastmod>2018-06-23T03:50:26.528Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo | （二）Next主题个性化设置</title>
+        <pubTime>2018-04-12T00:34:58.000Z</pubTime>
+        
+        <tag>Hexo博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo博客" url="https://liziczh.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/hexo-submit.html</loc>
+    <lastmod>2018-06-23T03:50:26.528Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo | （三）URL优化&站点提交</title>
+        <pubTime>2018-04-21T11:01:32.000Z</pubTime>
+        
+        <tag>Hexo博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo博客" url="https://liziczh.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/git-quickstart.html</loc>
+    <lastmod>2018-06-23T03:50:26.528Z</lastmod>
+    <data>
+        <display>
+        <title>Git | QuickStart</title>
+        <pubTime>2018-04-30T15:56:55.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="https://liziczh.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/hexo-blog-build.html</loc>
+    <lastmod>2018-06-23T03:50:26.528Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo | （一）使用Hexo+Pages搭建个人博客</title>
+        <pubTime>2018-04-11T02:57:46.000Z</pubTime>
+        
+        <tag>Hexo博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo博客" url="https://liziczh.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/db-pagination.html</loc>
+    <lastmod>2018-06-23T03:50:26.528Z</lastmod>
+    <data>
+        <display>
+        <title>Database | 分页SQL语句</title>
+        <pubTime>2018-06-21T04:50:55.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
