@@ -40,10 +40,10 @@ MySql使用`LIMIT`关键字实现分页：
 ```sql
 select *
 from <表/查询块>
-limit [offset,] pageSize
+limit (currentPage-1)*pageSize, pageSize
 ```
 
-> offset：开始的行数。
+> currentPage：当前页数。
 > pageSize：每页显示的数据条数。
 
 

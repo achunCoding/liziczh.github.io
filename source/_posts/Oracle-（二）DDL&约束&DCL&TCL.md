@@ -14,10 +14,10 @@ copyright: true
 
 <!--# Oracle | DDL&约束&DCL&TCL-->
 
-数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`TRUNCATE` 截断 、`DROP` 删除。
-约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 `NOT NULL`、唯一约束 `UNIQUE`、主键约束 `PRIMARY KEY`、检查约束 `CHECK`、外键约束 `FOREIGN KEY`。
-数据控制语言DCL，用于授予/回收访问数据库的权限，即 `GRANT` 授予、`REVOKE` 回收。
-事务控制语言TCL，用于事务的提交/回滚，即 `COMMIT` 提交、`ROLLBACK` 回滚，`SAVEPOINT` 保存点。
+- 数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`TRUNCATE` 截断 、`DROP` 删除。
+- 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 `NOT NULL`、唯一约束 `UNIQUE`、主键约束 `PRIMARY KEY`、检查约束 `CHECK`、外键约束 `FOREIGN KEY`。
+- 数据控制语言DCL，用于授予/回收访问数据库的权限，即 `GRANT` 授予、`REVOKE` 回收。
+- 事务控制语言TCL，用于事务的提交/回滚，即 `COMMIT` 提交、`ROLLBACK` 回滚，`SAVEPOINT` 保存点。
 
 <!--more-->
 
@@ -43,7 +43,7 @@ alter user <账户名> account unlock;
 ## 数据伪列
 
 - `ROWID`：数据库中每一行都有一个行地址，rowid伪列返回该行地址。rowId值可以唯一标识数据库中的一行。
-- `ROWNUM`，返回一个数值代表行的次序。通过使用rownum，用户可以限制查询返回的行数。
+- `ROWNUM`：返回一个数值代表行的次序。通过使用rownum，用户可以限制查询返回的行数。
 
 # DDL
 
