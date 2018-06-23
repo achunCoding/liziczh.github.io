@@ -4,7 +4,7 @@ comments: true
 date: 2018-04-30 23:56:55
 id: git-quickstart
 tags: 
-- git
+- Git
 categories: Git
 toc: true
 reward: true

@@ -4,8 +4,8 @@ comments: true
 date: 2018-05-15 17:19:29
 id: oracle-plsql
 tags:
-- oracle
-- database
+- Oracle
+- Database
 categories: DataBase
 toc: true
 reward: true

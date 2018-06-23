@@ -4,8 +4,8 @@ comments: true
 date: 2018-05-20 14:56:29
 id: oracle-newdb
 tags:
-- oracle
-- database
+- Oracle
+- Database
 categories: DataBase
 toc: true
 reward: true

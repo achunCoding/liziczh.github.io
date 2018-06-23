@@ -4,7 +4,7 @@ comments: true
 date: 2018-05-07 15:46:55
 id: markdown-grammer
 tags: 
-- markdown
+- Markdown
 categories: Markdown
 toc: true
 reward: true
@@ -40,11 +40,11 @@ Markdown是一种简单的、用于文本排版的轻量级标记语言，它使
 ## 加粗
 
 ```markdown
-**Blod**
+**Bold**
 ```
 
 ```markdown
-__Blod__
+__Bold__
 ```
 
 **效果**：
