@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://liziczh.com/jdbc.html</loc>
+    <lastmod>2018-06-23T13:09:20.429Z</lastmod>
+    <data>
+        <display>
+        <title>JDBC</title>
+        <pubTime>2018-05-18T15:33:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://liziczh.com/db-oracle-ddl.html</loc>
     <lastmod>2018-06-23T08:28:29.790Z</lastmod>
     <data>
@@ -85,28 +107,6 @@
            
              
               <breadCrumb title="Markdown" url="https://liziczh.com/categories/Markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/jdbc.html</loc>
-    <lastmod>2018-06-23T02:36:01.373Z</lastmod>
-    <data>
-        <display>
-        <title>JDBC</title>
-        <pubTime>2018-05-18T15:33:29.000Z</pubTime>
-        
-        <tag>Database</tag>
-         
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
           
         </display>
     </data>
