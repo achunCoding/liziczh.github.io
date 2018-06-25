@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="自然生长">
 <meta property="og:description" content="DDL（Data Definition Language，数据定义语言），用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 CREATE 创建、ALTER 修改、TRUNCATE 截断 、DROP 删除。 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 NOT NULL、唯一约束 UNIQUE、主键约束 PRIMARY KEY、检查">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-25T04:16:08.032Z">
+<meta property="og:updated_time" content="2018-06-25T14:17:14.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle | （二）DDL&amp;约束&amp;DCL&amp;TCL">
 <meta name="twitter:description" content="DDL（Data Definition Language，数据定义语言），用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 CREATE 创建、ALTER 修改、TRUNCATE 截断 、DROP 删除。 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 NOT NULL、唯一约束 UNIQUE、主键约束 PRIMARY KEY、检查">
@@ -356,6 +356,13 @@ var _hmt = _hmt || [];
 <li><strong>脏读</strong>：事务T1更新了一行记录，还未提交所做的修改，这个T2读取了更新后的数据，然后T1执行回滚操作，取消刚才的修改，所以T2所读取的行就无效，也就是脏数据。</li>
 </ul>
 <p>–于是引入事务锁，以保证数据的完整性。</p>
+<p><strong>四种隔离级别</strong>：</p>
+<ul>
+<li>串行化</li>
+<li>可重复读</li>
+<li>读已提交</li>
+<li>读未提交</li>
+</ul>
 <h2 id="事务处理-TCL"><a href="#事务处理-TCL" class="headerlink" title="事务处理-TCL"></a>事务处理-TCL</h2><p>事务控制语言TCL，用于事务的提交/回滚。TCL语句即 <code>COMMIT</code> 提交、<code>ROLLBACK</code> 回滚，<code>SAVEPOINT</code> 保存点。</p>
 <h3 id="提交：COMMIT"><a href="#提交：COMMIT" class="headerlink" title="提交：COMMIT"></a>提交：COMMIT</h3><p>事务提交 <code>COMMIT</code>：将事务中对数据库的修改进行永久保存。</p>
 <ul>
@@ -674,11 +681,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color4">Database</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Database</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -686,11 +693,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Java小程序</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color3">Java小程序</a>
               </li>
              
               <li class="article-tag-list-item">
