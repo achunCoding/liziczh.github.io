@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://liziczh.com/jdbc.html</loc>
-    <lastmod>2018-06-25T02:29:35.209Z</lastmod>
+    <lastmod>2018-06-25T04:20:09.656Z</lastmod>
     <data>
         <display>
         <title>JDBC</title>
@@ -25,10 +25,51 @@
     </url>
 
     
+  <url>
+    <loc>https://liziczh.com/git-quickstart.html</loc>
+    <lastmod>2018-06-25T04:18:06.393Z</lastmod>
+    <data>
+        <display>
+        <title>Git | QuickStart</title>
+        <pubTime>2018-04-30T15:56:55.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="https://liziczh.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/oracle-plsql.html</loc>
+    <lastmod>2018-06-25T04:17:07.406Z</lastmod>
+    <data>
+        <display>
+        <title>Oracle | （三）PL/SQL编程</title>
+        <pubTime>2018-05-15T09:19:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Oracle</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>https://liziczh.com/db-oracle-ddl.html</loc>
-    <lastmod>2018-06-23T08:28:29.790Z</lastmod>
+    <lastmod>2018-06-25T04:16:08.032Z</lastmod>
     <data>
         <display>
         <title>Oracle | （二）DDL&约束&DCL&TCL</title>
@@ -47,6 +88,89 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://liziczh.com/db-oracle-dml.html</loc>
+    <lastmod>2018-06-25T04:12:16.399Z</lastmod>
+    <data>
+        <display>
+        <title>Oracle | （一）DQL&DML</title>
+        <pubTime>2018-05-12T11:32:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Oracle</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/web-javascript.html</loc>
+    <lastmod>2018-06-25T04:07:17.755Z</lastmod>
+    <data>
+        <display>
+        <title>Web | JavaScript</title>
+        <pubTime>2018-04-07T06:27:12.000Z</pubTime>
+        
+        <tag>Web前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/web-css.html</loc>
+    <lastmod>2018-06-25T04:06:46.234Z</lastmod>
+    <data>
+        <display>
+        <title>Web | CSS</title>
+        <pubTime>2018-04-05T09:21:22.000Z</pubTime>
+        
+        <tag>Web前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/web-html.html</loc>
+    <lastmod>2018-06-25T04:06:05.798Z</lastmod>
+    <data>
+        <display>
+        <title>Web | HTML</title>
+        <pubTime>2018-04-03T14:36:54.000Z</pubTime>
+        
+        <tag>Web前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://liziczh.com/db-pagination.html</loc>
@@ -74,26 +198,6 @@
     
     
   <url>
-    <loc>https://liziczh.com/web-html.html</loc>
-    <lastmod>2018-06-23T02:59:35.127Z</lastmod>
-    <data>
-        <display>
-        <title>Web | HTML</title>
-        <pubTime>2018-04-03T14:36:54.000Z</pubTime>
-        
-        <tag>Web前端</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://liziczh.com/markdown-grammer.html</loc>
     <lastmod>2018-06-23T02:58:31.879Z</lastmod>
     <data>
@@ -107,70 +211,6 @@
            
              
               <breadCrumb title="Markdown" url="https://liziczh.com/categories/Markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/git-quickstart.html</loc>
-    <lastmod>2018-06-22T15:38:32.541Z</lastmod>
-    <data>
-        <display>
-        <title>Git | QuickStart</title>
-        <pubTime>2018-04-30T15:56:55.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-         
-           
-             
-              <breadCrumb title="Git" url="https://liziczh.com/categories/Git/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/oracle-plsql.html</loc>
-    <lastmod>2018-06-22T15:37:18.409Z</lastmod>
-    <data>
-        <display>
-        <title>Oracle | （三）PL/SQL编程</title>
-        <pubTime>2018-05-15T09:19:29.000Z</pubTime>
-        
-        <tag>Database</tag>
-         
-        <tag>Oracle</tag>
-         
-         
-           
-             
-              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/db-oracle-dml.html</loc>
-    <lastmod>2018-06-22T15:37:04.036Z</lastmod>
-    <data>
-        <display>
-        <title>Oracle | （一）DQL&DML</title>
-        <pubTime>2018-05-12T11:32:29.000Z</pubTime>
-        
-        <tag>Database</tag>
-         
-        <tag>Oracle</tag>
-         
-         
-           
-             
-              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
           
         </display>
     </data>
@@ -393,46 +433,6 @@
            
              
               <breadCrumb title="Java小程序" url="https://liziczh.com/categories/Java%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/web-javascript.html</loc>
-    <lastmod>2018-06-19T09:34:40.534Z</lastmod>
-    <data>
-        <display>
-        <title>Web | JavaScript</title>
-        <pubTime>2018-04-07T06:27:12.000Z</pubTime>
-        
-        <tag>Web前端</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/web-css.html</loc>
-    <lastmod>2018-06-19T09:33:21.885Z</lastmod>
-    <data>
-        <display>
-        <title>Web | CSS</title>
-        <pubTime>2018-04-05T09:21:22.000Z</pubTime>
-        
-        <tag>Web前端</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>

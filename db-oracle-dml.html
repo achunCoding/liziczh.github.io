@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://liziczh.com">
   <title>Oracle | （一）DQL&amp;DML | 后海有树的院子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。数据查询语言DQL，用于SQL查询，DQL语句即 SELECT 查询块。数据操作语言DML，用于SQL更新，DML语句即 INSERT 插入，UPDATE 更新，DELETE 删除。">
+  <meta name="description" content="SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 SELECT 查询块。DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 INSERT 插入、UPDATE 更新、DELETE 删除。">
 <meta name="keywords" content="Database,Oracle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle | （一）DQL&amp;DML">
 <meta property="og:url" content="https://liziczh.com/db-oracle-dml.html">
 <meta property="og:site_name" content="后海有树的院子">
-<meta property="og:description" content="SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。数据查询语言DQL，用于SQL查询，DQL语句即 SELECT 查询块。数据操作语言DML，用于SQL更新，DML语句即 INSERT 插入，UPDATE 更新，DELETE 删除。">
+<meta property="og:description" content="SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 SELECT 查询块。DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 INSERT 插入、UPDATE 更新、DELETE 删除。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-22T15:37:04.036Z">
+<meta property="og:updated_time" content="2018-06-25T04:12:16.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle | （一）DQL&amp;DML">
-<meta name="twitter:description" content="SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。数据查询语言DQL，用于SQL查询，DQL语句即 SELECT 查询块。数据操作语言DML，用于SQL更新，DML语句即 INSERT 插入，UPDATE 更新，DELETE 删除。">
+<meta name="twitter:description" content="SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 SELECT 查询块。DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 INSERT 插入、UPDATE 更新、DELETE 删除。">
   
     <link rel="alternative" href="/atom.xml" title="后海有树的院子" type="application/atom+xml">
   
@@ -231,7 +231,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <!--# Oracle | DQL&DML-->
-<p>SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。<br>数据查询语言DQL，用于SQL查询，DQL语句即 <code>SELECT</code> 查询块。<br>数据操作语言DML，用于SQL更新，DML语句即 <code>INSERT</code> 插入，<code>UPDATE</code> 更新，<code>DELETE</code> 删除。</p>
+<p>SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。<br>DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 <code>SELECT</code> 查询块。<br>DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 <code>INSERT</code> 插入、<code>UPDATE</code> 更新、<code>DELETE</code> 删除。</p>
 <a id="more"></a>
 <h2 id="1-SQL查询★"><a href="#1-SQL查询★" class="headerlink" title="1. SQL查询★"></a>1. SQL查询★</h2><p>SELECT 语句的一般格式：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> [<span class="keyword">DISTINCT</span>] &lt;目标列表达式&gt; [<span class="keyword">AS</span>] &lt;别名&gt;</span><br><span class="line"><span class="keyword">FROM</span> &lt;表/视图&gt; [<span class="keyword">AS</span>] &lt;别名&gt;</span><br><span class="line">[<span class="keyword">WHERE</span> &lt;查询条件&gt;]</span><br><span class="line">[<span class="keyword">GROUP</span> <span class="keyword">BY</span> &lt;分组列&gt; [<span class="keyword">HAVING</span> &lt;分组条件&gt;]]</span><br><span class="line">[<span class="keyword">ORDER</span> <span class="keyword">BY</span> &lt;排序列&gt; [<span class="keyword">ASC</span>|<span class="keyword">DESC</span>]];</span><br></pre></td></tr></table></figure>
@@ -758,19 +758,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Hexo博客</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Java小程序</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Java小程序</a>
               </li>
              
               <li class="article-tag-list-item">

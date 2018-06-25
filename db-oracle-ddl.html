@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://liziczh.com">
   <title>Oracle | （二）DDL&amp;约束&amp;DCL&amp;TCL | 后海有树的院子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 CREATE 创建、ALTER 修改、TRUNCATE 截断 、DROP 删除。 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 NOT NULL、唯一约束 UNIQUE、主键约束 PRIMARY KEY、检查约束 CHECK、外键约束 FOREIGN KEY。">
+  <meta name="description" content="DDL（Data Definition Language，数据定义语言），用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 CREATE 创建、ALTER 修改、TRUNCATE 截断 、DROP 删除。 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 NOT NULL、唯一约束 UNIQUE、主键约束 PRIMARY KEY、检查">
 <meta name="keywords" content="Database,Oracle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle | （二）DDL&amp;约束&amp;DCL&amp;TCL">
 <meta property="og:url" content="https://liziczh.com/db-oracle-ddl.html">
 <meta property="og:site_name" content="后海有树的院子">
-<meta property="og:description" content="数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 CREATE 创建、ALTER 修改、TRUNCATE 截断 、DROP 删除。 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 NOT NULL、唯一约束 UNIQUE、主键约束 PRIMARY KEY、检查约束 CHECK、外键约束 FOREIGN KEY。">
+<meta property="og:description" content="DDL（Data Definition Language，数据定义语言），用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 CREATE 创建、ALTER 修改、TRUNCATE 截断 、DROP 删除。 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 NOT NULL、唯一约束 UNIQUE、主键约束 PRIMARY KEY、检查">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-23T08:28:29.790Z">
+<meta property="og:updated_time" content="2018-06-25T04:16:08.032Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle | （二）DDL&amp;约束&amp;DCL&amp;TCL">
-<meta name="twitter:description" content="数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 CREATE 创建、ALTER 修改、TRUNCATE 截断 、DROP 删除。 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 NOT NULL、唯一约束 UNIQUE、主键约束 PRIMARY KEY、检查约束 CHECK、外键约束 FOREIGN KEY。">
+<meta name="twitter:description" content="DDL（Data Definition Language，数据定义语言），用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 CREATE 创建、ALTER 修改、TRUNCATE 截断 、DROP 删除。 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 NOT NULL、唯一约束 UNIQUE、主键约束 PRIMARY KEY、检查">
   
     <link rel="alternative" href="/atom.xml" title="后海有树的院子" type="application/atom+xml">
   
@@ -232,10 +232,10 @@ var _hmt = _hmt || [];
       
         <!--# Oracle | DDL&约束&DCL&TCL-->
 <ul>
-<li>数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 <code>CREATE</code> 创建、<code>ALTER</code> 修改、<code>TRUNCATE</code> 截断 、<code>DROP</code> 删除。</li>
+<li>DDL（Data Definition Language，数据定义语言），用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 <code>CREATE</code> 创建、<code>ALTER</code> 修改、<code>TRUNCATE</code> 截断 、<code>DROP</code> 删除。</li>
 <li>约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 <code>NOT NULL</code>、唯一约束 <code>UNIQUE</code>、主键约束 <code>PRIMARY KEY</code>、检查约束 <code>CHECK</code>、外键约束 <code>FOREIGN KEY</code>。</li>
-<li>数据控制语言DCL，用于授予/回收访问数据库的权限，即 <code>GRANT</code> 授予、<code>REVOKE</code> 回收。</li>
-<li>事务控制语言TCL，用于事务的提交/回滚，即 <code>COMMIT</code> 提交、<code>ROLLBACK</code> 回滚，<code>SAVEPOINT</code> 保存点。</li>
+<li>DCL（Data Control Language，数据控制语言），用于授予/回收访问数据库的权限。DCL 语句即<code>GRANT</code> 授予、<code>REVOKE</code> 回收。</li>
+<li>TCL（Transaction Control Language，事务控制语言），用于事务的提交/回滚。TCL语句包括 <code>COMMIT</code> 提交、<code>ROLLBACK</code> 回滚，<code>SAVEPOINT</code> 保存点。</li>
 </ul>
 <a id="more"></a>
 <h1 id="Oracle数据库"><a href="#Oracle数据库" class="headerlink" title="Oracle数据库"></a>Oracle数据库</h1><h2 id="解锁账户"><a href="#解锁账户" class="headerlink" title="解锁账户"></a>解锁账户</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> &lt;账户名&gt; <span class="keyword">account</span> <span class="keyword">unlock</span>;</span><br></pre></td></tr></table></figure>
@@ -678,19 +678,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Hexo博客</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Java小程序</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Java小程序</a>
               </li>
              
               <li class="article-tag-list-item">
