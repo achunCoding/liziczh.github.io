@@ -18,6 +18,7 @@ copyright: false
 - [Oracle-（二）DDL&约束&DCL&TCL](http://liziczh.com/db-oracle-ddl.html)
 - [Oracle-（三）PL/SQL编程](https://liziczh.com/oracle-plsql.html)
 - [分页SQL语句](https://liziczh.com/db-pagination.html)
+- [JDBC](https://liziczh.com/jdbc.html)
 
 ### Java小程序
 
