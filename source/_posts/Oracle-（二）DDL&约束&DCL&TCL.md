@@ -14,10 +14,10 @@ copyright: true
 
 <!--# Oracle | DDL&约束&DCL&TCL-->
 
-- 数据定义语言DDL，用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等，DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`TRUNCATE` 截断 、`DROP` 删除。
+- DDL（Data Definition Language，数据定义语言），用于创建/修改/删除数据库的各种对象，如表、视图、索引、同义词、序列等。DDL语句主要包括 `CREATE` 创建、`ALTER` 修改、`TRUNCATE` 截断 、`DROP` 删除。
 - 约束CONSTRAINT，用于限制表的数据的类型，主要包括非空约束 `NOT NULL`、唯一约束 `UNIQUE`、主键约束 `PRIMARY KEY`、检查约束 `CHECK`、外键约束 `FOREIGN KEY`。
-- 数据控制语言DCL，用于授予/回收访问数据库的权限，即 `GRANT` 授予、`REVOKE` 回收。
-- 事务控制语言TCL，用于事务的提交/回滚，即 `COMMIT` 提交、`ROLLBACK` 回滚，`SAVEPOINT` 保存点。
+- DCL（Data Control Language，数据控制语言），用于授予/回收访问数据库的权限。DCL 语句即`GRANT` 授予、`REVOKE` 回收。
+- TCL（Transaction Control Language，事务控制语言），用于事务的提交/回滚。TCL语句包括 `COMMIT` 提交、`ROLLBACK` 回滚，`SAVEPOINT` 保存点。
 
 <!--more-->
 
@@ -421,6 +421,13 @@ TO <角色2>,<用户>
 - **脏读**：事务T1更新了一行记录，还未提交所做的修改，这个T2读取了更新后的数据，然后T1执行回滚操作，取消刚才的修改，所以T2所读取的行就无效，也就是脏数据。
 
 --于是引入事务锁，以保证数据的完整性。
+
+**四种隔离级别**：
+
+- 串行化
+- 可重复读
+- 读已提交
+- 读未提交
 
 ## 事务处理-TCL
 

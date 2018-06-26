@@ -13,7 +13,7 @@ copyright: true
 
 <!--# CSS-->
 
-CSS 层叠样式表 (Cascading Style Sheets) ，主要通过为HTML元素增添样式的方式修饰静态页面，实现了页面内容与样式分离。目前主流网页布局均采用 **div+CSS** 方式实现。
+CSS（Cascading Style Sheets，层叠样式表），主要通过为HTML元素增添样式的方式修饰静态页面，实现了页面内容与样式分离。目前主流网页布局均采用 **div+CSS** 方式实现。
 
 <!-- more -->
 

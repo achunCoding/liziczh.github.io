@@ -15,8 +15,8 @@ copyright: true
 <!--# Oracle | DQL&DML-->
 
 SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。
-数据查询语言DQL，用于SQL查询，DQL语句即 `SELECT` 查询块。
-数据操作语言DML，用于SQL更新，DML语句即 `INSERT` 插入，`UPDATE` 更新，`DELETE` 删除。
+DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 `SELECT` 查询块。
+DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 `INSERT` 插入、`UPDATE` 更新、`DELETE` 删除。
 
 <!--more-->
 

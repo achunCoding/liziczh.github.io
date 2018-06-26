@@ -14,7 +14,7 @@ copyright: true
 
 <!--# Oracle | （三）PL/SQL编程-->
 
-PL/SQL即过程化SQL语言，是一种高级数据库程序设计语言，专门用于在各种环境下对ORACLE数据库进行访问。由于该语言集成于数据库服务器中，所以PL/SQL代码可以对数据进行快速高效的处理。 
+PL/SQL（Procedural Language/SQL，过程化SQL语言），是一种高级数据库程序设计语言，专门用于在各种环境下对ORACLE数据库进行访问。由于该语言集成于数据库服务器中，所以PL/SQL代码可以对数据进行快速高效的处理。 
 
 <!--more-->
 
