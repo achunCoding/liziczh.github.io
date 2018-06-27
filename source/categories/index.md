@@ -14,10 +14,10 @@ copyright: false
 
 ### 数据库
 
-- [Oracle-（一）DQL&DML](http://liziczh.com/db-oracle-dml.html)
-- [Oracle-（二）DDL&约束&DCL&TCL](http://liziczh.com/db-oracle-ddl.html)
-- [Oracle-（三）PL/SQL编程](https://liziczh.com/oracle-plsql.html)
-- [分页SQL语句](https://liziczh.com/db-pagination.html)
+- [Database-DQL&DML](http://liziczh.com/db-dml.html)
+- [Oracle-DDL&约束&DCL&TCL](http://liziczh.com/db-oracle-ddl.html)
+- [Oracle-PL/SQL编程](https://liziczh.com/oracle-plsql.html)
+- [Database-分页SQL语句](https://liziczh.com/db-pagination.html)
 - [JDBC](https://liziczh.com/jdbc.html)
 
 ### Java小程序

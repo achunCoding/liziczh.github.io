@@ -1,5 +1,5 @@
 ---
-title: Oracle | （二）DDL&约束&DCL&TCL
+title: Oracle | DDL&约束&DCL&TCL
 comments: true
 date: 2018-05-13 17:32:29
 id: db-oracle-ddl

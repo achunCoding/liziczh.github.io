@@ -1,8 +1,8 @@
 ---
-title: Oracle | （一）DQL&DML
+title: Database | DQL&DML
 comments: true
 date: 2018-05-12 19:32:29
-id: db-oracle-dml
+id: db-dml
 tags:
 - Oracle
 - Database
@@ -12,11 +12,13 @@ reward: true
 copyright: true
 ---
 
-<!--# Oracle | DQL&DML-->
+<!--# Database | DQL&DML-->
 
-SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。
-DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 `SELECT` 查询块。
-DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 `INSERT` 插入、`UPDATE` 更新、`DELETE` 删除。
+SQL（Structured Query Language，结构化查询语言），面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。
+SQL 是一种 ANSI 标准，所以存在多种不同版本的 SQL 语言。但就 SQL 查询和更新而言，Oracle、MySql 等数据库系统的实现大同小异，基本可以互通移植。
+
+- DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 `SELECT` 查询块。
+- DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 `INSERT` 插入、`UPDATE` 更新、`DELETE` 删除。
 
 <!--more-->
 
