@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="https://liziczh.com">
   <title>Git | QuickStart | 自然生长</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git是目前世界上最流行的分布式版本控制系统。它速度快，简单，采用完全分布式，可高效管理代码，对非线性开发模式提供强力支持。">
+  <meta name="description" content="Git 是目前世界上最流行的分布式版本控制系统。它速度快，简单，采用完全分布式，可高效管理代码，对非线性开发模式提供强力支持。">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git | QuickStart">
 <meta property="og:url" content="https://liziczh.com/git-quickstart.html">
 <meta property="og:site_name" content="自然生长">
-<meta property="og:description" content="Git是目前世界上最流行的分布式版本控制系统。它速度快，简单，采用完全分布式，可高效管理代码，对非线性开发模式提供强力支持。">
+<meta property="og:description" content="Git 是目前世界上最流行的分布式版本控制系统。它速度快，简单，采用完全分布式，可高效管理代码，对非线性开发模式提供强力支持。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://p6uturdzt.bkt.clouddn.com/git-filestream.png">
 <meta property="og:image" content="http://p6uturdzt.bkt.clouddn.com/git-filestatus.png">
-<meta property="og:updated_time" content="2018-06-25T04:18:06.393Z">
+<meta property="og:updated_time" content="2018-06-27T10:08:43.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git | QuickStart">
-<meta name="twitter:description" content="Git是目前世界上最流行的分布式版本控制系统。它速度快，简单，采用完全分布式，可高效管理代码，对非线性开发模式提供强力支持。">
+<meta name="twitter:description" content="Git 是目前世界上最流行的分布式版本控制系统。它速度快，简单，采用完全分布式，可高效管理代码，对非线性开发模式提供强力支持。">
 <meta name="twitter:image" content="http://p6uturdzt.bkt.clouddn.com/git-filestream.png">
   
     <link rel="alternative" href="/atom.xml" title="自然生长" type="application/atom+xml">
@@ -234,9 +234,9 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <!--# Git QuickStart-->
-<p>Git是目前世界上最流行的分布式版本控制系统。它速度快，简单，采用完全分布式，可高效管理代码，对非线性开发模式提供强力支持。</p>
+<p>Git 是目前世界上最流行的分布式版本控制系统。它速度快，简单，采用完全分布式，可高效管理代码，对非线性开发模式提供强力支持。</p>
 <a id="more"></a>
-<p>Git诞生于一个极富纷争的年代。起因是Linus创建了开源的Linux，在2002年以前，Linux的内核维护工作主要是由世界各地的志愿者将源码文件通过diff方式发给Linus，然后由Linus本人手工合并代码。到了2002年，Linux代码库之大已经很难通过手工方式管理，于是Linus选择了分布式版本控制系统BitKeeper管理和维护代码。2005年，BitKeeper与Linux开源社区的合作关系结束，迫使Linux开源社区不得不开发一套属于自己的版本控制系统。于是，Linus花了两周时间用C写了一个分布式版本控制系统Git，一个月之内Linux源码已经由Git进行管理了。</p>
+<p>Git 诞生于一个极富纷争的年代。起因是 Linus 创建了开源的 Linux，在 2002 年以前，Linux 的内核维护工作主要是由世界各地的志愿者将源码文件通过 diff 方式发给 Linus，然后由Linus本人手工合并代码。到了 2002 年，Linux 代码库之大已经很难通过手工方式管理，于是 Linus 选择了分布式版本控制系统 BitKeeper 管理和维护代码。2005 年，BitKeeper 与 Linux开源社区的合作关系结束，迫使 Linux 开源社区不得不开发一套属于自己的版本控制系统。于是，Linus 花了两周时间用 C 写了一个分布式版本控制系统Git，一个月之内 Linux 源码已经由 Git 进行管理了。</p>
 <h2 id="0-Git-基本操作"><a href="#0-Git-基本操作" class="headerlink" title="0. Git 基本操作"></a>0. Git 基本操作</h2><h3 id="0-1-创建一个新的仓库"><a href="#0-1-创建一个新的仓库" class="headerlink" title="0.1 创建一个新的仓库"></a>0.1 创建一个新的仓库</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git init</span><br><span class="line"><span class="meta">$</span> git add .</span><br><span class="line"><span class="meta">$</span> git commit -m "initial commit"</span><br><span class="line"><span class="meta">$</span> git remote add origin &lt;url&gt;</span><br><span class="line"><span class="meta">$</span> git push origin master</span><br></pre></td></tr></table></figure>
 <h3 id="0-2-记录每次更新到远程仓库"><a href="#0-2-记录每次更新到远程仓库" class="headerlink" title="0.2 记录每次更新到远程仓库"></a>0.2 记录每次更新到远程仓库</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git add .</span><br><span class="line"><span class="meta">$</span> git commit -m "initial commit"</span><br><span class="line"><span class="meta">$</span> git push origin master</span><br></pre></td></tr></table></figure>
 <h2 id="1-Git-配置"><a href="#1-Git-配置" class="headerlink" title="1. Git 配置"></a>1. Git 配置</h2><h3 id="1-1-配置用户信息"><a href="#1-1-配置用户信息" class="headerlink" title="1.1 配置用户信息"></a>1.1 配置用户信息</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> git配置用户名</span><br><span class="line"><span class="meta">$</span> git config --global user.name "username"</span><br><span class="line"><span class="meta">#</span> git配置用户邮箱</span><br><span class="line"><span class="meta">$</span> git config --global user.email useremail@example.com</span><br></pre></td></tr></table></figure>

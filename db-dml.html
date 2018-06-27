@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://liziczh.com">
-  <title>Oracle | （一）DQL&amp;DML | 自然生长</title>
+  <title>Database | DQL&amp;DML | 自然生长</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 SELECT 查询块。DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 INSERT 插入、UPDATE 更新、DELETE 删除。">
+  <meta name="description" content="SQL（Structured Query Language，结构化查询语言），面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。SQL 是一种 ANSI 标准，所以存在多种不同版本的 SQL 语言。但就 SQL 查询和更新而言，Oracle、MySql 等数据库系统的实现大同小异，基本可以互通移植。  DQL（Data Query Language，数据查询语言），即 SQL 查">
 <meta name="keywords" content="Database,Oracle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Oracle | （一）DQL&amp;DML">
-<meta property="og:url" content="https://liziczh.com/db-oracle-dml.html">
+<meta property="og:title" content="Database | DQL&amp;DML">
+<meta property="og:url" content="https://liziczh.com/db-dml.html">
 <meta property="og:site_name" content="自然生长">
-<meta property="og:description" content="SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 SELECT 查询块。DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 INSERT 插入、UPDATE 更新、DELETE 删除。">
+<meta property="og:description" content="SQL（Structured Query Language，结构化查询语言），面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。SQL 是一种 ANSI 标准，所以存在多种不同版本的 SQL 语言。但就 SQL 查询和更新而言，Oracle、MySql 等数据库系统的实现大同小异，基本可以互通移植。  DQL（Data Query Language，数据查询语言），即 SQL 查">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-25T04:12:16.399Z">
+<meta property="og:updated_time" content="2018-06-27T10:40:29.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oracle | （一）DQL&amp;DML">
-<meta name="twitter:description" content="SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 SELECT 查询块。DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 INSERT 插入、UPDATE 更新、DELETE 删除。">
+<meta name="twitter:title" content="Database | DQL&amp;DML">
+<meta name="twitter:description" content="SQL（Structured Query Language，结构化查询语言），面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。SQL 是一种 ANSI 标准，所以存在多种不同版本的 SQL 语言。但就 SQL 查询和更新而言，Oracle、MySql 等数据库系统的实现大同小异，基本可以互通移植。  DQL（Data Query Language，数据查询语言），即 SQL 查">
   
     <link rel="alternative" href="/atom.xml" title="自然生长" type="application/atom+xml">
   
@@ -210,19 +210,19 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Oracle-（一）DQL&amp;DML" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Database-DQL&amp;DML" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Oracle | （一）DQL&amp;DML
+      Database | DQL&amp;DML
     </h1>
   
 
         
-        <a href="/db-oracle-dml.html" class="archive-article-date">
+        <a href="/db-dml.html" class="archive-article-date">
   	<time datetime="2018-05-12T11:32:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-12</time>
 </a>
         
@@ -230,8 +230,12 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!--# Oracle | DQL&DML-->
-<p>SQL结构化查询语言，面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。<br>DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 <code>SELECT</code> 查询块。<br>DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 <code>INSERT</code> 插入、<code>UPDATE</code> 更新、<code>DELETE</code> 删除。</p>
+        <!--# Database | DQL&DML-->
+<p>SQL（Structured Query Language，结构化查询语言），面向集合的描述性非过程化语言，用于访问和处理关系数据库的标准语言。<br>SQL 是一种 ANSI 标准，所以存在多种不同版本的 SQL 语言。但就 SQL 查询和更新而言，Oracle、MySql 等数据库系统的实现大同小异，基本可以互通移植。</p>
+<ul>
+<li>DQL（Data Query Language，数据查询语言），即 SQL 查询，DQL 语句即 <code>SELECT</code> 查询块。</li>
+<li>DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 <code>INSERT</code> 插入、<code>UPDATE</code> 更新、<code>DELETE</code> 删除。</li>
+</ul>
 <a id="more"></a>
 <h2 id="1-SQL查询★"><a href="#1-SQL查询★" class="headerlink" title="1. SQL查询★"></a>1. SQL查询★</h2><p>SELECT 语句的一般格式：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> [<span class="keyword">DISTINCT</span>] &lt;目标列表达式&gt; [<span class="keyword">AS</span>] &lt;别名&gt;</span><br><span class="line"><span class="keyword">FROM</span> &lt;表/视图&gt; [<span class="keyword">AS</span>] &lt;别名&gt;</span><br><span class="line">[<span class="keyword">WHERE</span> &lt;查询条件&gt;]</span><br><span class="line">[<span class="keyword">GROUP</span> <span class="keyword">BY</span> &lt;分组列&gt; [<span class="keyword">HAVING</span> &lt;分组条件&gt;]]</span><br><span class="line">[<span class="keyword">ORDER</span> <span class="keyword">BY</span> &lt;排序列&gt; [<span class="keyword">ASC</span>|<span class="keyword">DESC</span>]];</span><br></pre></td></tr></table></figure>
@@ -567,7 +571,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzklEQVR42u3aS46DMBAFQO5/aWY70gTynh07jFReoYhAmUWrPz6OeJ1/1u/fr+5MnnasWLi4uNPc83bdc+9ffwYrN+Di4u7nXkWMq+vo0RebSQLi5e+4uLiP5I4lK0kgw8XF/e/cJFlJNoCLi/tk7kyguS9+8kD24VoNFxd3gpt3KdddL+nv4uLiDnHPcrWF0EzwevEvXFzcLdw8oJwTK6EX41hcXNwvcduGSDImyROaesiKi4v7UW7b1Ci+QfAh6s+Bi4u7hTv2grESKGm11A0UXFzcBdw2TZlPdNrBSRR3cXFxP8rNg8tMatIiitYJLi7uAm4SqtpDVG1AvN/Ai7iLi4u7mDtWJ82UQ/k9lwZcXNzF3PbFeTLUFj9J2oSLi7uHO5ZkJAPUqDsbf4hjJifCxcUd4n6qyGkpbYjExcX9FrdFtwc18rLnTa2Gi4v7Je5Y0Fke7HBxcRdzz3Llg5P2MFa0GVxc3C3ctlVx/9B2AzPDV1xc3NXcsUFIO2TNh6/RMU1cXNwt3MEJTDw0nSmo3rRFcHFxH8DN052ZrdZdE1xc3IdxW9DMgQxcXNyd3KT4aVuibQIUhUJcXNwt3Pk57cxAJW+54uLibuH+ALjZe4oVJPmsAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByElEQVR42u3aS27DMAxFUe9/0wrQUYCk6n2ixNrA1ShIHPnYA0L8XBde42elv4639XnlfM/SkitXbpk7pmt+DcHN9+EGuXLl9nPn4YkHIALie8qVK/f+3PSb9GHkypX7dC4/+siVK/e5XJL8zFMdfjxqytXkypVb4KYF0xOfD9Z35cqVG3JHYVX2XLu7XLlye7j8CFIJT/XWC8rJ5MqVu5VLbkMGLPijVu4oV67c/+Ly8uXalZV95MqVe5qbjluRMmjwhtKgJleu3BbuWrrC06RKe+aPzo9cuXKPcdfKmvxokjZRtnWD5cqVu4mbtlorRD6c8WsgkytXbguXNDbSxgk/4iC0XLlyG7k8SJGCSKU1Gw9eyJUr9xi3Xv5YS5N4OUauXLmdXL6Ckakw2PGxLbly5fZwSXm0Epg4KM7V5MqVe4ybjlLx1gg/+qTplly5ck9zR7gqB5S0ffvlRciVK7eFmyY/6ehGWnitBD65cuXu5dbHs9IQxpOfi0xvyZUr9xiXFz35waVSqUWdYbly5d6Yy1u2CEQyNrly5d6GSwITL6ouBj65cuU2ctPkhzdXeGEU/UuuXLkt3LWCadoi3VwckStX7inuC1TX/DPmHoA8AAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 

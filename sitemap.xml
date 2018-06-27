@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/db-dml.html</loc>
+    
+    <lastmod>2018-06-27T10:40:29.045Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/git-quickstart.html</loc>
+    
+    <lastmod>2018-06-27T10:08:43.223Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/jdbc.html</loc>
     
     <lastmod>2018-06-26T07:28:48.281Z</lastmod>
@@ -16,23 +30,9 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/git-quickstart.html</loc>
-    
-    <lastmod>2018-06-25T04:18:06.393Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://liziczh.com/oracle-plsql.html</loc>
     
     <lastmod>2018-06-25T04:17:07.406Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/db-oracle-dml.html</loc>
-    
-    <lastmod>2018-06-25T04:12:16.399Z</lastmod>
     
   </url>
   

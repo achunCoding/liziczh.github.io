@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>https://liziczh.com/db-dml.html</loc>
+    <lastmod>2018-06-27T10:40:29.045Z</lastmod>
+    <data>
+        <display>
+        <title>Database | DQL&DML</title>
+        <pubTime>2018-05-12T11:32:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Oracle</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/git-quickstart.html</loc>
+    <lastmod>2018-06-27T10:08:43.223Z</lastmod>
+    <data>
+        <display>
+        <title>Git | QuickStart</title>
+        <pubTime>2018-04-30T15:56:55.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="https://liziczh.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://liziczh.com/jdbc.html</loc>
     <lastmod>2018-06-26T07:28:48.281Z</lastmod>
     <data>
@@ -48,54 +90,12 @@
 
     
   <url>
-    <loc>https://liziczh.com/git-quickstart.html</loc>
-    <lastmod>2018-06-25T04:18:06.393Z</lastmod>
-    <data>
-        <display>
-        <title>Git | QuickStart</title>
-        <pubTime>2018-04-30T15:56:55.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-         
-           
-             
-              <breadCrumb title="Git" url="https://liziczh.com/categories/Git/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://liziczh.com/oracle-plsql.html</loc>
     <lastmod>2018-06-25T04:17:07.406Z</lastmod>
     <data>
         <display>
         <title>Oracle | （三）PL/SQL编程</title>
         <pubTime>2018-05-15T09:19:29.000Z</pubTime>
-        
-        <tag>Database</tag>
-         
-        <tag>Oracle</tag>
-         
-         
-           
-             
-              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/db-oracle-dml.html</loc>
-    <lastmod>2018-06-25T04:12:16.399Z</lastmod>
-    <data>
-        <display>
-        <title>Oracle | （一）DQL&DML</title>
-        <pubTime>2018-05-12T11:32:29.000Z</pubTime>
         
         <tag>Database</tag>
          
