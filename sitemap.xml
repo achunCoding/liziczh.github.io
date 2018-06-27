@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/oracle-plsql.html</loc>
+    
+    <lastmod>2018-06-27T11:10:38.167Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/db-oracle-ddl.html</loc>
+    
+    <lastmod>2018-06-27T11:10:25.742Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/categories/index.html</loc>
+    
+    <lastmod>2018-06-27T11:09:46.296Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/hexo-blog-build.html</loc>
+    
+    <lastmod>2018-06-27T11:03:47.366Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/db-dml.html</loc>
     
     <lastmod>2018-06-27T10:40:29.045Z</lastmod>
@@ -16,23 +44,16 @@
   </url>
   
   <url>
+    <loc>https://liziczh.com/windows-reos.html</loc>
+    
+    <lastmod>2018-06-27T09:37:37.145Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/jdbc.html</loc>
     
     <lastmod>2018-06-26T07:28:48.281Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/db-oracle-ddl.html</loc>
-    
-    <lastmod>2018-06-25T14:17:14.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/oracle-plsql.html</loc>
-    
-    <lastmod>2018-06-25T04:17:07.406Z</lastmod>
     
   </url>
   
@@ -54,13 +75,6 @@
     <loc>https://liziczh.com/web-html.html</loc>
     
     <lastmod>2018-06-25T04:06:05.798Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/categories/index.html</loc>
-    
-    <lastmod>2018-06-24T01:45:50.592Z</lastmod>
     
   </url>
   
@@ -107,13 +121,6 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/windows-reos.html</loc>
-    
-    <lastmod>2018-06-22T15:36:06.057Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://liziczh.com/javaweb-servlet.html</loc>
     
     <lastmod>2018-06-22T11:21:28.148Z</lastmod>
@@ -145,13 +152,6 @@
     <loc>https://liziczh.com/hexo-submit.html</loc>
     
     <lastmod>2018-06-19T10:05:11.858Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/hexo-blog-build.html</loc>
-    
-    <lastmod>2018-06-19T10:04:16.708Z</lastmod>
     
   </url>
   
