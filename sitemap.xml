@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/web-javascript.html</loc>
+    
+    <lastmod>2018-06-27T11:26:45.676Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/oracle-plsql.html</loc>
     
     <lastmod>2018-06-27T11:10:38.167Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://liziczh.com/jdbc.html</loc>
     
     <lastmod>2018-06-26T07:28:48.281Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/web-javascript.html</loc>
-    
-    <lastmod>2018-06-25T04:07:17.755Z</lastmod>
     
   </url>
   
