@@ -12,17 +12,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Database | 分页SQL语句]]></title>
-    <url>%2Fdb-pagination.html</url>
-    <content type="text"><![CDATA[使用数据库SQL语句实现分页功能。 Oracle分页语句Oracle使用ROWNUM伪列实现分页： 123456select * from ( select "temp".*, ROWNUM "rn" from &lt;表/查询块&gt; "temp" where ROWNUM &lt;= currengPage * pageSize ) where "rn" &gt; (currentPage-1) * pageSize currentPage：当前页数。pageSize：每页显示的数据条数。 MySql分页语句MySql使用LIMIT关键字实现分页： 123select *from &lt;表/查询块&gt;limit (currentPage-1)*pageSize, pageSize currentPage：当前页数。pageSize：每页显示的数据条数。]]></content>
-      <categories>
-        <category>DataBase</category>
-      </categories>
-      <tags>
-        <tag>Database</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Hexo | （五）Yilia主题优化]]></title>
     <url>%2Fhexo-yilia-optimization.html</url>
     <content type="text"><![CDATA[yilia主题简单优雅，但是缺少一些我想要的功能，所以我自己稍微扩展了一些功能，比如添加了之前使用的LiveRe评论系统，新增了百度自动推送功能，在文章底部追加了版权声明，勉强实现了相册功能。优化后的yilia主题：https://github.com/liziczh/hexo-theme-yilia add:LiveRe评论系统1.在yilia/layout/_partial/post下添加livere.ejs文件 1234567891011121314&lt;!-- 来必力City版安装代码 --&gt;&lt;div id=&quot;lv-container&quot; data-id=&quot;city&quot; data-uid=&quot;&lt;%=theme.livere_uid%&gt;&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt; (function(d, s) &#123; var j, e = d.getElementsByTagName(s)[0]; if (typeof LivereTower === &apos;function&apos;) &#123; return; &#125; j = d.createElement(s); j.src = &apos;https://cdn-city.livere.com/js/embed.dist.js&apos;; j.async = true; e.parentNode.insertBefore(j, e); &#125;)(document, &apos;script&apos;);&lt;/script&gt;&lt;/div&gt;&lt;!-- City版安装代码已完成 --&gt; 2.编辑yilia/layout/_partial/article.ejs，在评论代码中引用livere.ejs 1234567&lt;% if (theme.livere_uid)&#123; %&gt; &lt;%- partial(&apos;post/livere&apos;, &#123; key: post.slug, title: post.title, url: config.url+url_for(post.path) &#125;) %&gt;&lt;% &#125; %&gt; 3.编辑yilia/_config.yml，添加livere_uid属性 12#0、liveRe评论livere_uid: false add:百度推送1.在yilia/layout/_partial下添加baidu-push.ejs文件 12345678910111213141516&lt;% if (theme.baidu_push)&#123; %&gt;&lt;script&gt;(function()&#123; var bp = document.createElement(&apos;script&apos;); var curProtocol = window.location.protocol.split(&apos;:&apos;)[0]; if (curProtocol === &apos;https&apos;) &#123; bp.src = &apos;https://zz.bdstatic.com/linksubmit/push.js&apos;; &#125; else &#123; bp.src = &apos;http://push.zhanzhang.baidu.com/push.js&apos;; &#125; var s = document.getElementsByTagName(&quot;script&quot;)[0]; s.parentNode.insertBefore(bp, s);&#125;)();&lt;/script&gt;&lt;% &#125; %&gt; 2.编辑layout/_partial/head.ejs，引用baidu-push.ejs 1&lt;%- partial(&apos;baidu-push&apos;) %&gt; 3.编辑yilia/_config.yml，添加baidu_push属性 12# 百度推送baidu_push: true add:版权声明1.编辑layout/_partial/head.ejs，添加post-copyright代码 1234567891011121314151617&lt;% if (((theme.copyright_type === 2 &amp;&amp; !post.copyright) || (theme.copyright_type === 1 &amp;&amp; post.copyright)) &amp;&amp; !index)&#123; %&gt;&lt;div&gt; &lt;ul class=&quot;post-copyright&quot;&gt; &lt;li&gt; &lt;strong&gt;本文作者：&lt;/strong&gt;&lt;%= config.author%&gt; &lt;/li&gt; &lt;li&gt; &lt;strong&gt;本文链接：&lt;/strong&gt; &lt;a href=&quot;&lt;%= config.url %&gt;&lt;%- url_for(post.path) %&gt;&quot; title=&quot;&lt;%= config.title %&gt;&quot;&gt;&lt;%= config.url %&gt;&lt;%- url_for(post.path) %&gt;&lt;/a&gt; &lt;/li&gt; &lt;li&gt; &lt;strong&gt;版权声明： &lt;/strong&gt; 本博客所有文章除特别声明外，均采用 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/3.0/&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;CC BY-NC-SA 3.0&lt;/a&gt; 许可协议。转载请注明出处! &lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;&lt;% &#125; %&gt; 2.添加.post-copyright的样式 12345678.post-copyright&#123; margin: 0em 0em 0em 0em; padding: 0.5em 1em; border-left:3px solid #ff1700; background-color: #f9f9f9; list-style: none; font-size: 14px;&#125; 3.编辑yilia/_config.yml，添加copyright_type属性 123# 版权声明# type：0-关闭版权声明； 1-存在copyright:true属性的文章，显示版权声明； 2-所有文章均有版权声明copyright_type: 0 new:相册页面（未完成）暂时是直接将以下代码嵌入index.md文档中，勉强实现相册功能。但这样写我自己看着都难受，之后有时间再改。 1.相册图片CSS 1234&lt;style&gt;.img&#123;width:240px;display:inline-block;margin:0 10px 10px 0;&#125;.img-last&#123;width:240px;display:inline-block;margin:0 0 10px 0;&#125;&lt;/style&gt; 2.原生JS实现jQuery入口函数，实现手机图片自适应。 123456789101112131415161718192021222324252627&lt;script&gt;/*原生JS实现jQuery入口函数*/function ready(fn)&#123; if(document.addEventListener&#123; document.addEventListener('DOMContentLoaded',function()&#123; document.removeEventListener('DOMContentLoaded',arguments.callee,false); fn(); &#125;,false);&#125;else if(document.attachEvent)&#123; document.attachEvent('onreadystatechange',function()&#123; if(document.readyState=='complete')&#123; document.detachEvent('onreadystatechange',arguments.callee); fn(); &#125; &#125;);&#125;&#125;; /*手机图片自适应*/ready(function()&#123; var img = document.getElementsByTagName("img"); if(window.screen.width &lt; 500)&#123; for(var i = 0 ; i &lt; img.length;i++)&#123; var len = (window.screen.width-40) / 2; img[i].style.width = len.toString()+"px"; &#125; &#125;&#125;); &lt;/script&gt; new:Ones页面（未完成）单独写一个Ones的静态界面，暂未完成，之后再说。]]></content>
@@ -63,8 +52,8 @@
         <category>DataBase</category>
       </categories>
       <tags>
-        <tag>Oracle</tag>
         <tag>Database</tag>
+        <tag>Oracle</tag>
       </tags>
   </entry>
   <entry>
@@ -91,6 +80,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Database | 分页SQL语句]]></title>
+    <url>%2Fdb-pagination.html</url>
+    <content type="text"><![CDATA[使用数据库SQL语句实现分页功能。 Oracle分页语句Oracle使用ROWNUM伪列实现分页： 123456select * from ( select "temp".*, ROWNUM "rn" from &lt;表/查询块&gt; "temp" where ROWNUM &lt;= currengPage * pageSize ) where "rn" &gt; (currentPage-1) * pageSize currentPage：当前页数。pageSize：每页显示的数据条数。 MySql分页语句MySql使用LIMIT关键字实现分页： 123select *from &lt;表/查询块&gt;limit (currentPage-1)*pageSize, pageSize currentPage：当前页数。pageSize：每页显示的数据条数。]]></content>
+      <categories>
+        <category>DataBase</category>
+      </categories>
+      <tags>
+        <tag>Database</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Oracle | PL/SQL编程]]></title>
     <url>%2Foracle-plsql.html</url>
     <content type="text"><![CDATA[PL/SQL（Procedural Language/SQL，过程化SQL语言），是一种高级数据库程序设计语言，专门用于在各种环境下对ORACLE数据库进行访问。由于该语言集成于数据库服务器中，所以PL/SQL代码可以对数据进行快速高效的处理。 PL/SQL 中可引用的SQL语句 可用DML语句：SELECT INTO，INSERT，UPDATE，DELETE。 可用TCL语句：COMMIT，ROLLBACK，SAVEPOINT。 不能使用DDL语句。 PL/SQL 块PL/SQL块：声明部分+执行部分+异常处理部分 12345678-- 单行注释DECLARE /* 声明部分：声明变量，类型、游标、局部存储过程和函数 */BEGIN /* 执行部分：执行过程和SQL语句 */[EXCEPTION] /* 异常处理部分 */END; PL/SQL 变量PL/SQL 变量命名 标识符 命名规则 程序变量 V_name 程序常量 C_Name 游标变量 Name_cursor 异常标识 E_name 表类型 Name_table_type 表 Name_table 记录类型 Name_record PL/SQL 变量类型基本数据类型number，char，varchar2，long，date 记录类型记录类型：把逻辑相关的数据作为一个单元存储起来，用于存放互不相同但逻辑相关的信息。 12345TYPE record_type IS RECORD( Field1 type1 [NOT NULL] [:= exp1 ], Field2 type2 [NOT NULL] [:= exp2 ], . . . . . . Fieldn typen [NOT NULL] [:= expn ] ) ; %TYPE 类型%TYPE类型：指某个已定义变量的数据类型类型，或数据表中某列的数据类型。 使用%TYPE特性的优点： 所引用的数据库列的数据类型可以不必知道； 所引用的数据库列的数据类型可以实时改变。 %RowType 类型%RowType类型：返回一个与数据库表的数据结构一致的记录类型。 使用%ROWTYPE特性的优点： 所引用的数据库中列的个数和数据类型可以不必知道； 所引用的数据库中列的个数和数据类型可以实时改变。 PL/SQL 特殊运算符赋值运算符：:=关系运算符：=&gt;上下限运算符：.. PL/SQL 流程控制条件语句IF 语句1234567IF &lt;条件语句1&gt; THEN 语句1;ELSIF &lt;条件语句2&gt; THEN 语句2;ELSE 语句3;END IF; 注意是ELSIF不是ELSEIF； CASE 语句1234567CASE &lt;变量&gt; WHEN &lt;值1&gt; THEN &lt;结果1&gt; WHEN &lt;值2&gt; THEN &lt;结果1&gt; ... WHEN &lt;值N&gt; THEN &lt;结果N&gt; [ELSE &lt;结果N+1&gt;]END; 循环语句do…while 循环1234LOOP 循环语句; EXIT WHEN &lt;条件语句&gt;END LOOP; while 循环123WHILE &lt;条件语句&gt; LOOP 循环语句;END LOOP; for 循环123FOR &lt;循环计数器&gt; IN [REVERSE] &lt;下限&gt; .. &lt;上限&gt; LOOP 循环语句;END LOOP; GOTO 语句定义标号：&lt;&lt;标号名&gt;&gt;； GOTO语句：GOTO 标号名； NULL 语句NULL语句：不做任何事，增强代码可读性。 PL/SQL 异常处理异常错误类型 预定义错误：无需在程序中定义，由Oracle自动将其引发。 非预定义错误：用户需在程序中定义，然后由Oracle自动将其引发。 用户定义错误：用户在程序中定义，然后显式地在程序中将其引发。 异常处理1234EXCEPTION WHEN &lt;异常1&gt; THEN &lt;异常处理代码&gt; WHEN &lt;异常2&gt; THEN &lt;异常处理代码&gt; WHEN OTHERS THEN &lt;异常处理代码&gt; 游标-CURSOR为了处理 SQL 语句，Oracle 会分配一片叫上下文 (context area) 的区域来处理所必需的信息，即系统为用户开设的一个数据缓冲区，存放SQL语句的执行结果。游标就是一个指向上下文的句柄或指针。 显式游标显式游标主要是用于对查询语句的处理，尤其是查询结果为多条记录的情况。 显式游标处理：①定义游标：定义游标名及对应的 SELECT 查询 12CURSOR cursor_name (参数1 参数类型,参数2 参数类型...) IS SELECT查询块; 数据类型不能使用长度约束。 ②打开游标：执行游标的 SELECT 查询，将查询结果放入缓冲区，并指向缓冲区首部。 1OPEN cursor_name (参数1 =&gt; 值,参数2 =&gt; 值...); ③提取游标数据：检索结果集中的数据行，放入指定输出变量中。 1FETCH cursor_name INTO &#123;variable_list | record_variable &#125;; ④关闭游标：释放游标占用的系统资源。 1CLOSE cursor_name; 显式游标属性 游标属性 描述 %FOUND 布尔型，当最近一次读记录时成功返回,则值为TRUE %NOTFOUND 布尔型，当最近一次读记录时返回失败,则值为TRUE %ISOPEN 布尔型，当游标已打开时返回 TRUE %ROWCOUNT 数值型，返回已从游标中读取的记录数 游标的FOR循环：123FOR 索引 IN 游标[值1,值2...] LOOP 循环语句;END LOOP; 隐式游标隐式游标主要用于数据更新操作。隐式游标的名字为SQL，由Oracle系统提供，无需用户处理。 隐式游标属性 游标属性 描述 SQL%FOUND 布尔型，当最近一次读记录时成功返回,则值为TRUE SQL%NOTFOUND 布尔型，当最近一次读记录时返回失败,则值为TRUE SQL%ISOPEN 布尔型，当游标已打开时返回 TRUE SQL%ROWCOUNT 数值型，返回已从游标中读取的记录数 存储过程与函数存储过程用于执行特定操作，无返回值；函数用于执行复杂操作，有返回值；存储函数与函数统称为PL/SQL子程序。 存储过程-PROCEDURE存储过程：执行特定操作，无返回值，多用于更新操作。 定义存储过程12345678910CREATE [OR REPLACE] PROCEDURE Procedure_name[ (argment [ &#123; IN | IN OUT &#125;] Type, argment [ &#123; IN | OUT | IN OUT &#125; ] Type ]&#123; IS | AS &#125;&lt;类型.变量的说明&gt; BEGIN &lt;执行部分&gt;EXCEPTION &lt;异常处理&gt;END; 函数-FUNCTION函数：执行复杂操作，有返回值。 定义函数12345678CREATE [OR REPLACE] FUNCTION &lt;函数名&gt;[(argument [ &#123; IN | IN OUT &#125;] type,argument [ &#123; IN | OUT | IN OUT &#125; ] type]RETURN &lt;返回值类型&gt;&#123; IS | AS &#125; &lt;类型.变量的说明&gt; BEGIN &lt;执行部分&gt;EXCEPTION &lt;异常处理&gt;END; 函数执行方式1dbms_output.put_line(fun()); 1select fun() from dual; 函数参数类型 输入参数 IN； 输出参数 OUT； 输入输出参数 IN OUT； 参数传递类型位置表示法：根据参数位置依此传值 1argument_value1[,argument_value2 …] 名称表示法：使用关系运算符=&gt;为参数传值 1argument =&gt; parameter [,…] 触发器-TRIGGER触发器：用户定义的一类由事件触发而执行的特殊过程。 定义触发器12345678CREATE [OR REPLACE] TRIGGER &lt;触发器名称&gt;&#123;BEFORE | AFTER | INSTEAD OF&#125;&#123;INSERT | DELETE | UPDATE [OF column [, column …]]&#125;ON &lt;表/视图&gt;[REFERENCING &#123;OLD [AS] old | NEW [AS] new| PARENT as parent&#125;][FOR EACH ROW | STATEMENT][WHEN condition]trigger_body; 触发事件：INSERT | DELETE | UPDATE 触发时机：BEFORE | AFTER 触发频率： ROW：行级触发；当某触发事件发生时，对受到该操作影响的每一行数据，触发器都单独执行一次。 STATEMENT：语句级触发；当某触发事件发生时，该触发器只执行一次。 触发器的新值与旧值： :new 事件触发后的新的数据行； :old 事件触发前的旧的数据行；]]></content>
@@ -98,8 +98,8 @@
         <category>DataBase</category>
       </categories>
       <tags>
-        <tag>Oracle</tag>
         <tag>Database</tag>
+        <tag>Oracle</tag>
       </tags>
   </entry>
   <entry>
@@ -110,8 +110,8 @@
         <category>DataBase</category>
       </categories>
       <tags>
-        <tag>Oracle</tag>
         <tag>Database</tag>
+        <tag>Oracle</tag>
       </tags>
   </entry>
   <entry>
@@ -122,8 +122,8 @@
         <category>DataBase</category>
       </categories>
       <tags>
-        <tag>Oracle</tag>
         <tag>Database</tag>
+        <tag>Oracle</tag>
       </tags>
   </entry>
   <entry>

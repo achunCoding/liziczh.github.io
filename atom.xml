@@ -39,29 +39,6 @@
   </entry>
   
   <entry>
-    <title>Database | 分页SQL语句</title>
-    <link href="https://liziczh.com/db-pagination.html"/>
-    <id>https://liziczh.com/db-pagination.html</id>
-    <published>2018-06-21T04:50:55.000Z</published>
-    <updated>2018-06-23T08:24:34.788Z</updated>
-    
-    <content type="html"><![CDATA[<!--# Database | 分页SQL语句--><p>使用数据库SQL语句实现分页功能。</p><a id="more"></a><h3 id="Oracle分页语句"><a href="#Oracle分页语句" class="headerlink" title="Oracle分页语句"></a>Oracle分页语句</h3><p>Oracle使用<code>ROWNUM</code>伪列实现分页：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * </span><br><span class="line"><span class="keyword">from</span> ( </span><br><span class="line">  <span class="keyword">select</span> <span class="string">"temp"</span>.*, <span class="keyword">ROWNUM</span> <span class="string">"rn"</span> </span><br><span class="line">  <span class="keyword">from</span>  &lt;表/查询块&gt; <span class="string">"temp"</span> </span><br><span class="line">  <span class="keyword">where</span> <span class="keyword">ROWNUM</span> &lt;= currengPage * pageSize ) </span><br><span class="line"><span class="keyword">where</span> <span class="string">"rn"</span> &gt; (currentPage<span class="number">-1</span>) * pageSize</span><br></pre></td></tr></table></figure><blockquote><p>currentPage：当前页数。<br>pageSize：每页显示的数据条数。</p></blockquote><h3 id="MySql分页语句"><a href="#MySql分页语句" class="headerlink" title="MySql分页语句"></a>MySql分页语句</h3><p>MySql使用<code>LIMIT</code>关键字实现分页：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> *</span><br><span class="line"><span class="keyword">from</span> &lt;表/查询块&gt;</span><br><span class="line"><span class="keyword">limit</span> (currentPage<span class="number">-1</span>)*pageSize, pageSize</span><br></pre></td></tr></table></figure><blockquote><p>currentPage：当前页数。<br>pageSize：每页显示的数据条数。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;!--# Database | 分页SQL语句--&gt;
-&lt;p&gt;使用数据库SQL语句实现分页功能。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="DataBase" scheme="https://liziczh.com/categories/DataBase/"/>
-    
-    
-      <category term="Database" scheme="https://liziczh.com/tags/Database/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexo | （五）Yilia主题优化</title>
     <link href="https://liziczh.com/hexo-yilia-optimization.html"/>
     <id>https://liziczh.com/hexo-yilia-optimization.html</id>
@@ -149,9 +126,9 @@
       <category term="DataBase" scheme="https://liziczh.com/categories/DataBase/"/>
     
     
-      <category term="Oracle" scheme="https://liziczh.com/tags/Oracle/"/>
-    
       <category term="Database" scheme="https://liziczh.com/tags/Database/"/>
+    
+      <category term="Oracle" scheme="https://liziczh.com/tags/Oracle/"/>
     
   </entry>
   
@@ -204,6 +181,29 @@
   </entry>
   
   <entry>
+    <title>Database | 分页SQL语句</title>
+    <link href="https://liziczh.com/db-pagination.html"/>
+    <id>https://liziczh.com/db-pagination.html</id>
+    <published>2018-05-16T04:50:55.000Z</published>
+    <updated>2018-06-28T02:09:33.083Z</updated>
+    
+    <content type="html"><![CDATA[<!--# Database | 分页SQL语句--><p>使用数据库SQL语句实现分页功能。</p><a id="more"></a><h3 id="Oracle分页语句"><a href="#Oracle分页语句" class="headerlink" title="Oracle分页语句"></a>Oracle分页语句</h3><p>Oracle使用<code>ROWNUM</code>伪列实现分页：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * </span><br><span class="line"><span class="keyword">from</span> ( </span><br><span class="line">  <span class="keyword">select</span> <span class="string">"temp"</span>.*, <span class="keyword">ROWNUM</span> <span class="string">"rn"</span> </span><br><span class="line">  <span class="keyword">from</span>  &lt;表/查询块&gt; <span class="string">"temp"</span> </span><br><span class="line">  <span class="keyword">where</span> <span class="keyword">ROWNUM</span> &lt;= currengPage * pageSize ) </span><br><span class="line"><span class="keyword">where</span> <span class="string">"rn"</span> &gt; (currentPage<span class="number">-1</span>) * pageSize</span><br></pre></td></tr></table></figure><blockquote><p>currentPage：当前页数。<br>pageSize：每页显示的数据条数。</p></blockquote><h3 id="MySql分页语句"><a href="#MySql分页语句" class="headerlink" title="MySql分页语句"></a>MySql分页语句</h3><p>MySql使用<code>LIMIT</code>关键字实现分页：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> *</span><br><span class="line"><span class="keyword">from</span> &lt;表/查询块&gt;</span><br><span class="line"><span class="keyword">limit</span> (currentPage<span class="number">-1</span>)*pageSize, pageSize</span><br></pre></td></tr></table></figure><blockquote><p>currentPage：当前页数。<br>pageSize：每页显示的数据条数。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;!--# Database | 分页SQL语句--&gt;
+&lt;p&gt;使用数据库SQL语句实现分页功能。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DataBase" scheme="https://liziczh.com/categories/DataBase/"/>
+    
+    
+      <category term="Database" scheme="https://liziczh.com/tags/Database/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Oracle | PL/SQL编程</title>
     <link href="https://liziczh.com/oracle-plsql.html"/>
     <id>https://liziczh.com/oracle-plsql.html</id>
@@ -222,9 +222,9 @@
       <category term="DataBase" scheme="https://liziczh.com/categories/DataBase/"/>
     
     
-      <category term="Oracle" scheme="https://liziczh.com/tags/Oracle/"/>
-    
       <category term="Database" scheme="https://liziczh.com/tags/Database/"/>
+    
+      <category term="Oracle" scheme="https://liziczh.com/tags/Oracle/"/>
     
   </entry>
   
@@ -252,9 +252,9 @@
       <category term="DataBase" scheme="https://liziczh.com/categories/DataBase/"/>
     
     
-      <category term="Oracle" scheme="https://liziczh.com/tags/Oracle/"/>
-    
       <category term="Database" scheme="https://liziczh.com/tags/Database/"/>
+    
+      <category term="Oracle" scheme="https://liziczh.com/tags/Oracle/"/>
     
   </entry>
   
@@ -281,9 +281,9 @@
       <category term="DataBase" scheme="https://liziczh.com/categories/DataBase/"/>
     
     
-      <category term="Oracle" scheme="https://liziczh.com/tags/Oracle/"/>
-    
       <category term="Database" scheme="https://liziczh.com/tags/Database/"/>
+    
+      <category term="Oracle" scheme="https://liziczh.com/tags/Oracle/"/>
     
   </entry>
   
