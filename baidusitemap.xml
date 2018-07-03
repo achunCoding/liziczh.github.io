@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://liziczh.com/hexo-multimachine.html</loc>
+    <lastmod>2018-07-03T01:04:14.463Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo | （四）多机同步更新博客</title>
+        <pubTime>2018-04-21T14:00:07.000Z</pubTime>
+        
+        <tag>Hexo博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo博客" url="https://liziczh.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://liziczh.com/db-pagination.html</loc>
     <lastmod>2018-06-28T02:09:33.083Z</lastmod>
     <data>
@@ -326,26 +346,6 @@
         <display>
         <title>Hexo | （五）Yilia主题优化</title>
         <pubTime>2018-06-17T11:13:57.000Z</pubTime>
-        
-        <tag>Hexo博客</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo博客" url="https://liziczh.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/hexo-multimachine.html</loc>
-    <lastmod>2018-06-19T10:11:31.292Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo | （四）多机同步更新博客</title>
-        <pubTime>2018-04-21T14:00:07.000Z</pubTime>
         
         <tag>Hexo博客</tag>
          

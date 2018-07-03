@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/hexo-multimachine.html</loc>
+    
+    <lastmod>2018-07-03T01:04:14.463Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/db-pagination.html</loc>
     
     <lastmod>2018-06-28T02:09:33.083Z</lastmod>
@@ -138,13 +145,6 @@
     <loc>https://liziczh.com/hexo-yilia-optimization.html</loc>
     
     <lastmod>2018-06-19T10:12:02.959Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/hexo-multimachine.html</loc>
-    
-    <lastmod>2018-06-19T10:11:31.292Z</lastmod>
     
   </url>
   
