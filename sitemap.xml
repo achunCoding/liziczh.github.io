@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/albums/index.html</loc>
+    
+    <lastmod>2018-07-03T08:51:16.710Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/hexo-multimachine.html</loc>
     
     <lastmod>2018-07-03T01:04:14.463Z</lastmod>
@@ -93,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/tags/index.html</loc>
-    
-    <lastmod>2018-06-23T03:06:27.100Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://liziczh.com/ones/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
@@ -107,9 +107,9 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/albums/index.html</loc>
+    <loc>https://liziczh.com/tags/index.html</loc>
     
-    <lastmod>2018-06-23T03:06:27.038Z</lastmod>
+    <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
   </url>
   
