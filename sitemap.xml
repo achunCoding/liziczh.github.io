@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/categories/index.html</loc>
+    
+    <lastmod>2018-07-06T07:52:48.543Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/java-aliocr-impl.html</loc>
+    
+    <lastmod>2018-07-06T07:52:27.866Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/albums/index.html</loc>
     
     <lastmod>2018-07-03T08:51:16.710Z</lastmod>
@@ -40,13 +54,6 @@
     <loc>https://liziczh.com/db-oracle-ddl.html</loc>
     
     <lastmod>2018-06-27T11:10:25.742Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/categories/index.html</loc>
-    
-    <lastmod>2018-06-27T11:09:46.296Z</lastmod>
     
   </url>
   
@@ -100,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/ones/index.html</loc>
+    <loc>https://liziczh.com/tags/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://liziczh.com/tags/index.html</loc>
+    <loc>https://liziczh.com/ones/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
@@ -159,13 +166,6 @@
     <loc>https://liziczh.com/hexo-next-settings.html</loc>
     
     <lastmod>2018-06-19T09:49:26.085Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/java-aliorc-impl.html</loc>
-    
-    <lastmod>2018-06-19T09:37:20.837Z</lastmod>
     
   </url>
   

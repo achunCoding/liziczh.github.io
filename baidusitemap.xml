@@ -5,6 +5,27 @@
     
     
   <url>
+    <loc>https://liziczh.com/java-aliocr-impl.html</loc>
+    <lastmod>2018-07-06T07:52:27.866Z</lastmod>
+    <data>
+        <display>
+        <title>Java调用阿里OCR接口实现印刷文字识别</title>
+        <pubTime>2018-06-08T07:17:29.000Z</pubTime>
+        
+        <tag>Java小程序</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java小程序" url="https://liziczh.com/categories/Java%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://liziczh.com/hexo-multimachine.html</loc>
     <lastmod>2018-07-03T01:04:14.463Z</lastmod>
     <data>
@@ -107,7 +128,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://liziczh.com/hexo-blog-build.html</loc>
@@ -393,26 +413,6 @@
            
              
               <breadCrumb title="Hexo博客" url="https://liziczh.com/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/java-aliorc-impl.html</loc>
-    <lastmod>2018-06-19T09:37:20.837Z</lastmod>
-    <data>
-        <display>
-        <title>Java调用阿里ORC接口实现印刷文字识别</title>
-        <pubTime>2018-06-08T07:17:29.000Z</pubTime>
-        
-        <tag>Java小程序</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java小程序" url="https://liziczh.com/categories/Java%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
           
         </display>
     </data>
