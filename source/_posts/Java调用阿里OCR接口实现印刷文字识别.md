@@ -1,8 +1,8 @@
 ---
-title: Java调用阿里ORC接口实现印刷文字识别
+title: Java调用阿里OCR接口实现印刷文字识别
 comments: true
 date: 2018-06-08 15:17:29
-id: java-aliorc-impl
+id: java-aliocr-impl
 tags:
 - Java小程序
 categories: Java小程序
@@ -11,19 +11,19 @@ reward: true
 copyright: true
 ---
 
-<!--# Java调用阿里ORC接口实现印刷文字识别-->
+<!--# Java调用阿里OCR接口实现印刷文字识别-->
 
-**印刷文字识别(ORC)**：通俗来讲就是将图片中的印刷文字识别出来。
-阿里云提供了多种[ORC服务](https://market.tianchi.aliyun.com/outsource/api/products/56956004/?spm=a2c22.11465550.1067954.btn1.2cb43d0fwS0C9j#ymk=%7B%22categoryId%22%3A56956004%2C%22pageIndex%22%3A1%2C%22pageSize%22%3A10%2C%22saleMode%22%3A0%2C%22tag%22%3A%22%E9%98%BF%E9%87%8C%E4%BA%91%E5%AE%98%E6%96%B9%22%2C%22keywords%22%3A%22%22%7D)，在此使用的是**印刷文字识别－文档小说图片文字识别**，主要用于企业文档，法律法务文档，信件等，以及小说，文学类书籍等场景的文字识别。
+**印刷文字识别(OCR)**：通俗来讲就是将图片中的印刷文字识别出来。
+阿里云提供了多种[OCR服务](https://market.tianchi.aliyun.com/outsource/api/products/56956004/?spm=a2c22.11465550.1067954.btn1.2cb43d0fwS0C9j#ymk=%7B%22categoryId%22%3A56956004%2C%22pageIndex%22%3A1%2C%22pageSize%22%3A10%2C%22saleMode%22%3A0%2C%22tag%22%3A%22%E9%98%BF%E9%87%8C%E4%BA%91%E5%AE%98%E6%96%B9%22%2C%22keywords%22%3A%22%22%7D)，在此使用的是**印刷文字识别－文档小说图片文字识别**，主要用于企业文档，法律法务文档，信件等，以及小说，文学类书籍等场景的文字识别。
 
 <!--more-->
 
 ### 文档小说图片文字识别
 
-思路：将图片转化为base64编码，借助阿里ORC接口分析，返回印刷文字的json文件。
+思路：将图片转化为base64编码，借助阿里OCR接口分析，返回印刷文字的json文件。
 
 ```java
-package com.lizi.orc;
+package com.lizi.ocr;
 
 import com.lizi.tools.HttpUtils;
 import org.apache.http.HttpResponse;
@@ -36,24 +36,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 使用阿里ORC接口实现印刷文档图片转文字
+ * 使用阿里OCR接口实现印刷文档图片转文字
  */
-public class ORCDemo {
+public class OCRDemo {
 
     public static void main(String[] args) {
         // 将图片转换为base64编码格式
         String imgPath = "C:\\Users\\lizic\\Desktop\\2.png";
         String imgStr = imgToBase64(imgPath);
-        orc(imgStr);
+        ocr(imgStr);
     }
     /**
-     * 阿里ORC接口
+     * 阿里OCR接口
      */
-    public static void orc(String imgBase64){
+    public static void ocr(String imgBase64){
         String host = "https://ocrapi-document.taobao.com"; // 阿里接口地址
         String path = "/ocrservice/document"; // 具体地址
         String method = "POST";  // 请求类型POST
-        String appcode = "你购买的阿里ORC服务的AppCode"; // 产品密钥
+        String appcode = "你购买的阿里OCR服务的AppCode"; // 产品密钥
         Map<String, String> headers = new HashMap<String, String>();
         //最后在header中的格式(中间是英文空格)为Authorization:APPCODE yourAppCode
         headers.put("Authorization", "APPCODE " + appcode);

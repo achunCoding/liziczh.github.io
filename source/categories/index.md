@@ -23,7 +23,7 @@ copyright: false
 ### Java小程序
 
 - [Java使用POI实现Excel文件的读写](http://liziczh.com/java-poi-impl.html)
-- [Java调用阿里ORC接口实现印刷文字识别](http://liziczh.com/java-aliorc-impl.html)
+- [Java调用阿里OCR接口实现印刷文字识别](http://liziczh.com/java-aliocr-impl.html)
 - [基于java Swing实现俄罗斯方块(Tetris)](http://liziczh.com/java-tetris.html)
 
 ### Git
