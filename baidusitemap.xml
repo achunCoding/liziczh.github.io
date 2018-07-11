@@ -3,6 +3,46 @@
 
 
     
+  <url>
+    <loc>https://liziczh.com/javaweb-servlet.html</loc>
+    <lastmod>2018-07-11T06:23:21.617Z</lastmod>
+    <data>
+        <display>
+        <title>JavaWeb | Servlet</title>
+        <pubTime>2018-06-22T04:35:34.000Z</pubTime>
+        
+        <tag>JavaWeb</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="https://liziczh.com/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/web-jquery.html</loc>
+    <lastmod>2018-07-11T06:20:24.963Z</lastmod>
+    <data>
+        <display>
+        <title>Web | jQuery</title>
+        <pubTime>2018-04-09T08:34:00.000Z</pubTime>
+        
+        <tag>Web前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://liziczh.com/java-aliocr-impl.html</loc>
@@ -93,9 +133,9 @@
         <title>Oracle | PL/SQL编程</title>
         <pubTime>2018-05-15T09:19:29.000Z</pubTime>
         
-        <tag>Oracle</tag>
-         
         <tag>Database</tag>
+         
+        <tag>Oracle</tag>
          
          
            
@@ -115,9 +155,9 @@
         <title>Oracle | DDL&约束&DCL&TCL</title>
         <pubTime>2018-05-13T09:32:29.000Z</pubTime>
         
-        <tag>Oracle</tag>
-         
         <tag>Database</tag>
+         
+        <tag>Oracle</tag>
          
          
            
@@ -157,9 +197,9 @@
         <title>Database | DQL&DML</title>
         <pubTime>2018-05-12T11:32:29.000Z</pubTime>
         
-        <tag>Oracle</tag>
-         
         <tag>Database</tag>
+         
+        <tag>Oracle</tag>
          
          
            
@@ -305,34 +345,14 @@
         <title>Oracle新建数据库</title>
         <pubTime>2018-05-20T06:56:29.000Z</pubTime>
         
-        <tag>Oracle</tag>
-         
         <tag>Database</tag>
+         
+        <tag>Oracle</tag>
          
          
            
              
               <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/javaweb-servlet.html</loc>
-    <lastmod>2018-06-22T11:21:28.148Z</lastmod>
-    <data>
-        <display>
-        <title>JavaWeb | Servlet</title>
-        <pubTime>2018-06-22T04:35:34.000Z</pubTime>
-        
-        <tag>JavaWeb</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaWeb" url="https://liziczh.com/categories/JavaWeb/"/>
           
         </display>
     </data>
@@ -433,26 +453,6 @@
            
              
               <breadCrumb title="Java小程序" url="https://liziczh.com/categories/Java%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/web-jquery.html</loc>
-    <lastmod>2018-06-19T09:32:12.273Z</lastmod>
-    <data>
-        <display>
-        <title>Web | jQuery</title>
-        <pubTime>2018-04-09T08:34:00.000Z</pubTime>
-        
-        <tag>Web前端</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web前端" url="https://liziczh.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
