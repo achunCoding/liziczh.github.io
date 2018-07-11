@@ -708,8 +708,4 @@ var a = $.noConflict();  // 释放$的控制权，将$的能力赋予a。
 
 
 
-# 8. jQuery应用Ajax
-
-未完待续...
-
 

@@ -41,7 +41,7 @@ JavaWeb三大组件：Servlet，Filter，Listener；（全属于动态资源）
 
 Servlet容器：Tomcat，确保JAVA_HOME配置正确
 
-## 第一个Web项目（Eclipse）
+## Tomcat
 
 Dynamic Web Project，New Server：location：tomcat安装目录下wtpwebapp；
 
@@ -150,17 +150,17 @@ Servlet容器：Tomcat；
 
 **创建Servlet三种方式**：
 
-1. 实现Servlet接口
-2. 继承GenericServlet类
-3. 继承HttpServlet类
+1. 实现 Servlet 接口
+2. 继承 GenericServlet 类
+3. 继承 HttpServlet 类
 
 **Servlet接口的方法**：
 
-- init() - 用于初始化，只执行一次。
-- service() - 用于处理请求，请求一次执行一次。
-- destory() - 用于完成扫尾工作，当Servlet从容器中卸载时执行。
-- getServletConfig()
-- getServletInfo()
+- `init()` - 用于初始化，只执行一次。
+- `service()` - 用于处理请求，请求一次执行一次。
+- `destory()` - 用于完成扫尾工作，当Servlet从容器中卸载时执行。
+- `getServletConfig()`
+- `getServletInfo()`
 
 ### Servlet生命周期
 
@@ -196,13 +196,13 @@ Servlet容器：Tomcat；
 ```
 
 ```xml
-	<!--Servlet映射-->
-	<servlet-mapping>
-		<!--Servlet名称-->
-		<servlet-name>firstName</servlet-name>
-		<!--对应的url地址-->
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
+<!--Servlet映射-->
+<servlet-mapping>
+    <!--Servlet名称-->
+    <servlet-name>firstName</servlet-name>
+    <!--对应的url地址-->
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
 ```
 
 **url-pattern配置**：
@@ -225,10 +225,10 @@ GenericServlet类：抽象service方法，实现其他方法。
 
 ### Servlet 3.0 配置
 
-在开发中两种配置方式：约定 > 配置；
+在开发中两种配置方式：约定 > 配置。
 
 - 使用**注解**配置开发Servlet；
-- 使用**xml**配置开发Servlet
+- 使用**xml**配置开发Servlet；
 
 **Servlet 3.0支持注解配置**：约定 > 配置；
 
@@ -246,25 +246,50 @@ HttpServlet对http协议提供了特殊支持。
 - doGet() - Get请求时执行
 - doPost() - Post请求时执行
 
+#### 请求类型
+
+URL请求类型为GET类型。
+
+将请求参数拼接在URL后边 `url？name=val&name=val`；
+
+
+
+Form表单可指定请求类型 (GET/POST) 。
+
+```html
+<form action="" method="GET/POST">
+	表单域：表单元素；
+</form>
+```
+
+文件上传使用POST请求 (文件大小无限制) ；
+
+**获取请求表单数据**：
+
+```java
+String getParameter(String name);  // 通过name获取参数值
+String[] getParameterValues(String name);  // 通过name获取所有同名参数的value属性值
+```
+
 ## Servlet API
 
 ### ServletConfig
 
-ServletConfig对象由Servlet独享。
+ServletConfig 对象由 Servlet 独享。
 
-1.获取ServletName
+1.获取 ServletName
 
 ```java
 String getServletName();
 ```
 
-2.获取初始化参数值By初始化参数Name
+2.获取初始化参数值 By 初始化参数 Name
 
 ```java
 String getInitParameter(String name);
 ```
 
-3.获取所有初始化参数Name
+3.获取所有初始化参数 Name
 
 ```java
 Enumeration<String> getInitParameterNames();
@@ -272,7 +297,7 @@ Enumeration<String> getInitParameterNames();
 
 枚举 (enum)：有穷可列举。
 
-4.获取ServletContext
+4.获取 ServletContext
 
 ```java
 ServletContext getServletContext();
@@ -280,9 +305,9 @@ ServletContext getServletContext();
 
 ### ServletContext
 
-ServletContext的生命周期贯穿整个web应用，(域对象)。
+ServletContext 的生命周期贯穿整个web应用，(域对象)。
 
-ServletContext数据被一个web应用中的所有Servlet所共享，(Application域)。
+ServletContext 数据由一个web应用中的所有Servlet共享，(Application域)。
 
 ```xml
 <context-param>
@@ -320,7 +345,9 @@ request对象生命周期：发出请求到请求结束。
 **获取请求头**：
 
 ```java
-getHeader();
+String getHeader(String name);  // 获取指定name的请求头
+Enumeration getHeaderNames();  // 获取所有请求头name
+int getIntHeader(String name);  //获取int类型值的请求头
 ```
 
 **获取请求URL信息**：
@@ -344,46 +371,13 @@ String getServerName()  // 返回主机名，例如：localhost
 int getServerPort()  // 返回服务器端口号，例如：8080
 ```
 
-超链接请求类型为GET类型。
-
-表单Form请求类型可指定请求类型 (GET/POST) 。
-
-```html
-<form action="" method="GET/POST">
-	表单域：表单元素；
-</form>
-```
-
-文件上传使用POST请求 (文件大小无限制) ；
-
-**获取请求表单数据**：
+**获取请求参数**：
 
 ```java
-String getParameter(String name);  // 通过name获取参数值
-String[] getParameterValues(String name);  // 通过name获取所有同名参数的value属性值
+String getParameter(String name); // 获取指定名称的参数值
+String[] getParameterValues(String name); // 获取多个同名参数值
+Enumeration<String> getParameterNames(); // 获取参数名称
 ```
-
-#### 请求转发
-
-请求转发：请求转发只发送一次请求，地址栏不发生改变，共享一个request对象。
-
-```java
-request.getRequestDispatcher("/servletDemo2").forward(request,response);
-```
-
-parameter参数：网页前台获取的参数。
-
-attribute属性：自己设置的，自己获取的。
-
-#### 请求包含
-
-```java
-request.getRequestDispatcher("/servletDemo2").include(request,response);
-```
-
-请求包含多用于JSP页面，完成多页面的合并。
-
-请求转发多用于Servlet中，转发目标大多是JSP页面。
 
 ### Response
 
@@ -403,11 +397,37 @@ request.getRequestDispatcher("/servletDemo2").include(request,response);
 
 
 
+### Servlet请求转发
+
+#### 请求转发
+
+请求转发：保存当前请求的request和response对象，转发到指定URL处理。请求转发共享一个request和一个response对象，只发送一次请求，页面不跳转（地址栏不发生改变）。
+
+```java
+request.getRequestDispatcher("/servletDemo2").forward(request,response);
+```
+
 #### 重定向
+
+重定向：
+
+```java
+response.sendRedirect(String location);
+```
 
 客户端发送了两次请求，地址栏发生变化。
 
 重定向第二个请求一定是GET。
+
+#### 请求包含
+
+```java
+request.getRequestDispatcher("/servletDemo2").include(request,response);
+```
+
+请求包含多用于JSP页面，完成多页面的合并。
+
+请求转发多用于Servlet中，转发目标大多是JSP页面。
 
 ### 中文乱码问题
 
@@ -425,7 +445,7 @@ request.setCharacterEncoding("UTF-8");
 <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443" URIEncoding="UTF-8" / >
 ```
 
-**字符串解决方案**：如果以上两种配置都没用，使用本方法；
+**字符串终极解决方案**：如果以上两种配置都没用，重新编码；
 
 ```java
 String name = request.getParameter("name");
@@ -438,10 +458,3 @@ name = new String(name.getBytes("iso-8859-1"),"UTF-8");
 response.setContentType("text/html;charset=utf-8");  // 设置响应内容的字符集
 ```
 
-### ？JS提交
-
-路径
-
-以/开头：相对主机
-
-不以/开头：相对当前页面路径

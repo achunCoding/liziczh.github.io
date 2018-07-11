@@ -101,10 +101,10 @@ theme: yilia
 deploy:
   type: git
   repo: 
-    github: git@github.com:liziczh/liziczh.github.io.git
-    coding: git@git.coding.net:liziczh/liziczh.coding.me.git
-    # github: https://github.com/liziczh/liziczh.github.io.git
-    # coding: https://git.coding.net/liziczh/liziczh.coding.me.git
+    # github: git@github.com:liziczh/liziczh.github.io.git
+    # coding: git@git.coding.net:liziczh/liziczh.coding.me.git
+    github: https://github.com/liziczh/liziczh.github.io.git
+    coding: https://git.coding.net/liziczh/liziczh.coding.me.git
   branch: master
 
 #local search
