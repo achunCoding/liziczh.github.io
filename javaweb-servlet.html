@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://liziczh.com">
-  <title>JavaWeb | Servlet | 自然生长</title>
+  <title>JavaWeb | Servlet/JSP | 自然生长</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="JavaWeb-Servlet">
 <meta name="keywords" content="JavaWeb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaWeb | Servlet">
+<meta property="og:title" content="JavaWeb | Servlet&#x2F;JSP">
 <meta property="og:url" content="https://liziczh.com/javaweb-servlet.html">
 <meta property="og:site_name" content="自然生长">
 <meta property="og:description" content="JavaWeb-Servlet">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-11T06:23:21.617Z">
+<meta property="og:updated_time" content="2018-07-11T13:01:57.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaWeb | Servlet">
+<meta name="twitter:title" content="JavaWeb | Servlet&#x2F;JSP">
 <meta name="twitter:description" content="JavaWeb-Servlet">
   
     <link rel="alternative" href="/atom.xml" title="自然生长" type="application/atom+xml">
@@ -217,7 +217,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      JavaWeb | Servlet
+      JavaWeb | Servlet/JSP
     </h1>
   
 
@@ -397,7 +397,7 @@ var _hmt = _hmt || [];
 <li>ServletConfig对象调用getServletContext()方法；</li>
 <li>HttpServlet子类对象调用getServletContext()方法；</li>
 </ul>
-<p><strong>ServletContext数据操作</strong>：</p>
+<p><strong>ServletContext域属性操作</strong>：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setAttribute</span><span class="params">(String name, Object value)</span></span>;</span><br><span class="line"><span class="function">Object <span class="title">getAttribute</span><span class="params">(String name)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">removeAttribute</span><span class="params">(String name)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>获取资源：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">getRealPath</span><span class="params">(String filepath)</span></span>;  <span class="comment">// 获取资源物理路径</span></span><br><span class="line"><span class="function">InputStream <span class="title">getResourceAsStream</span><span class="params">(String filepath)</span></span>;  <span class="comment">// 获取文件流</span></span><br></pre></td></tr></table></figure>
@@ -430,6 +430,199 @@ var _hmt = _hmt || [];
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String name = request.getParameter(<span class="string">"name"</span>);</span><br><span class="line">name = <span class="keyword">new</span> String(name.getBytes(<span class="string">"iso-8859-1"</span>),<span class="string">"UTF-8"</span>);</span><br></pre></td></tr></table></figure>
 <p><strong>响应内容中文乱码</strong>解决方案：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setContentType(<span class="string">"text/html;charset=utf-8"</span>);  <span class="comment">// 设置响应内容的字符集</span></span><br></pre></td></tr></table></figure>
+<h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><p>JSP（Java Server Pages，Java 服务器页面），是一种动态网页开发技术。</p>
+<p>JSP = html +  java代码片段 + jsp动态标签</p>
+<h3 id="JSP-语法"><a href="#JSP-语法" class="headerlink" title="JSP 语法"></a>JSP 语法</h3><p><strong>JSP 注释</strong>：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%--注释内容--%&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>JSP 表达式</strong>：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= Java表达式 %&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>JSP表达式不加分号，Java表达式被翻译成一条 <code>out.print()</code> 语句。</p>
+</blockquote>
+<p><strong>JSP 声明</strong>：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%! Java定义类成员 %&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>JSP 脚本片段</strong>：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;% Java代码片段 %&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>JSP脚本片段可以直接使用JSP提供的隐式对象完成WebAPP特定功能。<br>JSP脚本片段中的Java代码将原样搬进由JSP页面翻译成的Servlet中的jspService方法中。</p>
+</blockquote>
+<p><strong>JSP原理</strong>：JSP即Servlet。将jsp部署到Web容器后，jsp文件会被翻译为index_jsp.java文件（本质还是Servlet）。</p>
+<h3 id="JSP-九大隐含对象★"><a href="#JSP-九大隐含对象★" class="headerlink" title="JSP 九大隐含对象★"></a>JSP 九大隐含对象★</h3><p><strong>隐含对象/内置对象</strong>：在jsp页面上无需显式声明，即可直接使用。（在jsp转换为servlet时，隐含对象已被声明在servlet的 <code>_jspService</code> 方法中）</p>
+<table>
+<thead>
+<tr>
+<th>JSP 隐含对象</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>out</code></td>
+<td>PrintWriter类的对象，用于将内容响应在页面上</td>
+</tr>
+<tr>
+<td><code>pageContext</code></td>
+<td>ServletContext类的对象，获取当前页面的所有对象</td>
+</tr>
+<tr>
+<td><code>session</code></td>
+<td>HttpSession类的对象，表示一次会话</td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td>表示当前页面对象（this）</td>
+</tr>
+<tr>
+<td><code>config</code></td>
+<td>ServletConfig类的对象，表示当前servlet的配置信息</td>
+</tr>
+<tr>
+<td><code>application</code></td>
+<td>ServletContext类的对象，表示当前应用上下文</td>
+</tr>
+<tr>
+<td><code>request</code></td>
+<td>HttpRequest类的对象，表示一次请求</td>
+</tr>
+<tr>
+<td><code>response</code></td>
+<td>HttpResponse类的对象，表示一次响应</td>
+</tr>
+<tr>
+<td><code>exception</code></td>
+<td>Exception类的对象，表示当前页面的异常对象</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>exception对象必须在 <code>isErrorPage=&quot;true&quot;</code> 的情况下使用。</p>
+</blockquote>
+<p><strong>JSP 隐含对象的应用</strong>：</p>
+<ul>
+<li>out - 输出</li>
+<li>pageContext - </li>
+<li>request - 请求</li>
+<li>response - 响应，不常用</li>
+</ul>
+<h3 id="JSP-域对象"><a href="#JSP-域对象" class="headerlink" title="JSP 域对象"></a>JSP 域对象</h3><p><strong>JSP 四个域对象</strong>：pageContext，request，session，application</p>
+<table>
+<thead>
+<tr>
+<th>JSP域对象</th>
+<th>作用范围</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageContext</td>
+<td>page域</td>
+<td>只能在当前jsp页面使用（当前页面)</td>
+</tr>
+<tr>
+<td>request</td>
+<td>request域</td>
+<td>只能在同一个请求中使用（转发）</td>
+</tr>
+<tr>
+<td>session</td>
+<td>session域</td>
+<td>只能在同一个会话中使用 （私有）</td>
+</tr>
+<tr>
+<td>application</td>
+<td>context域</td>
+<td>只能在一个web应用中使用（全局）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>一次会话：浏览器打开直到浏览器关闭。</p>
+</blockquote>
+<p><strong>域对象属性操作</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置域对象属性</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setAttribute</span><span class="params">(String name, Object value)</span></span>;</span><br><span class="line"><span class="comment">// 获取域对象属性</span></span><br><span class="line"><span class="function">Object <span class="title">getAttribute</span><span class="params">(String name)</span></span>;</span><br><span class="line"><span class="comment">// 移除域对象属性</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">removeAttribute</span><span class="params">(String name)</span></span>;</span><br></pre></td></tr></table></figure>
+<p><strong>域对象的作用</strong>：保存数据，获取数据，数据共享。</p>
+<h3 id="JSP-指令"><a href="#JSP-指令" class="headerlink" title="JSP 指令"></a>JSP 指令</h3><p>JSP指令用来设置整个JSP页面相关的属性，告诉JSP引擎如何处理JSP页面其他部分。</p>
+<p><strong>基本语法</strong>：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ 指令 属性名=<span class="string">"值"</span> %&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>示例</strong>：</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>指令类型</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>指令标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;%@ page ... %&gt;</code></td>
+<td>定义网页依赖属性</td>
+</tr>
+<tr>
+<td><code>&lt;%@ include ... %&gt;</code></td>
+<td>包含其他文件</td>
+</tr>
+<tr>
+<td><code>&lt;%@ taglib ... %&gt;</code></td>
+<td>引入标签库</td>
+</tr>
+</tbody>
+</table>
+<h4 id="page指令"><a href="#page指令" class="headerlink" title="page指令"></a>page指令</h4><p><strong>page指令</strong>：为JSP页面的定义各种属性。</p>
+<table>
+<thead>
+<tr>
+<th>常用属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`import=”{packag.class \</td>
+<td>package.*}, …”`</td>
+<td>导包</td>
+</tr>
+<tr>
+<td>`session=”true</td>
+<td>false”`</td>
+<td>指定当前页面是否生成隐含对象session</td>
+</tr>
+<tr>
+<td><code>contentType=&quot;mimeType;charset=字符集&quot;</code></td>
+<td>指定MIME类型和字符编码</td>
+</tr>
+<tr>
+<td><code>pageEncoding=&quot;字符集&quot;</code></td>
+<td>指定页面编码字符集</td>
+</tr>
+<tr>
+<td>`isELIgnored=”true</td>
+<td>false”`</td>
+<td>指定是否执行EL表达式</td>
+</tr>
+<tr>
+<td><code>errorPage=&quot;relative_url&quot;</code></td>
+<td>指定错误处理页面的相对路径</td>
+</tr>
+<tr>
+<td>`isErrorPage=”true</td>
+<td>false”`</td>
+<td>指定当前页面是否为错误处理页面</td>
+</tr>
+</tbody>
+</table>
+<p><strong>errorPage与isErrorPage对比</strong>：</p>
+<ul>
+<li><code>errorPage</code> 属性值必须使用相对路径（<code>/</code>代表当前WEB应用的根目录）。响应errorPage使用请求转发方式。</li>
+<li><code>isErrorPage</code> 指定当前页面是否为错误处理页面，当前页面是否隐含exception对象。</li>
+</ul>
+<h4 id="include-指令"><a href="#include-指令" class="headerlink" title="include 指令"></a>include 指令</h4><p><strong>include 指令</strong>：包含其他文件，作为该 JSP 文件的一部分，会被同时编译执行。 </p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ include file=<span class="string">"relativeURL"</span> %&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="JSP-标签"><a href="#JSP-标签" class="headerlink" title="JSP 标签"></a>JSP 标签</h3><p><code>&lt;jsp:include&gt;</code></p>
+<p><code>&lt;jsp:forward&gt;</code></p>
+<p><code>&lt;jsp:param&gt;</code></p>
 
       
 
@@ -588,7 +781,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaWeb后端"><span class="toc-number">1.</span> <span class="toc-text">JavaWeb后端</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaWeb概述"><span class="toc-number">1.1.</span> <span class="toc-text">JavaWeb概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tomcat"><span class="toc-number">1.2.</span> <span class="toc-text">Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#虚拟目录配置"><span class="toc-number">1.2.1.</span> <span class="toc-text">虚拟目录配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#虚拟主机配置"><span class="toc-number">1.2.2.</span> <span class="toc-text">虚拟主机配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web项目打包"><span class="toc-number">1.2.3.</span> <span class="toc-text">Web项目打包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP协议"><span class="toc-number">1.3.</span> <span class="toc-text">HTTP协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#？HTTPS"><span class="toc-number">1.3.1.</span> <span class="toc-text">？HTTPS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet"><span class="toc-number">1.4.</span> <span class="toc-text">Servlet</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建Servlet"><span class="toc-number">1.4.1.</span> <span class="toc-text">创建Servlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet生命周期"><span class="toc-number">1.4.2.</span> <span class="toc-text">Servlet生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet配置"><span class="toc-number">1.4.3.</span> <span class="toc-text">Servlet配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GenericServlet"><span class="toc-number">1.4.4.</span> <span class="toc-text">GenericServlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet-3-0-配置"><span class="toc-number">1.4.5.</span> <span class="toc-text">Servlet 3.0 配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HttpServlet"><span class="toc-number">1.4.6.</span> <span class="toc-text">HttpServlet</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#请求类型"><span class="toc-number">1.4.6.1.</span> <span class="toc-text">请求类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet-API"><span class="toc-number">1.5.</span> <span class="toc-text">Servlet API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ServletConfig"><span class="toc-number">1.5.1.</span> <span class="toc-text">ServletConfig</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ServletContext"><span class="toc-number">1.5.2.</span> <span class="toc-text">ServletContext</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Request"><span class="toc-number">1.5.3.</span> <span class="toc-text">Request</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Response"><span class="toc-number">1.5.4.</span> <span class="toc-text">Response</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置响应正文"><span class="toc-number">1.5.4.1.</span> <span class="toc-text">设置响应正文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置响应头"><span class="toc-number">1.5.4.2.</span> <span class="toc-text">设置响应头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置状态码"><span class="toc-number">1.5.4.3.</span> <span class="toc-text">设置状态码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet请求转发"><span class="toc-number">1.5.5.</span> <span class="toc-text">Servlet请求转发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#请求转发"><span class="toc-number">1.5.5.1.</span> <span class="toc-text">请求转发</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重定向"><span class="toc-number">1.5.5.2.</span> <span class="toc-text">重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#请求包含"><span class="toc-number">1.5.5.3.</span> <span class="toc-text">请求包含</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#中文乱码问题"><span class="toc-number">1.5.6.</span> <span class="toc-text">中文乱码问题</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaWeb后端"><span class="toc-number">1.</span> <span class="toc-text">JavaWeb后端</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaWeb概述"><span class="toc-number">1.1.</span> <span class="toc-text">JavaWeb概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tomcat"><span class="toc-number">1.2.</span> <span class="toc-text">Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#虚拟目录配置"><span class="toc-number">1.2.1.</span> <span class="toc-text">虚拟目录配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#虚拟主机配置"><span class="toc-number">1.2.2.</span> <span class="toc-text">虚拟主机配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web项目打包"><span class="toc-number">1.2.3.</span> <span class="toc-text">Web项目打包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP协议"><span class="toc-number">1.3.</span> <span class="toc-text">HTTP协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#？HTTPS"><span class="toc-number">1.3.1.</span> <span class="toc-text">？HTTPS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet"><span class="toc-number">1.4.</span> <span class="toc-text">Servlet</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建Servlet"><span class="toc-number">1.4.1.</span> <span class="toc-text">创建Servlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet生命周期"><span class="toc-number">1.4.2.</span> <span class="toc-text">Servlet生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet配置"><span class="toc-number">1.4.3.</span> <span class="toc-text">Servlet配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GenericServlet"><span class="toc-number">1.4.4.</span> <span class="toc-text">GenericServlet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet-3-0-配置"><span class="toc-number">1.4.5.</span> <span class="toc-text">Servlet 3.0 配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HttpServlet"><span class="toc-number">1.4.6.</span> <span class="toc-text">HttpServlet</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#请求类型"><span class="toc-number">1.4.6.1.</span> <span class="toc-text">请求类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet-API"><span class="toc-number">1.5.</span> <span class="toc-text">Servlet API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ServletConfig"><span class="toc-number">1.5.1.</span> <span class="toc-text">ServletConfig</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ServletContext"><span class="toc-number">1.5.2.</span> <span class="toc-text">ServletContext</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Request"><span class="toc-number">1.5.3.</span> <span class="toc-text">Request</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Response"><span class="toc-number">1.5.4.</span> <span class="toc-text">Response</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#设置响应正文"><span class="toc-number">1.5.4.1.</span> <span class="toc-text">设置响应正文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置响应头"><span class="toc-number">1.5.4.2.</span> <span class="toc-text">设置响应头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置状态码"><span class="toc-number">1.5.4.3.</span> <span class="toc-text">设置状态码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Servlet请求转发"><span class="toc-number">1.5.5.</span> <span class="toc-text">Servlet请求转发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#请求转发"><span class="toc-number">1.5.5.1.</span> <span class="toc-text">请求转发</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重定向"><span class="toc-number">1.5.5.2.</span> <span class="toc-text">重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#请求包含"><span class="toc-number">1.5.5.3.</span> <span class="toc-text">请求包含</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#中文乱码问题"><span class="toc-number">1.5.6.</span> <span class="toc-text">中文乱码问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSP"><span class="toc-number">1.6.</span> <span class="toc-text">JSP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JSP-语法"><span class="toc-number">1.6.1.</span> <span class="toc-text">JSP 语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSP-九大隐含对象★"><span class="toc-number">1.6.2.</span> <span class="toc-text">JSP 九大隐含对象★</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSP-域对象"><span class="toc-number">1.6.3.</span> <span class="toc-text">JSP 域对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSP-指令"><span class="toc-number">1.6.4.</span> <span class="toc-text">JSP 指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#page指令"><span class="toc-number">1.6.4.1.</span> <span class="toc-text">page指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#include-指令"><span class="toc-number">1.6.4.2.</span> <span class="toc-text">include 指令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSP-标签"><span class="toc-number">1.6.5.</span> <span class="toc-text">JSP 标签</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -747,10 +940,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
@@ -760,6 +949,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
             
             <div class="clearfix"></div>
