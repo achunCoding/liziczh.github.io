@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/javaweb-CookieAndSession.html</loc>
+    
+    <lastmod>2018-07-16T13:02:53.005Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/categories/index.html</loc>
     
     <lastmod>2018-07-16T12:49:23.453Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://liziczh.com/javaweb-ServletAndJsp.html</loc>
     
     <lastmod>2018-07-16T12:46:44.903Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/javaweb-CookieAndSession.html</loc>
-    
-    <lastmod>2018-07-16T12:46:10.714Z</lastmod>
     
   </url>
   
