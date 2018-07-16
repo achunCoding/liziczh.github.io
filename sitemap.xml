@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://liziczh.com/javaweb-servlet.html</loc>
+    <loc>https://liziczh.com/categories/index.html</loc>
     
-    <lastmod>2018-07-11T13:01:57.297Z</lastmod>
+    <lastmod>2018-07-16T12:49:23.453Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/javaweb-ServletAndJsp.html</loc>
+    
+    <lastmod>2018-07-16T12:46:44.903Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/javaweb-CookieAndSession.html</loc>
+    
+    <lastmod>2018-07-16T12:46:10.714Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>https://liziczh.com/web-jquery.html</loc>
     
     <lastmod>2018-07-11T06:20:24.963Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/categories/index.html</loc>
-    
-    <lastmod>2018-07-06T07:52:48.543Z</lastmod>
     
   </url>
   
@@ -121,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/tags/index.html</loc>
+    <loc>https://liziczh.com/ones/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://liziczh.com/ones/index.html</loc>
+    <loc>https://liziczh.com/tags/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     

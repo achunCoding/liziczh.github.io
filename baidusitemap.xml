@@ -3,13 +3,34 @@
 
 
     
+    
   <url>
-    <loc>https://liziczh.com/javaweb-servlet.html</loc>
-    <lastmod>2018-07-11T13:01:57.297Z</lastmod>
+    <loc>https://liziczh.com/javaweb-ServletAndJsp.html</loc>
+    <lastmod>2018-07-16T12:46:44.903Z</lastmod>
     <data>
         <display>
-        <title>JavaWeb | Servlet/JSP</title>
+        <title>JavaWeb | Servlet&JSP</title>
         <pubTime>2018-06-22T04:35:34.000Z</pubTime>
+        
+        <tag>JavaWeb</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaWeb" url="https://liziczh.com/categories/JavaWeb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/javaweb-CookieAndSession.html</loc>
+    <lastmod>2018-07-16T12:46:10.714Z</lastmod>
+    <data>
+        <display>
+        <title>JavaWeb | Cookie&Session</title>
+        <pubTime>2018-07-16T12:45:55.000Z</pubTime>
         
         <tag>JavaWeb</tag>
          
@@ -42,7 +63,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://liziczh.com/java-aliocr-impl.html</loc>
