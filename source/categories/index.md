@@ -10,7 +10,8 @@ copyright: false
 
 ### JavaWeb
 
-- [JavaWeb-Servlet](https://liziczh.com/javaweb-servlet.html)
+- [JavaWeb-Servlet&JSP](https://liziczh.com/javaweb-ServletAndJsp.html)
+- [JavaWeb-Cookie&Session](https://liziczh.com/javaweb-CookieAndSession.html)
 
 ### 数据库
 

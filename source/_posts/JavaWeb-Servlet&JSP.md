@@ -1,8 +1,8 @@
 ---
-title: JavaWeb | Servlet/JSP
+title: JavaWeb | Servlet&JSP
 comments: true
 date: 2018-06-22 12:35:34
-id: javaweb-servlet
+id: javaweb-ServletAndJsp
 tags: 
 - JavaWeb
 categories: JavaWeb
@@ -460,7 +460,11 @@ response.setContentType("text/html;charset=utf-8");  // 设置响应内容的字
 
 ## JSP
 
-JSP（Java Server Pages，Java 服务器页面），是一种动态网页开发技术。
+JSP（Java Server Pages，Java 服务器页面），是一种动态网页开发技术。它使用JSP标签在HTML网页中插入Java代码。 
+
+JSP本质是Java Servlet。将jsp部署到Web容器后，jsp文件会被翻译为index_jsp.java文件。
+
+JSP通过网页表单获取用户输入数据、访问数据库及其他数据源，然后动态地创建网页。 
 
 JSP = html +  java代码片段 + jsp动态标签
 
@@ -495,8 +499,6 @@ JSP = html +  java代码片段 + jsp动态标签
 > JSP脚本片段可以直接使用JSP提供的隐式对象完成WebAPP特定功能。
 > JSP脚本片段中的Java代码将原样搬进由JSP页面翻译成的Servlet中的jspService方法中。
 
-**JSP原理**：JSP即Servlet。将jsp部署到Web容器后，jsp文件会被翻译为index_jsp.java文件（本质还是Servlet）。
-
 ### JSP 九大隐含对象★
 
 **隐含对象/内置对象**：在jsp页面上无需显式声明，即可直接使用。（在jsp转换为servlet时，隐含对象已被声明在servlet的 `_jspService` 方法中）
@@ -514,15 +516,6 @@ JSP = html +  java代码片段 + jsp动态标签
 | `exception`   | Exception类的对象，表示当前页面的异常对象        |
 
 > exception对象必须在 `isErrorPage="true"` 的情况下使用。
-
-**JSP 隐含对象的应用**：
-
-- out - 输出
-- pageContext - 
-- request - 请求
-- response - 响应，不常用
-
-
 
 ### JSP 域对象
 
@@ -595,19 +588,69 @@ JSP指令用来设置整个JSP页面相关的属性，告诉JSP引擎如何处�
 
 #### include 指令
 
-**include 指令**：包含其他文件，作为该 JSP 文件的一部分，会被同时编译执行。 
+**include 指令**：包含其他文件（静态包含），当前JSP页面与引入页面在被JSP引擎翻译成Servlet的过程中合并为一个Servlet。
 
 ```jsp
 <%@ include file="relativeURL" %>
 ```
 
+> 被引入文件必须遵循JSP语法。
+> 被引入文件可以使用任意扩展名，建议使用.jspf。
+
+### JSP 动作元素
+
+JSP Action元素完成各种通用JSP页面功能，实现一些处理复杂业务逻辑的专用功能。
+
+**`<jsp:include>`**：包含其他文件（动态包含）。将另一个页面的输出内容插入当前JSP页面的输出内容之中。
+
+```jsp
+<jsp:include page="relative URL" flush="true" />
+```
+
+> page属性指定引入资源的相对路径。
+> flush属性定义在包含资源前是否刷新缓存区 
+
+**`<jsp:forward>`**：请求转发
+
+```jsp
+<jsp:forward page="Relative URL" />
+```
+
+**`<jsp:param>`**：以键值对形式为其他标签提供附加信息。
+
+`<jsp:param>`与`<jsp:include>`搭配使用：
+
+```jsp
+<jsp:include page="resource/sum.jsp">
+    <jsp:param name="number" value="300" />
+</jsp:include>
+```
 
 
-### JSP 标签
 
-`<jsp:include>`
+**静态包含与动态包含的区别**：
 
-`<jsp:forward>`
+（1）语法不同：
 
-`<jsp:param>`
+- 静态包含：JSP指令 - `<%@ include file=""%> `
+- 动态包含：JSP行为 - `<jsp: include page=""%> `
+
+（2）生成文件数量不同：
+
+- 静态包含：两个文件二合一，整体编译，生成一个servlet和class文件。
+- 动态包含：各个jsp分别转换，分别编译，生成多个servlet和class文件。
+
+（3）包含时机不同：
+
+- 静态包含：JSP翻译成Servlet阶段。
+- 动态包含：执行class文件阶段，动态加入。
+
+（4）静态包含在两个文件中不能有相同的变量，动态包含允许
+
+（5）静态包含只能包含文件，动态包含还可以包含servlet输出的结果
+
+（6）静态包含不能使用变量作为文件名，动态包含可以使用变量作为文件名
+
+（7）动态包含文件发生变化，包含文件会感知变化
+
 
