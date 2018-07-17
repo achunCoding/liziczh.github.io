@@ -23,7 +23,7 @@
     <link rel="alternative" href="/atom.xml" title="自然生长" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/userImg/L.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -33,8 +33,31 @@
     }
   </style>
   
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-120960442-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?fad26e690685f3b9d5d9e96cda8b1f71";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
   
 <script>
@@ -63,7 +86,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/userImg/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">栗子</a></h1>
@@ -77,35 +100,39 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/categories">分类</a></li>
+	        
+				<li><a href="/albums">相册</a></li>
+	        
+				<li><a href="/ones">积雨</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">归档</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">我的</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于</a>
     			
             
 		</nav>
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/liziczh" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="weibo" target="_blank" href="https://weibo.com/p/1005055521704376/home" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="mailto:liziczh@foxmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -123,7 +150,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<a href="/"><img src="" class="js-avatar"></a>
+				<a href="/"><img src="/assets/userImg/avatar.png" class="js-avatar"></a>
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">栗子</h1>
@@ -137,29 +164,37 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/liziczh" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weibo" target="_blank" href="https://weibo.com/p/1005055521704376/home" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="mailto:liziczh@foxmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 25%"><a href="/albums">相册</a></li>
+		        
+					<li style="width: 25%"><a href="/ones">积雨</a></li>
 		        
 				</ul>
 			</nav>
@@ -204,8 +239,6 @@
 <li>TCL（Transaction Control Language，事务控制语言），用于事务的提交/回滚。TCL语句包括 <code>COMMIT</code> 提交、<code>ROLLBACK</code> 回滚，<code>SAVEPOINT</code> 保存点。</li>
 </ul>
         
-          <a class="article-more-a" href="/db-oracle-ddl.html#more">more >></a>
-        
       
 
       
@@ -246,7 +279,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/db-oracle-ddl.html">展开全文 >></a>
+          <a class="article-more-a" href="/db-oracle-ddl.html">More >></a>
         </p>
       
 
@@ -303,8 +336,6 @@
 <li>DML（Data Manipulation Language，数据操作语言），即 SQL 更新，DML 语句即 <code>INSERT</code> 插入、<code>UPDATE</code> 更新、<code>DELETE</code> 删除。</li>
 </ul>
         
-          <a class="article-more-a" href="/db-dml.html#more">more >></a>
-        
       
 
       
@@ -345,7 +376,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/db-dml.html">展开全文 >></a>
+          <a class="article-more-a" href="/db-dml.html">More >></a>
         </p>
       
 
@@ -398,8 +429,6 @@
         <!--# Markdown 语法-->
 <p>Markdown是一种简单的、用于文本排版的轻量级标记语言，它使用简洁的语法代替排版，让作者更专注于作品的内容。并且允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档，非常适用于网络书写。</p>
         
-          <a class="article-more-a" href="/markdown-grammer.html#more">more >></a>
-        
       
 
       
@@ -436,7 +465,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/markdown-grammer.html">展开全文 >></a>
+          <a class="article-more-a" href="/markdown-grammer.html">More >></a>
         </p>
       
 
@@ -489,8 +518,6 @@
         <!--# Git QuickStart-->
 <p>Git 是目前世界上最流行的分布式版本控制系统。它速度快，简单，采用完全分布式，可高效管理代码，对非线性开发模式提供强力支持。</p>
         
-          <a class="article-more-a" href="/git-quickstart.html#more">more >></a>
-        
       
 
       
@@ -527,7 +554,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/git-quickstart.html">展开全文 >></a>
+          <a class="article-more-a" href="/git-quickstart.html">More >></a>
         </p>
       
 
@@ -580,8 +607,6 @@
         <!--# Hexo | 多机同步更新博客-->
 <p>Hexo博客存在一个问题：我们仅仅将博客的静态页面文件部署到了github远程仓库中，而我们的站点源文件仍在本地存储。如果存储站点源文件的电脑系统崩溃了，或者我们换了其他电脑，我们便无法实时更新博客了。<br>如果选择重新搭建站点，不仅过程繁琐，而且还需要大量时间安装依赖、主题配置、博客优化，极其麻烦。所以我们需要将站点必要文件也部署到github远程仓库中。<br>我们采取的远程仓库部署策略是：一个仓库两个分支。仓库即[yourname.github.io]，一个分支[master]用于托管演示页面，一个分支[backup]用于备份Hexo博客站点的必要文件。</p>
         
-          <a class="article-more-a" href="/hexo-multimachine.html#more">more >></a>
-        
       
 
       
@@ -618,7 +643,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/hexo-multimachine.html">展开全文 >></a>
+          <a class="article-more-a" href="/hexo-multimachine.html">More >></a>
         </p>
       
 
@@ -671,8 +696,6 @@
         <!--# Hexo | （三）URL优化&站点提交-->
 <p>在站点搭建完成之后，搜索引擎是无法搜索到我们自己的网站的。如果想要在搜索引擎中搜索到自己的博客，我们就需要将自己的站点提交给搜索引擎。<br>在站点提交之前，为了方便搜索引擎的爬虫爬取网页，我们需要先优化一下自己网站的URL。</p>
         
-          <a class="article-more-a" href="/hexo-submit.html#more">more >></a>
-        
       
 
       
@@ -709,7 +732,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/hexo-submit.html">展开全文 >></a>
+          <a class="article-more-a" href="/hexo-submit.html">More >></a>
         </p>
       
 
@@ -768,8 +791,6 @@
 <li>Gemini scheme: <a href="https://almostover.ru/" target="_blank" rel="noopener">Ivan.Nginx</a> | <a href="https://raincal.com/" target="_blank" rel="noopener">Raincal</a> | <a href="https://dandyxu.me/" target="_blank" rel="noopener">Dandy</a></li>
 </ul>
         
-          <a class="article-more-a" href="/hexo-next-settings.html#more">more >></a>
-        
       
 
       
@@ -806,7 +827,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/hexo-next-settings.html">展开全文 >></a>
+          <a class="article-more-a" href="/hexo-next-settings.html">More >></a>
         </p>
       
 
@@ -859,8 +880,6 @@
         <!--# Hexo | （一）使用Hexo+Pages搭建个人博客-->
 <p>本篇主要介绍使用Hexo+Pages搭建个人博客的流程。使用 <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> 博客框架搭建，解析markdown文章，生成静态页面，将页面托管到 <a href="https://github.com" target="_blank" rel="noopener">github</a>  / <a href="https://coding.net" target="_blank" rel="noopener">coding</a> 服务器上。<a href="https://github.com" target="_blank" rel="noopener">github</a>  / <a href="https://coding.net" target="_blank" rel="noopener">coding</a> 都有pages 服务，提供免费的静态网页托管和演示服务。</p>
         
-          <a class="article-more-a" href="/hexo-blog-build.html#more">more >></a>
-        
       
 
       
@@ -897,7 +916,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/hexo-blog-build.html">展开全文 >></a>
+          <a class="article-more-a" href="/hexo-blog-build.html">More >></a>
         </p>
       
 
@@ -950,8 +969,6 @@
         <!--# Windows | 系统重装-->
 <p>使用微软官方工具制作系统启动U盘，安装微软原版 Windows 系统，了解Windows系统的启动模式。</p>
         
-          <a class="article-more-a" href="/windows-reos.html#more">more >></a>
-        
       
 
       
@@ -988,7 +1005,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/windows-reos.html">展开全文 >></a>
+          <a class="article-more-a" href="/windows-reos.html">More >></a>
         </p>
       
 
@@ -1041,8 +1058,6 @@
         <!--# jQuery-->
 <p>jQuery 是一个 JavaScript 函数库，将 JS 的一些功能实现封装成了函数，极大地简化了 JavaScript 编程。<br>jQuery是 John Resig 于2006年创建的一个开源项目，jQuery集成了 JavaScript、CSS、 DOM 和 Ajax 于一体的强大功能。它可以用最少的代码， 完成更多复杂而困难的功能。</p>
         
-          <a class="article-more-a" href="/web-jquery.html#more">more >></a>
-        
       
 
       
@@ -1079,7 +1094,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/web-jquery.html">展开全文 >></a>
+          <a class="article-more-a" href="/web-jquery.html">More >></a>
         </p>
       
 
@@ -1144,7 +1159,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -1177,15 +1192,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">归档</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">我的</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于</a></li>
       
         
     </ul>
@@ -1294,27 +1309,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://github.com/liziczh" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>GitHub</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="mailto:liziczh@foxmail.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>E-Mail</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://www.linkedin.com/in/%E5%93%B2%E6%98%8A-%E9%99%88-604536161/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Linkedin</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="https://www.facebook.com/jehaw.chen.3" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>FaceBook</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+              <a href="https://www.instagram.com/jehawchen" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Instagram</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://weibo.com/p/1005055521704376/home" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Weibo</a>
             </li>
           
         </ul>
@@ -1325,7 +1340,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">球可以不进&lt;br/&gt;&lt;br/&gt;但姿势一定要帅~</div>
   	  	
     	</section>
     
