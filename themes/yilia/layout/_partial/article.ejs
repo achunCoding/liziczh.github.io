@@ -23,7 +23,7 @@
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
-              招摇撞骗
+              赏
             </span>
             <span class="tooltip-content">
               <span class="tooltip-text">
@@ -51,7 +51,7 @@
         </div>
       <% } %>
       
-      <% if ((theme.copyright_type === 2  || (theme.copyright_type === 1 && post.copyright)) && !index){ %>
+      <% if (((theme.copyright_type === 2 && !post.copyright) || (theme.copyright_type === 1 && post.copyright)) && !index){ %>
         <div> 
           <ul class="post-copyright">
             <li>
