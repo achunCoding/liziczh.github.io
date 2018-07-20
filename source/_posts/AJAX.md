@@ -16,8 +16,6 @@ copyright: true
 
 AJAX（Asynchronous JavaScript and XML，异步的 JavaScript 和 XML）一种异步请求、局部刷新技术。它在不重新载入全部页面的情况下，与服务器交换数据，实现对部分页面的更新。
 
-<!--more-->
-
 - XMLHttpRequest 对象（异步的与服务器交换数据）
 - JavaScript/DOM（信息显示/交互）
 - CSS（给数据定义样式）
@@ -158,9 +156,7 @@ window.onload = function () {
 
 
 
-### JSON
-
-JSON 解析
+### JSON 解析
 
 
 
@@ -189,12 +185,43 @@ $(selector).load(URL,[data],function(responseTxt,statusTxt,xhr));
 （1）`$.get()` 方法通过 HTTP GET 请求从服务器上请求数据。
 
 ```js
-$.get(URL,callback);
+$.get(URL,data,callback,type);
 ```
 
 （2）`$.post()` 方法通过 HTTP POST 请求从服务器上请求数据。
 
 ```js
-$.post(URL,data,callback);
+$.post(URL,data,callback,type);
 ```
+
+
+
+## 跨域
+
+同源策略：
+
+### JSONP
+
+```js
+dataType: "jsonp",
+jsonpCallback: "callback",
+```
+
+> 只支持 GET 请求 
+
+### CORS
+
+```java
+response.setHeader("Assess-","*")
+```
+
+> 支持 GET 和 POST 请求
+
+
+
+
+
+
+
+
 
