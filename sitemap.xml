@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/JavaWeb-ajax.html</loc>
+    
+    <lastmod>2018-07-20T01:23:37.781Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/javaweb-CookieAndSession.html</loc>
     
-    <lastmod>2018-07-16T13:02:53.005Z</lastmod>
+    <lastmod>2018-07-20T01:21:28.978Z</lastmod>
     
   </url>
   
@@ -128,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/tags/index.html</loc>
+    <loc>https://liziczh.com/ones/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://liziczh.com/ones/index.html</loc>
+    <loc>https://liziczh.com/tags/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
