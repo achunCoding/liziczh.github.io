@@ -16,6 +16,8 @@ copyright: true
 
 AJAX（Asynchronous JavaScript and XML，异步的 JavaScript 和 XML）一种异步请求、局部刷新技术。它在不重新载入全部页面的情况下，与服务器交换数据，实现对部分页面的更新。
 
+<!--more-->
+
 - XMLHttpRequest 对象（异步的与服务器交换数据）
 - JavaScript/DOM（信息显示/交互）
 - CSS（给数据定义样式）
