@@ -4,7 +4,8 @@ comments: true
 date: 2018-07-19 21:02:16
 id: JavaWeb-ajax
 tags: 
-- JavaWeb,ajax
+- JavaWeb 
+- AJAX
 categories: JavaWeb
 toc: true
 reward: true
