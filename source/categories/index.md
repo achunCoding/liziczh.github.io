@@ -12,6 +12,7 @@ copyright: false
 
 - [JavaWeb-Servlet&JSP](https://liziczh.com/javaweb-ServletAndJsp.html)
 - [JavaWeb-Cookie&Session](https://liziczh.com/javaweb-CookieAndSession.html)
+- [JavaWeb-AJAX](http://www.liziczh.com/JavaWeb-ajax.html)
 
 ### 数据库
 
