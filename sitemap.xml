@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/jdbc.html</loc>
+    
+    <lastmod>2018-07-23T01:49:12.813Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/java-tetris.html</loc>
+    
+    <lastmod>2018-07-23T01:33:42.209Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/JavaWeb-ajax.html</loc>
     
     <lastmod>2018-07-20T04:02:06.239Z</lastmod>
@@ -114,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/jdbc.html</loc>
-    
-    <lastmod>2018-06-26T07:28:48.281Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://liziczh.com/web-css.html</loc>
     
     <lastmod>2018-06-25T04:06:46.234Z</lastmod>
@@ -135,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/tags/index.html</loc>
+    <loc>https://liziczh.com/ones/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://liziczh.com/ones/index.html</loc>
+    <loc>https://liziczh.com/tags/index.html</loc>
     
     <lastmod>2018-06-23T03:06:27.100Z</lastmod>
     
@@ -159,13 +166,6 @@
     <loc>https://liziczh.com/oracle-newdb.html</loc>
     
     <lastmod>2018-06-22T15:36:49.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/java-tetris.html</loc>
-    
-    <lastmod>2018-06-22T04:34:18.843Z</lastmod>
     
   </url>
   

@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>https://liziczh.com/jdbc.html</loc>
+    <lastmod>2018-07-23T01:49:12.813Z</lastmod>
+    <data>
+        <display>
+        <title>JDBC</title>
+        <pubTime>2018-05-18T15:33:29.000Z</pubTime>
+        
+        <tag>Database</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://liziczh.com/java-tetris.html</loc>
+    <lastmod>2018-07-23T01:33:42.209Z</lastmod>
+    <data>
+        <display>
+        <title>Java | Tetris</title>
+        <pubTime>2018-05-19T15:01:34.000Z</pubTime>
+        
+        <tag>Java小程序</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java小程序" url="https://liziczh.com/categories/Java%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://liziczh.com/JavaWeb-ajax.html</loc>
     <lastmod>2018-07-20T04:02:06.239Z</lastmod>
     <data>
@@ -175,9 +217,9 @@
         <title>Oracle | PL/SQL编程</title>
         <pubTime>2018-05-15T09:19:29.000Z</pubTime>
         
-        <tag>Database</tag>
-         
         <tag>Oracle</tag>
+         
+        <tag>Database</tag>
          
          
            
@@ -197,9 +239,9 @@
         <title>Oracle | DDL&约束&DCL&TCL</title>
         <pubTime>2018-05-13T09:32:29.000Z</pubTime>
         
-        <tag>Database</tag>
-         
         <tag>Oracle</tag>
+         
+        <tag>Database</tag>
          
          
            
@@ -239,9 +281,9 @@
         <title>Database | DQL&DML</title>
         <pubTime>2018-05-12T11:32:29.000Z</pubTime>
         
-        <tag>Database</tag>
-         
         <tag>Oracle</tag>
+         
+        <tag>Database</tag>
          
          
            
@@ -287,28 +329,6 @@
            
              
               <breadCrumb title="电脑维修" url="https://liziczh.com/categories/%E7%94%B5%E8%84%91%E7%BB%B4%E4%BF%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/jdbc.html</loc>
-    <lastmod>2018-06-26T07:28:48.281Z</lastmod>
-    <data>
-        <display>
-        <title>JDBC</title>
-        <pubTime>2018-05-18T15:33:29.000Z</pubTime>
-        
-        <tag>Database</tag>
-         
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
           
         </display>
     </data>
@@ -387,34 +407,14 @@
         <title>Oracle新建数据库</title>
         <pubTime>2018-05-20T06:56:29.000Z</pubTime>
         
-        <tag>Database</tag>
-         
         <tag>Oracle</tag>
+         
+        <tag>Database</tag>
          
          
            
              
               <breadCrumb title="DataBase" url="https://liziczh.com/categories/DataBase/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/java-tetris.html</loc>
-    <lastmod>2018-06-22T04:34:18.843Z</lastmod>
-    <data>
-        <display>
-        <title>Java | Tetris</title>
-        <pubTime>2018-05-19T15:01:34.000Z</pubTime>
-        
-        <tag>Java小程序</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java小程序" url="https://liziczh.com/categories/Java%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
           
         </display>
     </data>
