@@ -45,68 +45,6 @@
     </url>
 
     
-  <url>
-    <loc>https://liziczh.com/JavaWeb-ajax.html</loc>
-    <lastmod>2018-07-20T04:02:06.239Z</lastmod>
-    <data>
-        <display>
-        <title>JavaWeb | AJAX</title>
-        <pubTime>2018-07-19T13:02:16.000Z</pubTime>
-        
-        <tag>JavaWeb</tag>
-         
-        <tag>AJAX</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaWeb" url="https://liziczh.com/categories/JavaWeb/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://liziczh.com/javaweb-CookieAndSession.html</loc>
-    <lastmod>2018-07-20T01:21:28.978Z</lastmod>
-    <data>
-        <display>
-        <title>JavaWeb | Cookie&Session</title>
-        <pubTime>2018-07-16T12:45:55.000Z</pubTime>
-        
-        <tag>JavaWeb</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaWeb" url="https://liziczh.com/categories/JavaWeb/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/javaweb-ServletAndJsp.html</loc>
-    <lastmod>2018-07-16T12:46:44.903Z</lastmod>
-    <data>
-        <display>
-        <title>JavaWeb | Servlet&JSP</title>
-        <pubTime>2018-06-22T04:35:34.000Z</pubTime>
-        
-        <tag>JavaWeb</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaWeb" url="https://liziczh.com/categories/JavaWeb/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://liziczh.com/web-jquery.html</loc>
@@ -217,9 +155,9 @@
         <title>Oracle | PL/SQL编程</title>
         <pubTime>2018-05-15T09:19:29.000Z</pubTime>
         
-        <tag>Oracle</tag>
-         
         <tag>Database</tag>
+         
+        <tag>Oracle</tag>
          
          
            
@@ -239,9 +177,9 @@
         <title>Oracle | DDL&约束&DCL&TCL</title>
         <pubTime>2018-05-13T09:32:29.000Z</pubTime>
         
-        <tag>Oracle</tag>
-         
         <tag>Database</tag>
+         
+        <tag>Oracle</tag>
          
          
            
@@ -281,9 +219,9 @@
         <title>Database | DQL&DML</title>
         <pubTime>2018-05-12T11:32:29.000Z</pubTime>
         
-        <tag>Oracle</tag>
-         
         <tag>Database</tag>
+         
+        <tag>Oracle</tag>
          
          
            
@@ -407,9 +345,9 @@
         <title>Oracle新建数据库</title>
         <pubTime>2018-05-20T06:56:29.000Z</pubTime>
         
-        <tag>Oracle</tag>
-         
         <tag>Database</tag>
+         
+        <tag>Oracle</tag>
          
          
            
