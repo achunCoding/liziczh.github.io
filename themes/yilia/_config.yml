@@ -79,8 +79,8 @@ google_analytics: 'UA-120960442-1'
 favicon: /assets/userImg/L.png
 
 #你的头像url
-# avatar: http://p6uturdzt.bkt.clouddn.com/avatar.png
-avatar: /assets/userImg/avatar.png
+avatar: http://p6uturdzt.bkt.clouddn.com/avatar.png
+# avatar: /assets/userImg/avatar.png
 
 #是否开启分享
 share_jia: true

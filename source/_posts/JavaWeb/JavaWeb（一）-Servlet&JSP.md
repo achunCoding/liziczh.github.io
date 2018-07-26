@@ -252,6 +252,8 @@ URL请求类型为GET类型。
 
 将请求参数拼接在URL后边 `url？name=val&name=val`；
 
+一个Servlet同时执行多种请求：`URL?method=delete`；
+
 
 
 Form表单可指定请求类型 (GET/POST) 。

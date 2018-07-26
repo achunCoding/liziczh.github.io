@@ -60,11 +60,11 @@ var xhr = createXMLHttpRequest();
 > - GET请求：`send()`，数据可直接通过 open() 中的URL地址传送。
 > - POST请求：`send("key=value&key=value")`，数据以键值对形式发送。
 >
-> > 如果是 POST 请求，则需要在 open() 打开链接后，设置请求头内容类型：
-> >
-> > ```js
-> > xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-> > ```
+> 如果是 POST 请求，则需要在 open() 打开链接后，设置请求头内容类型：
+>
+> ```js
+> xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+> ```
 
 **GET 请求发送数据示例**：
 
@@ -158,7 +158,7 @@ window.onload = function () {
 
 
 
-### JSON 解析
+### JSON 
 
 
 
@@ -214,7 +214,7 @@ jsonpCallback: "callback",
 ### CORS
 
 ```java
-response.setHeader("Assess-","*")
+response.setHeader("Access-Control-Allow-Origin","*");
 ```
 
 > 支持 GET 和 POST 请求
