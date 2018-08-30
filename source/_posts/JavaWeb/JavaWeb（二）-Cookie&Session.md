@@ -94,10 +94,6 @@ getSession(true)：先创建session对象，再返回session。
 
 
 
-
-
-
-
 SessionID保存在Cookie中。
 
 Session会话，保存在服务端，客户端只存在一个sessionID信息。
@@ -183,14 +179,6 @@ URL重写实例：
 - 使用Cookie存储
 - 使用Session存储
 - 使用Cookie+数据库存储（常用）
-
-
-
-
-
-
-
-
 
 #### 一次性验证码
 
