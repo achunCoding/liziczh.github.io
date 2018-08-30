@@ -2,30 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liziczh.com/categories/index.html</loc>
+    
+    <lastmod>2018-08-30T01:32:13.389Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/JavaWeb-FileUpload&Download.html</loc>
+    
+    <lastmod>2018-08-30T01:25:55.907Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/JavaWeb-Listener.html</loc>
+    
+    <lastmod>2018-08-30T01:25:31.739Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/JavaWeb-Filter.html</loc>
+    
+    <lastmod>2018-08-30T01:25:16.881Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://liziczh.com/javaweb-el&jstl.html</loc>
+    
+    <lastmod>2018-08-30T01:24:57.573Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://liziczh.com/SpringMVC.html</loc>
     
-    <lastmod>2018-08-30T01:15:48.084Z</lastmod>
+    <lastmod>2018-08-30T01:24:25.343Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://liziczh.com/Spring.html</loc>
     
-    <lastmod>2018-08-30T01:15:17.482Z</lastmod>
+    <lastmod>2018-08-30T01:24:09.059Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://liziczh.com/MyBatis.html</loc>
     
-    <lastmod>2018-08-30T01:14:33.582Z</lastmod>
+    <lastmod>2018-08-30T01:23:51.943Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://liziczh.com/Maven.html</loc>
     
-    <lastmod>2018-08-30T01:11:24.208Z</lastmod>
+    <lastmod>2018-08-30T01:23:38.675Z</lastmod>
     
   </url>
   
@@ -37,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/JavaWeb-FileUpload&Download.html</loc>
-    
-    <lastmod>2018-07-26T09:47:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://liziczh.com/git-quickstart.html</loc>
     
     <lastmod>2018-07-26T06:22:44.000Z</lastmod>
@@ -51,30 +79,9 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/JavaWeb-Listener.html</loc>
-    
-    <lastmod>2018-07-26T01:10:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/JavaWeb-Filter.html</loc>
-    
-    <lastmod>2018-07-26T01:10:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://liziczh.com/JavaWeb-ajax.html</loc>
     
     <lastmod>2018-07-26T01:10:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/javaweb-el&jstl.html</loc>
-    
-    <lastmod>2018-07-26T01:10:08.000Z</lastmod>
     
   </url>
   
@@ -96,13 +103,6 @@
     <loc>https://liziczh.com/javaweb-ServletAndJsp.html</loc>
     
     <lastmod>2018-07-21T09:35:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://liziczh.com/categories/index.html</loc>
-    
-    <lastmod>2018-07-20T02:05:42.000Z</lastmod>
     
   </url>
   
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://liziczh.com/tags/index.html</loc>
+    <loc>https://liziczh.com/ones/index.html</loc>
     
     <lastmod>2018-06-23T03:06:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://liziczh.com/ones/index.html</loc>
+    <loc>https://liziczh.com/tags/index.html</loc>
     
     <lastmod>2018-06-23T03:06:28.000Z</lastmod>
     
