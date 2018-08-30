@@ -11,7 +11,7 @@ reward: true
 copyright: true
 ---
 
-# Filter
+<!--# Filter-->
 
 Filter 过滤器，使用 Filter 可以动态拦截请求和响应，可以对 web 服务器管理的所有 web 资源（Servlet、JSP、静态图片或静态 html 等）进行拦截，从而实现一些特殊的功能。如 URL 级别的权限访问控制、过滤敏感词汇、压缩响应信息等一些高级功能。
 
