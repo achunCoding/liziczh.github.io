@@ -3,6 +3,26 @@
 
 
     
+  <url>
+    <loc>https://liziczh.com/MyBatis.html</loc>
+    <lastmod>2018-08-30T01:47:17.721Z</lastmod>
+    <data>
+        <display>
+        <title>MyBatis| 持久层框架</title>
+        <pubTime>2018-08-15T06:06:16.000Z</pubTime>
+        
+        <tag>MyBatis</tag>
+         
+         
+           
+             
+              <breadCrumb title="MyBatis" url="https://liziczh.com/categories/MyBatis/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://liziczh.com/JavaWeb-FileUpload&Download.html</loc>
@@ -118,26 +138,6 @@
            
              
               <breadCrumb title="Spring" url="https://liziczh.com/categories/Spring/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/MyBatis.html</loc>
-    <lastmod>2018-08-30T01:23:51.943Z</lastmod>
-    <data>
-        <display>
-        <title>MyBatis| 持久层框架</title>
-        <pubTime>2018-08-15T06:06:16.000Z</pubTime>
-        
-        <tag>MyBatis</tag>
-         
-         
-           
-             
-              <breadCrumb title="MyBatis" url="https://liziczh.com/categories/MyBatis/"/>
           
         </display>
     </data>
