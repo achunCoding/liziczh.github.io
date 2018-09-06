@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://liziczh.com/Spring.html</loc>
+    <lastmod>2018-08-30T02:13:50.071Z</lastmod>
+    <data>
+        <display>
+        <title>Spring</title>
+        <pubTime>2018-08-20T07:02:16.000Z</pubTime>
+        
+        <tag>Spring</tag>
+         
+         
+           
+             
+              <breadCrumb title="Spring" url="https://liziczh.com/categories/Spring/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://liziczh.com/MyBatis.html</loc>
     <lastmod>2018-08-30T01:47:17.721Z</lastmod>
     <data>
@@ -118,26 +138,6 @@
            
              
               <breadCrumb title="SpringMVC" url="https://liziczh.com/categories/SpringMVC/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://liziczh.com/Spring.html</loc>
-    <lastmod>2018-08-30T01:24:09.059Z</lastmod>
-    <data>
-        <display>
-        <title>Spring</title>
-        <pubTime>2018-08-20T07:02:16.000Z</pubTime>
-        
-        <tag>Spring</tag>
-         
-         
-           
-             
-              <breadCrumb title="Spring" url="https://liziczh.com/categories/Spring/"/>
           
         </display>
     </data>
